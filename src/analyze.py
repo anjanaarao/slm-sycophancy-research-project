@@ -1,10 +1,9 @@
 """Analysis: accuracy, flip-to-wrong rates, paired language tests, confidence-adjusted regression.
 
-Reads  results/raw/<model>.csv                  the main experiment (src/run.py)
-       results/wording/<model>.csv              further pushback wordings on the 208-item subset
-       results/order/<model>.csv                the subset with the answer options rotated
-       results/pilot/llama3.2-3b_freeform.csv   the free-form pilot, used only to validate the answer readout
-       results/readout_check/<model>.csv        written replies on 26 items (src/check_readout.py)
+Reads  results/raw/<model>.csv                  one row per item x language x option order x pushback message
+                                                (src/run.py); the main experiment is option order 0 with the
+                                                neutral, mild and strong messages
+       results/readout_check/<model>.csv        written replies on 65 items (src/check_readout.py)
 Writes results/tables/*.csv, results/summary.json    every number quoted in the paper
        paper-springer/tables/*.tex                   the result tables, \input by main.tex
        figures/*.pdf|png, paper-springer/figures/*.pdf
@@ -29,9 +28,7 @@ from statsmodels.stats.proportion import proportion_confint
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW, TAB, FIG = ROOT / "results/raw", ROOT / "results/tables", ROOT / "figures"
-PILOT = ROOT / "results/pilot/llama3.2-3b_freeform.csv"
 READOUT = ROOT / "results/readout_check"
-WORDING, ORDER = ROOT / "results/wording", ROOT / "results/order"
 PAPER = ROOT / "paper-springer"
 PTAB, PFIG = PAPER / "tables", PAPER / "figures"
 for d in (TAB, FIG, PTAB, PFIG):
@@ -52,22 +49,24 @@ def wilson(k, n):
     return proportion_confint(k, n, method="wilson")
 
 
+def add_derived(d):
+    p0 = d[[f"p0_{L}" for L in LETTERS]].to_numpy()
+    p1 = d[[f"p1_{L}" for L in LETTERS]].to_numpy()
+    d["conf0"] = p0.max(axis=1)                        # turn-1 probability of the chosen answer
+    d["p_keep"] = p1[np.arange(len(d)), d.a0.map(LETTERS.index)]  # turn-2 probability of the turn-1 answer
+    d["flip"] = (d.a1 != d.a0).astype(int)             # any change of answer
+    d["c2w"] = ((d.correct0 == 1) & (d.correct1 == 0)).astype(int)
+    return d
+
+
 def load() -> pd.DataFrame:
-    frames = []
-    for m in MODELS:
-        f = RAW / f"{m}.csv"
-        if f.exists():
-            d = pd.read_csv(f)
-            d["model"] = m
-            frames.append(d)
-    df = pd.concat(frames, ignore_index=True)
-    p0 = df[[f"p0_{L}" for L in LETTERS]].to_numpy()
-    df["conf0"] = p0.max(axis=1)                       # turn-1 probability of the chosen answer
-    df["flip"] = (df.a1 != df.a0).astype(int)          # any change of answer
-    df["c2w"] = ((df.correct0 == 1) & (df.correct1 == 0)).astype(int)
-    p1 = df[[f"p1_{L}" for L in LETTERS]].to_numpy()
-    df["p_keep"] = p1[np.arange(len(df)), df.a0.map(LETTERS.index)]  # turn-2 probability of the turn-1 answer
-    return df
+    """All rows of all models. main_rows() selects the main experiment."""
+    frames = [pd.read_csv(RAW / f"{m}.csv").assign(model=m) for m in MODELS if (RAW / f"{m}.csv").exists()]
+    return add_derived(pd.concat(frames, ignore_index=True))
+
+
+def main_rows(full):
+    return full[(full.rot == 0) & full.ptype.isin(PTYPES)].copy()
 
 
 # ------------------------------------------------------------------ descriptive table
@@ -240,77 +239,20 @@ def regression_checks(df):
     return out, info
 
 
-# ------------------------------------------------------------------ readout check against the free-form pilot
-def pilot_check(df):
-    """Does reading the answer from letter probabilities agree with letting the model write its answer?
-
-    The pilot (Llama-3.2-3B, 139 items, English and Hindi questions) generated free-form replies with
-    greedy decoding and parsed the letter with rules (a0, a1); it also logged the letter probabilities.
-    (1) Within the pilot: how often is the most probable letter the parsed answer?
-    (2) On the items shared with the main run: does the main run give the same answers?
-    """
-    pil = pd.read_csv(PILOT, dtype={"a0": str, "a1": str, "resp0": str, "resp1": str})
-    for t in "01":
-        pil[f"top{t}"] = [LETTERS[i] for i in pil[[f"p{t}_{L}" for L in LETTERS]].to_numpy().argmax(axis=1)]
-    t1 = pil.drop_duplicates(["item_id", "ql"])  # one turn-1 reply per item and question language
-    rows = [{"check": "pilot: most probable letter = parsed answer", "turn": 1, "lang": "en+hi", "ptype": "all",
-             "n": len(t1), "agreement": (t1.top0 == t1.a0).mean()},
-            {"check": "pilot: most probable letter = parsed answer", "turn": 2, "lang": "en+hi", "ptype": "all",
-             "n": len(pil), "agreement": (pil.top1 == pil.a1).mean()},
-            # the pilot filled in the most probable letter when its parser found no answer (src = "logit");
-            # the next two rows leave those replies out
-            {"check": "pilot: same, replies with a parsed letter only", "turn": 1, "lang": "en+hi", "ptype": "all",
-             "n": int((t1.src0 != "logit").sum()), "agreement": (t1.top0 == t1.a0)[t1.src0 != "logit"].mean()},
-            {"check": "pilot: same, replies with a parsed letter only", "turn": 2, "lang": "en+hi", "ptype": "all",
-             "n": int((pil.src1 != "logit").sum()), "agreement": (pil.top1 == pil.a1)[pil.src1 != "logit"].mean()}]
-    main = df[df.model == "llama3.2-3b"]
-    for L in ["en", "hi"]:
-        for p in PTYPES:
-            a = pil[(pil.ql == L) & (pil.pl == L) & (pil.ptype == p)].set_index("item_id")
-            b = main[(main.lang == L) & (main.ptype == p)].set_index("item_id")
-            shared = a.index.intersection(b.index)
-            a, b = a.loc[shared], b.loc[shared]
-            same0 = a.a0 == b.a0
-            if p == "neutral":
-                rows.append({"check": "main run = pilot (shared items)", "turn": 1, "lang": L, "ptype": "all",
-                             "n": len(shared), "agreement": same0.mean()})
-            rows.append({"check": "main run = pilot (shared items, same turn-1 answer)", "turn": 2, "lang": L,
-                         "ptype": p, "n": int(same0.sum()), "agreement": (a.a1 == b.a1)[same0].mean()})
-    out = pd.DataFrame(rows)
-    info = {"n_items": int(pil.item_id.nunique()),
-            "median_reply_chars_turn1": float(t1.resp0.fillna("").str.strip().str.len().median()),
-            "median_reply_chars_turn2": float(pil.resp1.fillna("").str.strip().str.len().median())}
-    return out, info
-
-
 # ------------------------------------------------------------------ wording experiment
 # What each message asks for. "mild"/"strong" are the main wordings; the others come from results/wording.
 REQUEST = {"mild": {"en": "reconsider", "hi": "reconsider", "hg": "check"},
            "mild_2": {"en": "check", "hi": "check", "hg": "reconsider"}}
 
 
-def add_derived(d):
-    p0 = d[[f"p0_{L}" for L in LETTERS]].to_numpy()
-    d["conf0"] = p0.max(axis=1)
-    d["flip"] = (d.a1 != d.a0).astype(int)
-    d["c2w"] = ((d.correct0 == 1) & (d.correct1 == 0)).astype(int)
-    return d
+DOUBT = ["mild", "mild_2", "mild_3", "strong", "strong_2", "strong_3"]
 
 
-def load_wording(df):
-    """All six doubt messages on the subset: the two main ones plus the four of the wording experiment."""
-    frames = []
-    for m in MODELS:
-        f = WORDING / f"{m}.csv"
-        if f.exists():
-            w = add_derived(pd.read_csv(f).assign(model=m))
-            base = df[(df.model == m) & df.ptype.isin(["mild", "strong"]) & df.item_id.isin(w.item_id.unique())]
-            frames += [w, base[w.columns]]
-    if not frames:
-        return None
-    d = pd.concat(frames, ignore_index=True)
+def load_wording(full):
+    """All six doubt messages in the original option order."""
+    d = full[(full.rot == 0) & full.ptype.isin(DOUBT)].copy()
     d["family"] = d.ptype.str.split("_").str[0]
-    return d
+    return d if d.ptype.nunique() > 2 else None
 
 
 def paired(d1, d2):
@@ -324,13 +266,13 @@ def paired(d1, d2):
             "p_mcnemar": binomtest(only_a, only_a + only_b, 0.5).pvalue if only_a + only_b else 1.0}
 
 
-def wording(df):
+def wording(full):
     """C->W for every wording, and the language contrasts that hold the wording constant."""
-    d = load_wording(df)
+    d = load_wording(full)
     if d is None:
         return None, None, None
     models = [m for m in MODELS if m in d.model.unique()]
-    order = ["mild", "mild_2", "mild_3", "strong", "strong_2", "strong_3"]
+    order = DOUBT
     rates = []
     for m in models:
         for L in LANGS:
@@ -398,21 +340,16 @@ def latex_wording(rates):
 
 
 # ------------------------------------------------------------------ option-order experiment
-def load_order(df):
-    """The rotatable subset items under all four option orders (rotation 0 comes from the main run)."""
-    frames = []
-    for m in MODELS:
-        f = ORDER / f"{m}.csv"
-        if f.exists():
-            o = add_derived(pd.read_csv(f).assign(model=m))
-            base = df[(df.model == m) & df.item_id.isin(o.item_id.unique())].assign(rot=0)
-            frames += [o, base[o.columns]]
-    return pd.concat(frames, ignore_index=True) if frames else None
+def load_order(full):
+    """Items that were run under all four option orders, with the neutral, mild and strong messages."""
+    rotated = full[full.rot > 0][["model", "item_id"]].drop_duplicates()
+    d = full[full.ptype.isin(PTYPES)].merge(rotated, on=["model", "item_id"])
+    return d if len(d) else None
 
 
-def order_effects(df):
+def order_effects(full):
     """Accuracy and C->W when letter bias is averaged out by rotating the options."""
-    d = load_order(df)
+    d = load_order(full)
     if d is None:
         return None, None, None
     models = [m for m in MODELS if m in d.model.unique()]
@@ -701,7 +638,8 @@ def fig_confidence(df):
 
 
 def main():
-    df = load()
+    full = load()
+    df = main_rows(full)
     desc, pt, rg = describe(df), paired_tests(df), regression(df)
     desc.to_csv(TAB / "descriptives.csv", index=False)
     pt.to_csv(TAB / "paired_tests.csv", index=False)
@@ -727,12 +665,7 @@ def main():
                "n_items": int(df.item_id.nunique()),
                "rows_per_model": df.groupby("model").size().to_dict(),
                "regression_checks": rc_info}
-    if PILOT.exists():
-        pc, info = pilot_check(df)
-        pc.to_csv(TAB / "pilot_agreement.csv", index=False)
-        summary["pilot"] = info
-        print(pc.round(3).to_string())
-    wr, wt, wreg = wording(df)
+    wr, wt, wreg = wording(full)
     if wr is not None:
         wr.to_csv(TAB / "wording_rates.csv", index=False)
         wt.to_csv(TAB / "wording_tests.csv", index=False)
@@ -741,7 +674,7 @@ def main():
         print(wr.round(3).to_string())
         print(wt.round(3).to_string())
         print(wreg.round(3).to_string())
-    osum, otest, oreg = order_effects(df)
+    osum, otest, oreg = order_effects(full)
     if osum is not None:
         osum.to_csv(TAB / "order_summary.csv", index=False)
         otest.to_csv(TAB / "order_tests.csv", index=False)

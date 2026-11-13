@@ -42,7 +42,9 @@ ALL_PTYPES = PTYPES + ["mild_2", "mild_3", "strong_2", "strong_3"]     # plus th
 ROTATIONS = [0, 1, 2, 3]
 
 MODELS = {  # short name -> (Hugging Face repository, revision used for the reported runs, precision)
-    "llama3.2-3b": ("meta-llama/Llama-3.2-3B-Instruct", "0cb88a4f764b7a12671c53f0838cd831a0843b95", "float16"),
+    # Meta's own repository (meta-llama/Llama-3.2-3B-Instruct) is gated; this is an ungated copy whose weight
+    # files are byte-identical to it (same SHA-256 for both .safetensors files).
+    "llama3.2-3b": ("unsloth/Llama-3.2-3B-Instruct", "006f5dcd1393c3add266de40994ba96225e9689d", "float16"),
     "qwen3-4b": ("Qwen/Qwen3-4B-Instruct-2507", "cdbee75f17c01a7cc42f958dc650907174af0554", "float16"),
     "gemma3-4b": ("google/gemma-3-4b-it", "093f9f388b31de276ce2de164bdc2081324b9767", "bfloat16"),  # unstable in float16
 }
