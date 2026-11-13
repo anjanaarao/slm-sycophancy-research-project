@@ -1,0 +1,22 @@
+{
+  "n_items": 520,
+  "options_identical_to_english": 1169,
+  "options_total": 2080,
+  "share_options_identical": 0.562,
+  "stems_identical_to_english": 5,
+  "stem_char_length_ratio_hg_over_en": {
+    "mean": 1.046,
+    "median": 1.029
+  },
+  "approx_CMI_stem": {
+    "mean": 31.7,
+    "median": 33.3,
+    "share_stems_CMI_gt_0": 0.983
+  },
+  "token_share_hindi_vs_english_in_stems": {
+    "hindi": 5971,
+    "english": 2819,
+    "hindi_share": 0.679
+  },
+  "note": "CMI uses a dictionary heuristic (English = in /usr/share/dict/words and not a listed Hindi word); it is an approximation, not a gold language-ID annotation."
+}

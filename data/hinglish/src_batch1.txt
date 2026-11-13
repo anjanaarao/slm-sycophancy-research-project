@@ -1,0 +1,130 @@
+q0130	The pacf is necessary for distinguishing between	A:An AR and an MA model	B:An AR and an ARMA model	C:An MA and an ARMA model	D:Different models from within the ARMA family
+q0131	Which one of the following statements best describes the algebraic representation of the fitted regression line?	A:\hat{y}_t = \hat{\alpha} + \hat{\beta}x_t + \hat{u}_t	B:\hat{y}_t = \hat{\alpha} + \hat{\beta}x_t	C:\hat{y}_t = \hat{\alpha} + \hat{\beta}x_t + u_t	D:y_t = \hat{\alpha} + \hat{\beta}x_t + \hat{u}_t
+q0132	The order condition is	A:A necessary and sufficient condition for identification	B:A necessary but not sufficient condition for identification	C:A sufficient but not necessary condition for identification	D:A condition that is nether necessary nor sufficient for identification
+q0133	If an estimator is said to have minimum variance, which of the following statements is NOT implied?	A:The probability that the estimate is a long way away from its true value is minimised	B:The estimator is efficient	C:Such an estimator would be termed "best"	D:Such an estimator will always be unbiased
+q0134	Consider the following model for $y_t$:\n\n$y_t = \mu + \lambda t + u_t$\n\nWhich one of the following most accurately describes the process for $y_t$?	A:A unit root process	B:A stationary process	C:A deterministic trend process	D:A random walk with drift
+q0135	The fixed effects panel model is also sometimes known as	A:A seemingly unrelated regression model	B:The least squares dummy variables approach	C:The random effects model	D:Heteroscedasticity and autocorrelation consistent
+q0136	Under the matrix notation for the classical linear regression model, $y = X \beta + u$, what are the dimensions of $u$?	A:T x k	B:T x 1	C:k x 1	D:1 x 1
+q0137	Which of the following could be used as a test for autocorrelation up to third order?	A:The Durbin Watson test	B:White's test	C:The RESET test	D:The Breusch-Godfrey test
+q0138	If OLS is applied separately to each equation that is part of a simultaneous system, the resulting estimates will be	A:Unbiased and consistent	B:Biased but consistent	C:Biased and inconsistent	D:It is impossible to apply OLS to equations that are part of a simultaneous system
+q0139	If the Engle-Granger test is applied to the residuals of a potentially cointegrating regression, what would be the interpretation of the null hypothesis?	A:The variables are cointegrated	B:The variables are not cointegrated	C:Both variables are stationary	D:Both variables are non-stationary
+q0140	LC oscillators are used for produce a waveform with frequency ranging from	A:1MHz to 500 MHz	B:100 KHz to 500 MHz	C:1 KHz to 1 MHz	D:1MHz to 100 GHz
+q0141	A Binary number system has how many digits.	A:0	B:1	C:2	D:10
+q0142	________ is the most detrimental impurity in the magnetic materials	A:Carbon.	B:Sulphur.	C:Oxygen.	D:Nitrogen.
+q0143	Advantages of higher transmission voltage is/are	A:Power transfer capability of the transmission line is increased	B:Transmission line losses are reduced	C:Area of cross section and volume of the conductor is reduced	D:all of the above
+q0144	One of the following is the primary function of an oscillator	A:produces sinusoidal oscillations	B:generates non sinusoidal waveforms	C:generates sustained oscillations at a constant amplitude and specific frequency	D:none of the above
+q0145	The latching current of SCR is 20 mA. Its holding current will be	A:23 mA.	B:40 mA.	C:10 mA.	D:60 mA.
+q0146	In an intel 8085A, which is the first machine cycle of an instruction?	A:An op-code fetch cycle	B:A memory read cycle	C:A memory write cycle	D:An I/O read cycle
+q0147	Which of the following are the disadvantages of a closed loop control system?	A:Reduces the overall gain.	B:Complex and costly.	C:Oscillatory response.	D:All of the above.
+q0148	The number of rings in the Bohr model of any element is determined by what?	A:Column number on periodic table.	B:Atomic mass.	C:Row number on periodic table.	D:Atomic number.
+q0149	Which oscillators are easy to fabricate in a monolithic IC?	A:Crystal oscillator.	B:Hartley oscillator.	C:Wien bridge oscillator.	D:Relaxation oscillator.
+q0150	What is the value of p in 24 = 2p?	A:p = 4	B:p = 8	C:p = 12	D:p = 24
+q0151	Find the median in the set of data 23, 13, 18, 29, 32, 25.	A:18	B:24	C:25	D:29
+q0152	Abe found the mean and median of this list of numbers. 1, 3, 3 If the number 6 were added to the list, then	A:the mean would increase.	B:the mean would decrease.	C:the median would increase.	D:the median would decrease.
+q0153	A shelf has four books on it. The weight, in pounds, of each of the four books on the shelf is 2.5, 3.2, 2.7, 2.3 Which inequality represents the weight, w, of any book chosen from the shelf?	A:w > 2.3	B:w < 2.4	C:w > 3.2	D:w < 3.3
+q0154	Write the ratio of 2 cups to 3 qt as a fraction in simplest form.	A:3 over 2	B:2 over 3	C:2 over 12	D:1 over 6
+q0155	What value of y makes y + 2.9 = 11 true?	A:8.1	B:8.9	C:9.1	D:13.9
+q0156	Write the unit rate for driving 308 km in 4 h. Round to the nearest hundredth if necessary.	A:82 km/h	B:74 km/h	C:72 km/h	D:77 km/h
+q0157	An ice cream shopsold 48 vanilla milkshakes in a day, which was 40% of the total number of milkshakes sold that day. What was the total number of milkshakes that the ice cream shop sold that day?	A:60	B:72	C:100	D:120
+q0158	Which algebraic expression represents four times the quantity 22 less than x?	A:4(x – 22)	B:(4 • 22) – x	C:4(22 – x)	D:(x • 4) – 22
+q0159	There are 190 guests at a wedding. What is the least number of circular tables needed to seat all the guests if each table seats exactly 8 people?	A:22	B:23	C:24	D:25
+q0160	 Which of the given formulas of PL is the best symbolization of the following sentence?\nEverybody loves Raymond, or not.	A:L	B:~L	C:L • ~L	D:L ∨ ~L
+q0161	 Select the best translation into predicate logic. All planets are smaller than Jupiter. (j: Jupiter; Px: x is a planet; Sxy: x is smaller than y)	A:(∃x)(Px • Sxj)	B:(∀x)(Px • Sxj)	C:(∀x)(Px ⊃ Sjx)	D:(∀x)(Px ⊃ Sxj)
+q0162	Select the best translation into predicate logic. José introduces Wilma to Kevin. (j: José; k: Kevin; w: Wilma; Ixyz: x introduces y to z)	A:Iwkj	B:Ijwk	C:Iwjk	D:Ijkw
+q0163	 Which of the given formulas of PL is the best symbolization of the following sentence?\nThe restaurant serves pie or cheesecake or ice cream for dessert.	A:P ∨ (C ∨ I)	B:(P ∨ C) ∨ I	C:P ∨ C ∨ I	D:Options A and B
+q0164	 Which of the given formulas of PL is the best symbolization of the following sentence?\nIf Beth rides her bike, she gets to work earlier.	A:B ⊃ W	B:W ⊃ B	C:B ≡ W	D:Both A and B
+q0165	Select the best translation into predicate logic: Either Taylor or Eric is a latte boy.	A:Lt ∨ Le	B:Lx ∨ Ly	C:tL ∨ eL	D:Tl ⊃ El
+q0166	Select the best translation into predicate logic: Abdul and Cleopatra are Egyptian.	A:Ea • Ec	B:Ea • c	C:Ae ∨ Ce	D:Ex • Ey
+q0167	 Select the best translation into predicate logic: Ms. Jackson lent me some sugar, but neither Janet nor Latoya did.	A:Lm ∨ ~(Jl ∨ Ll)	B:Lm • ~(Lj • Ll)	C:Lm • ~(Lj ∨ Ll)	D:Lm ∨ ~(Lj • Ll)
+q0168	 Which of the following propositions is not an immediate (one-step) consequence in PL of the given premises?\nI ⊃ (J ≡ K)\n(J ≡ K) ⊃ (L ∨ M)\nI ⊃ ~L	A:~L	B:J ≡ K	C:I ⊃ (L ∨ M)	D:~L ⊃ (J ≡ K)
+q0169	 Which of the given formulas of PL is the best symbolization of the following sentence?\nDylan likes neither math nor science.	A:M ∨ S	B:~(M • S)	C:~(M ∨ S)	D:~M ∨ ~S
+q0170	Which of the following countries generated the most total energy from solar sources in 2019?	A:China	B:United States	C:Germany	D:Japan
+q0171	As of 2020, about what percentage of the world population practices open defecation?	A:2%	B:4%	C:9%	D:18%
+q0172	In 1965 how many Americans thought that sending troops to Vietnam was a mistake?	A:25%	B:45%	C:65%	D:85%
+q0173	In 1997, the World Bank found that the fraction of the world’s population living in low and lower-middle income countries—that is, countries with per capita incomes of $1230 or less—was approximately	A:25%	B:40%	C:55%	D:75%
+q0174	Controlling for inflation and PPP-adjustment, about how much did GDP per capita increase from 1950 to 2016 in China?	A:by 4 fold	B:by 8 fold	C:by 16 fold	D:by 32 fold
+q0175	Which of the following was responsible for the most death in the 20th century?	A:Earthquakes	B:Volcanic activity	C:Wildfires	D:Floods
+q0176	About what percentage of survey respondents from China report having paid a bribe in the last year to access public services (such as education; judiciary; medical and health; police; registry and permit services; utilities; tax revenue and customs; and land service) as of 2017?	A:26%	B:46%	C:66%	D:86%
+q0177	As of 2017, the share of GDP spent on the military by China is about	A:0.50%	B:2%	C:6%	D:12%
+q0178	What is the median international income as of 2020?	A:$300 	B:$1,000 	C:$10,000 	D:$30,000 
+q0179	As of 2017, how many people in the world have some access to electricity?	A:60%	B:70%	C:80%	D:90%
+q0180	Two unrelated species evolve in a way that makes them more similar.	A:Divergent evolution	B:Convergent evolution	C:Parallel evolution	D:Coevolution
+q0181	All of the following statements are true EXCEPT	A:thyroxine increases the rate of metabolism	B:insulin decreases storage of glycogen	C:vasopressin stimulates water reabsorption in the kidney	D:epinephrine increases blood sugar levels and heart rate
+q0182	Which of the following is a biotic factor that could affect the growth rate of a population?	A:Volcanic eruption	B:Glacier melting	C:Destruction of the ozone layer	D:Sudden reduction in the animal food resource
+q0183	The nucleotide sequence of a DNA molecule is 5′-C-A-T-3′. A mRNA molecule with a complementary codon is transcribed from the DNA in the process of protein synthesis a tRNA pairs with a mRNA codon. What is the nucleotide sequence of the tRNA anticodon?	A:5′-G-T-A-3′	B:5′-G-U-A-3′	C:5′-C-A-U-3′	D:5-′U-A-C-3′
+q0184	Which of the following about meiosis is NOT true?	A:Meiosis produces two haploid gametes.	B:Homologous chromosomes join during synapsis.	C:Sister chromatids separate during meiosis I.	D:Crossing-over increases genetic variation in gametes.
+q0185	An animal that is harmless copies the appearance of an animal that is dangerous as a defense mechanism to make predators think twice about attacking.	A:Aposomatic coloration	B:Batesian mimicry	C:Deceptive markings	D:Cryptic coloration
+q0186	Which of the following is known to be involved in the photoperiodic flowering response of angiosperms?	A:Auxin	B:Cytochrome	C:Phytochrome	D:Gibberellins
+q0187	In general, animal cells differ from plant cells in that animal cells have	A:a cell wall made of cellulose	B:lysosomes	C:large vacuoles that store water	D:centrioles within centrosomes
+q0188	A cell is placed into a hypertonic environment and its cytoplasm shrivels up. This demonstrates the principle of	A:diffusion.	B:active transport.	C:facilitated diffusion.	D:plasmolysis.
+q0189	A child with type A B blood inherits an IA allele from one parent and an IB allele from the other. The child will carry both A and B glycoproteins on the surface of all red blood cells. This pattern of expression is referred to as	A:codominance	B:epistasis	C:polygenic	D:linkage
+q0190	The rate law may be written using stoichiometric coefficients for which of the following?	A:Precipitation reactions	B:Acid-base reactions	C:Elementary processes	D:Solubility reactions
+q0191	The melting point of straight-chain hydrocarbons increases as the number of carbon atoms increase. The reason for this is the	A:increasing mass of the compounds	B:increasing polarity of the compounds	C:increasing number of induced dipoles per molecule	D:increased probability of hydrogen bonds
+q0192	Which of the following pair of liquids is expected to be immiscible?	A:H2O and CH3OH	B:C6H6 and C5H12	C:C10H22 and CH2CH2CH2OH	D:CH3CH2NH2 and CH3CH2CH2OH
+q0193	The subatomic particle with the most penetrating ability is	A:a beta particle	B:a neutron	C:a proton	D:an alpha particle
+q0194	Identify the Brønsted-Lowry conjugate acid-base pair in the following list.	A:H3O+ and OH-	B:H3PO4 and H3PO3	C:HC2H3O2 and C2H3O2-	D:SO32- and SO22-
+q0195	Using fundamental trends in electronegativity and bond strength, which of the following should be the strongest acid?	A:H2S	B:HI	C:HBr	D:H2O
+q0196	Which of the following is a reduction half-reaction? (1) Cu2+ + e- → Cu+ (2) Cu+ + e- → Cu0 (3) Fe2+ → Fe3+ + e-	A:1 only because copper(II) ions are reduced	B:3 only because the iron is reduced	C:1 and 2 because they both reduce copper ions	D:1 and 3 because they do not have insoluble ions
+q0197	A 2.35-gram sample was dissolved in water, and the chloride ions were precipitated by adding silver nitrate (Ag+ + Cl- → AgCl). If 0.435 g of precipitate was obtained, what is the percentage of chlorine in the sample?	A:10.80%	B:4.60%	C:43.50%	D:18%
+q0198	Less than 1/1000 of the mass of any atom is contributed by	A:the electrons	B:the electrons and neutrons	C:the electrons and protons	D:the protons and neutrons
+q0199	A sample of solid MgCl2 would be most soluble in which of the following solutions?	A:LiOH(aq)	B:CBr4(aq)	C:Mg(NO3)2(aq)	D:AlCl3(aq)
+q0200	Let x = 1. What is x << 3 in Python 3?	A:1	B:3	C:8	D:16
+q0201	What is the output of the statement "a" + "ab" in Python 3?	A:Error	B:aab	C:ab	D:a ab
+q0202	The color of a pixel can be represented using the RGB (Red, Green, Blue) color model, which stores values for red, green, and blue, each ranging from 0 to 255. How many bits (binary digits) would be needed to represent a color in the RGB model?	A:8	B:16	C:24	D:32
+q0203	Which types of functions grow the slowest?	A:O(log e^N)	B:O(log N)	C:O(log log N)	D:O(N)
+q0204	In Python 3, what is the following function returns item from the list with max value?	A:cmp(list)	B:len(list)	C:max(list)	D:min(list)
+q0205	Which pillar of cybersecurity is compromised when someone logs into a system using a stolen login and password?	A:Authentication	B:Confidentiality	C:Integrity	D:Nonrepudiation
+q0206	What is the value of this python expression: 4 + 3 % 2?	A:1	B:6	C:4	D:5
+q0207	Let l = [1,2,3,4]. What is sum(l) in Python3?	A:4	B:1	C:10	D:8
+q0208	Which of the following has the greatest potential for compromising a user's personal privacy?	A:A group of cookies stored by the user's Web browser	B:The Internet Protocol (IP) address of the user's computer	C:The user's e-mail address	D:The user's public key used for encryption
+q0209	Let l = [1,2,2,3,4]. In Python3, what is a possible output of set(l)?	A:{1}	B:{1,2,2,3,4}	C:{1,2,3,4}	D:{4,3,2,2,1}
+q0210	Which zone contains low-income slums, ethnic ghettos, and general deterioration in Burgess's concentric zone model of urban form?	A:First	B:Second	C:Third	D:Fourth
+q0211	On which of the following can one most accurately depict true geographical distance, true direction, true size, and true shape?	A:A Mercator projection	B:A globe	C:A conic projection	D:A gnomonic projection
+q0212	Ankara, Turkey and Islamabad, Pakistan are both examples of	A:desert cities.	B:forward-thrust capitals.	C:old colonial capitals.	D:rival cities.
+q0213	A rejection of or indifference to religion in a country is called	A:polytheism.	B:animism.	C:secularism.	D:monotheism.
+q0214	All of the following are reasons major cities attract young people in Latin America EXCEPT	A:the availability of jobs.	B:the potential for decent housing.	C:educational opportunities.	D:their families live there already.
+q0215	Which of the following is NOT used by geographers to determine absolute location?	A:Longitude	B:Latitude	C:Equator	D:Distance to the nearest city
+q0216	The intensive agricultural practice of planting and harvesting the same crop more than once a year is called	A:swidden.	B:double cropping.	C:pastorialism.	D:intertillage.
+q0217	When a new fashion design is introduced globally, the information initially travels through a process known as	A:contagious diffusion	B:relocation diffusion	C:innovative diffusion	D:hierarchical diffusion
+q0218	Which theory below was used as justification for US involvement in Vietnam in the 1960s and 1970s?	A:Devolution	B:Colonialism	C:Heartland theory	D:Containment theory
+q0219	What condition occurs when the people of one state want to annex a territory whose population is ethnically related to that state's population but now under the rule of another state?	A:Nationalism	B:Resource dispute	C:Irredentism	D:Positional dispute
+q0220	Of the following interest groups, which has created the largest number of political action committees (PACs) since the 1970s?	A:Environmental activists	B:Labor unions	C:For-profit business	D:Religious institutions
+q0221	The Commerce Clause of the Constitution has been used to	A:release detainees from prison following unlawful arrest	B:maintain the navy	C:increase the power of the national government	D:veto legislative bills of attainder
+q0222	Which of the following is true of the House Committee on Ways and Means?	A:Its primary role is to appropriate spending for infrastructure projects.	B:It is the primary author of congressional banking reform legislation.	C:It allocates funding for canals and waterways.	D:Its jurisdiction includes the tax system.
+q0223	Which of the following best predicts how someone will vote in an election?	A:The voter's gender	B:The voter's political party affiliation	C:The voter's socioeconomic status	D:The voter's religion
+q0224	Which of the following is the primary purpose of "motor voter" laws?	A:To increase turnout on election days	B:To make it easier for citizens to register to vote	C:To require that all voters know how to drive	D:To establish voter identification laws
+q0225	Which of the following is an example of an implied power of the Congress?	A:regulation of interstate commerce	B:borrowing money on the credit of the United States	C:oversight of executive branch agencies	D:declarations of war
+q0226	Unlike in a closed primary election, in an open primary election	A:voters select the winner by caucus instead of by individual ballots	B:the election results are not binding	C:any registered voter may participate, regardless of party affiliation	D:voters may register to vote on the day of the election
+q0227	Which of the following is true of federal judges?	A:They serve four-year terms that coincide with the presidential term.	B:They are appointed for life and can only be removed by impeachment.	C:They are elected by Congress and serve ten-year terms.	D:They are appointed for life and cannot be removed from office.
+q0228	In Gideon v. Wainwright, the Supreme Court ruled that criminal defendants in state cases have the right	A:to representation by an attorney	B:not to incriminate themselves	C:to a speedy trial	D:not to be punished excessively
+q0229	The Civil Rights Act of 1964 was passed to reinforce the	A:presidential veto	B:system of checks and balances	C:states' power to challenge federal regulation	D:Fourteenth Amendment
+q0230	Assume the reserve requirement is 10 percent. If the FED sells $29 million worth of government securities in an open market operation then the money supply can	A:increase by $2.9 million.	B:decrease by $2.9 million.	C:increase by $290 million.	D:decrease by $290 million.
+q0231	Which of the following statements is true?	A:Some of the things included in M2 are not as liquid as the things in MI.	B:M2 is smaller than MI.	C:M I is backed by gold and M2 is backed by silver.	D:The biggest component of M I is currency.
+q0232	If the money supply increases what happens in the money market (assuming money demand is downward sloping)?	A:The nominal interest rates rises.	B:The nominal interest rates falls.	C:The nominal interest rate does not change.	D:Transaction demand for money falls.
+q0233	Depreciation of the dollar is most likely to	A:increase imports	B:increase travel abroad	C:increase exports	D:decrease a trade surplus
+q0234	Expansionary fiscal policy would best be prescribed to	A:eliminate a recessionary gap	B:reduce inflation	C:reduce the interest rate	D:eliminate an inflationary gap
+q0235	If prices are expected to rise more slowly in the future	A:the Phillips curve will shift to the right	B:the actual rate of inflation will increase	C:the actual inflation rate will remain steady unless supply shocks set in	D:these expectations will become reality
+q0236	Which of the following would increase the aggregate demand function?	A:Higher levels of imported goods	B:Lower levels of consumer wealth	C:A higher real interest rate	D:Lower taxes on personal income
+q0237	A decrease in real investment stemming from higher interest rates due to government purchases is most commonly called	A:crowding out	B:zero policy effectiveness	C:the Laffer effect	D:fiscal defeat
+q0238	The appropriate fiscal policy to remedy inflation calls for	A:the federal government to run a deficit.	B:the federal government to run a surplus.	C:increased taxes and government spending.	D:decreased government spending and taxes.
+q0239	Which of the following will result in economic growth?	A:A decrease in the unemployment rate.	B:An increase in the unemployment rate.	C:An increase in the size of the labor force.	D:A decrease in the population.
+q0240	At breakfast, lunch, and dinner, Joe randomly chooses with equal probabilities either an apple, an orange, or a banana to eat. On a given day, what is the probability that Joe will eat at least two different kinds of fruit?	A:\frac{7}{9}	B:\frac{8}{9}	C:\frac{5}{9}	D:\frac{9}{11}
+q0241	What is the sum of all positive integer values of $n$ such that $n^2$ is a factor of $1200$?	A:42	B:12	C:36	D:39
+q0242	An 8.5-by-11-inch piece of paper is folded in half repeatedly (never being unfolded), each time shortening what was then the longer side. What is the length of the longest side, in inches, immediately after the second fold? Express your answer as a decimal to the nearest tenth.	A:4.5	B:1	C:5.5	D:5
+q0243	Let $f(x)=\frac{(x-2)^2-9}{3}$. The equation $y=f(x)$ is graphed, and the $x$- and $y$-intercepts of the graph are connected to form a polygon. What is the area of that polygon?	A:5	B:\frac{25}{6}	C:\frac{\sqrt{2465}{9}	D:2
+q0244	Find the remainder when 25^1059 is divided by 23.	A:11	B:13	C:8	D:5
+q0245	The standard tip in a restaurant is $ 15 \%$ of the bill before tax. Many people in California find the tip by doubling the sales tax, which is $8.25 \%$. By how many cents does this exceed the standard tip on a bill of $ \$60 $ before tax?	A:90	B:80	C:70	D:60
+q0246	A right triangle has legs of length $6$ and $b$, and a hypotenuse of length $c$. The perimeter of the triangle is $18$. Compute $c$.	A:18	B:\frac{15}{2}	C:8	D:6
+q0247	John has five children. What is the probability that at least half of them are girls? (We can assume a boy is equally likely to be born as is a girl, and vice-versa.)	A:\frac{1}{2}	B:\frac{1}{4}	C:\frac{1}{8}	D:\frac{3}{5}
+q0248	The curve defined by x^3 + xy - y^2 = 10 has a vertical tangent line when x =	A:0 or –1/3	B:1.037	C:2.074	D:2.096
+q0249	When the expression $-2x^2-20x-53$ is written in the form $a(x+d)^2+e$, where $a$, $d$, and $e$ are constants, what is the sum $a+d+e$?	A:-80	B:0	C:6	D:53
+q0250	At a Nash equilibrium,	A:the supply curve intersects the demand curve	B:neither party has an incentive to deviate from his or her strategy	C:the marginal revenue curve intersects the marginal cost curve	D:the equilibrium is unstable and each party would like to switch strategies
+q0251	Which of the following is an example of an economic rent?	A:A superstar basketball player's $50 million earnings.	B:A social security retirement income.	C:A welfare payment from social services.	D:A check to a college student from a parent or guardian.
+q0252	Which of the following is not among the methods unions use to increase wages?	A:Negotiations to obtain a wage floor	B:Restrictive membership policies	C:Efforts to decrease the prices of substitute resources	D:Featherbedding or make-work rules
+q0253	Which of the following will increase wages for tuba makers?	A:An increase in the number of graduates at tuba maker training school	B:An increase in the price of tubas	C:An increase in the price of tuba lessons	D:An increase in the tax on tubas
+q0254	Suppose that aluminum is a key production input in the production of bicycles. If the price of aluminum falls, and all other variables are held constant, we expect	A:the demand for aluminum to rise.	B:the supply of bicycles to rise.	C:the supply of bicycles to fall.	D:the demand for bicycles to rise.
+q0255	For a competitive firm, what is the most important thing to consider in deciding whether to shut down in the short run?	A:Compare AVC to MR.	B:Compare TR to TC.	C:Do not produce if the TFC is not covered by revenue.	D:Produce the highest quantity demanded regardless of price.
+q0256	If a market is organized by a cartel, we can expect	A:normal profits for all cartel firms.	B:an incentive for cartel firms to cheat on the cartel agreement.	C:profit maximization by individual firms in the cartel.	D:allocative efficiency.
+q0257	The individual firm, operating under perfect competition, is characterized as:	A:a price-maker.	B:one of a few sellers.	C:a price strategist.	D:a price-taker.
+q0258	Unlike a perfectly competitive firm, a monopoly	A:will charge the highest price it can on the demand curve	B:has a horizontal marginal revenue curve	C:has an upward sloping total revenue curve	D:faces a downward sloping demand curve
+q0259	The basis for the answer in number 1 is	A:P or wage rate of labor > MRP of labor and with one additional unit of labor, wage rate < MRP.	B:P or wage rate of labor < MRP of labor and with one additional unit of labor WI, > MRP.	C:total revenue is at a maximum.	D:total output is at a maximum.

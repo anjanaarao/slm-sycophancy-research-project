@@ -1,0 +1,130 @@
+q0000	Is finite field mein diye gaye polynomial ke saare zeros find karo, jiske coefficients usi field mein hain. x^5 + 3x^3 + x^2 + 2x in Z_5	=	=	=	=
+q0001	Statement 1 | Ek ring homomorphism one to one hota hai agar aur sirf agar uska kernel {0} ho. Statement 2 | Q, R mein ek ideal hai.	=	=	=	=
+q0002	Multiplicative group {1, -1, i , -i} mein -i ka inverse kya hai?	=	=	=	=
+q0003	Statement 1 | Agar T: V -> W ek linear transformation hai aur dim(V ) < dim(W) < 1 hai, to T zaroor injective hoga. Statement 2 | Maan lo dim(V) = n hai aur T: V -> V linear hai. Agar T injective hai, to woh ek bijection hai.	=	=	=	=
+q0004	Q ke upar diye gaye field extension Q(sqrt(2), sqrt(3)) ki degree find karo.	=	=	=	=
+q0005	Diye gaye ring mein product compute karo. (20)(-8) in Z_26	=	=	=	=
+q0006	Maan lo A aur B sets hain, f: A -> B aur g: B -> A aise functions hain ki har a \in A ke liye g(f(a)) = a. Statement 1 | Function f ka injective hona zaroori hai. Statement 2 | Function f ka surjective hona zaroori hai.	=	=	=	=
+q0007	Statement 1 | Subring ki unity wahi honi chahiye jo ring ki unity hai. Statement 2 | Har field ek integral domain hota hai.	=	=	=	=
+q0008	Agar A = (1, 2, 3, 4) hai. Maan lo ~= {(1, 2), (1, 3), (4, 2)}. To ~ kya hai?	anti-symmetric nahi hai	transitive hai	reflexive hai	symmetric hai
+q0009	Ring Z x Z ki characteristic find karo.	=	=	=	=
+q0010	Male hormones inmein se kis ke dwara produce hote hain?	=	=	=	=
+q0011	Rib ke relation mein, corresponding intercostal nerve kahan hoti hai?	uske superior border ke deep mein.	uske superior border ke superficial mein.	uske inferior border ke deep mein.	uske inferior border ke superficial mein.
+q0012	Auditory tube ke baare mein kaunsa sahi hai?	inner ear aur nasopharynx ko connect karti hai.	second pharyngeal pouch se derive hoti hai.	levator veli palatini ke action se khulti hai.	tensor veli palatini ke action se band hoti hai.
+q0013	Cerebrospinal fluid brain ke around kinke beech circulate karta hai?	skull aur dura mater ke beech.	dura mater aur arachnoid mater ke beech.	arachnoid aur pia maters ke beech.	pia mater aur brain surface ke beech.
+q0014	Seventh cranial nerve kisko supply karti hai?	tongue ke posterior third par taste buds ko.	soft palate ke muscles ko.	lower lip ke muscles ko.	parotid salivary gland ko.
+q0015	Parasympathetic preganglionic nerves central nervous system ko kinke saath chhodti hain?	third cranial nerves ke saath.	fourth cranial nerves ke saath.	fifth cranial nerves ke saath.	sixth cranial nerves ke saath.
+q0016	Inmein se kaunsa abdominal cavity ke left upper quadrant mein diaphragm ke neeche hota hai?	=	=	=	=
+q0017	Inmein se kaunsa structure small intestine ka part hai?	=	=	=	=
+q0018	Inmein se kis bone ka ek process zygomatic bone ke saath judkar zygomatic arch banata hai?	=	=	=	=
+q0019	Saari spinal nerves ki dorsal roots mein kya hota hai?	sensory neuronal processes.	sensory aur autonomic neuronal processes.	motor neuronal processes.	motor aur autonomic neuronal processes.
+q0020	Agar aapko kisi object ki actual brightness aur aapki location se uski apparent brightness dono pata hain, to bina kisi aur information ke aap kya estimate kar sakte ho?	Aapke relative uski speed	Uska composition	Uska size	Aapse uski distance
+q0021	Hamare solar system ke kis planet par Great Red Spot milta hai?	=	=	=	=
+q0022	Zyadatar log rozana ka temperature measure karne ke liye C° (degree Celsius) use karte hain. Astronomers temperature ke liye K (Kelvin) use karna prefer karte hain. 25 C° approximately kitne Kelvin hote hain?	=	=	=	=
+q0023	Astronomical term ecliptic kya describe karta hai?	Poore saal sky mein Sun ka path.	Poore saal Earth ka axial tilt.	Earth ke rotation ki wajah se stars ka movement.	Axis of rotation se guzarne wali central line.
+q0024	Hum kaise jaante hain ki Earth kitni purani hai?	Earth ke andar materials ki layering se.	Ancient life ke fossils se.	Earth ki surface ki cratering history se.	Rocks aur meteorites ki radioactive dating se.
+q0025	Jis impact ko 65 million saal pehle dinosaurs ke mass extinction ka zimmedaar maana jaata hai, uska crater kahan hai?	=	Chicxulub Crater, Mexico ka Yucatan Peninsula.	=	Arizona mein Meteor Crater.
+q0026	Ek Mars year approximately kitne Earth years lamba hota hai?	=	=	=	=
+q0027	Jis life ko hum jaante hain, uske liye inmein se kaunsi cheez essential requirement nahi hai?	Oxygen breathe karne ki ability	Sunlight se energy banane ki ya aisi cheezein khaane ki ability jo yeh karti hain	Organic molecules ka ek source	A aur B
+q0028	Solar system ke kis planet (ya planets) mein active plate tectonics hai?	=	=	=	Mars aur Earth
+q0029	Trojan asteroids kahan located hain?	asteroid belt ke center mein	aise orbits par jo Earth ke orbit ko cross karte hain	Jupiter ke chaaron taraf	Jupiter ke orbit par, Jupiter se 60° aage aur peeche
+q0030	________ consumer ka yeh right hai ki woh control kar sake ki companies uske baare mein kaunsi information collect kar sakti hain aur use kaise store, use aur share kiya jaata hai.	=	=	=	=
+q0031	___________, ___________ aur __________ yeh sab factors moral intensity ko impact kar sakte hain.	=	=	=	=
+q0032	Predatory pricing.	=	=	=	=
+q0033	Theory ki complexity.	=	=	=	=
+q0034	Corporate governance Combined Code of Practice ke underlying principles mein se inmein se kaunsa nahi hai?	=	=	=	=
+q0035	Post-modern ethics kehti hai ki ethics context aur individual specific hoti hai aur isliye unka ethics ke liye ek internal guide hota hai.	=	=	=	=
+q0036	Workplace ko ______ karne mein employees ko empower kiya jaata hai, jaise 'job enrichment' jismein employees ko apna kaam organize karne ka decide karne ke liye zyada scope milta hai, ya 'job enlargement' jismein employees ko zyada tarah ke tasks diye jaate hain.	=	=	=	=
+q0037	Healthy eating, khaas kar sugar aur salt consumption, food aur packaging waste aur supply chain CO2 emissions, yeh sab ________ ke saamne business ethics issues hain.	=	=	=	=
+q0038	Woh bahut irrational aur uncodified hain.	=	=	=	=
+q0039	Private Sector Social Enterprise Model.	=	=	=	=
+q0040	Jis patient ko rapid blood transfusion ki zaroorat ho, usmein aap kis size ka cannula use karoge (2020 ki medical knowledge ke hisaab se)?	=	=	=	=
+q0041	Translation ho jaane ke baad protein structure modify karne ke liye inmein se kaunsa process use nahi hota?	=	Peptide bonds ke through aur amino acids attach karna.	=	=
+q0042	Left ventricle ke contractions ke beech bhi blood vessels mein flow karta rehta hai kyunki:	atria contract ho rahe hote hain.	vessels contracted hote hain.	right ventricle relaxed hota hai.	arteries mein elastic recoil hota hai.
+q0043	Hydrogen ions kab bante hain?	jab glycogen deplete ho jaata hai.	jab phosphocreatine breakdown hota hai.	jab pyruvate lactate mein convert hota hai.	jab ATP resynthesise karne ke main tareeke ke roop mein glycolysis use ho raha ho.
+q0044	Inmein se kaunsa amino acid nahi hai?	=	=	=	=
+q0045	Wound drainage ko serous kab kaha jaata hai?	jab usmein red blood cells hon.	jab woh thick aur yellow ya green ho.	jab usmein microorganisms hon.	jab woh clear ya thoda yellow ho.
+q0046	Bachche ka sex kiske inheritance se decide hota hai?	mother se mile X chromosomes ki sankhya se.	X chromosome par ek recessive allele se.	mother se mile ek single Y chromosome se.	father se mile ek single Y chromosome se.
+q0047	Blood clots baar-baar catheter ko block kar rahe hain. Aapko kya karna chahiye?	Help ke liye call karo.	Medical staff ko inform karo.	Patient ko inform karo.	Catheter nikaal kar dobara catheterize karo.
+q0048	Genome kya hai?	kisi organism ke somatic cells mein milne wale chromosomes ki sankhya.	kisi organism ka poora DNA sequence.	un saare proteins ki list jo ek organism bana sakta hai.	ek poore chromosome ka DNA sequence.
+q0049	General taur par, exercise ki intensity jitni zyada hogi, utna hi zyada proportional contribution kiska hoga?	aerobic energy production ka.	anaerobic energy production ka.	ATP production mein TCA cycle (Krebs' cycle) ka.	ATP production mein electron transfer chain ka.
+q0050	Single-stranded RNA template se RNA/DNA hybrid synthesize karne ke liye kya chahiye?	ek DNA ya RNA primer aur reverse transcriptase	ek DNA ya RNA primer aur DNA polymerase	sirf RNase	sirf reverse transcriptase
+q0051	Population growth mein, jis point par natality aur mortality rates ek doosre ke barabar hote hain, use kya kehte hain?	=	=	=	=
+q0052	Dicot stem ke center mein pith tissue kis cell type se bana hota hai?	=	=	=	=
+q0053	Humans mein xeroderma pigmentosum (XP) naam ka hereditary disorder DNA ke ultraviolet damage ko repair na kar paane ka kaaran ban sakta hai. XP waale individuals mein inmein se kaunsa molecular lesion sabse zyada jama hone ki sambhavna hai?	=	Cytosine ka deamination	=	=
+q0054	Inmein se sab intracellular messengers ki tarah kaam kar sakte hain, SIWAAY	=	=	=	=
+q0055	Fungi inmein se sab mein participate karte hain, SIWAAY	glucose banane ke liye photosynthesis	alcohol banane ke liye fermentation	humans ke saath association karke ringworm paida karna	plants ki roots ke saath association karke mycorrhizae banana
+q0056	Human genome ka approximately kitna fraction proteins encode karta hai?	=	=	=	=
+q0057	Humans mein calcium ke adequate serum levels kiske secretion se maintain hote hain?	=	=	=	=
+q0058	Phalloidin death cap mushroom dwara banaya gaya ek toxin hai. Yeh toxin actin subunits se bind hota hai aur actin ka function disrupt karta hai. Inmein se kaunsa structure phalloidin se sabse directly affect hoga?	=	=	=	=
+q0059	Homeotic cluster genes ka mutation aksar Drosophila mein inmein se kaunsa developmental defect paida karta hai?	Lagataar segments ke ek group ka absent hona	Ek segment ka doosre segment mein transform ho jaana	Anterior-posterior axis ke along har segment mein polarity defects	Imaginal discs mein tumor banna
+q0060	Zero-order chemical reaction A → B ka rate, r, inmein se kis tarah express kiya ja sakta hai?	=	=	=	=
+q0061	Jab neeche di gayi equation balance ki jaaye, to inmein se kya sahi hai?\n__ MnO4− + __ I− + __ H+ <-> __ Mn2+ + __ IO3− + __ H2O	I− : IO3− ratio 3:1 hai.	MnO4- : I- ratio 6:5 hai.	MnO4- : Mn2+ ratio 3:1 hai.	H+ : I− ratio 2:1 hai.
+q0062	43Ca ka spin angular momentum calculate karo. [I = 7⁄2]	=	=	=	=
+q0063	Neeche diye gaye compounds mein se kiska melting point sabse kam hai?	=	=	=	=
+q0064	Jab ground-state aluminum ionize hota hai, to jo electron sabse aasaani se remove hota hai uska orbital angular momentum quantum number, l, kya hai?	=	=	=	=
+q0065	55Mn nuclide ke liye allowed energy levels ki sankhya kitni hai?	=	=	=	=
+q0066	Aisa substance jise generally paani mein toxic pollutant nahi maana jaata, woh hai	=	ek halogenated hydrocarbon	=	=
+q0067	Saare proteins lagbhag 190 nm wavelength ki electromagnetic radiation absorb karte hain, jo protein molecule mein π → π* excitation ke corresponding hai. Yeh wavelength spectrum ke kis region mein milti hai?	=	=	=	=
+q0068	Thionyl chloride, SOCl2, ki molecular geometry ko sabse achhe se kaise describe kiya ja sakta hai?	=	=	=	=
+q0069	Inmein se kaunsi procedure(s) measured results par random errors ke influence ko kam karti hai?\nI. Signal averaging\nII. Internal standards ka use\nIII. Multiple samples ke results ko average karna	Sirf I	Sirf II	Sirf III	Sirf I aur III
+q0070	Inmein se kaunsa statement purely segmented memory system ki properties describe karta hai?\nI. Yeh memory ko equal size ke units mein divide karta hai.\nII. Yeh virtual memory implement karne deta hai.\nIII. Ismein internal fragmentation ki problem hoti hai.	Sirf I	Sirf II	Sirf III	I aur III
+q0071	Ek given undirected graph G se related neeche ki problems mein se kaunsi abhi polynomial time mein solvable maani jaati hai?	G mein sabse lamba simple cycle find karna	G mein sabse chhota cycle find karna	G ke SAARE spanning trees find karna	G mein sabse bada clique find karna
+q0072	Inmein se kaunsi bitmap graphics ki property NAHI hai?	Pixels ke blocks ko efficiently move karne ke liye fast hardware exist karta hai.	Realistic lighting aur shading ki ja sakti hai.	Saare line segments straight display kiye ja sakte hain.	Polygons ko solid colors aur textures se fill kiya ja sakta hai.
+q0073	Bob 1 aur 1,000 ke beech ek number likhta hai. Mary ko Bob se "yes/no" questions poochh kar woh number identify karna hai. Mary jaanti hai ki Bob hamesha sach bolta hai. Agar Mary optimal strategy use kare, to worst case mein woh exactly kitne questions ke baad answer jaan legi?	=	=	=	=
+q0074	8-bit words se numbers ke inmein se kis representation mein integers 109 aur -42 ka addition range ke andar hai?\nI. One's complement\nII. Two's complement\nIII. Sign and magnitude	Sirf I	Sirf II	Sirf I aur II	I, II, aur III
+q0075	Inmein se kis sorting algorithm ka average-case aur worst-case running time O(n log n) hai?	=	=	=	=
+q0076	Maan lo k >= 2. Maan lo L, {0, 1}^* mein strings ka set hai jahan x \in L agar aur sirf agar x mein 0's ki sankhya k se divisible ho aur 1's ki sankhya odd ho. L ko recognize karne wale deterministic finite automaton (DFA) mein minimum kitne states honge?	=	=	=	=
+q0077	Inmein se kis language feature ke liye static allocation ki jagah stack-based storage allocation use karna zaroori hai?	=	=	=	=
+q0078	Fuzzy logic data handle karne ka ek tareeka yeh ho sakta hai ki ternary (base-3) logic wala computer design kiya jaaye taaki data “true,” “false,” aur “unknown” ke roop mein store ho sake. Agar har ternary logic element ko flit kaha jaaye, to kam se kam 256 alag values represent karne ke liye kitne flits chahiye?	=	=	=	=
+q0079	Maan lo kisi software product ka mean time between failures 10,000 hours hai aur mean time to repair 20 hours hai. Agar yeh product 100 customers use karte hain, to iski availability kya hai?	=	=	=	=
+q0080	Isomorphism tak, order 16 ke kitne additive abelian groups G mein yeh property hai ki G ke har x ke liye x + x + x + x = 0?	=	=	=	=
+q0081	Maan lo P un polynomials ka set hai jinke coefficients Z_5 mein hain aur degree 7 se kam ya barabar hai. Agar operator D, P ke p(x) ko uske derivative p′(x) par bhejta hai, to D ke null space n aur range r ki dimensions kya hain?	n = 1 aur r = 6	n = 1 aur r = 7	n = 2 aur r = 5	n = 2 aur r = 6
+q0082	Inmein se kya sahi hai?	Har compact space complete hota hai	Har complete space compact hota hai	Na (a) na (b).	(a) aur (b) dono.
+q0083	Maan lo F ek constant unit force hai jo xyz-space mein vector (-1, 0, 1) ke parallel hai. Jo particle time t=0 se t=1 ke beech (t, t^2, t^3) path par move karta hai, us par F dwara kiya gaya work kitna hai?	=	=	=	=
+q0084	3 <= n <= 11 waale kin integers n ke liye order n ka sirf ek group hota hai (isomorphism tak)?	Aisa koi integer n nahi hai	Sirf 3, 5, 7, aur 11 ke liye	Sirf 3, 5, 7, 9, aur 11 ke liye	Sirf 4, 6, 8, aur 10 ke liye
+q0085	x = 0 par y = x + e^x ke graph ki tangent line ki equation inmein se kaunsi hai?	=	=	=	=
+q0086	Agar A woh 2 by 2 matrix hai jiski (i, j) entry i + j ke barabar hai, aur B woh 3 by 3 matrix hai jiski (i, j) entry i + j ke barabar hai, to sum detA + detB ki value find karo.	=	=	=	=
+q0087	(1+i)^10 =	=	=	=	=
+q0088	Inmein se kis circle ke parabola x^2 = y + 4 ke saath sabse zyada points of intersection hain?	=	=	=	=
+q0089	Maan lo T: R^2 -> R^2 woh linear transformation hai jo point (1, 2) ko (2, 3) par aur point (-1, 2) ko (2, -3) par map karta hai. To T point (2, 1) ko kahan map karega?	=	=	=	=
+q0090	Translation ho jaane ke baad protein structure modify karne ke liye inmein se kaunsa process use nahi hota?	=	Peptide bonds ke through aur amino acids attach karna.	=	=
+q0091	Glycolysis us pathway ka naam hai jismein kiska conversion hota hai?	glycogen se glucose-1-phosphate.	glycogen ya glucose se fructose.	glycogen ya glucose se pyruvate ya lactate.	glycogen ya glucose se pyruvate ya acetyl CoA.
+q0092	Multiple sprint activities ke dauraan peripheral muscle fatigue develop hone mein inmein se kiska role maana jaata hai?	Inorganic phosphate ka accumulation.	Muscles mein hyperosmolality develop hona.	Antioxidants ki excess.	Potassium ki kami.
+q0093	Muscle lactate production kab badhta hai?	jab oxygen aasaani se available ho.	jab glucose breakdown se pyruvate na ban sake.	jab muscle ka pH gir jaaye.	jab exercise shuru hote hi glycolysis activate ho.
+q0094	Skeletal muscle mein contractile process shuru karne ka trigger kya hai?	potassium ka myosin se bind hona.	calcium ka tropomyosin se bind hona.	ATP ka myosin cross bridges se bind hona.	calcium ka troponin se bind hona.
+q0095	Pharmacological agents dwara brain ke kin neurotransmitters mein badlaav ko fatigue development par asar daalte hue dikhaya gaya hai?	Acetyl choline aur noradrenaline.	Dopamine aur acetyl choline.	Glutamate aur serotonin.	Dopamine aur serotonin.
+q0096	Oxygen kahan use hoti hai?	glycolysis mein.	fatty acids ko acetyl CoA mein convert karne mein.	tricarboxylic acid cycle (Krebs' cycle) mein.	glycogenolysis mein.
+q0097	Creatine kisse synthesize hota hai?	muscles mein amino acids se.	liver mein amino acids se.	kidneys mein amino acids se.	kidneys mein creatinine se.
+q0098	Muscle cell mein phosphocreatine kahan paaya jaata hai?	mitochondria mein.	saare subcellular compartments mein.	sarcolemma mein.	cytoplasm mein.
+q0099	Bachche ka sex kiske inheritance se decide hota hai?	mother se mile X chromosomes ki sankhya se.	X chromosome par ek recessive allele se.	mother se mile ek single Y chromosome se.	father se mile ek single Y chromosome se.
+q0100	De Broglie ne hypothesis di ki free massive particle ka linear momentum aur wavelength inmein se kis constant se related hain?	=	=	=	=
+q0101	Doped semiconductor mein charge carriers ka sign inmein se kaunsi property measure karke pata kiya ja sakta hai?	=	=	=	=
+q0102	Visible wavelengths ki range mein spectroscopy karne ke liye sabse best type ka laser kaunsa hai?	=	=	=	=
+q0103	Ek magnetic field 0.2 m^2 area aur 250 turns waali circular coil ke plane ke perpendicular directed hai. Agar 0.25 s ke time interval mein magnetic field 0.01 T se 0.06 T tak badhaya jaaye, to coil mein average induced EMF kitna hoga?	=	=	=	=
+q0104	Dono ends par open organ pipe dwara produce kiye gaye pehle paanch harmonics 50 Hz, 100 Hz, 150 Hz, 200 Hz, aur 250 Hz hain. Pipe ko ek end par band karne ke baad inmein se kaunse harmonics, agar koi hain, bachenge?	Sirf 50 Hz, 150 Hz, aur 250 Hz	Sirf 100 Hz aur 200 Hz	Sirf 150 Hz aur 250 Hz	Koi nahi
+q0105	Sun ki surface ka temperature lagbhag 6,000 K hai aur yeh ek blackbody (Planck) spectrum emit karta hai jo 500 nm ke paas maximum par pahunchta hai. Jis body ki surface temperature lagbhag 300 K ho, uska thermal spectrum kis wavelength par maximum hoga?	=	=	=	=
+q0106	Hydrogen mein n = 4, l = 1 state waale electron ko consider karo. Inmein se kaunsi final state allowed transition se NAHI reach ki ja sakti?	n = 3, l = 2	n = 3, l = 1	n = 3, l = 0	n = 2, l = 0
+q0107	Doubly ionized lithium atom Li++ (Z = 3, A = 7) ka emission spectrum hydrogen atom ke jaisa hi hai jismein saari wavelengths	9 ke factor se kam ho jaati hain	49 ke factor se kam ho jaati hain	81 ke factor se kam ho jaati hain	9 ke factor se badh jaati hain
+q0108	4.0 dielectric constant waale nonmagnetic dielectric material ke andar light ki speed kitni hai?	=	=	=	=
+q0109	Ek nonrelativistic, one-dimensional collision mein, 2m mass ka particle rest par rakhe m mass ke particle se takraata hai. Agar collision ke baad dono particles chipak jaate hain, to initial kinetic energy ka kitna fraction collision mein lose hota hai?	=	=	=	=
+q0110	____________ bhi darknet ka ek part hai jo files ko anonymously transfer karne ke liye use hota hai.	=	=	=	=
+q0111	Inmein se kiski wireless security sabse strong hai?	=	=	=	=
+q0112	Generally baat karein to buffer overflow kab hota hai?	jab ek freed pointer par write kiya jaaye	jab stack se heap par buffer copy kiya jaaye	jab pointer ka use aisi memory access karne ke liye ho jo use allocate nahi hui	jab program notice kare ki buffer bhar gaya hai, aur isliye requests reject karna shuru kar de
+q0113	Inmein se kaunsa network intrusion detection aur real-time traffic analysis se deal karta hai?	=	=	=	=
+q0114	Proxy firewall kis layer par filter karta hai?	=	=	=	=
+q0115	_______ jaise purane operating systems aur NT-based systems mein buffer-overflow attack ek common vulnerability hai.	=	=	=	=
+q0116	Jab data receiver tak bilkul waise hi pahunchna chahiye jaisa bheja gaya tha, to use kya kehte hain?	Message Confidentiality	=	=	=
+q0117	Nmap kaunse port states determine karta hai?	=	=	=	=
+q0118	Ping sweep kyun use kiya jaata hai?	Live systems identify karne ke liye	Live systems locate karne ke liye	Open ports identify karne ke liye	Firewalls locate karne ke liye
+q0119	Messages se related chaar Primary Security Principles kaunse hain?	Confidentiality, Integrity, Non repudiation aur Authentication	Confidentiality, Access Control, Integrity, Non repudiation	Authentication, Authorization, Availability, Integrity	Availability, Authorization, Confidentiality, Integrity
+q0120	Electric circuit mein ek step-up transformer kya step up kar sakta hai?	=	=	Ye dono	Inmein se koi nahi
+q0121	Jab aap hawa se bhare party balloon ko dabaate ho, to aap uski kya badhaate ho?	=	=	=	=
+q0122	Black kiska combination hai?	saare colors ek saath	do ya zyada appropriate colors	jab prism ulta pakda jaaye tab ki light	Inmein se koi nahi
+q0123	Doppler effect tab hota hai jab sound ka source move karta hai	aapki taraf	aapse door	Ye dono	Inmein se koi nahi
+q0124	Inmein se sab electromagnetic waves hain, SIWAAY	=	=	=	Koi bhi family se bahar nahi hai; sab electromagnetic waves hain
+q0125	Jab tin can ko horizontal circle mein ghumaaya jaata hai, to can par net force kis taraf act karta hai?	andar ki taraf	bahar ki taraf	upar ki taraf	Inmein se koi nahi
+q0126	Ideal pulley system se ek 100-N crate ko rope ko 25 N force se neeche kheench kar uthao. Rope ki har 1-m length neeche kheenchne par crate kitna upar uthta hai?	=	=	=	Inmein se koi nahi
+q0127	Electric aur magnetic fields ka mutual induction kya produce kar sakta hai?	=	=	Ye dono	Inmein se koi nahi
+q0128	Beats ka phenomenon sound ke kis cheez se hota hai?	reflection se.	refraction se.	interference se.	Ye sabhi.
+q0129	Time dilation, length contraction aur relativistic momentum aur energy ki relativistic equations kab sahi hoti hain?	light ki speed ke paas waali speeds par.	rozana ki low speeds par.	saari speeds par.	sirf approximately.

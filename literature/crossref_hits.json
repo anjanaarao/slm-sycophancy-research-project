@@ -1,0 +1,207 @@
+{
+ "Can ChatGPT Defend its Belief in Truth? Evaluating LLM Reasoning via Debate": {
+  "DOI": "10.18653/v1/2023.findings-emnlp.795",
+  "title": [
+   "Can ChatGPT Defend its Belief in Truth? Evaluating LLM Reasoning via Debate"
+  ],
+  "container-title": [
+   "Findings of the Association for Computational Linguistics: EMNLP 2023"
+  ],
+  "published": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "type": "proceedings-article"
+ },
+ "Ask Again, Then Fail: Large Language Models' Vacillations in Judgment": {
+  "DOI": "10.18653/v1/2024.acl-long.577",
+  "title": [
+   "Ask Again, Then Fail: Large Language Models\u2019 Vacillations in Judgment"
+  ],
+  "container-title": [
+   "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)"
+  ],
+  "published": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "type": "proceedings-article"
+ },
+ "Multilingual Large Language Models Are Not (Yet) Code-Switchers": {
+  "DOI": "10.18653/v1/2023.emnlp-main.774",
+  "title": [
+   "Multilingual Large Language Models Are Not (Yet) Code-Switchers"
+  ],
+  "container-title": [
+   "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing"
+  ],
+  "published": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "type": "proceedings-article"
+ },
+ "MEGA: Multilingual Evaluation of Generative AI": {
+  "DOI": "10.18653/v1/2023.emnlp-main.258",
+  "title": [
+   "MEGA: Multilingual Evaluation of Generative AI"
+  ],
+  "container-title": [
+   "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing"
+  ],
+  "published": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "type": "proceedings-article"
+ },
+ "GLUECoS: An Evaluation Benchmark for Code-Switched NLP": {
+  "DOI": "10.18653/v1/2020.acl-main.329",
+  "title": [
+   "GLUECoS: An Evaluation Benchmark for Code-Switched NLP"
+  ],
+  "container-title": [
+   "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics"
+  ],
+  "published": {
+   "date-parts": [
+    [
+     2020
+    ]
+   ]
+  },
+  "type": "proceedings-article"
+ },
+ "Okapi: Instruction-tuned Large Language Models in Multiple Languages with Reinforcement Learning from Human Feedback": {
+  "DOI": "10.18653/v1/2023.emnlp-demo.28",
+  "title": [
+   "Okapi: Instruction-tuned Large Language Models in Multiple Languages with Reinforcement Learning from Human Feedback"
+  ],
+  "container-title": [
+   "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing: System Demonstrations"
+  ],
+  "published": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "type": "proceedings-article"
+ },
+ "Global MMLU: Understanding and Addressing Cultural and Linguistic Biases in Multilingual Evaluation": {
+  "DOI": "10.18653/v1/2025.acl-long.919",
+  "title": [
+   "Global MMLU: Understanding and Addressing Cultural and Linguistic Biases in Multilingual Evaluation"
+  ],
+  "container-title": [
+   "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)"
+  ],
+  "published": {
+   "date-parts": [
+    [
+     2025
+    ]
+   ]
+  },
+  "type": "proceedings-article"
+ },
+ "Do All Languages Cost the Same? Tokenization in the Era of Commercial Language Models": {
+  "DOI": "10.18653/v1/2023.emnlp-main.614",
+  "title": [
+   "Do All Languages Cost the Same? Tokenization in the Era of Commercial Language Models"
+  ],
+  "container-title": [
+   "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing"
+  ],
+  "published": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "type": "proceedings-article"
+ },
+ "HinGE: A Dataset for Generation and Evaluation of Code-Mixed Hinglish Text": {
+  "DOI": "10.18653/v1/2021.eval4nlp-1.20",
+  "title": [
+   "HinGE: A Dataset for Generation and Evaluation of Code-Mixed Hinglish Text"
+  ],
+  "container-title": [
+   "Proceedings of the 2nd Workshop on Evaluation and Comparison of NLP Systems"
+  ],
+  "published": {
+   "date-parts": [
+    [
+     2021
+    ]
+   ]
+  },
+  "type": "proceedings-article"
+ },
+ "Not All Languages Are Created Equal in LLMs: Improving Multilingual Capability by Cross-Lingual-Thought Prompting": {
+  "DOI": "10.18653/v1/2023.findings-emnlp.826",
+  "title": [
+   "Not All Languages Are Created Equal in LLMs: Improving Multilingual Capability by Cross-Lingual-Thought Prompting"
+  ],
+  "container-title": [
+   "Findings of the Association for Computational Linguistics: EMNLP 2023"
+  ],
+  "published": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "type": "proceedings-article"
+ },
+ "Sycophancy in Large Language Models: Causes and Mitigations": {
+  "DOI": "10.1007/978-3-031-92611-2_5",
+  "title": [
+   "Sycophancy in\u00a0Large Language Models: Causes and\u00a0Mitigations"
+  ],
+  "container-title": [
+   "Lecture Notes in Networks and Systems",
+   "Intelligent Computing"
+  ],
+  "published": {
+   "date-parts": [
+    [
+     2025
+    ]
+   ]
+  },
+  "type": "book-chapter"
+ },
+ "Language Model Tokenizers Introduce Unfairness Between Languages": {
+  "DOI": "10.52202/075280-1608",
+  "title": [
+   "Language Model Tokenizers Introduce Unfairness Between Languages"
+  ],
+  "container-title": [
+   "Advances in Neural Information Processing Systems 36"
+  ],
+  "published": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "type": "proceedings-article"
+ }
+}

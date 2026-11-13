@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.DS_Store
+
+# kept locally, not part of the repository
+archive/
+paper/
+paper-springer/
+Explanation.pdf

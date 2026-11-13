@@ -1,0 +1,130 @@
+q0130	PACF kin models ke beech distinguish karne ke liye zaroori hai?	Ek AR aur ek MA model	Ek AR aur ek ARMA model	Ek MA aur ek ARMA model	ARMA family ke andar ke alag-alag models
+q0131	Inmein se kaunsa statement fitted regression line ke algebraic representation ko sabse achhe se describe karta hai?	=	=	=	=
+q0132	Order condition kya hai?	Identification ke liye ek necessary aur sufficient condition	Identification ke liye ek necessary lekin sufficient nahi condition	Identification ke liye ek sufficient lekin necessary nahi condition	Aisi condition jo identification ke liye na necessary hai na sufficient
+q0133	Agar kisi estimator ke baare mein kaha jaaye ki uska variance minimum hai, to inmein se kaunsa statement imply NAHI hota?	Estimate ke apni true value se bahut door hone ki probability minimise hoti hai	Estimator efficient hai	Aise estimator ko "best" kaha jaayega	Aisa estimator hamesha unbiased hoga
+q0134	$y_t$ ke liye yeh model consider karo:\n\n$y_t = \mu + \lambda t + u_t$\n\nInmein se kaunsa $y_t$ ke process ko sabse accurately describe karta hai?	Ek unit root process	Ek stationary process	Ek deterministic trend process	Drift ke saath ek random walk
+q0135	Fixed effects panel model ko kabhi-kabhi kis naam se bhi jaana jaata hai?	Ek seemingly unrelated regression model	Least squares dummy variables approach	Random effects model	=
+q0136	Classical linear regression model ke matrix notation $y = X \beta + u$ mein, $u$ ki dimensions kya hain?	=	=	=	=
+q0137	Third order tak autocorrelation ke test ke liye inmein se kya use kiya ja sakta hai?	=	=	=	=
+q0138	Agar simultaneous system ka part har equation par OLS alag se apply kiya jaaye, to jo estimates milenge woh kaise honge?	Unbiased aur consistent	Biased lekin consistent	Biased aur inconsistent	Simultaneous system ka part equations par OLS apply karna impossible hai
+q0139	Agar potentially cointegrating regression ke residuals par Engle-Granger test apply kiya jaaye, to null hypothesis ka interpretation kya hoga?	Variables cointegrated hain	Variables cointegrated nahi hain	Dono variables stationary hain	Dono variables non-stationary hain
+q0140	LC oscillators kis range ki frequency wala waveform produce karne ke liye use hote hain?	=	=	=	=
+q0141	Binary number system mein kitne digits hote hain?	=	=	=	=
+q0142	Magnetic materials mein sabse zyada nuksaandeh impurity ________ hai.	=	=	=	=
+q0143	Higher transmission voltage ke advantage(s) kya hai/hain?	Transmission line ki power transfer capability badh jaati hai	Transmission line losses kam ho jaate hain	Conductor ka area of cross section aur volume kam ho jaata hai	upar diye gaye sabhi
+q0144	Inmein se kaunsa ek oscillator ka primary function hai?	sinusoidal oscillations produce karta hai	non sinusoidal waveforms generate karta hai	constant amplitude aur specific frequency par sustained oscillations generate karta hai	upar mein se koi nahi
+q0145	SCR ka latching current 20 mA hai. Uska holding current kitna hoga?	=	=	=	=
+q0146	Intel 8085A mein, kisi instruction ka pehla machine cycle kaunsa hota hai?	=	=	=	=
+q0147	Closed loop control system ke disadvantages inmein se kaunse hain?	Overall gain kam karta hai.	Complex aur costly hai.	Oscillatory response.	Upar diye gaye sabhi.
+q0148	Kisi bhi element ke Bohr model mein rings ki sankhya kisse determine hoti hai?	Periodic table par column number.	Atomic mass.	Periodic table par row number.	Atomic number.
+q0149	Monolithic IC mein kaunse oscillators fabricate karna aasaan hai?	=	=	=	=
+q0150	24 = 2p mein p ki value kya hai?	=	=	=	=
+q0151	Data set 23, 13, 18, 29, 32, 25 ka median find karo.	=	=	=	=
+q0152	Abe ne numbers ki is list ka mean aur median nikaala. 1, 3, 3 Agar list mein number 6 add kar diya jaaye, to	mean badh jaayega.	mean ghat jaayega.	median badh jaayega.	median ghat jaayega.
+q0153	Ek shelf par chaar books rakhi hain. Shelf par rakhi chaaron books ka weight, pounds mein, 2.5, 3.2, 2.7, 2.3 hai. Shelf se chuni gayi kisi bhi book ke weight, w, ko kaunsi inequality represent karti hai?	=	=	=	=
+q0154	2 cups aur 3 qt ke ratio ko simplest form mein fraction ki tarah likho.	=	=	=	=
+q0155	y ki kaunsi value y + 2.9 = 11 ko true banati hai?	=	=	=	=
+q0156	4 h mein 308 km drive karne ka unit rate likho. Zaroorat ho to nearest hundredth tak round karo.	=	=	=	=
+q0157	Ek ice cream shop ne ek din mein 48 vanilla milkshakes beche, jo us din beche gaye total milkshakes ka 40% tha. Us din ice cream shop ne total kitne milkshakes beche?	=	=	=	=
+q0158	Kaunsa algebraic expression "x se 22 kam quantity ka chaar guna" represent karta hai?	=	=	=	=
+q0159	Ek shaadi mein 190 guests hain. Agar har table par exactly 8 log baith sakte hain, to saare guests ko bithane ke liye kam se kam kitni circular tables chahiye?	=	=	=	=
+q0160	Neeche diye gaye sentence ka PL ke diye gaye formulas mein se sabse best symbolization kaunsa hai?\nEverybody loves Raymond, or not.	=	=	=	=
+q0161	Predicate logic mein sabse best translation select karo. Saare planets Jupiter se chhote hain. (j: Jupiter; Px: x ek planet hai; Sxy: x, y se chhota hai)	=	=	=	=
+q0162	Predicate logic mein sabse best translation select karo. José, Wilma ko Kevin se introduce karwata hai. (j: José; k: Kevin; w: Wilma; Ixyz: x, y ko z se introduce karwata hai)	=	=	=	=
+q0163	Neeche diye gaye sentence ka PL ke diye gaye formulas mein se sabse best symbolization kaunsa hai?\nRestaurant dessert mein pie ya cheesecake ya ice cream serve karta hai.	=	=	=	Options A aur B
+q0164	Neeche diye gaye sentence ka PL ke diye gaye formulas mein se sabse best symbolization kaunsa hai?\nAgar Beth apni bike chalati hai, to woh kaam par jaldi pahunchti hai.	=	=	=	A aur B dono
+q0165	Predicate logic mein sabse best translation select karo: Ya to Taylor ya Eric ek latte boy hai.	=	=	=	=
+q0166	Predicate logic mein sabse best translation select karo: Abdul aur Cleopatra Egyptian hain.	=	=	=	=
+q0167	Predicate logic mein sabse best translation select karo: Ms. Jackson ne mujhe thodi sugar udhaar di, lekin na Janet ne di na Latoya ne.	=	=	=	=
+q0168	Diye gaye premises se inmein se kaunsa proposition PL mein immediate (one-step) consequence nahi hai?\nI ⊃ (J ≡ K)\n(J ≡ K) ⊃ (L ∨ M)\nI ⊃ ~L	=	=	=	=
+q0169	Neeche diye gaye sentence ka PL ke diye gaye formulas mein se sabse best symbolization kaunsa hai?\nDylan ko na math pasand hai na science.	=	=	=	=
+q0170	2019 mein inmein se kis country ne solar sources se sabse zyada total energy generate ki?	=	=	=	=
+q0171	2020 tak, world population ka lagbhag kitna percentage open defecation karta hai?	=	=	=	=
+q0172	1965 mein kitne Americans sochte the ki Vietnam mein troops bhejna ek galti thi?	=	=	=	=
+q0173	1997 mein, World Bank ne paaya ki low aur lower-middle income countries—yaani jin countries ki per capita income $1230 ya usse kam hai—mein rehne wali world population ka fraction approximately kitna tha?	=	=	=	=
+q0174	Inflation aur PPP-adjustment ko control karte hue, China mein 1950 se 2016 tak GDP per capita lagbhag kitna badha?	4 guna	8 guna	16 guna	32 guna
+q0175	20th century mein sabse zyada deaths ke liye inmein se kaun zimmedaar tha?	=	Volcanic activity	=	=
+q0176	2017 tak, China ke survey respondents mein se lagbhag kitne percentage ne report kiya ki unhone pichhle saal public services (jaise education; judiciary; medical aur health; police; registry aur permit services; utilities; tax revenue aur customs; aur land service) access karne ke liye rishwat di?	=	=	=	=
+q0177	2017 tak, China dwara military par kharch kiya gaya GDP ka share lagbhag kitna hai?	=	=	=	=
+q0178	2020 tak median international income kitni hai?	=	=	=	=
+q0179	2017 tak, duniya mein kitne logon ke paas electricity ka kuch access hai?	=	=	=	=
+q0180	Do unrelated species is tarah evolve hoti hain ki woh zyada similar ho jaati hain.	=	=	=	=
+q0181	Inmein se saare statements true hain, SIWAAY	thyroxine metabolism ka rate badhata hai	insulin glycogen ka storage kam karta hai	vasopressin kidney mein water reabsorption ko stimulate karta hai	epinephrine blood sugar levels aur heart rate badhata hai
+q0182	Inmein se kaunsa biotic factor hai jo kisi population ke growth rate ko affect kar sakta hai?	Volcanic eruption	Glacier ka pighalna	Ozone layer ka destruction	Animal food resource mein achanak kami
+q0183	Ek DNA molecule ka nucleotide sequence 5′-C-A-T-3′ hai. Protein synthesis ke process mein DNA se complementary codon wala ek mRNA molecule transcribe hota hai aur ek tRNA, mRNA codon ke saath pair karta hai. tRNA anticodon ka nucleotide sequence kya hai?	=	=	=	=
+q0184	Meiosis ke baare mein inmein se kya sahi NAHI hai?	Meiosis do haploid gametes produce karta hai.	Synapsis ke dauraan homologous chromosomes judte hain.	Meiosis I ke dauraan sister chromatids alag hote hain.	Crossing-over gametes mein genetic variation badhata hai.
+q0185	Ek harmless animal defense mechanism ke roop mein ek dangerous animal ki appearance copy karta hai taaki predators attack karne se pehle do baar sochein.	=	=	=	=
+q0186	Angiosperms ke photoperiodic flowering response mein inmein se kiska involvement known hai?	=	=	=	=
+q0187	General taur par, animal cells plant cells se is baat mein alag hote hain ki animal cells mein hote hain	cellulose se bani cell wall	lysosomes	paani store karne wale bade vacuoles	centrosomes ke andar centrioles
+q0188	Ek cell ko hypertonic environment mein rakha jaata hai aur uska cytoplasm sikud jaata hai. Yeh kis principle ko demonstrate karta hai?	=	=	=	=
+q0189	Type A B blood wale ek bachche ko ek parent se IA allele aur doosre se IB allele milta hai. Bachche ke saare red blood cells ki surface par A aur B dono glycoproteins honge. Expression ke is pattern ko kya kehte hain?	=	=	=	=
+q0190	Rate law inmein se kiske liye stoichiometric coefficients use karke likha ja sakta hai?	=	=	=	=
+q0191	Straight-chain hydrocarbons ka melting point carbon atoms ki sankhya badhne ke saath badhta hai. Iska reason hai	compounds ka badhta hua mass	compounds ki badhti hui polarity	har molecule mein induced dipoles ki badhti hui sankhya	hydrogen bonds ki badhi hui probability
+q0192	Liquids ke inmein se kaunse pair ke immiscible hone ki ummeed hai?	H2O aur CH3OH	C6H6 aur C5H12	C10H22 aur CH2CH2CH2OH	CH3CH2NH2 aur CH3CH2CH2OH
+q0193	Sabse zyada penetrating ability wala subatomic particle kaunsa hai?	=	=	=	=
+q0194	Neeche di gayi list mein Brønsted-Lowry conjugate acid-base pair identify karo.	H3O+ aur OH-	H3PO4 aur H3PO3	HC2H3O2 aur C2H3O2-	SO32- aur SO22-
+q0195	Electronegativity aur bond strength ke fundamental trends ke hisaab se, inmein se sabse strong acid kaunsa hona chahiye?	=	=	=	=
+q0196	Inmein se kaunsa reduction half-reaction hai? (1) Cu2+ + e- → Cu+ (2) Cu+ + e- → Cu0 (3) Fe2+ → Fe3+ + e-	Sirf 1 kyunki copper(II) ions reduce hote hain	Sirf 3 kyunki iron reduce hota hai	1 aur 2 kyunki dono copper ions ko reduce karte hain	1 aur 3 kyunki unmein insoluble ions nahi hain
+q0197	Ek 2.35-gram sample ko paani mein dissolve kiya gaya, aur silver nitrate add karke chloride ions ko precipitate kiya gaya (Ag+ + Cl- → AgCl). Agar 0.435 g precipitate mila, to sample mein chlorine ka percentage kya hai?	=	=	=	=
+q0198	Kisi bhi atom ke mass ka 1/1000 se kam hissa kiska hota hai?	electrons ka	electrons aur neutrons ka	electrons aur protons ka	protons aur neutrons ka
+q0199	Solid MgCl2 ka sample inmein se kis solution mein sabse zyada soluble hoga?	=	=	=	=
+q0200	Maan lo x = 1. Python 3 mein x << 3 kya hai?	=	=	=	=
+q0201	Python 3 mein statement "a" + "ab" ka output kya hai?	=	=	=	=
+q0202	Ek pixel ka color RGB (Red, Green, Blue) color model se represent kiya ja sakta hai, jo red, green aur blue ki values store karta hai, har ek 0 se 255 tak. RGB model mein ek color represent karne ke liye kitne bits (binary digits) chahiye honge?	=	=	=	=
+q0203	Kis type ke functions sabse slow grow karte hain?	=	=	=	=
+q0204	Python 3 mein, kaunsa function list se max value wala item return karta hai?	=	=	=	=
+q0205	Jab koi chori kiye gaye login aur password se system mein login karta hai, to cybersecurity ka kaunsa pillar compromise hota hai?	=	=	=	=
+q0206	Is python expression ki value kya hai: 4 + 3 % 2?	=	=	=	=
+q0207	Maan lo l = [1,2,3,4]. Python3 mein sum(l) kya hai?	=	=	=	=
+q0208	Inmein se kisme user ki personal privacy compromise karne ka sabse zyada potential hai?	User ke Web browser dwara store kiye gaye cookies ka ek group	User ke computer ka Internet Protocol (IP) address	User ka e-mail address	Encryption ke liye use hone wali user ki public key
+q0209	Maan lo l = [1,2,2,3,4]. Python3 mein set(l) ka ek possible output kya hai?	=	=	=	=
+q0210	Burgess ke urban form ke concentric zone model mein kis zone mein low-income slums, ethnic ghettos aur general deterioration hota hai?	=	=	=	=
+q0211	Inmein se kis par true geographical distance, true direction, true size aur true shape sabse accurately dikhaya ja sakta hai?	Ek Mercator projection	Ek globe	Ek conic projection	Ek gnomonic projection
+q0212	Ankara, Turkey aur Islamabad, Pakistan dono kiske examples hain?	desert cities.	forward-thrust capitals.	purani colonial capitals.	rival cities.
+q0213	Kisi country mein religion ko reject karna ya usse indifferent rehna kya kehlata hai?	=	=	=	=
+q0214	Latin America mein bade shehar young logon ko inmein se sab kaaranon se attract karte hain, SIWAAY	jobs ki availability.	decent housing ki sambhavna.	educational opportunities.	unki families pehle se wahan rehti hain.
+q0215	Absolute location determine karne ke liye geographers inmein se kya use NAHI karte?	=	=	=	Nearest city tak ki distance
+q0216	Ek hi crop ko saal mein ek se zyada baar lagaane aur kaatne ki intensive agricultural practice ko kya kehte hain?	=	=	=	=
+q0217	Jab koi naya fashion design globally introduce hota hai, to information shuru mein kis process ke through travel karti hai?	=	=	=	=
+q0218	1960s aur 1970s mein Vietnam mein US involvement ko justify karne ke liye neeche di gayi kaunsi theory use hui thi?	=	=	=	=
+q0219	Kaunsi condition tab hoti hai jab ek state ke log aisa territory annex karna chahte hain jiski population ethnically us state ki population se related hai lekin abhi kisi doosre state ke rule mein hai?	=	=	=	=
+q0220	Neeche diye gaye interest groups mein se kisne 1970s se sabse zyada political action committees (PACs) banaye hain?	=	=	=	=
+q0221	Constitution ka Commerce Clause kis liye use kiya gaya hai?	unlawful arrest ke baad detainees ko prison se release karne ke liye	navy maintain karne ke liye	national government ki power badhane ke liye	legislative bills of attainder ko veto karne ke liye
+q0222	House Committee on Ways and Means ke baare mein inmein se kya sahi hai?	Iska primary role infrastructure projects ke liye spending appropriate karna hai.	Yeh congressional banking reform legislation ka primary author hai.	Yeh canals aur waterways ke liye funding allocate karti hai.	Iske jurisdiction mein tax system aata hai.
+q0223	Inmein se kya sabse achhe se predict karta hai ki koi election mein kaise vote karega?	Voter ka gender	Voter ki political party affiliation	Voter ka socioeconomic status	Voter ka religion
+q0224	"Motor voter" laws ka primary purpose inmein se kya hai?	Election days par turnout badhana	Citizens ke liye vote register karna aasaan banana	Yeh zaroori karna ki saare voters ko drive karna aata ho	Voter identification laws establish karna
+q0225	Inmein se kaunsa Congress ki implied power ka example hai?	=	United States ke credit par paisa borrow karna	=	=
+q0226	Closed primary election ke ulat, open primary election mein	voters individual ballots ki jagah caucus se winner select karte hain	election results binding nahi hote	koi bhi registered voter participate kar sakta hai, party affiliation chahe jo bhi ho	voters election ke din vote ke liye register kar sakte hain
+q0227	Federal judges ke baare mein inmein se kya sahi hai?	Woh four-year terms serve karte hain jo presidential term ke saath coincide karti hain.	Woh life ke liye appoint hote hain aur sirf impeachment se hi hataaye ja sakte hain.	Woh Congress dwara elect hote hain aur ten-year terms serve karte hain.	Woh life ke liye appoint hote hain aur office se hataaye nahi ja sakte.
+q0228	Gideon v. Wainwright mein, Supreme Court ne rule kiya ki state cases mein criminal defendants ko right hai	attorney dwara representation ka	khud ko incriminate na karne ka	speedy trial ka	excessively punish na kiye jaane ka
+q0229	Civil Rights Act of 1964 kisko reinforce karne ke liye pass kiya gaya tha?	=	=	federal regulation ko challenge karne ki states ki power	=
+q0230	Maan lo reserve requirement 10 percent hai. Agar FED open market operation mein $29 million ki government securities bechta hai, to money supply	$2.9 million badh sakti hai.	$2.9 million ghat sakti hai.	$290 million badh sakti hai.	$290 million ghat sakti hai.
+q0231	Inmein se kaunsa statement true hai?	M2 mein shaamil kuch cheezein MI ki cheezon jitni liquid nahi hain.	M2, MI se chhota hai.	M I gold se backed hai aur M2 silver se backed hai.	M I ka sabse bada component currency hai.
+q0232	Agar money supply badhti hai to money market mein kya hota hai (maan lo money demand downward sloping hai)?	Nominal interest rates badhte hain.	Nominal interest rates girte hain.	Nominal interest rate change nahi hota.	Money ki transaction demand girti hai.
+q0233	Dollar ke depreciation se sabse zyada kya hone ki sambhavna hai?	imports badhna	abroad travel badhna	exports badhna	trade surplus ghatna
+q0234	Expansionary fiscal policy sabse achhe se kis liye prescribe ki jaayegi?	recessionary gap khatam karne ke liye	inflation kam karne ke liye	interest rate kam karne ke liye	inflationary gap khatam karne ke liye
+q0235	Agar future mein prices dheere badhne ki ummeed ho, to	Phillips curve right ki taraf shift hogi	actual rate of inflation badhega	actual inflation rate steady rahega jab tak supply shocks na aayein	yeh expectations reality ban jaayengi
+q0236	Inmein se kya aggregate demand function ko badhayega?	Imported goods ke higher levels	Consumer wealth ke lower levels	Ek higher real interest rate	Personal income par lower taxes
+q0237	Government purchases ki wajah se higher interest rates ke kaaran real investment mein aayi kami ko aam taur par kya kaha jaata hai?	=	=	=	=
+q0238	Inflation ko theek karne ke liye appropriate fiscal policy kya kehti hai?	federal government deficit chalaaye.	federal government surplus chalaaye.	taxes aur government spending badhaayi jaaye.	government spending aur taxes kam kiye jaayein.
+q0239	Inmein se kisse economic growth hoga?	Unemployment rate mein kami.	Unemployment rate mein badhotri.	Labor force ke size mein badhotri.	Population mein kami.
+q0240	Breakfast, lunch aur dinner mein, Joe barabar probability ke saath randomly ek apple, ek orange ya ek banana khaane ke liye chunta hai. Kisi din, iski probability kya hai ki Joe kam se kam do alag tarah ke fruits khaayega?	=	=	=	=
+q0241	$n$ ki un saari positive integer values ka sum kya hai jinke liye $n^2$, $1200$ ka factor hai?	=	=	=	=
+q0242	Ek 8.5-by-11-inch paper ko baar-baar aadha fold kiya jaata hai (kabhi unfold nahi kiya jaata), har baar us samay ki lambi side ko chhota karte hue. Second fold ke turant baad sabse lambi side ki length, inches mein, kya hai? Answer ko nearest tenth tak decimal mein likho.	=	=	=	=
+q0243	Maan lo $f(x)=\frac{(x-2)^2-9}{3}$. Equation $y=f(x)$ ka graph banaya jaata hai, aur graph ke $x$- aur $y$-intercepts ko jodkar ek polygon banaya jaata hai. Us polygon ka area kya hai?	=	=	=	=
+q0244	25^1059 ko 23 se divide karne par remainder find karo.	=	=	=	=
+q0245	Restaurant mein standard tip tax se pehle ke bill ka $ 15 \%$ hota hai. California mein bahut log sales tax, jo $8.25 \%$ hai, ko double karke tip nikaalte hain. Tax se pehle $ \$60 $ ke bill par yeh standard tip se kitne cents zyada hai?	=	=	=	=
+q0246	Ek right triangle ke legs ki length $6$ aur $b$ hai, aur hypotenuse ki length $c$ hai. Triangle ka perimeter $18$ hai. $c$ compute karo.	=	=	=	=
+q0247	John ke paanch bachche hain. Iski probability kya hai ki unmein se kam se kam aadhe girls hain? (Hum maan sakte hain ki boy aur girl ke paida hone ki sambhavna barabar hai.)	=	=	=	=
+q0248	x^3 + xy - y^2 = 10 se define ki gayi curve ki vertical tangent line kab hoti hai, x =	0 ya –1/3	=	=	=
+q0249	Jab expression $-2x^2-20x-53$ ko $a(x+d)^2+e$ form mein likha jaata hai, jahan $a$, $d$, aur $e$ constants hain, to sum $a+d+e$ kya hai?	=	=	=	=
+q0250	Nash equilibrium par,	supply curve demand curve ko intersect karti hai	kisi bhi party ke paas apni strategy se hatne ka incentive nahi hota	marginal revenue curve marginal cost curve ko intersect karti hai	equilibrium unstable hota hai aur har party strategies switch karna chahegi
+q0251	Inmein se kaunsa economic rent ka example hai?	Ek superstar basketball player ki $50 million ki earnings.	Ek social security retirement income.	Social services se ek welfare payment.	Parent ya guardian se college student ko mila ek check.
+q0252	Wages badhane ke liye unions jo methods use karte hain, unmein inmein se kaunsa shaamil nahi hai?	Wage floor paane ke liye negotiations	Restrictive membership policies	Substitute resources ke prices kam karne ki koshish	Featherbedding ya make-work rules
+q0253	Inmein se kya tuba makers ki wages badhayega?	Tuba maker training school mein graduates ki sankhya mein badhotri	Tubas ke price mein badhotri	Tuba lessons ke price mein badhotri	Tubas par tax mein badhotri
+q0254	Maan lo bicycles ke production mein aluminum ek key production input hai. Agar aluminum ka price girta hai, aur baaki saare variables constant rehte hain, to hum expect karte hain ki	aluminum ki demand badhegi.	bicycles ki supply badhegi.	bicycles ki supply ghategi.	bicycles ki demand badhegi.
+q0255	Ek competitive firm ke liye, short run mein shut down karne ka decide karte samay sabse important cheez kya consider karni chahiye?	AVC ko MR se compare karo.	TR ko TC se compare karo.	Agar revenue se TFC cover nahi hota to produce mat karo.	Price chahe jo ho, sabse zyada demanded quantity produce karo.
+q0256	Agar koi market cartel dwara organize hai, to hum kya expect kar sakte hain?	saari cartel firms ke liye normal profits.	cartel firms ke liye cartel agreement mein cheat karne ka incentive.	cartel ki individual firms dwara profit maximization.	allocative efficiency.
+q0257	Perfect competition mein operate karne wali individual firm ki pehchaan kya hai?	ek price-maker.	kuch sellers mein se ek.	ek price strategist.	ek price-taker.
+q0258	Perfectly competitive firm ke ulat, ek monopoly	demand curve par jo sabse zyada price charge kar sake woh karegi	ki marginal revenue curve horizontal hoti hai	ki total revenue curve upward sloping hoti hai	ko downward sloping demand curve face karni padti hai
+q0259	Number 1 ke answer ka basis kya hai?	P ya labor ka wage rate > labor ka MRP aur labor ki ek additional unit ke saath, wage rate < MRP.	P ya labor ka wage rate < labor ka MRP aur labor ki ek additional unit ke saath WI, > MRP.	total revenue maximum par hai.	total output maximum par hai.

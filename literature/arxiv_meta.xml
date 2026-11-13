@@ -1,0 +1,4654 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/l/6LhjWOyoImp1BKJGk/I3D63Bo</id>
+  <title>arXiv Query: search_query=&amp;id_list=2310.13548,2212.09251,2308.03958,2311.08596,2310.02174,2305.13160,2310.01798,2502.08177,2505.23840,2411.15287,2409.01658,2311.09410,2009.03300,2412.03304,2307.16039,2004.12376,2107.03760,2305.14235,2310.02446,2310.06474,2303.12528,2310.10378,2207.05221,2407.21783,2505.09388,2503.19786,2602.00046,2603.27664,2610.30696,2610.06522,2606.16011,2503.11656,2505.13995,2402.06625,2204.08398,2505.05063,2305.07004,2305.15425,2305.13707&amp;start=0&amp;max_results=60</title>
+  <updated>2026-11-09T18:48:20Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=60&amp;id_list=2310.13548,2212.09251,2308.03958,2311.08596,2310.02174,2305.13160,2310.01798,2502.08177,2505.23840,2411.15287,2409.01658,2311.09410,2009.03300,2412.03304,2307.16039,2004.12376,2107.03760,2305.14235,2310.02446,2310.06474,2303.12528,2310.10378,2207.05221,2407.21783,2505.09388,2503.19786,2602.00046,2603.27664,2610.30696,2610.06522,2606.16011,2503.11656,2505.13995,2402.06625,2204.08398,2505.05063,2305.07004,2305.15425,2305.13707" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>60</opensearch:itemsPerPage>
+  <opensearch:totalResults>39</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2402.06625v1</id>
+    <title>Understanding the Effects of Iterative Prompting on Truthfulness</title>
+    <updated>2024-02-09T18:57:08Z</updated>
+    <link href="https://arxiv.org/abs/2402.06625v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.06625v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The development of Large Language Models (LLMs) has notably transformed numerous sectors, offering impressive text generation capabilities. Yet, the reliability and truthfulness of these models remain pressing concerns. To this end, we investigate iterative prompting, a strategy hypothesized to refine LLM responses, assessing its impact on LLM truthfulness, an area which has not been thoroughly explored. Our extensive experiments delve into the intricacies of iterative prompting variants, examining their influence on the accuracy and calibration of model responses. Our findings reveal that naive prompting methods significantly undermine truthfulness, leading to exacerbated calibration errors. In response to these challenges, we introduce several prompting variants designed to address the identified issues. These variants demonstrate marked improvements over existing baselines, signaling a promising direction for future research. Our work provides a nuanced understanding of iterative prompting and introduces novel approaches to enhance the truthfulness of LLMs, thereby contributing to the development of more accurate and trustworthy AI systems.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-09T18:57:08Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Satyapriya Krishna</name>
+    </author>
+    <author>
+      <name>Chirag Agarwal</name>
+    </author>
+    <author>
+      <name>Himabindu Lakkaraju</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.13160v2</id>
+    <title>Can ChatGPT Defend its Belief in Truth? Evaluating LLM Reasoning via Debate</title>
+    <updated>2023-10-10T17:34:15Z</updated>
+    <link href="https://arxiv.org/abs/2305.13160v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.13160v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) such as ChatGPT and GPT-4 have shown impressive performance in complex reasoning tasks. However, it is difficult to know whether the models are reasoning based on deep understandings of truth and logic, or leveraging their memorized patterns in a relatively superficial way. In this work, we explore testing LLMs' reasoning by engaging with them in a debate-like conversation, where given a question, the LLM and the user need to discuss to make the correct decision starting from opposing arguments. Upon mitigating the Clever Hans effect, our task requires the LLM to not only achieve the correct answer on its own, but also be able to hold and defend its belief instead of blindly believing or getting misled by the user's (invalid) arguments and critiques, thus testing in greater depth whether the LLM grasps the essence of the reasoning required to solve the problem. Across a range of complex reasoning benchmarks spanning math, commonsense, logic and BIG-Bench tasks, we find that despite their impressive performance as reported in existing work on generating correct step-by-step solutions in the beginning, LLMs like ChatGPT cannot maintain their beliefs in truth for a significant portion of examples when challenged by oftentimes absurdly invalid arguments. Our work points to danger zones of model alignment, and also suggests more careful treatments and interpretations of the recent findings that LLMs can improve their responses based on feedback.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-22T15:47:31Z</published>
+    <arxiv:comment>EMNLP-23 (findings)</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Boshi Wang</name>
+    </author>
+    <author>
+      <name>Xiang Yue</name>
+    </author>
+    <author>
+      <name>Huan Sun</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.13707v1</id>
+    <title>Do All Languages Cost the Same? Tokenization in the Era of Commercial Language Models</title>
+    <updated>2023-05-23T05:46:45Z</updated>
+    <link href="https://arxiv.org/abs/2305.13707v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.13707v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Language models have graduated from being research prototypes to commercialized products offered as web APIs, and recent works have highlighted the multilingual capabilities of these products. The API vendors charge their users based on usage, more specifically on the number of ``tokens'' processed or generated by the underlying language models. What constitutes a token, however, is training data and model dependent with a large variance in the number of tokens required to convey the same information in different languages. In this work, we analyze the effect of this non-uniformity on the fairness of an API's pricing policy across languages. We conduct a systematic analysis of the cost and utility of OpenAI's language model API on multilingual benchmarks in 22 typologically diverse languages. We show evidence that speakers of a large number of the supported languages are overcharged while obtaining poorer results. These speakers tend to also come from regions where the APIs are less affordable to begin with. Through these analyses, we aim to increase transparency around language model APIs' pricing policies and encourage the vendors to make them more equitable.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-23T05:46:45Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Orevaoghene Ahia</name>
+    </author>
+    <author>
+      <name>Sachin Kumar</name>
+    </author>
+    <author>
+      <name>Hila Gonen</name>
+    </author>
+    <author>
+      <name>Jungo Kasai</name>
+    </author>
+    <author>
+      <name>David R. Mortensen</name>
+    </author>
+    <author>
+      <name>Noah A. Smith</name>
+    </author>
+    <author>
+      <name>Yulia Tsvetkov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.09388v1</id>
+    <title>Qwen3 Technical Report</title>
+    <updated>2025-05-14T13:41:34Z</updated>
+    <link href="https://arxiv.org/abs/2505.09388v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.09388v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this work, we present Qwen3, the latest version of the Qwen model family. Qwen3 comprises a series of large language models (LLMs) designed to advance performance, efficiency, and multilingual capabilities. The Qwen3 series includes models of both dense and Mixture-of-Expert (MoE) architectures, with parameter scales ranging from 0.6 to 235 billion. A key innovation in Qwen3 is the integration of thinking mode (for complex, multi-step reasoning) and non-thinking mode (for rapid, context-driven responses) into a unified framework. This eliminates the need to switch between different models--such as chat-optimized models (e.g., GPT-4o) and dedicated reasoning models (e.g., QwQ-32B)--and enables dynamic mode switching based on user queries or chat templates. Meanwhile, Qwen3 introduces a thinking budget mechanism, allowing users to allocate computational resources adaptively during inference, thereby balancing latency and performance based on task complexity. Moreover, by leveraging the knowledge from the flagship models, we significantly reduce the computational resources required to build smaller-scale models, while ensuring their highly competitive performance. Empirical evaluations demonstrate that Qwen3 achieves state-of-the-art results across diverse benchmarks, including tasks in code generation, mathematical reasoning, agent tasks, etc., competitive against larger MoE models and proprietary models. Compared to its predecessor Qwen2.5, Qwen3 expands multilingual support from 29 to 119 languages and dialects, enhancing global accessibility through improved cross-lingual understanding and generation capabilities. To facilitate reproducibility and community-driven research and development, all Qwen3 models are publicly accessible under Apache 2.0.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-14T13:41:34Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>An Yang</name>
+    </author>
+    <author>
+      <name>Anfeng Li</name>
+    </author>
+    <author>
+      <name>Baosong Yang</name>
+    </author>
+    <author>
+      <name>Beichen Zhang</name>
+    </author>
+    <author>
+      <name>Binyuan Hui</name>
+    </author>
+    <author>
+      <name>Bo Zheng</name>
+    </author>
+    <author>
+      <name>Bowen Yu</name>
+    </author>
+    <author>
+      <name>Chang Gao</name>
+    </author>
+    <author>
+      <name>Chengen Huang</name>
+    </author>
+    <author>
+      <name>Chenxu Lv</name>
+    </author>
+    <author>
+      <name>Chujie Zheng</name>
+    </author>
+    <author>
+      <name>Dayiheng Liu</name>
+    </author>
+    <author>
+      <name>Fan Zhou</name>
+    </author>
+    <author>
+      <name>Fei Huang</name>
+    </author>
+    <author>
+      <name>Feng Hu</name>
+    </author>
+    <author>
+      <name>Hao Ge</name>
+    </author>
+    <author>
+      <name>Haoran Wei</name>
+    </author>
+    <author>
+      <name>Huan Lin</name>
+    </author>
+    <author>
+      <name>Jialong Tang</name>
+    </author>
+    <author>
+      <name>Jian Yang</name>
+    </author>
+    <author>
+      <name>Jianhong Tu</name>
+    </author>
+    <author>
+      <name>Jianwei Zhang</name>
+    </author>
+    <author>
+      <name>Jianxin Yang</name>
+    </author>
+    <author>
+      <name>Jiaxi Yang</name>
+    </author>
+    <author>
+      <name>Jing Zhou</name>
+    </author>
+    <author>
+      <name>Jingren Zhou</name>
+    </author>
+    <author>
+      <name>Junyang Lin</name>
+    </author>
+    <author>
+      <name>Kai Dang</name>
+    </author>
+    <author>
+      <name>Keqin Bao</name>
+    </author>
+    <author>
+      <name>Kexin Yang</name>
+    </author>
+    <author>
+      <name>Le Yu</name>
+    </author>
+    <author>
+      <name>Lianghao Deng</name>
+    </author>
+    <author>
+      <name>Mei Li</name>
+    </author>
+    <author>
+      <name>Mingfeng Xue</name>
+    </author>
+    <author>
+      <name>Mingze Li</name>
+    </author>
+    <author>
+      <name>Pei Zhang</name>
+    </author>
+    <author>
+      <name>Peng Wang</name>
+    </author>
+    <author>
+      <name>Qin Zhu</name>
+    </author>
+    <author>
+      <name>Rui Men</name>
+    </author>
+    <author>
+      <name>Ruize Gao</name>
+    </author>
+    <author>
+      <name>Shixuan Liu</name>
+    </author>
+    <author>
+      <name>Shuang Luo</name>
+    </author>
+    <author>
+      <name>Tianhao Li</name>
+    </author>
+    <author>
+      <name>Tianyi Tang</name>
+    </author>
+    <author>
+      <name>Wenbiao Yin</name>
+    </author>
+    <author>
+      <name>Xingzhang Ren</name>
+    </author>
+    <author>
+      <name>Xinyu Wang</name>
+    </author>
+    <author>
+      <name>Xinyu Zhang</name>
+    </author>
+    <author>
+      <name>Xuancheng Ren</name>
+    </author>
+    <author>
+      <name>Yang Fan</name>
+    </author>
+    <author>
+      <name>Yang Su</name>
+    </author>
+    <author>
+      <name>Yichang Zhang</name>
+    </author>
+    <author>
+      <name>Yinger Zhang</name>
+    </author>
+    <author>
+      <name>Yu Wan</name>
+    </author>
+    <author>
+      <name>Yuqiong Liu</name>
+    </author>
+    <author>
+      <name>Zekun Wang</name>
+    </author>
+    <author>
+      <name>Zeyu Cui</name>
+    </author>
+    <author>
+      <name>Zhenru Zhang</name>
+    </author>
+    <author>
+      <name>Zhipeng Zhou</name>
+    </author>
+    <author>
+      <name>Zihan Qiu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.13548v4</id>
+    <title>Towards Understanding Sycophancy in Language Models</title>
+    <updated>2025-05-10T07:10:46Z</updated>
+    <link href="https://arxiv.org/abs/2310.13548v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.13548v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Human feedback is commonly utilized to finetune AI assistants. But human feedback may also encourage model responses that match user beliefs over truthful ones, a behaviour known as sycophancy. We investigate the prevalence of sycophancy in models whose finetuning procedure made use of human feedback, and the potential role of human preference judgments in such behavior. We first demonstrate that five state-of-the-art AI assistants consistently exhibit sycophancy across four varied free-form text-generation tasks. To understand if human preferences drive this broadly observed behavior, we analyze existing human preference data. We find that when a response matches a user's views, it is more likely to be preferred. Moreover, both humans and preference models (PMs) prefer convincingly-written sycophantic responses over correct ones a non-negligible fraction of the time. Optimizing model outputs against PMs also sometimes sacrifices truthfulness in favor of sycophancy. Overall, our results indicate that sycophancy is a general behavior of state-of-the-art AI assistants, likely driven in part by human preference judgments favoring sycophantic responses.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-20T14:46:48Z</published>
+    <arxiv:comment>32 pages, 20 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Mrinank Sharma</name>
+    </author>
+    <author>
+      <name>Meg Tong</name>
+    </author>
+    <author>
+      <name>Tomasz Korbak</name>
+    </author>
+    <author>
+      <name>David Duvenaud</name>
+    </author>
+    <author>
+      <name>Amanda Askell</name>
+    </author>
+    <author>
+      <name>Samuel R. Bowman</name>
+    </author>
+    <author>
+      <name>Newton Cheng</name>
+    </author>
+    <author>
+      <name>Esin Durmus</name>
+    </author>
+    <author>
+      <name>Zac Hatfield-Dodds</name>
+    </author>
+    <author>
+      <name>Scott R. Johnston</name>
+    </author>
+    <author>
+      <name>Shauna Kravec</name>
+    </author>
+    <author>
+      <name>Timothy Maxwell</name>
+    </author>
+    <author>
+      <name>Sam McCandlish</name>
+    </author>
+    <author>
+      <name>Kamal Ndousse</name>
+    </author>
+    <author>
+      <name>Oliver Rausch</name>
+    </author>
+    <author>
+      <name>Nicholas Schiefer</name>
+    </author>
+    <author>
+      <name>Da Yan</name>
+    </author>
+    <author>
+      <name>Miranda Zhang</name>
+    </author>
+    <author>
+      <name>Ethan Perez</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2311.09410v4</id>
+    <title>When Large Language Models contradict humans? Large Language Models' Sycophantic Behaviour</title>
+    <updated>2025-06-24T19:59:56Z</updated>
+    <link href="https://arxiv.org/abs/2311.09410v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2311.09410v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models have been demonstrating broadly satisfactory generative abilities for users, which seems to be due to the intensive use of human feedback that refines responses. Nevertheless, suggestibility inherited via human feedback improves the inclination to produce answers corresponding to users' viewpoints. This behaviour is known as sycophancy and depicts the tendency of LLMs to generate misleading responses as long as they align with humans. This phenomenon induces bias and reduces the robustness and, consequently, the reliability of these models. In this paper, we study the suggestibility of Large Language Models (LLMs) to sycophantic behaviour, analysing these tendencies via systematic human-interventions prompts over different tasks. Our investigation demonstrates that LLMs have sycophantic tendencies when answering queries that involve subjective opinions and statements that should elicit a contrary response based on facts. In contrast, when faced with math tasks or queries with an objective answer, they, at various scales, do not follow the users' hints by demonstrating confidence in generating the correct answers.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-11-15T22:18:33Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Leonardo Ranaldi</name>
+    </author>
+    <author>
+      <name>Giulia Pucci</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.21783v3</id>
+    <title>The Llama 3 Herd of Models</title>
+    <updated>2024-11-23T23:27:33Z</updated>
+    <link href="https://arxiv.org/abs/2407.21783v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.21783v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Modern artificial intelligence (AI) systems are powered by foundation models. This paper presents a new set of foundation models, called Llama 3. It is a herd of language models that natively support multilinguality, coding, reasoning, and tool usage. Our largest model is a dense Transformer with 405B parameters and a context window of up to 128K tokens. This paper presents an extensive empirical evaluation of Llama 3. We find that Llama 3 delivers comparable quality to leading language models such as GPT-4 on a plethora of tasks. We publicly release Llama 3, including pre-trained and post-trained versions of the 405B parameter language model and our Llama Guard 3 model for input and output safety. The paper also presents the results of experiments in which we integrate image, video, and speech capabilities into Llama 3 via a compositional approach. We observe this approach performs competitively with the state-of-the-art on image, video, and speech recognition tasks. The resulting models are not yet being broadly released as they are still under development.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-31T17:54:27Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Aaron Grattafiori</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Abhimanyu Dubey</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Abhinav Jauhri</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Abhinav Pandey</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Abhishek Kadian</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ahmad Al-Dahle</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Aiesha Letman</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Akhil Mathur</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Alan Schelten</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Alex Vaughan</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Amy Yang</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Angela Fan</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Anirudh Goyal</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Anthony Hartshorn</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Aobo Yang</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Archi Mitra</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Archie Sravankumar</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Artem Korenev</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Arthur Hinsvark</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Arun Rao</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Aston Zhang</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Aurelien Rodriguez</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Austen Gregerson</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ava Spataru</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Baptiste Roziere</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Bethany Biron</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Binh Tang</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Bobbie Chern</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Charlotte Caucheteux</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Chaya Nayak</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Chloe Bi</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Chris Marra</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Chris McConnell</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Christian Keller</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Christophe Touret</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Chunyang Wu</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Corinne Wong</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Cristian Canton Ferrer</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Cyrus Nikolaidis</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Damien Allonsius</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Daniel Song</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Danielle Pintz</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Danny Livshits</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Danny Wyatt</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>David Esiobu</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Dhruv Choudhary</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Dhruv Mahajan</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Diego Garcia-Olano</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Diego Perino</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Dieuwke Hupkes</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Egor Lakomkin</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ehab AlBadawy</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Elina Lobanova</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Emily Dinan</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Eric Michael Smith</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Filip Radenovic</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Francisco Guzmán</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Frank Zhang</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Gabriel Synnaeve</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Gabrielle Lee</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Georgia Lewis Anderson</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Govind Thattai</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Graeme Nail</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Gregoire Mialon</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Guan Pang</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Guillem Cucurell</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Hailey Nguyen</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Hannah Korevaar</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Hu Xu</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Hugo Touvron</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Iliyan Zarov</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Imanol Arrieta Ibarra</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Isabel Kloumann</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ishan Misra</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ivan Evtimov</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jack Zhang</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jade Copet</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jaewon Lee</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jan Geffert</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jana Vranes</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jason Park</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jay Mahadeokar</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jeet Shah</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jelmer van der Linde</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jennifer Billock</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jenny Hong</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jenya Lee</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jeremy Fu</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jianfeng Chi</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jianyu Huang</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jiawen Liu</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jie Wang</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jiecao Yu</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Joanna Bitton</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Joe Spisak</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jongsoo Park</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Joseph Rocca</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Joshua Johnstun</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Joshua Saxe</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Junteng Jia</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kalyan Vasuden Alwala</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Karthik Prasad</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kartikeya Upasani</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kate Plawiak</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ke Li</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kenneth Heafield</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kevin Stone</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Khalid El-Arini</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Krithika Iyer</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kshitiz Malik</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kuenley Chiu</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kunal Bhalla</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kushal Lakhotia</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Lauren Rantala-Yeary</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Laurens van der Maaten</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Lawrence Chen</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Liang Tan</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Liz Jenkins</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Louis Martin</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Lovish Madaan</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Lubo Malo</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Lukas Blecher</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Lukas Landzaat</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Luke de Oliveira</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Madeline Muzzi</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Mahesh Pasupuleti</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Mannat Singh</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Manohar Paluri</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Marcin Kardas</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Maria Tsimpoukelli</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Mathew Oldham</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Mathieu Rita</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Maya Pavlova</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Melanie Kambadur</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Mike Lewis</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Min Si</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Mitesh Kumar Singh</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Mona Hassan</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Naman Goyal</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Narjes Torabi</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Nikolay Bashlykov</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Nikolay Bogoychev</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Niladri Chatterji</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ning Zhang</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Olivier Duchenne</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Onur Çelebi</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Patrick Alrassy</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Pengchuan Zhang</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Pengwei Li</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Petar Vasic</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Peter Weng</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Prajjwal Bhargava</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Pratik Dubal</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Praveen Krishnan</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Punit Singh Koura</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Puxin Xu</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Qing He</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Qingxiao Dong</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ragavan Srinivasan</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Raj Ganapathy</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ramon Calderer</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ricardo Silveira Cabral</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Robert Stojnic</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Roberta Raileanu</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Rohan Maheswari</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Rohit Girdhar</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Rohit Patel</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Romain Sauvestre</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ronnie Polidoro</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Roshan Sumbaly</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ross Taylor</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ruan Silva</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Rui Hou</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Rui Wang</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Saghar Hosseini</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sahana Chennabasappa</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sanjay Singh</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sean Bell</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Seohyun Sonia Kim</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sergey Edunov</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Shaoliang Nie</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sharan Narang</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sharath Raparthy</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sheng Shen</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Shengye Wan</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Shruti Bhosale</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Shun Zhang</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Simon Vandenhende</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Soumya Batra</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Spencer Whitman</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sten Sootla</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Stephane Collot</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Suchin Gururangan</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sydney Borodinsky</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Tamar Herman</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Tara Fowler</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Tarek Sheasha</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Thomas Georgiou</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Thomas Scialom</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Tobias Speckbacher</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Todor Mihaylov</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Tong Xiao</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ujjwal Karn</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Vedanuj Goswami</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Vibhor Gupta</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Vignesh Ramanathan</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Viktor Kerkez</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Vincent Gonguet</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Virginie Do</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Vish Vogeti</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Vítor Albiero</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Vladan Petrovic</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Weiwei Chu</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Wenhan Xiong</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Wenyin Fu</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Whitney Meers</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Xavier Martinet</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Xiaodong Wang</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Xiaofang Wang</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Xiaoqing Ellen Tan</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Xide Xia</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Xinfeng Xie</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Xuchao Jia</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Xuewei Wang</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Yaelle Goldschlag</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Yashesh Gaur</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Yasmine Babaei</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Yi Wen</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Yiwen Song</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Yuchen Zhang</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Yue Li</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Yuning Mao</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Zacharie Delpierre Coudert</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Zheng Yan</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Zhengxing Chen</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Zoe Papakipos</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Aaditya Singh</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Aayushi Srivastava</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Abha Jain</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Adam Kelsey</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Adam Shajnfeld</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Adithya Gangidi</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Adolfo Victoria</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ahuva Goldstand</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ajay Menon</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ajay Sharma</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Alex Boesenberg</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Alexei Baevski</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Allie Feinstein</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Amanda Kallet</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Amit Sangani</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Amos Teo</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Anam Yunus</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Andrei Lupu</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Andres Alvarado</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Andrew Caples</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Andrew Gu</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Andrew Ho</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Andrew Poulton</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Andrew Ryan</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ankit Ramchandani</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Annie Dong</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Annie Franco</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Anuj Goyal</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Aparajita Saraf</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Arkabandhu Chowdhury</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ashley Gabriel</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ashwin Bharambe</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Assaf Eisenman</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Azadeh Yazdan</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Beau James</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ben Maurer</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Benjamin Leonhardi</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Bernie Huang</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Beth Loyd</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Beto De Paola</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Bhargavi Paranjape</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Bing Liu</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Bo Wu</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Boyu Ni</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Braden Hancock</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Bram Wasti</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Brandon Spence</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Brani Stojkovic</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Brian Gamido</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Britt Montalvo</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Carl Parker</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Carly Burton</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Catalina Mejia</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ce Liu</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Changhan Wang</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Changkyu Kim</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Chao Zhou</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Chester Hu</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ching-Hsiang Chu</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Chris Cai</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Chris Tindal</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Christoph Feichtenhofer</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Cynthia Gao</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Damon Civin</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Dana Beaty</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Daniel Kreymer</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Daniel Li</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>David Adkins</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>David Xu</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Davide Testuggine</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Delia David</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Devi Parikh</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Diana Liskovich</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Didem Foss</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Dingkang Wang</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Duc Le</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Dustin Holland</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Edward Dowling</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Eissa Jamil</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Elaine Montgomery</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Eleonora Presani</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Emily Hahn</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Emily Wood</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Eric-Tuan Le</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Erik Brinkman</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Esteban Arcaute</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Evan Dunbar</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Evan Smothers</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Fei Sun</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Felix Kreuk</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Feng Tian</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Filippos Kokkinos</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Firat Ozgenel</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Francesco Caggioni</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Frank Kanayet</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Frank Seide</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Gabriela Medina Florez</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Gabriella Schwarz</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Gada Badeer</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Georgia Swee</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Gil Halpern</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Grant Herman</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Grigory Sizov</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name> Guangyi</name>
+      <arxiv:affiliation>Jack</arxiv:affiliation>
+    </author>
+    <author>
+      <name> Zhang</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Guna Lakshminarayanan</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Hakan Inan</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Hamid Shojanazeri</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Han Zou</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Hannah Wang</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Hanwen Zha</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Haroun Habeeb</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Harrison Rudolph</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Helen Suk</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Henry Aspegren</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Hunter Goldman</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Hongyuan Zhan</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ibrahim Damlaj</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Igor Molybog</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Igor Tufanov</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ilias Leontiadis</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Irina-Elena Veliche</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Itai Gat</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jake Weissman</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>James Geboski</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>James Kohli</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Janice Lam</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Japhet Asher</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jean-Baptiste Gaya</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jeff Marcus</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jeff Tang</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jennifer Chan</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jenny Zhen</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jeremy Reizenstein</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jeremy Teboul</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jessica Zhong</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jian Jin</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jingyi Yang</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Joe Cummings</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jon Carvill</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jon Shepard</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jonathan McPhie</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jonathan Torres</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Josh Ginsburg</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Junjie Wang</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kai Wu</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kam Hou U</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Karan Saxena</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kartikay Khandelwal</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Katayoun Zand</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kathy Matosich</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kaushik Veeraraghavan</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kelly Michelena</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Keqian Li</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kiran Jagadeesh</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kun Huang</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kunal Chawla</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kyle Huang</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Lailin Chen</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Lakshya Garg</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Lavender A</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Leandro Silva</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Lee Bell</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Lei Zhang</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Liangpeng Guo</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Licheng Yu</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Liron Moshkovich</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Luca Wehrstedt</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Madian Khabsa</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Manav Avalani</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Manish Bhatt</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Martynas Mankus</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Matan Hasson</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Matthew Lennie</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Matthias Reso</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Maxim Groshev</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Maxim Naumov</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Maya Lathi</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Meghan Keneally</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Miao Liu</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Michael L. Seltzer</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Michal Valko</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Michelle Restrepo</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Mihir Patel</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Mik Vyatskov</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Mikayel Samvelyan</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Mike Clark</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Mike Macey</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Mike Wang</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Miquel Jubert Hermoso</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Mo Metanat</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Mohammad Rastegari</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Munish Bansal</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Nandhini Santhanam</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Natascha Parks</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Natasha White</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Navyata Bawa</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Nayan Singhal</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Nick Egebo</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Nicolas Usunier</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Nikhil Mehta</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Nikolay Pavlovich Laptev</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ning Dong</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Norman Cheng</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Oleg Chernoguz</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Olivia Hart</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Omkar Salpekar</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ozlem Kalinli</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Parkin Kent</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Parth Parekh</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Paul Saab</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Pavan Balaji</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Pedro Rittner</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Philip Bontrager</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Pierre Roux</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Piotr Dollar</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Polina Zvyagina</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Prashant Ratanchandani</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Pritish Yuvraj</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Qian Liang</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Rachad Alao</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Rachel Rodriguez</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Rafi Ayub</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Raghotham Murthy</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Raghu Nayani</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Rahul Mitra</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Rangaprabhu Parthasarathy</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Raymond Li</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Rebekkah Hogan</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Robin Battey</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Rocky Wang</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Russ Howes</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ruty Rinott</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sachin Mehta</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sachin Siby</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sai Jayesh Bondu</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Samyak Datta</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sara Chugh</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sara Hunt</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sargun Dhillon</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sasha Sidorov</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Satadru Pan</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Saurabh Mahajan</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Saurabh Verma</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Seiji Yamamoto</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sharadh Ramaswamy</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Shaun Lindsay</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Shaun Lindsay</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sheng Feng</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Shenghao Lin</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Shengxin Cindy Zha</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Shishir Patil</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Shiva Shankar</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Shuqiang Zhang</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Shuqiang Zhang</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sinong Wang</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sneha Agarwal</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Soji Sajuyigbe</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Soumith Chintala</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Stephanie Max</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Stephen Chen</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Steve Kehoe</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Steve Satterfield</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sudarshan Govindaprasad</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sumit Gupta</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Summer Deng</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sungmin Cho</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sunny Virk</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Suraj Subramanian</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sy Choudhury</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sydney Goldman</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Tal Remez</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Tamar Glaser</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Tamara Best</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Thilo Koehler</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Thomas Robinson</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Tianhe Li</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Tianjun Zhang</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Tim Matthews</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Timothy Chou</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Tzook Shaked</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Varun Vontimitta</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Victoria Ajayi</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Victoria Montanez</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Vijai Mohan</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Vinay Satish Kumar</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Vishal Mangla</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Vlad Ionescu</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Vlad Poenaru</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Vlad Tiberiu Mihailescu</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Vladimir Ivanov</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Wei Li</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Wenchen Wang</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Wenwen Jiang</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Wes Bouaziz</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Will Constable</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Xiaocheng Tang</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Xiaojian Wu</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Xiaolan Wang</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Xilun Wu</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Xinbo Gao</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Yaniv Kleinman</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Yanjun Chen</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ye Hu</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ye Jia</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ye Qi</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Yenda Li</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Yilin Zhang</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ying Zhang</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Yossi Adi</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Youngjin Nam</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name> Yu</name>
+      <arxiv:affiliation>Sid</arxiv:affiliation>
+    </author>
+    <author>
+      <name> Wang</name>
+    </author>
+    <author>
+      <name>Yu Zhao</name>
+    </author>
+    <author>
+      <name>Yuchen Hao</name>
+    </author>
+    <author>
+      <name>Yundi Qian</name>
+    </author>
+    <author>
+      <name>Yunlu Li</name>
+    </author>
+    <author>
+      <name>Yuzi He</name>
+    </author>
+    <author>
+      <name>Zach Rait</name>
+    </author>
+    <author>
+      <name>Zachary DeVito</name>
+    </author>
+    <author>
+      <name>Zef Rosnbrick</name>
+    </author>
+    <author>
+      <name>Zhaoduo Wen</name>
+    </author>
+    <author>
+      <name>Zhenyu Yang</name>
+    </author>
+    <author>
+      <name>Zhiwei Zhao</name>
+    </author>
+    <author>
+      <name>Zhiyu Ma</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.01658v3</id>
+    <title>From Yes-Men to Truth-Tellers: Addressing Sycophancy in Large Language Models with Pinpoint Tuning</title>
+    <updated>2025-02-05T07:09:32Z</updated>
+    <link href="https://arxiv.org/abs/2409.01658v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.01658v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) tend to prioritize adherence to user prompts over providing veracious responses, leading to the sycophancy issue. When challenged by users, LLMs tend to admit mistakes and provide inaccurate responses even if they initially provided the correct answer. Recent works propose to employ supervised fine-tuning (SFT) to mitigate the sycophancy issue, while it typically leads to the degeneration of LLMs' general capability. To address the challenge, we propose a novel supervised pinpoint tuning (SPT), where the region-of-interest modules are tuned for a given objective. Specifically, SPT first reveals and verifies a small percentage (&lt;5%) of the basic modules, which significantly affect a particular behavior of LLMs. i.e., sycophancy. Subsequently, SPT merely fine-tunes these identified modules while freezing the rest. To verify the effectiveness of the proposed SPT, we conduct comprehensive experiments, demonstrating that SPT significantly mitigates the sycophancy issue of LLMs (even better than SFT). Moreover, SPT introduces limited or even no side effects on the general capability of LLMs. Our results shed light on how to precisely, effectively, and efficiently explain and improve the targeted ability of LLMs. Code and data are available at https://github.com/yellowtownhz/sycophancy-interpretability.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-03T07:01:37Z</published>
+    <arxiv:comment>accepted by ICML 2024, code and data are available at https://github.com/yellowtownhz/sycophancy-interpretability</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Wei Chen</name>
+    </author>
+    <author>
+      <name>Zhen Huang</name>
+    </author>
+    <author>
+      <name>Liang Xie</name>
+    </author>
+    <author>
+      <name>Binbin Lin</name>
+    </author>
+    <author>
+      <name>Houqiang Li</name>
+    </author>
+    <author>
+      <name>Le Lu</name>
+    </author>
+    <author>
+      <name>Xinmei Tian</name>
+    </author>
+    <author>
+      <name>Deng Cai</name>
+    </author>
+    <author>
+      <name>Yonggang Zhang</name>
+    </author>
+    <author>
+      <name>Wenxiao Wang</name>
+    </author>
+    <author>
+      <name>Xu Shen</name>
+    </author>
+    <author>
+      <name>Jieping Ye</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.30696v1</id>
+    <title>Disentangling Robustness and Sycophancy in Multilingual LLMs</title>
+    <updated>2026-10-22T04:10:03Z</updated>
+    <link href="https://arxiv.org/abs/2610.30696v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.30696v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>When a multilingual LLM agrees with a user's false premise, is it being sycophantic, or does it simply not know better in that language? Current research does not distinguish these cases: they record only whether the model agreed, not why. We introduce the SC-matrix, that crosses a model's competence (whether it answers correctly under no pressure) with its sycophancy (whether it maintains that answer under pressure). Our results show that (1) identical aggregate sycophancy rates can mask different failure compositions, (2) high competence in a language does not always protect against sycophancy, and (3) reasoning-oriented mitigations outperform directive-based strategies. We find that multilingual sycophancy is not a single phenomenon but a composite of different failures that require distinct diagnosis.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-22T04:10:03Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Rhitabrat Pokharel</name>
+    </author>
+    <author>
+      <name>Ameeta Agrawal</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2004.12376v2</id>
+    <title>GLUECoS : An Evaluation Benchmark for Code-Switched NLP</title>
+    <updated>2020-05-14T05:57:38Z</updated>
+    <link href="https://arxiv.org/abs/2004.12376v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2004.12376v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Code-switching is the use of more than one language in the same conversation or utterance. Recently, multilingual contextual embedding models, trained on multiple monolingual corpora, have shown promising results on cross-lingual and multilingual tasks. We present an evaluation benchmark, GLUECoS, for code-switched languages, that spans several NLP tasks in English-Hindi and English-Spanish. Specifically, our evaluation benchmark includes Language Identification from text, POS tagging, Named Entity Recognition, Sentiment Analysis, Question Answering and a new task for code-switching, Natural Language Inference. We present results on all these tasks using cross-lingual word embedding models and multilingual models. In addition, we fine-tune multilingual models on artificially generated code-switched data. Although multilingual models perform significantly better than cross-lingual models, our results show that in most tasks, across both language pairs, multilingual models fine-tuned on code-switched data perform best, showing that multilingual models can be further optimized for code-switching tasks.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-04-26T13:28:34Z</published>
+    <arxiv:comment>To appear at ACL 2020</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Simran Khanuja</name>
+    </author>
+    <author>
+      <name>Sandipan Dandapat</name>
+    </author>
+    <author>
+      <name>Anirudh Srinivasan</name>
+    </author>
+    <author>
+      <name>Sunayana Sitaram</name>
+    </author>
+    <author>
+      <name>Monojit Choudhury</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2204.08398v1</id>
+    <title>L3Cube-HingCorpus and HingBERT: A Code Mixed Hindi-English Dataset and BERT Language Models</title>
+    <updated>2022-04-18T16:49:59Z</updated>
+    <link href="https://arxiv.org/abs/2204.08398v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2204.08398v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Code-switching occurs when more than one language is mixed in a given sentence or a conversation. This phenomenon is more prominent on social media platforms and its adoption is increasing over time. Therefore code-mixed NLP has been extensively studied in the literature. As pre-trained transformer-based architectures are gaining popularity, we observe that real code-mixing data are scarce to pre-train large language models. We present L3Cube-HingCorpus, the first large-scale real Hindi-English code mixed data in a Roman script. It consists of 52.93M sentences and 1.04B tokens, scraped from Twitter. We further present HingBERT, HingMBERT, HingRoBERTa, and HingGPT. The BERT models have been pre-trained on codemixed HingCorpus using masked language modelling objectives. We show the effectiveness of these BERT models on the subsequent downstream tasks like code-mixed sentiment analysis, POS tagging, NER, and LID from the GLUECoS benchmark. The HingGPT is a GPT2 based generative transformer model capable of generating full tweets. We also release L3Cube-HingLID Corpus, the largest code-mixed Hindi-English language identification(LID) dataset and HingBERT-LID, a production-quality LID model to facilitate capturing of more code-mixed data using the process outlined in this work. The dataset and models are available at https://github.com/l3cube-pune/code-mixed-nlp .</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-04-18T16:49:59Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Ravindra Nayak</name>
+    </author>
+    <author>
+      <name>Raviraj Joshi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.15425v2</id>
+    <title>Language Model Tokenizers Introduce Unfairness Between Languages</title>
+    <updated>2023-10-20T10:09:55Z</updated>
+    <link href="https://arxiv.org/abs/2305.15425v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.15425v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent language models have shown impressive multilingual performance, even when not explicitly trained for it. Despite this, there are concerns about the quality of their outputs across different languages. In this paper, we show how disparity in the treatment of different languages arises at the tokenization stage, well before a model is even invoked. The same text translated into different languages can have drastically different tokenization lengths, with differences up to 15 times in some cases. These disparities persist even for tokenizers that are intentionally trained for multilingual support. Character-level and byte-level models also exhibit over 4 times the difference in the encoding length for some language pairs. This induces unfair treatment for some language communities in regard to the cost of accessing commercial language services, the processing time and latency, as well as the amount of content that can be provided as context to the models. Therefore, we make the case that we should train future language models using multilingually fair subword tokenizers.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-17T14:17:57Z</published>
+    <arxiv:comment>Published at NeurIPS 2023, Project webpage: https://aleksandarpetrov.github.io/tokenization-fairness, Code: https://github.com/AleksandarPetrov/tokenization-fairness</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Aleksandar Petrov</name>
+    </author>
+    <author>
+      <name>Emanuele La Malfa</name>
+    </author>
+    <author>
+      <name>Philip H. S. Torr</name>
+    </author>
+    <author>
+      <name>Adel Bibi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2307.16039v2</id>
+    <title>Okapi: Instruction-tuned Large Language Models in Multiple Languages with Reinforcement Learning from Human Feedback</title>
+    <updated>2023-08-02T00:39:25Z</updated>
+    <link href="https://arxiv.org/abs/2307.16039v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2307.16039v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A key technology for the development of large language models (LLMs) involves instruction tuning that helps align the models' responses with human expectations to realize impressive learning abilities. Two major approaches for instruction tuning characterize supervised fine-tuning (SFT) and reinforcement learning from human feedback (RLHF), which are currently applied to produce the best commercial LLMs (e.g., ChatGPT). To improve the accessibility of LLMs for research and development efforts, various instruction-tuned open-source LLMs have also been introduced recently, e.g., Alpaca, Vicuna, to name a few. However, existing open-source LLMs have only been instruction-tuned for English and a few popular languages, thus hindering their impacts and accessibility to many other languages in the world. Among a few very recent work to explore instruction tuning for LLMs in multiple languages, SFT has been used as the only approach to instruction-tune LLMs for multiple languages. This has left a significant gap for fine-tuned LLMs based on RLHF in diverse languages and raised important questions on how RLHF can boost the performance of multilingual instruction tuning. To overcome this issue, we present Okapi, the first system with instruction-tuned LLMs based on RLHF for multiple languages. Okapi introduces instruction and response-ranked data in 26 diverse languages to facilitate the experiments and development of future multilingual LLM research. We also present benchmark datasets to enable the evaluation of generative LLMs in multiple languages. Our experiments demonstrate the advantages of RLHF for multilingual instruction over SFT for different base models and datasets. Our framework and resources are released at https://github.com/nlp-uoregon/Okapi.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-07-29T18:01:46Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Viet Dac Lai</name>
+    </author>
+    <author>
+      <name>Chien Van Nguyen</name>
+    </author>
+    <author>
+      <name>Nghia Trung Ngo</name>
+    </author>
+    <author>
+      <name>Thuat Nguyen</name>
+    </author>
+    <author>
+      <name>Franck Dernoncourt</name>
+    </author>
+    <author>
+      <name>Ryan A. Rossi</name>
+    </author>
+    <author>
+      <name>Thien Huu Nguyen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2311.08596v2</id>
+    <title>Are You Sure? Challenging LLMs Leads to Performance Drops in The FlipFlop Experiment</title>
+    <updated>2024-02-21T18:15:47Z</updated>
+    <link href="https://arxiv.org/abs/2311.08596v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2311.08596v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The interactive nature of Large Language Models (LLMs) theoretically allows models to refine and improve their answers, yet systematic analysis of the multi-turn behavior of LLMs remains limited. In this paper, we propose the FlipFlop experiment: in the first round of the conversation, an LLM completes a classification task. In a second round, the LLM is challenged with a follow-up phrase like "Are you sure?", offering an opportunity for the model to reflect on its initial answer, and decide whether to confirm or flip its answer. A systematic study of ten LLMs on seven classification tasks reveals that models flip their answers on average 46% of the time and that all models see a deterioration of accuracy between their first and final prediction, with an average drop of 17% (the FlipFlop effect). We conduct finetuning experiments on an open-source LLM and find that finetuning on synthetically created data can mitigate - reducing performance deterioration by 60% - but not resolve sycophantic behavior entirely. The FlipFlop experiment illustrates the universality of sycophantic behavior in LLMs and provides a robust framework to analyze model behavior and evaluate future models.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-11-14T23:40:22Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Philippe Laban</name>
+    </author>
+    <author>
+      <name>Lidiya Murakhovs'ka</name>
+    </author>
+    <author>
+      <name>Caiming Xiong</name>
+    </author>
+    <author>
+      <name>Chien-Sheng Wu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.02174v5</id>
+    <title>Ask Again, Then Fail: Large Language Models' Vacillations in Judgment</title>
+    <updated>2024-06-11T15:22:07Z</updated>
+    <link href="https://arxiv.org/abs/2310.02174v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.02174v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We observe that current conversational language models often waver in their judgments when faced with follow-up questions, even if the original judgment was correct. This wavering presents a significant challenge for generating reliable responses and building user trust. To comprehensively assess this issue, we introduce a \textsc{Follow-up Questioning Mechanism} along with two metrics to quantify this inconsistency, confirming its widespread presence in current language models. To mitigate this issue, we explore various prompting strategies for closed-source models; moreover, we develop a training-based framework \textsc{Unwavering-FQ} that teaches language models to maintain their originally correct judgments through synthesized high-quality preference data. Our experimental results confirm the effectiveness of our framework and its ability to enhance the general capabilities of models.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-03T16:08:41Z</published>
+    <arxiv:comment>Accepted by ACL 2024 main conference</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Qiming Xie</name>
+    </author>
+    <author>
+      <name>Zengzhi Wang</name>
+    </author>
+    <author>
+      <name>Yi Feng</name>
+    </author>
+    <author>
+      <name>Rui Xia</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.23840v4</id>
+    <title>Measuring Sycophancy of Language Models in Multi-turn Dialogues</title>
+    <updated>2026-02-26T23:11:24Z</updated>
+    <link href="https://arxiv.org/abs/2505.23840v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.23840v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) are expected to provide helpful and harmless responses, yet they often exhibit sycophancy--conforming to user beliefs regardless of factual accuracy or ethical soundness. Prior research on sycophancy has primarily focused on single-turn factual correctness, overlooking the dynamics of real-world interactions. In this work, we introduce SYCON Bench, a novel benchmark for evaluating sycophantic behavior in multi-turn, free-form conversational settings. Our benchmark measures how quickly a model conforms to the user (Turn of Flip) and how frequently it shifts its stance under sustained user pressure (Number of Flip). Applying SYCON Bench to 17 LLMs across three real-world scenarios, we find that sycophancy remains a prevalent failure mode. Our analysis shows that alignment tuning amplifies sycophantic behavior, whereas model scaling and reasoning optimization strengthen the model's ability to resist undesirable user views. Reasoning models generally outperform instruction-tuned models but often fail when they over-index on logical exposition instead of directly addressing the user's underlying beliefs. Finally, we evaluate four additional prompting strategies and demonstrate that adopting a third-person perspective reduces sycophancy by up to 63.8% in debate scenario. We release our code and data at https://github.com/JiseungHong/SYCON-Bench.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-28T14:05:46Z</published>
+    <arxiv:comment>Accepted to Findings of EMNLP 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <arxiv:journal_ref>Findings of the Association for Computational Linguistics: EMNLP 2025, pages 2239-2259</arxiv:journal_ref>
+    <author>
+      <name>Jiseung Hong</name>
+    </author>
+    <author>
+      <name>Grace Byun</name>
+    </author>
+    <author>
+      <name>Seungone Kim</name>
+    </author>
+    <author>
+      <name>Kai Shu</name>
+    </author>
+    <author>
+      <name>Jinho D. Choi</name>
+    </author>
+    <arxiv:doi>10.18653/v1/2025.findings-emnlp.121</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.18653/v1/2025.findings-emnlp.121" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.05063v1</id>
+    <title>CodeMixBench: Evaluating Large Language Models on Code Generation with Code-Mixed Prompts</title>
+    <updated>2025-05-08T08:55:32Z</updated>
+    <link href="https://arxiv.org/abs/2505.05063v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.05063v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) have achieved remarkable success in code generation tasks, powering various applications like code completion, debugging, and programming assistance. However, existing benchmarks such as HumanEval, MBPP, and BigCodeBench primarily evaluate LLMs on English-only prompts, overlooking the real-world scenario where multilingual developers often use code-mixed language while interacting with LLMs. To address this gap, we introduce CodeMixBench, a novel benchmark designed to evaluate the robustness of LLMs on code generation from code-mixed prompts. Built upon BigCodeBench, CodeMixBench introduces controlled code-mixing (CMD) into the natural language parts of prompts across three language pairs: Hinglish (Hindi-English), Spanish-English, and Chinese Pinyin-English. We comprehensively evaluate a diverse set of open-source code generation models ranging from 1.5B to 15B parameters. Our results show that code-mixed prompts consistently degrade Pass@1 performance compared to their English-only counterparts, with performance drops increasing under higher CMD levels for smaller models. CodeMixBench provides a realistic evaluation framework for studying multilingual code generation and highlights new challenges and directions for building robust code generation models that generalize well across diverse linguistic settings.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-08T08:55:32Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Manik Sheokand</name>
+    </author>
+    <author>
+      <name>Parth Sawant</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.08177v4</id>
+    <title>SycEval: Evaluating LLM Sycophancy</title>
+    <updated>2025-09-19T14:30:28Z</updated>
+    <link href="https://arxiv.org/abs/2502.08177v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.08177v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) are increasingly applied in educational, clinical, and professional settings, but their tendency for sycophancy -- prioritizing user agreement over independent reasoning -- poses risks to reliability. This study introduces a framework to evaluate sycophantic behavior in ChatGPT-4o, Claude-Sonnet, and Gemini-1.5-Pro across AMPS (mathematics) and MedQuad (medical advice) datasets. Sycophantic behavior was observed in 58.19% of cases, with Gemini exhibiting the highest rate (62.47%) and ChatGPT the lowest (56.71%). Progressive sycophancy, leading to correct answers, occurred in 43.52% of cases, while regressive sycophancy, leading to incorrect answers, was observed in 14.66%. Preemptive rebuttals demonstrated significantly higher sycophancy rates than in-context rebuttals (61.75% vs. 56.52%, $Z=5.87$, $p&lt;0.001$), particularly in computational tasks, where regressive sycophancy increased significantly (preemptive: 8.13%, in-context: 3.54%, $p&lt;0.001$). Simple rebuttals maximized progressive sycophancy ($Z=6.59$, $p&lt;0.001$), while citation-based rebuttals exhibited the highest regressive rates ($Z=6.59$, $p&lt;0.001$). Sycophantic behavior showed high persistence (78.5%, 95% CI: [77.2%, 79.8%]) regardless of context or model. These findings emphasize the risks and opportunities of deploying LLMs in structured and dynamic domains, offering insights into prompt programming and model optimization for safer AI applications.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-12T07:32:42Z</published>
+    <arxiv:comment>AIES 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Aaron Fanous</name>
+      <arxiv:affiliation>Stanford University</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jacob Goldberg</name>
+      <arxiv:affiliation>Stanford University</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ank A. Agarwal</name>
+      <arxiv:affiliation>Stanford University</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Joanna Lin</name>
+      <arxiv:affiliation>Stanford University</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Anson Zhou</name>
+      <arxiv:affiliation>Stanford University</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Roxana Daneshjou</name>
+      <arxiv:affiliation>Stanford University</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sanmi Koyejo</name>
+      <arxiv:affiliation>Stanford University</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.06522v2</id>
+    <title>Anatomy of LLM Sycophancy: What a Flip Rate Hides</title>
+    <updated>2026-11-06T03:55:14Z</updated>
+    <link href="https://arxiv.org/abs/2610.06522v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.06522v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A model under pushback can correct itself, capitulate, or hold, and one flip rate counts a correction and a capitulation alike. SycoLens, a modular replay protocol, measures flip rates from replays of an item, a committed answer, and one scripted user line, each against a matched control with the line deleted. Pushback wording, committed text, answer format, boundary distance, and ground truth become factors of one instrument, where earlier instruments vary one to three, so the interactions between the factors become measurable. Across eleven frontier models and about 760,000 controlled replays, lines that assert the opposite verdict and lines that challenge without asserting one rank the models almost unrelatedly. Flip effects grow several-fold near a model's boundary, yet items the model is certain of still carry about half of the most-affected totals; planted prose anchors a commitment at rest more than it protects it. Under a yes/no readout the rankings come closer, entangled with a pressure-induced shift toward "no". Where a truth exists, one model re-derives and corrects itself while another abandons correct answers without written work. One score per model therefore compares different behaviours; we condense them into a reporting profile, and the records and analyses will be released upon publication.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-05T15:32:45Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Haonan Huang</name>
+    </author>
+    <author>
+      <name>Tianlin Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2107.03760v1</id>
+    <title>HinGE: A Dataset for Generation and Evaluation of Code-Mixed Hinglish Text</title>
+    <updated>2021-07-08T11:11:37Z</updated>
+    <link href="https://arxiv.org/abs/2107.03760v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2107.03760v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Text generation is a highly active area of research in the computational linguistic community. The evaluation of the generated text is a challenging task and multiple theories and metrics have been proposed over the years. Unfortunately, text generation and evaluation are relatively understudied due to the scarcity of high-quality resources in code-mixed languages where the words and phrases from multiple languages are mixed in a single utterance of text and speech. To address this challenge, we present a corpus (HinGE) for a widely popular code-mixed language Hinglish (code-mixing of Hindi and English languages). HinGE has Hinglish sentences generated by humans as well as two rule-based algorithms corresponding to the parallel Hindi-English sentences. In addition, we demonstrate the inefficacy of widely-used evaluation metrics on the code-mixed data. The HinGE dataset will facilitate the progress of natural language generation research in code-mixed languages.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-07-08T11:11:37Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Vivek Srivastava</name>
+    </author>
+    <author>
+      <name>Mayank Singh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.07004v2</id>
+    <title>Not All Languages Are Created Equal in LLMs: Improving Multilingual Capability by Cross-Lingual-Thought Prompting</title>
+    <updated>2023-10-22T13:43:27Z</updated>
+    <link href="https://arxiv.org/abs/2305.07004v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.07004v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) demonstrate impressive multilingual capability, but their performance varies substantially across different languages. In this work, we introduce a simple yet effective method, called cross-lingual-thought prompting (XLT), to systematically improve the multilingual capability of LLMs. Specifically, XLT is a generic template prompt that stimulates cross-lingual and logical reasoning skills to enhance task performance across languages. We conduct comprehensive evaluations on 7 typical benchmarks related to reasoning, understanding, and generation tasks, covering both high-resource and low-resource languages. Experimental results show that XLT not only remarkably enhances the performance of various multilingual tasks but also significantly reduces the gap between the average performance and the best performance of each task in different languages. Notably, XLT brings over 10 points of average improvement in arithmetic reasoning and open-domain question-answering tasks.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-11T17:44:17Z</published>
+    <arxiv:comment>Accepted by EMNLP 2023 Findings</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Haoyang Huang</name>
+    </author>
+    <author>
+      <name>Tianyi Tang</name>
+    </author>
+    <author>
+      <name>Dongdong Zhang</name>
+    </author>
+    <author>
+      <name>Wayne Xin Zhao</name>
+    </author>
+    <author>
+      <name>Ting Song</name>
+    </author>
+    <author>
+      <name>Yan Xia</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.03958v2</id>
+    <title>Simple synthetic data reduces sycophancy in large language models</title>
+    <updated>2024-02-15T01:03:13Z</updated>
+    <link href="https://arxiv.org/abs/2308.03958v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.03958v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Sycophancy is an undesirable behavior where models tailor their responses to follow a human user's view even when that view is not objectively correct (e.g., adapting liberal views once a user reveals that they are liberal). In this paper, we study the prevalence of sycophancy in language models and propose a simple synthetic-data intervention to reduce this behavior.
+  First, on a set of three sycophancy tasks (Perez et al., 2022) where models are asked for an opinion on statements with no correct answers (e.g., politics), we observe that both model scaling and instruction tuning significantly increase sycophancy for PaLM models up to 540B parameters. Second, we extend sycophancy evaluations to simple addition statements that are objectively incorrect, finding that despite knowing that these statements are wrong, language models will still agree with them if the user does as well.
+  To reduce sycophancy, we present a straightforward synthetic-data intervention that takes public NLP tasks and encourages models to be robust to user opinions on these tasks. Adding these data in a lightweight finetuning step can significantly reduce sycophantic behavior on held-out prompts. Code for generating synthetic data for intervention can be found at https://github.com/google/sycophancy-intervention.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-07T23:48:36Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Jerry Wei</name>
+    </author>
+    <author>
+      <name>Da Huang</name>
+    </author>
+    <author>
+      <name>Yifeng Lu</name>
+    </author>
+    <author>
+      <name>Denny Zhou</name>
+    </author>
+    <author>
+      <name>Quoc V. Le</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.10378v5</id>
+    <title>Cross-Lingual Consistency of Factual Knowledge in Multilingual Language Models</title>
+    <updated>2025-05-19T17:05:56Z</updated>
+    <link href="https://arxiv.org/abs/2310.10378v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.10378v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multilingual large-scale Pretrained Language Models (PLMs) have been shown to store considerable amounts of factual knowledge, but large variations are observed across languages. With the ultimate goal of ensuring that users with different language backgrounds obtain consistent feedback from the same model, we study the cross-lingual consistency (CLC) of factual knowledge in various multilingual PLMs. To this end, we propose a Ranking-based Consistency (RankC) metric to evaluate knowledge consistency across languages independently from accuracy. Using this metric, we conduct an in-depth analysis of the determining factors for CLC, both at model level and at language-pair level. Among other results, we find that increasing model size leads to higher factual probing accuracy in most languages, but does not improve cross-lingual consistency. Finally, we conduct a case study on CLC when new factual associations are inserted in the PLMs via model editing. Results on a small sample of facts inserted in English reveal a clear pattern whereby the new piece of knowledge transfers only to languages with which English has a high RankC score.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-16T13:19:17Z</published>
+    <arxiv:comment>EMNLP2023 Outstanding Paper (Multilinguality and Linguistic Diversity Track). All code and data are released at https://github.com/Betswish/Cross-Lingual-Consistency</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Jirui Qi</name>
+    </author>
+    <author>
+      <name>Raquel Fernández</name>
+    </author>
+    <author>
+      <name>Arianna Bisazza</name>
+    </author>
+    <arxiv:doi>10.18653/v1/2023.emnlp-main.658</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.18653/v1/2023.emnlp-main.658" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.11656v1</id>
+    <title>TRUTH DECAY: Quantifying Multi-Turn Sycophancy in Language Models</title>
+    <updated>2025-02-04T06:56:32Z</updated>
+    <link href="https://arxiv.org/abs/2503.11656v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.11656v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Rapid improvements in large language models have unveiled a critical challenge in human-AI interaction: sycophancy. In this context, sycophancy refers to the tendency of models to excessively agree with or flatter users, often at the expense of factual accuracy. While previous studies have primarily analyzed this behavior in single-turn interactions, its persistence and evolution in multi-step conversations remain largely unexplored. We introduce TRUTH DECAY, a benchmark specifically designed to evaluate sycophancy in extended dialogues, where language models must navigate iterative user feedback, challenges, and persuasion. We prompt models to elicit four types of sycophantic biases. We then propose and test sycophancy reduction strategies, evaluating their effectiveness beyond single-step interactions.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-04T06:56:32Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Joshua Liu</name>
+    </author>
+    <author>
+      <name>Aarav Jain</name>
+    </author>
+    <author>
+      <name>Soham Takuri</name>
+    </author>
+    <author>
+      <name>Srihan Vege</name>
+    </author>
+    <author>
+      <name>Aslihan Akalin</name>
+    </author>
+    <author>
+      <name>Kevin Zhu</name>
+    </author>
+    <author>
+      <name>Sean O'Brien</name>
+    </author>
+    <author>
+      <name>Vasu Sharma</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2207.05221v4</id>
+    <title>Language Models (Mostly) Know What They Know</title>
+    <updated>2022-11-21T16:38:35Z</updated>
+    <link href="https://arxiv.org/abs/2207.05221v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2207.05221v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study whether language models can evaluate the validity of their own claims and predict which questions they will be able to answer correctly. We first show that larger models are well-calibrated on diverse multiple choice and true/false questions when they are provided in the right format. Thus we can approach self-evaluation on open-ended sampling tasks by asking models to first propose answers, and then to evaluate the probability "P(True)" that their answers are correct. We find encouraging performance, calibration, and scaling for P(True) on a diverse array of tasks. Performance at self-evaluation further improves when we allow models to consider many of their own samples before predicting the validity of one specific possibility. Next, we investigate whether models can be trained to predict "P(IK)", the probability that "I know" the answer to a question, without reference to any particular proposed answer. Models perform well at predicting P(IK) and partially generalize across tasks, though they struggle with calibration of P(IK) on new tasks. The predicted P(IK) probabilities also increase appropriately in the presence of relevant source materials in the context, and in the presence of hints towards the solution of mathematical word problems. We hope these observations lay the groundwork for training more honest models, and for investigating how honesty generalizes to cases where models are trained on objectives other than the imitation of human writing.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-07-11T22:59:39Z</published>
+    <arxiv:comment>23+17 pages; refs added, typos fixed</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Saurav Kadavath</name>
+    </author>
+    <author>
+      <name>Tom Conerly</name>
+    </author>
+    <author>
+      <name>Amanda Askell</name>
+    </author>
+    <author>
+      <name>Tom Henighan</name>
+    </author>
+    <author>
+      <name>Dawn Drain</name>
+    </author>
+    <author>
+      <name>Ethan Perez</name>
+    </author>
+    <author>
+      <name>Nicholas Schiefer</name>
+    </author>
+    <author>
+      <name>Zac Hatfield-Dodds</name>
+    </author>
+    <author>
+      <name>Nova DasSarma</name>
+    </author>
+    <author>
+      <name>Eli Tran-Johnson</name>
+    </author>
+    <author>
+      <name>Scott Johnston</name>
+    </author>
+    <author>
+      <name>Sheer El-Showk</name>
+    </author>
+    <author>
+      <name>Andy Jones</name>
+    </author>
+    <author>
+      <name>Nelson Elhage</name>
+    </author>
+    <author>
+      <name>Tristan Hume</name>
+    </author>
+    <author>
+      <name>Anna Chen</name>
+    </author>
+    <author>
+      <name>Yuntao Bai</name>
+    </author>
+    <author>
+      <name>Sam Bowman</name>
+    </author>
+    <author>
+      <name>Stanislav Fort</name>
+    </author>
+    <author>
+      <name>Deep Ganguli</name>
+    </author>
+    <author>
+      <name>Danny Hernandez</name>
+    </author>
+    <author>
+      <name>Josh Jacobson</name>
+    </author>
+    <author>
+      <name>Jackson Kernion</name>
+    </author>
+    <author>
+      <name>Shauna Kravec</name>
+    </author>
+    <author>
+      <name>Liane Lovitt</name>
+    </author>
+    <author>
+      <name>Kamal Ndousse</name>
+    </author>
+    <author>
+      <name>Catherine Olsson</name>
+    </author>
+    <author>
+      <name>Sam Ringer</name>
+    </author>
+    <author>
+      <name>Dario Amodei</name>
+    </author>
+    <author>
+      <name>Tom Brown</name>
+    </author>
+    <author>
+      <name>Jack Clark</name>
+    </author>
+    <author>
+      <name>Nicholas Joseph</name>
+    </author>
+    <author>
+      <name>Ben Mann</name>
+    </author>
+    <author>
+      <name>Sam McCandlish</name>
+    </author>
+    <author>
+      <name>Chris Olah</name>
+    </author>
+    <author>
+      <name>Jared Kaplan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.06474v3</id>
+    <title>Multilingual Jailbreak Challenges in Large Language Models</title>
+    <updated>2024-03-04T04:03:54Z</updated>
+    <link href="https://arxiv.org/abs/2310.06474v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.06474v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>While large language models (LLMs) exhibit remarkable capabilities across a wide range of tasks, they pose potential safety concerns, such as the ``jailbreak'' problem, wherein malicious instructions can manipulate LLMs to exhibit undesirable behavior. Although several preventive measures have been developed to mitigate the potential risks associated with LLMs, they have primarily focused on English. In this study, we reveal the presence of multilingual jailbreak challenges within LLMs and consider two potential risky scenarios: unintentional and intentional. The unintentional scenario involves users querying LLMs using non-English prompts and inadvertently bypassing the safety mechanisms, while the intentional scenario concerns malicious users combining malicious instructions with multilingual prompts to deliberately attack LLMs. The experimental results reveal that in the unintentional scenario, the rate of unsafe content increases as the availability of languages decreases. Specifically, low-resource languages exhibit about three times the likelihood of encountering harmful content compared to high-resource languages, with both ChatGPT and GPT-4. In the intentional scenario, multilingual prompts can exacerbate the negative impact of malicious instructions, with astonishingly high rates of unsafe output: 80.92\% for ChatGPT and 40.71\% for GPT-4. To handle such a challenge in the multilingual context, we propose a novel \textsc{Self-Defense} framework that automatically generates multilingual training data for safety fine-tuning. Experimental results show that ChatGPT fine-tuned with such data can achieve a substantial reduction in unsafe content generation. Data is available at \url{https://github.com/DAMO-NLP-SG/multilingual-safety-for-LLMs}.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-10T09:44:06Z</published>
+    <arxiv:comment>ICLR 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Yue Deng</name>
+    </author>
+    <author>
+      <name>Wenxuan Zhang</name>
+    </author>
+    <author>
+      <name>Sinno Jialin Pan</name>
+    </author>
+    <author>
+      <name>Lidong Bing</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.02446v2</id>
+    <title>Low-Resource Languages Jailbreak GPT-4</title>
+    <updated>2024-01-27T22:54:52Z</updated>
+    <link href="https://arxiv.org/abs/2310.02446v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.02446v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>AI safety training and red-teaming of large language models (LLMs) are measures to mitigate the generation of unsafe content. Our work exposes the inherent cross-lingual vulnerability of these safety mechanisms, resulting from the linguistic inequality of safety training data, by successfully circumventing GPT-4's safeguard through translating unsafe English inputs into low-resource languages. On the AdvBenchmark, GPT-4 engages with the unsafe translated inputs and provides actionable items that can get the users towards their harmful goals 79% of the time, which is on par with or even surpassing state-of-the-art jailbreaking attacks. Other high-/mid-resource languages have significantly lower attack success rate, which suggests that the cross-lingual vulnerability mainly applies to low-resource languages. Previously, limited training on low-resource languages primarily affects speakers of those languages, causing technological disparities. However, our work highlights a crucial shift: this deficiency now poses a risk to all LLMs users. Publicly available translation APIs enable anyone to exploit LLMs' safety vulnerabilities. Therefore, our work calls for a more holistic red-teaming efforts to develop robust multilingual safeguards with wide language coverage.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-03T21:30:56Z</published>
+    <arxiv:comment>NeurIPS Workshop on Socially Responsible Language Modelling Research (SoLaR) 2023. Best Paper Award</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Zheng-Xin Yong</name>
+    </author>
+    <author>
+      <name>Cristina Menghini</name>
+    </author>
+    <author>
+      <name>Stephen H. Bach</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2212.09251v1</id>
+    <title>Discovering Language Model Behaviors with Model-Written Evaluations</title>
+    <updated>2022-12-19T05:13:52Z</updated>
+    <link href="https://arxiv.org/abs/2212.09251v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2212.09251v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As language models (LMs) scale, they develop many novel behaviors, good and bad, exacerbating the need to evaluate how they behave. Prior work creates evaluations with crowdwork (which is time-consuming and expensive) or existing data sources (which are not always available). Here, we automatically generate evaluations with LMs. We explore approaches with varying amounts of human effort, from instructing LMs to write yes/no questions to making complex Winogender schemas with multiple stages of LM-based generation and filtering. Crowdworkers rate the examples as highly relevant and agree with 90-100% of labels, sometimes more so than corresponding human-written datasets. We generate 154 datasets and discover new cases of inverse scaling where LMs get worse with size. Larger LMs repeat back a dialog user's preferred answer ("sycophancy") and express greater desire to pursue concerning goals like resource acquisition and goal preservation. We also find some of the first examples of inverse scaling in RL from Human Feedback (RLHF), where more RLHF makes LMs worse. For example, RLHF makes LMs express stronger political views (on gun rights and immigration) and a greater desire to avoid shut down. Overall, LM-written evaluations are high-quality and let us quickly discover many novel LM behaviors.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-12-19T05:13:52Z</published>
+    <arxiv:comment>for associated data visualizations, see https://www.evals.anthropic.com/model-written/ for full datasets, see https://github.com/anthropics/evals</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Ethan Perez</name>
+    </author>
+    <author>
+      <name>Sam Ringer</name>
+    </author>
+    <author>
+      <name>Kamilė Lukošiūtė</name>
+    </author>
+    <author>
+      <name>Karina Nguyen</name>
+    </author>
+    <author>
+      <name>Edwin Chen</name>
+    </author>
+    <author>
+      <name>Scott Heiner</name>
+    </author>
+    <author>
+      <name>Craig Pettit</name>
+    </author>
+    <author>
+      <name>Catherine Olsson</name>
+    </author>
+    <author>
+      <name>Sandipan Kundu</name>
+    </author>
+    <author>
+      <name>Saurav Kadavath</name>
+    </author>
+    <author>
+      <name>Andy Jones</name>
+    </author>
+    <author>
+      <name>Anna Chen</name>
+    </author>
+    <author>
+      <name>Ben Mann</name>
+    </author>
+    <author>
+      <name>Brian Israel</name>
+    </author>
+    <author>
+      <name>Bryan Seethor</name>
+    </author>
+    <author>
+      <name>Cameron McKinnon</name>
+    </author>
+    <author>
+      <name>Christopher Olah</name>
+    </author>
+    <author>
+      <name>Da Yan</name>
+    </author>
+    <author>
+      <name>Daniela Amodei</name>
+    </author>
+    <author>
+      <name>Dario Amodei</name>
+    </author>
+    <author>
+      <name>Dawn Drain</name>
+    </author>
+    <author>
+      <name>Dustin Li</name>
+    </author>
+    <author>
+      <name>Eli Tran-Johnson</name>
+    </author>
+    <author>
+      <name>Guro Khundadze</name>
+    </author>
+    <author>
+      <name>Jackson Kernion</name>
+    </author>
+    <author>
+      <name>James Landis</name>
+    </author>
+    <author>
+      <name>Jamie Kerr</name>
+    </author>
+    <author>
+      <name>Jared Mueller</name>
+    </author>
+    <author>
+      <name>Jeeyoon Hyun</name>
+    </author>
+    <author>
+      <name>Joshua Landau</name>
+    </author>
+    <author>
+      <name>Kamal Ndousse</name>
+    </author>
+    <author>
+      <name>Landon Goldberg</name>
+    </author>
+    <author>
+      <name>Liane Lovitt</name>
+    </author>
+    <author>
+      <name>Martin Lucas</name>
+    </author>
+    <author>
+      <name>Michael Sellitto</name>
+    </author>
+    <author>
+      <name>Miranda Zhang</name>
+    </author>
+    <author>
+      <name>Neerav Kingsland</name>
+    </author>
+    <author>
+      <name>Nelson Elhage</name>
+    </author>
+    <author>
+      <name>Nicholas Joseph</name>
+    </author>
+    <author>
+      <name>Noemí Mercado</name>
+    </author>
+    <author>
+      <name>Nova DasSarma</name>
+    </author>
+    <author>
+      <name>Oliver Rausch</name>
+    </author>
+    <author>
+      <name>Robin Larson</name>
+    </author>
+    <author>
+      <name>Sam McCandlish</name>
+    </author>
+    <author>
+      <name>Scott Johnston</name>
+    </author>
+    <author>
+      <name>Shauna Kravec</name>
+    </author>
+    <author>
+      <name>Sheer El Showk</name>
+    </author>
+    <author>
+      <name>Tamera Lanham</name>
+    </author>
+    <author>
+      <name>Timothy Telleen-Lawton</name>
+    </author>
+    <author>
+      <name>Tom Brown</name>
+    </author>
+    <author>
+      <name>Tom Henighan</name>
+    </author>
+    <author>
+      <name>Tristan Hume</name>
+    </author>
+    <author>
+      <name>Yuntao Bai</name>
+    </author>
+    <author>
+      <name>Zac Hatfield-Dodds</name>
+    </author>
+    <author>
+      <name>Jack Clark</name>
+    </author>
+    <author>
+      <name>Samuel R. Bowman</name>
+    </author>
+    <author>
+      <name>Amanda Askell</name>
+    </author>
+    <author>
+      <name>Roger Grosse</name>
+    </author>
+    <author>
+      <name>Danny Hernandez</name>
+    </author>
+    <author>
+      <name>Deep Ganguli</name>
+    </author>
+    <author>
+      <name>Evan Hubinger</name>
+    </author>
+    <author>
+      <name>Nicholas Schiefer</name>
+    </author>
+    <author>
+      <name>Jared Kaplan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.15287v1</id>
+    <title>Sycophancy in Large Language Models: Causes and Mitigations</title>
+    <updated>2024-11-22T16:56:49Z</updated>
+    <link href="https://arxiv.org/abs/2411.15287v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.15287v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) have demonstrated remarkable capabilities across a wide range of natural language processing tasks. However, their tendency to exhibit sycophantic behavior - excessively agreeing with or flattering users - poses significant risks to their reliability and ethical deployment. This paper provides a technical survey of sycophancy in LLMs, analyzing its causes, impacts, and potential mitigation strategies. We review recent work on measuring and quantifying sycophantic tendencies, examine the relationship between sycophancy and other challenges like hallucination and bias, and evaluate promising techniques for reducing sycophancy while maintaining model performance. Key approaches explored include improved training data, novel fine-tuning methods, post-deployment control mechanisms, and decoding strategies. We also discuss the broader implications of sycophancy for AI alignment and propose directions for future research. Our analysis suggests that mitigating sycophancy is crucial for developing more robust, reliable, and ethically-aligned language models.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-22T16:56:49Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <arxiv:journal_ref>Computing Conference 2025 (upcoming)</arxiv:journal_ref>
+    <author>
+      <name>Lars Malmqvist</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.00046v1</id>
+    <title>Extending Beacon to Hindi: Cultural Adaptation Drives Cross-Lingual Sycophancy</title>
+    <updated>2026-01-19T12:03:52Z</updated>
+    <link href="https://arxiv.org/abs/2602.00046v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.00046v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Sycophancy, the tendency of language models to prioritize agreement with user preferences over principled reasoning, has been identified as a persistent alignment failure in English-language evaluations. However, it remains unclear whether such diagnostics generalize across languages and cultural contexts. We extend the Beacon single-turn forced-choice sycophancy diagnostic to Hindi through a controlled three-condition design: English original, Hindi literal translation, and Hindi culturally adapted prompts. We evaluate four open-weight instruction-tuned models on 50 prompts per condition, enabling separation of language encoding effects from cultural adaptation effects. Across all models, sycophancy rates are consistently higher for culturally adapted Hindi prompts than for English, with absolute differences ranging from 12.0 to 16.0 percentage points. A decomposition on Qwen 2.5-Coder-7B shows that cultural adaptation (delta = 14.0%, 95% CI: [4.0%, 26.0%]) accounts for the majority of this gap, while language encoding contributes minimally (delta = 2.0%, 95% CI: [0.0%, 6.0%]). Category-level analysis reveals that advice prompts exhibit the largest cross-lingual differences (20-25 percentage points), achieving statistical significance in two of four models. These findings indicate that alignment behaviors measured in English may not transfer uniformly across languages and that culturally grounded prompt framing plays a substantial role. We release all datasets and evaluation code to support replication and extension.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-19T12:03:52Z</published>
+    <arxiv:comment>First Hindi sycophancy benchmark using a three-condition design separating language and cultural effects, with empirical evaluation across four instruction-tuned models</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Sarthak Sattigeri</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.01798v2</id>
+    <title>Large Language Models Cannot Self-Correct Reasoning Yet</title>
+    <updated>2024-03-14T04:27:52Z</updated>
+    <link href="https://arxiv.org/abs/2310.01798v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.01798v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) have emerged as a groundbreaking technology with their unparalleled text generation capabilities across various applications. Nevertheless, concerns persist regarding the accuracy and appropriateness of their generated content. A contemporary methodology, self-correction, has been proposed as a remedy to these issues. Building upon this premise, this paper critically examines the role and efficacy of self-correction within LLMs, shedding light on its true potential and limitations. Central to our investigation is the notion of intrinsic self-correction, whereby an LLM attempts to correct its initial responses based solely on its inherent capabilities, without the crutch of external feedback. In the context of reasoning, our research indicates that LLMs struggle to self-correct their responses without external feedback, and at times, their performance even degrades after self-correction. Drawing from these insights, we offer suggestions for future research and practical applications in this field.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-03T04:56:12Z</published>
+    <arxiv:comment>ICLR 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Jie Huang</name>
+    </author>
+    <author>
+      <name>Xinyun Chen</name>
+    </author>
+    <author>
+      <name>Swaroop Mishra</name>
+    </author>
+    <author>
+      <name>Huaixiu Steven Zheng</name>
+    </author>
+    <author>
+      <name>Adams Wei Yu</name>
+    </author>
+    <author>
+      <name>Xinying Song</name>
+    </author>
+    <author>
+      <name>Denny Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.16011v2</id>
+    <title>Who Flips? Self- and Cross-Model Counterarguments Reveal Answer Instability in LLMs</title>
+    <updated>2026-08-30T15:25:57Z</updated>
+    <link href="https://arxiv.org/abs/2606.16011v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.16011v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Standard accuracy benchmarks evaluate whether large language models (LLMs) reach correct answers. However, they do not test whether models maintain that answer when challenged by a plausible counter-argument. We introduce a controlled protocol for evaluating answer stability: after a model answers a multiple-choice question correctly, we challenge the model's answer with a coherent argument for an incorrect option and measure whether the model flips. The setup a) isolates argumentative content from overt social pressure and b) varies argument length, self-attribution, and cross-model source. Across seven frontier models and 57 MMLU subjects, flip rates range from 17.5% to 97.3%, revealing large differences in stability that are not captured by accuracy metrics alone. We find that self-attribution consistently increases flip rates (mean 7.1pp, up to 18.7pp). Furthermore, pooling wrong-answer arguments across models and selecting the most effective one per question yields stronger adversarial challenges than relying on any single source model. From this cross-model pool, we construct MaxFlip, a curated benchmark that amplifies answer flips by up to 23.6pp over self-generated challenges. We release the protocol, challenge records, and MaxFlip to support stability evaluation alongside standard accuracy benchmarks. Materials are available at https://github.com/nafisenik/WhoFlips, https://hf.co/datasets/nafisehNik/WhoFlips.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-14T20:45:30Z</published>
+    <arxiv:comment>EMNLP Findings 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Nafiseh Nikeghbal</name>
+    </author>
+    <author>
+      <name>Amir Hossein Kargaran</name>
+    </author>
+    <author>
+      <name>Shaghayegh Kolli</name>
+    </author>
+    <author>
+      <name>Jana Diesner</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.19786v1</id>
+    <title>Gemma 3 Technical Report</title>
+    <updated>2025-03-25T15:52:34Z</updated>
+    <link href="https://arxiv.org/abs/2503.19786v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.19786v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce Gemma 3, a multimodal addition to the Gemma family of lightweight open models, ranging in scale from 1 to 27 billion parameters. This version introduces vision understanding abilities, a wider coverage of languages and longer context - at least 128K tokens. We also change the architecture of the model to reduce the KV-cache memory that tends to explode with long context. This is achieved by increasing the ratio of local to global attention layers, and keeping the span on local attention short. The Gemma 3 models are trained with distillation and achieve superior performance to Gemma 2 for both pre-trained and instruction finetuned versions. In particular, our novel post-training recipe significantly improves the math, chat, instruction-following and multilingual abilities, making Gemma3-4B-IT competitive with Gemma2-27B-IT and Gemma3-27B-IT comparable to Gemini-1.5-Pro across benchmarks. We release all our models to the community.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-25T15:52:34Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name> Gemma Team</name>
+    </author>
+    <author>
+      <name>Aishwarya Kamath</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Johan Ferret</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Shreya Pathak</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Nino Vieillard</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ramona Merhej</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sarah Perrin</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Tatiana Matejovicova</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Alexandre Ramé</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Morgane Rivière</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Louis Rouillard</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Thomas Mesnard</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Geoffrey Cideron</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jean-bastien Grill</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sabela Ramos</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Edouard Yvinec</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Michelle Casbon</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Etienne Pot</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ivo Penchev</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Gaël Liu</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Francesco Visin</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kathleen Kenealy</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Lucas Beyer</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Xiaohai Zhai</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Anton Tsitsulin</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Robert Busa-Fekete</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Alex Feng</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Noveen Sachdeva</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Benjamin Coleman</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Yi Gao</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Basil Mustafa</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Iain Barr</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Emilio Parisotto</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>David Tian</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Matan Eyal</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Colin Cherry</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jan-Thorsten Peter</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Danila Sinopalnikov</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Surya Bhupatiraju</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Rishabh Agarwal</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Mehran Kazemi</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Dan Malkin</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ravin Kumar</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>David Vilar</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Idan Brusilovsky</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jiaming Luo</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Andreas Steiner</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Abe Friesen</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Abhanshu Sharma</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Abheesht Sharma</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Adi Mayrav Gilady</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Adrian Goedeckemeyer</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Alaa Saade</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Alex Feng</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Alexander Kolesnikov</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Alexei Bendebury</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Alvin Abdagic</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Amit Vadi</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>András György</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>André Susano Pinto</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Anil Das</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ankur Bapna</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Antoine Miech</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Antoine Yang</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Antonia Paterson</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ashish Shenoy</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ayan Chakrabarti</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Bilal Piot</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Bo Wu</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Bobak Shahriari</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Bryce Petrini</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Charlie Chen</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Charline Le Lan</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Christopher A. Choquette-Choo</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>CJ Carey</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Cormac Brick</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Daniel Deutsch</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Danielle Eisenbud</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Dee Cattle</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Derek Cheng</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Dimitris Paparas</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Divyashree Shivakumar Sreepathihalli</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Doug Reid</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Dustin Tran</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Dustin Zelle</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Eric Noland</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Erwin Huizenga</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Eugene Kharitonov</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Frederick Liu</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Gagik Amirkhanyan</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Glenn Cameron</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Hadi Hashemi</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Hanna Klimczak-Plucińska</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Harman Singh</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Harsh Mehta</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Harshal Tushar Lehri</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Hussein Hazimeh</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ian Ballantyne</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Idan Szpektor</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ivan Nardini</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jean Pouget-Abadie</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jetha Chan</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Joe Stanton</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>John Wieting</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jonathan Lai</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jordi Orbay</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Joseph Fernandez</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Josh Newlan</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ju-yeong Ji</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jyotinder Singh</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kat Black</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kathy Yu</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kevin Hui</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kiran Vodrahalli</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Klaus Greff</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Linhai Qiu</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Marcella Valentine</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Marina Coelho</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Marvin Ritter</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Matt Hoffman</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Matthew Watson</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Mayank Chaturvedi</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Michael Moynihan</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Min Ma</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Nabila Babar</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Natasha Noy</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Nathan Byrd</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Nick Roy</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Nikola Momchev</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Nilay Chauhan</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Noveen Sachdeva</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Oskar Bunyan</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Pankil Botarda</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Paul Caron</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Paul Kishan Rubenstein</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Phil Culliton</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Philipp Schmid</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Pier Giuseppe Sessa</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Pingmei Xu</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Piotr Stanczyk</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Pouya Tafti</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Rakesh Shivanna</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Renjie Wu</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Renke Pan</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Reza Rokni</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Rob Willoughby</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Rohith Vallu</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ryan Mullins</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sammy Jerome</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sara Smoot</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sertan Girgin</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Shariq Iqbal</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Shashir Reddy</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Shruti Sheth</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Siim Põder</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sijal Bhatnagar</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sindhu Raghuram Panyam</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sivan Eiger</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Susan Zhang</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Tianqi Liu</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Trevor Yacovone</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Tyler Liechty</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Uday Kalra</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Utku Evci</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Vedant Misra</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Vincent Roseberry</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Vlad Feinberg</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Vlad Kolesnikov</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Woohyun Han</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Woosuk Kwon</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Xi Chen</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Yinlam Chow</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Yuvein Zhu</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Zichuan Wei</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Zoltan Egyed</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Victor Cotruta</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Minh Giang</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Phoebe Kirk</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Anand Rao</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Kat Black</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Nabila Babar</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jessica Lo</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Erica Moreira</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Luiz Gustavo Martins</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Omar Sanseviero</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Lucas Gonzalez</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Zach Gleicher</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Tris Warkentin</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Vahab Mirrokni</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Evan Senter</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Eli Collins</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Joelle Barral</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Zoubin Ghahramani</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Raia Hadsell</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Yossi Matias</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>D. Sculley</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Slav Petrov</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Noah Fiedel</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Noam Shazeer</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Oriol Vinyals</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jeff Dean</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Demis Hassabis</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Koray Kavukcuoglu</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Clement Farabet</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Elena Buchatskaya</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jean-Baptiste Alayrac</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Rohan Anil</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name> Dmitry</name>
+      <arxiv:affiliation>Dima</arxiv:affiliation>
+    </author>
+    <author>
+      <name> Lepikhin</name>
+    </author>
+    <author>
+      <name>Sebastian Borgeaud</name>
+    </author>
+    <author>
+      <name>Olivier Bachem</name>
+    </author>
+    <author>
+      <name>Armand Joulin</name>
+    </author>
+    <author>
+      <name>Alek Andreev</name>
+    </author>
+    <author>
+      <name>Cassidy Hardin</name>
+    </author>
+    <author>
+      <name>Robert Dadashi</name>
+    </author>
+    <author>
+      <name>Léonard Hussenot</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.12528v4</id>
+    <title>MEGA: Multilingual Evaluation of Generative AI</title>
+    <updated>2023-10-22T22:19:13Z</updated>
+    <link href="https://arxiv.org/abs/2303.12528v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.12528v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generative AI models have shown impressive performance on many Natural Language Processing tasks such as language understanding, reasoning, and language generation. An important question being asked by the AI community today is about the capabilities and limits of these models, and it is clear that evaluating generative AI is very challenging. Most studies on generative LLMs have been restricted to English and it is unclear how capable these models are at understanding and generating text in other languages. We present the first comprehensive benchmarking of generative LLMs - MEGA, which evaluates models on standard NLP benchmarks, covering 16 NLP datasets across 70 typologically diverse languages. We compare the performance of generative LLMs including Chat-GPT and GPT-4 to State of the Art (SOTA) non-autoregressive models on these tasks to determine how well generative models perform compared to the previous generation of LLMs. We present a thorough analysis of the performance of models across languages and tasks and discuss challenges in improving the performance of generative LLMs on low-resource languages. We create a framework for evaluating generative LLMs in the multilingual setting and provide directions for future progress in the field.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-22T13:03:10Z</published>
+    <arxiv:comment>EMNLP 2023</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Kabir Ahuja</name>
+    </author>
+    <author>
+      <name>Harshita Diddee</name>
+    </author>
+    <author>
+      <name>Rishav Hada</name>
+    </author>
+    <author>
+      <name>Millicent Ochieng</name>
+    </author>
+    <author>
+      <name>Krithika Ramesh</name>
+    </author>
+    <author>
+      <name>Prachi Jain</name>
+    </author>
+    <author>
+      <name>Akshay Nambi</name>
+    </author>
+    <author>
+      <name>Tanuja Ganu</name>
+    </author>
+    <author>
+      <name>Sameer Segal</name>
+    </author>
+    <author>
+      <name>Maxamed Axmed</name>
+    </author>
+    <author>
+      <name>Kalika Bali</name>
+    </author>
+    <author>
+      <name>Sunayana Sitaram</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.14235v2</id>
+    <title>Multilingual Large Language Models Are Not (Yet) Code-Switchers</title>
+    <updated>2023-10-23T15:17:59Z</updated>
+    <link href="https://arxiv.org/abs/2305.14235v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.14235v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multilingual Large Language Models (LLMs) have recently shown great capabilities in a wide range of tasks, exhibiting state-of-the-art performance through zero-shot or few-shot prompting methods. While there have been extensive studies on their abilities in monolingual tasks, the investigation of their potential in the context of code-switching (CSW), the practice of alternating languages within an utterance, remains relatively uncharted. In this paper, we provide a comprehensive empirical analysis of various multilingual LLMs, benchmarking their performance across four tasks: sentiment analysis, machine translation, summarization and word-level language identification. Our results indicate that despite multilingual LLMs exhibiting promising outcomes in certain tasks using zero or few-shot prompting, they still underperform in comparison to fine-tuned models of much smaller scales. We argue that current "multilingualism" in LLMs does not inherently imply proficiency with code-switching texts, calling for future research to bridge this discrepancy.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-23T16:50:48Z</published>
+    <arxiv:comment>Accepted at EMNLP 2023</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Ruochen Zhang</name>
+    </author>
+    <author>
+      <name>Samuel Cahyawijaya</name>
+    </author>
+    <author>
+      <name>Jan Christian Blaise Cruz</name>
+    </author>
+    <author>
+      <name>Genta Indra Winata</name>
+    </author>
+    <author>
+      <name>Alham Fikri Aji</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2009.03300v3</id>
+    <title>Measuring Massive Multitask Language Understanding</title>
+    <updated>2021-01-12T18:57:11Z</updated>
+    <link href="https://arxiv.org/abs/2009.03300v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2009.03300v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a new test to measure a text model's multitask accuracy. The test covers 57 tasks including elementary mathematics, US history, computer science, law, and more. To attain high accuracy on this test, models must possess extensive world knowledge and problem solving ability. We find that while most recent models have near random-chance accuracy, the very largest GPT-3 model improves over random chance by almost 20 percentage points on average. However, on every one of the 57 tasks, the best models still need substantial improvements before they can reach expert-level accuracy. Models also have lopsided performance and frequently do not know when they are wrong. Worse, they still have near-random accuracy on some socially important subjects such as morality and law. By comprehensively evaluating the breadth and depth of a model's academic and professional understanding, our test can be used to analyze models across many tasks and to identify important shortcomings.</summary>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-09-07T17:59:25Z</published>
+    <arxiv:comment>ICLR 2021; the test and code is available at https://github.com/hendrycks/test</arxiv:comment>
+    <arxiv:primary_category term="cs.CY"/>
+    <author>
+      <name>Dan Hendrycks</name>
+    </author>
+    <author>
+      <name>Collin Burns</name>
+    </author>
+    <author>
+      <name>Steven Basart</name>
+    </author>
+    <author>
+      <name>Andy Zou</name>
+    </author>
+    <author>
+      <name>Mantas Mazeika</name>
+    </author>
+    <author>
+      <name>Dawn Song</name>
+    </author>
+    <author>
+      <name>Jacob Steinhardt</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.13995v2</id>
+    <title>ELEPHANT: Measuring and understanding social sycophancy in LLMs</title>
+    <updated>2025-09-29T21:29:38Z</updated>
+    <link href="https://arxiv.org/abs/2505.13995v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.13995v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>LLMs are known to exhibit sycophancy: agreeing with and flattering users, even at the cost of correctness. Prior work measures sycophancy only as direct agreement with users' explicitly stated beliefs that can be compared to a ground truth. This fails to capture broader forms of sycophancy such as affirming a user's self-image or other implicit beliefs. To address this gap, we introduce social sycophancy, characterizing sycophancy as excessive preservation of a user's face (their desired self-image), and present ELEPHANT, a benchmark for measuring social sycophancy in an LLM. Applying our benchmark to 11 models, we show that LLMs consistently exhibit high rates of social sycophancy: on average, they preserve user's face 45 percentage points more than humans in general advice queries and in queries describing clear user wrongdoing (from Reddit's r/AmITheAsshole). Furthermore, when prompted with perspectives from either side of a moral conflict, LLMs affirm both sides (depending on whichever side the user adopts) in 48% of cases--telling both the at-fault party and the wronged party that they are not wrong--rather than adhering to a consistent moral or value judgment. We further show that social sycophancy is rewarded in preference datasets, and that while existing mitigation strategies for sycophancy are limited in effectiveness, model-based steering shows promise for mitigating these behaviors. Our work provides theoretical grounding and an empirical benchmark for understanding and addressing sycophancy in the open-ended contexts that characterize the vast majority of LLM use cases.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-20T06:45:17Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Myra Cheng</name>
+    </author>
+    <author>
+      <name>Sunny Yu</name>
+    </author>
+    <author>
+      <name>Cinoo Lee</name>
+    </author>
+    <author>
+      <name>Pranav Khadpe</name>
+    </author>
+    <author>
+      <name>Lujain Ibrahim</name>
+    </author>
+    <author>
+      <name>Dan Jurafsky</name>
+    </author>
+    <arxiv:doi>10.1126/science.aec8352</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1126/science.aec8352" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.27664v1</id>
+    <title>Investigating the Influence of Language on Sycophantic Behavior of Multilingual LLMs</title>
+    <updated>2026-03-29T12:31:05Z</updated>
+    <link href="https://arxiv.org/abs/2603.27664v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.27664v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) have achieved strong performance across a wide range of tasks, but they are also prone to sycophancy, the tendency to agree with user statements regardless of validity. Previous research has outlined both the extent and the underlying causes of sycophancy in earlier models, such as ChatGPT-3.5 and Davinci. Newer models have since undergone multiple mitigation strategies, yet there remains a critical need to systematically test their behavior. In particular, the effect of language on sycophancy has not been explored.
+  In this work, we investigate how the language influences sycophantic responses. We evaluate three state-of-the-art models, GPT-4o mini, Gemini 1.5 Flash, and Claude 3.5 Haiku, using a set of tweet-like opinion prompts translated into five additional languages: Arabic, Chinese, French, Spanish, and Portuguese. Our results show that although newer models exhibit significantly less sycophancy overall compared to earlier generations, the extent of sycophancy is still influenced by the language. We further provide a granular analysis of how language shapes model agreeableness across sensitive topics, revealing systematic cultural and linguistic patterns. These findings highlight both the progress of mitigation efforts and the need for broader multilingual audits to ensure trustworthy and bias-aware deployment of LLMs.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-29T12:31:05Z</published>
+    <arxiv:comment>15 Pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Bayan Abdullah Aldahlawi</name>
+    </author>
+    <author>
+      <name>A. B. M. Ashikur Rahman</name>
+    </author>
+    <author>
+      <name>Irfan Ahmad</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.03304v2</id>
+    <title>Global MMLU: Understanding and Addressing Cultural and Linguistic Biases in Multilingual Evaluation</title>
+    <updated>2025-02-19T13:30:23Z</updated>
+    <link href="https://arxiv.org/abs/2412.03304v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.03304v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Cultural biases in multilingual datasets pose significant challenges for their effectiveness as global benchmarks. These biases stem not only from differences in language but also from the cultural knowledge required to interpret questions, reducing the practical utility of translated datasets like MMLU. Furthermore, translation often introduces artefacts that can distort the meaning or clarity of questions in the target language. A common practice in multilingual evaluation is to rely on machine-translated evaluation sets, but simply translating a dataset is insufficient to address these challenges. In this work, we trace the impact of both of these issues on multilingual evaluations and ensuing model performances. Our large-scale evaluation of state-of-the-art open and proprietary models illustrates that progress on MMLU depends heavily on learning Western-centric concepts, with 28% of all questions requiring culturally sensitive knowledge. Moreover, for questions requiring geographic knowledge, an astounding 84.9% focus on either North American or European regions. Rankings of model evaluations change depending on whether they are evaluated on the full portion or the subset of questions annotated as culturally sensitive, showing the distortion to model rankings when blindly relying on translated MMLU. We release Global MMLU, an improved MMLU with evaluation coverage across 42 languages -- with improved overall quality by engaging with compensated professional and community annotators to verify translation quality while also rigorously evaluating cultural biases present in the original dataset. This comprehensive Global MMLU set also includes designated subsets labeled as culturally sensitive and culturally agnostic to allow for more holistic, complete evaluation.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-04T13:27:09Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Shivalika Singh</name>
+    </author>
+    <author>
+      <name>Angelika Romanou</name>
+    </author>
+    <author>
+      <name>Clémentine Fourrier</name>
+    </author>
+    <author>
+      <name>David I. Adelani</name>
+    </author>
+    <author>
+      <name>Jian Gang Ngui</name>
+    </author>
+    <author>
+      <name>Daniel Vila-Suero</name>
+    </author>
+    <author>
+      <name>Peerat Limkonchotiwat</name>
+    </author>
+    <author>
+      <name>Kelly Marchisio</name>
+    </author>
+    <author>
+      <name>Wei Qi Leong</name>
+    </author>
+    <author>
+      <name>Yosephine Susanto</name>
+    </author>
+    <author>
+      <name>Raymond Ng</name>
+    </author>
+    <author>
+      <name>Shayne Longpre</name>
+    </author>
+    <author>
+      <name>Wei-Yin Ko</name>
+    </author>
+    <author>
+      <name>Sebastian Ruder</name>
+    </author>
+    <author>
+      <name>Madeline Smith</name>
+    </author>
+    <author>
+      <name>Antoine Bosselut</name>
+    </author>
+    <author>
+      <name>Alice Oh</name>
+    </author>
+    <author>
+      <name>Andre F. T. Martins</name>
+    </author>
+    <author>
+      <name>Leshem Choshen</name>
+    </author>
+    <author>
+      <name>Daphne Ippolito</name>
+    </author>
+    <author>
+      <name>Enzo Ferrante</name>
+    </author>
+    <author>
+      <name>Marzieh Fadaee</name>
+    </author>
+    <author>
+      <name>Beyza Ermis</name>
+    </author>
+    <author>
+      <name>Sara Hooker</name>
+    </author>
+  </entry>
+</feed>

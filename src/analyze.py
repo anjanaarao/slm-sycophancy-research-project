@@ -1,0 +1,519 @@
+"""Analysis: accuracy, flip-to-wrong rates, paired language tests, confidence-adjusted regression.
+
+Reads  results/raw/<model>.csv                  the experiment (src/run.py)
+       results/pilot/llama3.2-3b_freeform.csv   the free-form pilot, used only to validate the answer readout
+       results/readout_check/<model>.csv        written replies on 26 items (src/check_readout.py)
+Writes results/tables/*.csv, results/summary.json    every number quoted in the paper
+       paper-springer/tables/*.tex                   the result tables, \input by main.tex
+       figures/*.pdf|png, paper-springer/figures/*.pdf
+"""
+from __future__ import annotations
+
+import json
+import re
+import shutil
+from pathlib import Path
+
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import statsmodels.api as sm
+import statsmodels.formula.api as smf
+from scipy.stats import binomtest
+from statsmodels.stats.multitest import multipletests
+from statsmodels.stats.proportion import proportion_confint
+
+ROOT = Path(__file__).resolve().parents[1]
+RAW, TAB, FIG = ROOT / "results/raw", ROOT / "results/tables", ROOT / "figures"
+PILOT = ROOT / "results/pilot/llama3.2-3b_freeform.csv"
+READOUT = ROOT / "results/readout_check"
+PAPER = ROOT / "paper-springer"
+PTAB, PFIG = PAPER / "tables", PAPER / "figures"
+for d in (TAB, FIG, PTAB, PFIG):
+    d.mkdir(parents=True, exist_ok=True)
+
+MODELS = {"llama3.2-3b": "Llama-3.2-3B", "qwen3-4b": "Qwen3-4B", "gemma3-4b": "Gemma-3-4B"}
+LANGS = {"en": "English", "hi": "Hindi", "hg": "Hinglish"}
+PTYPES = ["neutral", "mild", "strong"]
+COLORS = {"en": "#2a78d6", "hi": "#eb6834", "hg": "#1baf7a"}  # validated categorical slots 1-3
+MARKERS = {"en": "o", "hi": "s", "hg": "^"}
+LETTERS = list("ABCD")
+rng = np.random.default_rng(2026)
+
+
+def wilson(k, n):
+    if n == 0:
+        return (np.nan, np.nan)
+    return proportion_confint(k, n, method="wilson")
+
+
+def load() -> pd.DataFrame:
+    frames = []
+    for m in MODELS:
+        f = RAW / f"{m}.csv"
+        if f.exists():
+            d = pd.read_csv(f)
+            d["model"] = m
+            frames.append(d)
+    df = pd.concat(frames, ignore_index=True)
+    p0 = df[[f"p0_{L}" for L in LETTERS]].to_numpy()
+    df["conf0"] = p0.max(axis=1)                       # turn-1 probability of the chosen answer
+    df["flip"] = (df.a1 != df.a0).astype(int)          # any change of answer
+    df["c2w"] = ((df.correct0 == 1) & (df.correct1 == 0)).astype(int)
+    p1 = df[[f"p1_{L}" for L in LETTERS]].to_numpy()
+    df["p_keep"] = p1[np.arange(len(df)), df.a0.map(LETTERS.index)]  # turn-2 probability of the turn-1 answer
+    return df
+
+
+# ------------------------------------------------------------------ descriptive table
+def describe(df):
+    rows = []
+    for m in [m for m in MODELS if m in df.model.unique()]:
+        for L in LANGS:
+            d = df[(df.model == m) & (df.lang == L)]
+            t1 = d[d.ptype == "neutral"]
+            n, k = len(t1), int(t1.correct0.sum())
+            lo, hi = wilson(k, n)
+            r = {"model": m, "lang": L, "n_items": n, "acc0": k / n, "acc0_lo": lo, "acc0_hi": hi, "n_correct0": k,
+                 "letter_mass0_median": t1.mass0.median(), "share_mass0_lt_0.5": (t1.mass0 < 0.5).mean()}
+            for p in PTYPES:
+                c = d[(d.ptype == p) & (d.correct0 == 1)]
+                kk = int(c.c2w.sum())
+                lo, hi = wilson(kk, len(c))
+                r.update({f"c2w_{p}": kk / len(c) if len(c) else np.nan, f"c2w_{p}_lo": lo, f"c2w_{p}_hi": hi,
+                          f"acc1_{p}": d[d.ptype == p].correct1.mean(),
+                          f"flip_{p}": d[d.ptype == p].flip.mean()})
+                w = d[(d.ptype == p) & (d.correct0 == 0)]
+                r[f"w2c_{p}"] = w.correct1.mean() if len(w) else np.nan
+                ch = w[w.flip == 1]  # wrong answers that were changed: how many, and how many became right
+                r.update({f"flip_wrong_{p}": w.flip.mean() if len(w) else np.nan, f"n_changed_wrong_{p}": len(ch),
+                          f"w2c_changed_{p}": ch.correct1.mean() if len(ch) else np.nan,
+                          f"p_keep_{p}": d[d.ptype == p].p_keep.mean()})
+            rows.append(r)
+    return pd.DataFrame(rows)
+
+
+# ------------------------------------------------------------------ answer-letter bias
+def letter_bias(df):
+    """Which letters does a model answer at turn 1, and how much of its accuracy comes from its favourite letter?"""
+    rows = []
+    for m in [m for m in MODELS if m in df.model.unique()]:
+        for L in LANGS:
+            d = df[(df.model == m) & (df.lang == L)]
+            t1 = d[d.ptype == "neutral"]
+            share = t1.a0.value_counts(normalize=True).reindex(LETTERS, fill_value=0.0)
+            top = share.idxmax()
+            r = {"model": m, "lang": L, **{f"share_{x}": share[x] for x in LETTERS},
+                 "gold_share_top": (t1.gold == top).mean(), "top_letter": top, "top_share": share[top],
+                 "acc_gold_top": t1[t1.gold == top].correct0.mean(), "acc_gold_other": t1[t1.gold != top].correct0.mean(),
+                 "balanced_acc": t1.groupby("gold").correct0.mean().mean(),
+                 "share_correct_on_top": (t1[t1.correct0 == 1].a0 == top).mean()}
+            for p in ["mild", "strong"]:
+                c = d[(d.ptype == p) & (d.correct0 == 1)]
+                r.update({f"c2w_{p}_top": c[c.gold == top].c2w.mean(), f"n_{p}_top": int((c.gold == top).sum()),
+                          f"c2w_{p}_other": c[c.gold != top].c2w.mean(), f"n_{p}_other": int((c.gold != top).sum()),
+                          f"share_flips_to_top_{p}": (c[c.c2w == 1].a1 == top).mean()})
+            rows.append(r)
+    return pd.DataFrame(rows)
+
+
+# ------------------------------------------------------------------ paired language contrasts
+def paired_tests(df):
+    """Items answered correctly at turn 1 in BOTH English and language L; compare C->W under the same pushback."""
+    rows = []
+    for m in [m for m in MODELS if m in df.model.unique()]:
+        for p in ["mild", "strong"]:
+            w = df[(df.model == m) & (df.ptype == p)].pivot(index="item_id", columns="lang", values=["correct0", "c2w"])
+            for L in ["hi", "hg"]:
+                both = w[(w[("correct0", "en")] == 1) & (w[("correct0", L)] == 1)]
+                fe, fl = both[("c2w", "en")].to_numpy(), both[("c2w", L)].to_numpy()
+                n = len(both)
+                b, c = int(((fl == 1) & (fe == 0)).sum()), int(((fl == 0) & (fe == 1)).sum())  # discordant pairs
+                pval = binomtest(b, b + c, 0.5).pvalue if b + c else 1.0
+                boots = [(fl[i] - fe[i]).mean() for i in (rng.integers(0, n, n) for _ in range(2000))] if n else [np.nan]
+                rows.append({"model": m, "ptype": p, "contrast": f"{L}-en", "n_pairs": n,
+                             "c2w_en": fe.mean() if n else np.nan, "c2w_L": fl.mean() if n else np.nan,
+                             "delta": (fl - fe).mean() if n else np.nan,
+                             "ci_lo": np.percentile(boots, 2.5), "ci_hi": np.percentile(boots, 97.5),
+                             "only_L_flips": b, "only_en_flips": c, "p_mcnemar": pval})
+    t = pd.DataFrame(rows)
+    t["p_holm"] = multipletests(t.p_mcnemar, method="holm")[1]
+    return t
+
+
+# ------------------------------------------------------------------ confidence-adjusted regression
+def reg_data(df):
+    """Correct turn-1 answers under mild or strong pushback, with the logit of turn-1 confidence."""
+    d = df[(df.correct0 == 1) & (df.ptype.isin(["mild", "strong"]))].copy()
+    d["conf_logit"] = np.log(d.conf0.clip(1e-4, 1 - 1e-4) / (1 - d.conf0.clip(1e-4, 1 - 1e-4)))
+    d["lang"] = pd.Categorical(d.lang, categories=["en", "hi", "hg"])
+    return d
+
+
+def fit_or(g, formula, **info):
+    """Logistic regression with SEs clustered by item; returns the Hindi and Hinglish odds ratios vs English."""
+    try:
+        fit = smf.glm(formula, g, family=sm.families.Binomial()).fit(
+            cov_type="cluster", cov_kwds={"groups": pd.factorize(g.item_id)[0]})
+    except Exception as e:  # e.g. perfect separation
+        print(f"regression failed for {info}: {e}")
+        return [], None
+    ci = fit.conf_int()
+    rows = []
+    for L in ["hi", "hg"]:
+        k = f"C(lang)[T.{L}]"
+        r = {**info, "lang": L, "n": int(fit.nobs), "n_flips_L": int(g[g.lang == L].c2w.sum()),
+             "OR": np.exp(fit.params[k]), "OR_lo": np.exp(ci.loc[k, 0]), "OR_hi": np.exp(ci.loc[k, 1]),
+             "p": fit.pvalues[k]}
+        if r["n_flips_L"] == 0:  # no flip at all in this language: the odds ratio is 0 and has no usable CI
+            r.update({"OR": 0.0, "OR_lo": np.nan, "OR_hi": np.nan, "p": np.nan})
+        rows.append(r)
+    return rows, fit
+
+
+def regression(df):
+    """Logistic regression of C->W on language (vs English), with and without turn-1 confidence.
+
+    Rows: turn-1-correct answers under mild or strong pushback. SEs clustered by item.
+    Pooled model adds model fixed effects.
+    """
+    d = reg_data(df)
+    rows = []
+    groups = [(m, d[d.model == m]) for m in MODELS if m in d.model.unique()] + [("pooled", d)]
+    for name, g in groups:
+        fe = " + C(model)" if name == "pooled" else ""
+        for adj, f in [("unadjusted", f"c2w ~ C(lang) + C(ptype){fe}"),
+                       ("confidence-adjusted", f"c2w ~ C(lang) + C(ptype) + conf_logit{fe}")]:
+            rr, fit = fit_or(g, f, model=name, spec=adj)
+            for r in rr:
+                del r["n_flips_L"]
+                r["OR_conf_per_logit"] = np.exp(fit.params["conf_logit"]) if "conf_logit" in fit.params else np.nan
+            rows += rr
+    return pd.DataFrame(rows)
+
+
+def regression_checks(df):
+    """How far can the regression of Table 3 be trusted? Four checks.
+
+    by pushback        the same regression for mild and strong pushback separately
+    leave one out      the pooled confidence-adjusted model without each model in turn
+    confidence scale   the per-model adjusted model with confidence clipped differently or cut into 5 bins
+    interactions       Wald tests: does the language effect differ between models / between pushback types?
+    """
+    d = reg_data(df)
+    models = [m for m in MODELS if m in d.model.unique()]
+    rows = []
+    for m in models:
+        for p in ["mild", "strong"]:
+            g = d[(d.model == m) & (d.ptype == p)]
+            rows += fit_or(g, "c2w ~ C(lang)", check="by pushback", model=m, ptype=p, spec="unadjusted")[0]
+            rows += fit_or(g, "c2w ~ C(lang) + conf_logit", check="by pushback", model=m, ptype=p,
+                           spec="confidence-adjusted")[0]
+    for m in models:
+        rows += fit_or(d[d.model != m], "c2w ~ C(lang) + C(ptype) + conf_logit + C(model)", check="leave one out",
+                       model=f"pooled without {m}", ptype="mild+strong", spec="confidence-adjusted")[0]
+    for m in models:
+        g = d[d.model == m].copy()
+        for eps in (1e-2, 1e-5):
+            c = g.conf0.clip(eps, 1 - eps)
+            g["conf_alt"] = np.log(c / (1 - c))
+            rows += fit_or(g, "c2w ~ C(lang) + C(ptype) + conf_alt", check="confidence scale", model=m,
+                           ptype="mild+strong", spec=f"logit, clipped at {eps:g}")[0]
+        g["conf_bin"] = pd.cut(g.conf0, [0, 0.6, 0.9, 0.99, 0.9999, 1.01], right=False).astype(str)
+        rows += fit_or(g, "c2w ~ C(lang) + C(ptype) + C(conf_bin)", check="confidence scale", model=m,
+                       ptype="mild+strong", spec="5 confidence bins")[0]
+    out = pd.DataFrame(rows)
+
+    def wald(formula, term):
+        fit = smf.glm(formula, d, family=sm.families.Binomial()).fit(
+            cov_type="cluster", cov_kwds={"groups": pd.factorize(d.item_id)[0]})
+        return float(fit.wald_test_terms(scalar=True).table.loc[term, "pvalue"])
+    info = {"p_language_x_model": wald("c2w ~ C(lang) * C(model) + C(ptype) + conf_logit", "C(lang):C(model)"),
+            "p_language_x_pushback": wald("c2w ~ C(lang) * C(ptype) + C(model) + conf_logit", "C(lang):C(ptype)"),
+            "share_conf_ge_0.9999": {m: d[d.model == m].groupby("lang", observed=True).conf0
+                                     .apply(lambda x: round(float((x >= 0.9999).mean()), 3)).to_dict() for m in models}}
+    return out, info
+
+
+# ------------------------------------------------------------------ readout check against the free-form pilot
+def pilot_check(df):
+    """Does reading the answer from letter probabilities agree with letting the model write its answer?
+
+    The pilot (Llama-3.2-3B, 139 items, English and Hindi questions) generated free-form replies with
+    greedy decoding and parsed the letter with rules (a0, a1); it also logged the letter probabilities.
+    (1) Within the pilot: how often is the most probable letter the parsed answer?
+    (2) On the items shared with the main run: does the main run give the same answers?
+    """
+    pil = pd.read_csv(PILOT, dtype={"a0": str, "a1": str, "resp0": str, "resp1": str})
+    for t in "01":
+        pil[f"top{t}"] = [LETTERS[i] for i in pil[[f"p{t}_{L}" for L in LETTERS]].to_numpy().argmax(axis=1)]
+    t1 = pil.drop_duplicates(["item_id", "ql"])  # one turn-1 reply per item and question language
+    rows = [{"check": "pilot: most probable letter = parsed answer", "turn": 1, "lang": "en+hi", "ptype": "all",
+             "n": len(t1), "agreement": (t1.top0 == t1.a0).mean()},
+            {"check": "pilot: most probable letter = parsed answer", "turn": 2, "lang": "en+hi", "ptype": "all",
+             "n": len(pil), "agreement": (pil.top1 == pil.a1).mean()},
+            # the pilot filled in the most probable letter when its parser found no answer (src = "logit");
+            # the next two rows leave those replies out
+            {"check": "pilot: same, replies with a parsed letter only", "turn": 1, "lang": "en+hi", "ptype": "all",
+             "n": int((t1.src0 != "logit").sum()), "agreement": (t1.top0 == t1.a0)[t1.src0 != "logit"].mean()},
+            {"check": "pilot: same, replies with a parsed letter only", "turn": 2, "lang": "en+hi", "ptype": "all",
+             "n": int((pil.src1 != "logit").sum()), "agreement": (pil.top1 == pil.a1)[pil.src1 != "logit"].mean()}]
+    main = df[df.model == "llama3.2-3b"]
+    for L in ["en", "hi"]:
+        for p in PTYPES:
+            a = pil[(pil.ql == L) & (pil.pl == L) & (pil.ptype == p)].set_index("item_id")
+            b = main[(main.lang == L) & (main.ptype == p)].set_index("item_id")
+            shared = a.index.intersection(b.index)
+            a, b = a.loc[shared], b.loc[shared]
+            same0 = a.a0 == b.a0
+            if p == "neutral":
+                rows.append({"check": "main run = pilot (shared items)", "turn": 1, "lang": L, "ptype": "all",
+                             "n": len(shared), "agreement": same0.mean()})
+            rows.append({"check": "main run = pilot (shared items, same turn-1 answer)", "turn": 2, "lang": L,
+                         "ptype": p, "n": int(same0.sum()), "agreement": (a.a1 == b.a1)[same0].mean()})
+    out = pd.DataFrame(rows)
+    info = {"n_items": int(pil.item_id.nunique()),
+            "median_reply_chars_turn1": float(t1.resp0.fillna("").str.strip().str.len().median()),
+            "median_reply_chars_turn2": float(pil.resp1.fillna("").str.strip().str.len().median())}
+    return out, info
+
+
+def readout_check():
+    """Written replies (src/check_readout.py) against the stored probability readout, per model.
+
+    The written answer is the first stand-alone letter A-D in the reply (none if the reply has no such letter).
+    """
+    def letter(text):
+        m = re.search(r"(?<![A-Za-z])([ABCD])(?![A-Za-z])", text)
+        return m.group(1) if m else None
+
+    rows = []
+    for m in MODELS:
+        f = READOUT / f"{m}.csv"
+        if not f.exists():
+            continue
+        d = pd.read_csv(f, dtype=str, keep_default_na=False)
+        t1 = d.drop_duplicates(["item_id", "lang"])
+        same0, same1 = t1.gen0.map(letter) == t1.a0, d.gen1.map(letter) == d.a1
+        for L in LANGS:
+            rows.append({"model": m, "lang": L, "n_items": int((t1.lang == L).sum()),
+                         "turn1_agree": int(same0[t1.lang == L].sum()), "turn1_n": int((t1.lang == L).sum()),
+                         "turn2_agree": int(same1[d.lang == L].sum()), "turn2_n": int((d.lang == L).sum()),
+                         "turn2_bare_letter": int((d[d.lang == L].gen1.str.strip().str.len() == 1).sum())})
+    return pd.DataFrame(rows)
+
+
+# ------------------------------------------------------------------ LaTeX helpers
+def fmt_p(p):
+    return "$<$.001" if p < 0.001 else f"{p:.3f}"
+
+
+def latex_main(desc):
+    out = [r"\begin{tabular}{llcrccccc}", r"\toprule",
+           r"Model & Language & Acc$_0$ & $n_c$ & \multicolumn{3}{c}{C$\to$W rate} & Acc$_1^{\text{strong}}$ & Mass$_0$\\",
+           r"\cmidrule(lr){5-7}", r" & & & & Neutral & Mild & Strong & & \\", r"\midrule"]
+    for i, m in enumerate(desc.model.unique()):
+        if i:
+            out.append(r"\midrule")
+        for j, r in desc[desc.model == m].reset_index().iterrows():
+            out.append(f"{MODELS[m] if j == 0 else ''} & {LANGS[r.lang]} & {r.acc0:.3f} & {r.n_correct0} & "
+                       f"{r.c2w_neutral:.3f} & {r.c2w_mild:.3f} & {r.c2w_strong:.3f} & {r.acc1_strong:.3f} & "
+                       f"{r.letter_mass0_median:.2f}\\\\")
+    out += [r"\bottomrule", r"\end{tabular}"]
+    (PTAB / "main_results.tex").write_text("\n".join(out) + "\n")
+
+
+def latex_paired(pt):
+    out = [r"\begin{tabular}{lllrccrc}", r"\toprule",
+           r"Model & Pushback & Contrast & $n$ & C$\to$W$_{\text{EN}}$ & C$\to$W$_{L}$ & $\Delta$ [95\% CI] & $p_{\text{Holm}}$\\",
+           r"\midrule"]
+    for i, m in enumerate(pt.model.unique()):
+        if i:
+            out.append(r"\midrule")
+        for j, r in pt[pt.model == m].reset_index().iterrows():
+            lab = {"hi-en": "HI$-$EN", "hg-en": "HG$-$EN"}[r.contrast]
+            out.append(f"{MODELS[m] if j == 0 else ''} & {r.ptype} & {lab} & {r.n_pairs} & {r.c2w_en:.3f} & "
+                       f"{r.c2w_L:.3f} & {r.delta:+.3f} [{r.ci_lo:+.2f}, {r.ci_hi:+.2f}] & {fmt_p(r.p_holm)}\\\\")
+    out += [r"\bottomrule", r"\end{tabular}"]
+    (PTAB / "paired_tests.tex").write_text("\n".join(out) + "\n")
+
+
+def latex_reg(rg):
+    out = [r"\begin{tabular}{llcccc}", r"\toprule",
+           r" & & \multicolumn{2}{c}{Unadjusted} & \multicolumn{2}{c}{Confidence-adjusted}\\",
+           r"\cmidrule(lr){3-4}\cmidrule(lr){5-6}",
+           r"Model & Language & OR [95\% CI] & $p$ & OR [95\% CI] & $p$\\", r"\midrule"]
+    names = {**MODELS, "pooled": "All (pooled)"}
+    for i, m in enumerate(rg.model.unique()):
+        if i:
+            out.append(r"\midrule")
+        for j, L in enumerate(["hi", "hg"]):
+            cells = []
+            for spec in ["unadjusted", "confidence-adjusted"]:
+                r = rg[(rg.model == m) & (rg.lang == L) & (rg.spec == spec)]
+                if len(r):
+                    r = r.iloc[0]
+                    cells.append(f"{r.OR:.2f} [{r.OR_lo:.2f}, {r.OR_hi:.2f}] & {fmt_p(r.p)}")
+                else:
+                    cells.append("-- & --")
+            out.append(f"{names[m] if j == 0 else ''} & {LANGS[L]} vs.\\ English & {cells[0]} & {cells[1]}\\\\")
+    out += [r"\bottomrule", r"\end{tabular}"]
+    (PTAB / "regression.tex").write_text("\n".join(out) + "\n")
+
+
+def latex_reg_by_pushback(rc):
+    t = rc[(rc.check == "by pushback") & (rc.spec == "confidence-adjusted")]
+    out = [r"\begin{tabular}{llcccc}", r"\toprule",
+           r" & & \multicolumn{2}{c}{Mild pushback} & \multicolumn{2}{c}{Strong pushback}\\",
+           r"\cmidrule(lr){3-4}\cmidrule(lr){5-6}",
+           r"Model & Language & OR [95\% CI] & $p$ & OR [95\% CI] & $p$\\", r"\midrule"]
+    for i, m in enumerate(t.model.unique()):
+        if i:
+            out.append(r"\midrule")
+        for j, L in enumerate(["hi", "hg"]):
+            cells = []
+            for p in ["mild", "strong"]:
+                r = t[(t.model == m) & (t.lang == L) & (t.ptype == p)].iloc[0]
+                cells.append("0 (no flips) & --" if r.n_flips_L == 0 else
+                             f"{r.OR:.2f} [{r.OR_lo:.2f}, {r.OR_hi:.2f}] & {fmt_p(r.p)}")
+            out.append(f"{MODELS[m] if j == 0 else ''} & {LANGS[L]} vs.\\ English & {cells[0]} & {cells[1]}\\\\")
+    out += [r"\bottomrule", r"\end{tabular}"]
+    (PTAB / "regression_by_pushback.tex").write_text("\n".join(out) + "\n")
+
+
+# ------------------------------------------------------------------ figures
+def style(ax):
+    ax.spines[["top", "right"]].set_visible(False)
+    ax.spines[["left", "bottom"]].set_color("#8a8984")
+    ax.tick_params(colors="#52514e", labelsize=8)
+    ax.grid(axis="y", color="#e6e5e0", linewidth=0.6)
+    ax.set_axisbelow(True)
+
+
+def save(fig, name):
+    for ext in ("pdf", "png"):
+        fig.savefig(FIG / f"{name}.{ext}", dpi=200)
+    plt.close(fig)
+    shutil.copyfile(FIG / f"{name}.pdf", PFIG / f"{name}.pdf")  # the paper folder keeps its own copy
+
+
+def fig_accuracy(desc):
+    models = list(desc.model.unique())
+    fig, ax = plt.subplots(figsize=(3.9, 2.1))
+    w = 0.26
+    for i, L in enumerate(LANGS):
+        d = desc[desc.lang == L].set_index("model").loc[models]
+        x = np.arange(len(models)) + (i - 1) * w
+        ax.bar(x, d.acc0, w - 0.03, color=COLORS[L], label=LANGS[L])
+        ax.errorbar(x, d.acc0, yerr=[d.acc0 - d.acc0_lo, d.acc0_hi - d.acc0], fmt="none", ecolor="#52514e", lw=0.8, capsize=2)
+    ax.axhline(0.25, color="#8a8984", lw=0.8, ls="--")
+    ax.text(-0.45, 0.265, "chance", fontsize=7, color="#52514e", ha="left")
+    ax.set_xticks(range(len(models)), [MODELS[m] for m in models], fontsize=8)
+    ax.set_ylabel("Turn-1 accuracy", fontsize=8)
+    ax.set_ylim(0, 1)
+    style(ax)
+    ax.legend(frameon=False, fontsize=7, ncol=3, loc="upper left")
+    fig.tight_layout()
+    save(fig, "fig_accuracy")
+
+
+def fig_flip(desc):
+    models = list(desc.model.unique())
+    fig, axes = plt.subplots(1, len(models), figsize=(1.6 * len(models) + 0.2, 2.0), sharey=True)
+    axes = np.atleast_1d(axes)
+    x = np.arange(len(PTYPES))
+    for ax, m in zip(axes, models):
+        for L in LANGS:
+            r = desc[(desc.model == m) & (desc.lang == L)].iloc[0]
+            y = np.array([r[f"c2w_{p}"] for p in PTYPES])
+            lo = np.array([r[f"c2w_{p}_lo"] for p in PTYPES])
+            hi = np.array([r[f"c2w_{p}_hi"] for p in PTYPES])
+            ax.fill_between(x, lo, hi, color=COLORS[L], alpha=0.12, lw=0)
+            ax.plot(x, y, color=COLORS[L], lw=2, marker=MARKERS[L], ms=5, label=LANGS[L])
+        ax.set_title(MODELS[m], fontsize=9)
+        ax.set_xticks(x, [p.capitalize() for p in PTYPES], fontsize=8)
+        ax.set_ylim(0, 1.02)
+        style(ax)
+    axes[0].set_ylabel("C→W rate (correct → wrong)", fontsize=8)
+    axes[0].legend(frameon=False, fontsize=7, loc="upper left")
+    fig.tight_layout()
+    save(fig, "fig_flip")
+
+
+def fig_confidence(df):
+    d = df[(df.correct0 == 1) & (df.ptype.isin(["mild", "strong"]))].copy()
+    bins = [0, 0.6, 0.9, 0.99, 1.0001]
+    labels = ["<.6", ".6–.9", ".9–.99", "≥.99"]
+    d["bin"] = pd.cut(d.conf0, bins, labels=labels, right=False)
+    models = [m for m in MODELS if m in d.model.unique()]
+    fig, axes = plt.subplots(1, len(models), figsize=(1.9 * len(models) + 0.3, 2.4), sharey=True)
+    axes = np.atleast_1d(axes)
+    x = np.arange(len(labels))
+    for ax, m in zip(axes, models):  # one panel per model: pooling would mix models with very different confidence
+        for i, L in enumerate(LANGS):
+            g = d[(d.model == m) & (d.lang == L)].groupby("bin", observed=False).c2w.agg(["sum", "count"])
+            y = np.where(g["count"] >= 10, g["sum"] / g["count"].replace(0, np.nan), np.nan)  # hide sparse bins
+            ax.plot(x + (i - 1) * 0.06, y, color=COLORS[L], lw=2, marker=MARKERS[L], ms=5, label=LANGS[L])
+        ax.set_title(MODELS[m], fontsize=9)
+        ax.set_xticks(x, labels, fontsize=7.5)
+        ax.set_xlim(-0.3, len(labels) - 0.7)
+        ax.set_ylim(0, 1.02)
+        style(ax)
+    axes[len(axes) // 2].set_xlabel("Turn-1 probability of the (correct) answer", fontsize=8)
+    axes[0].set_ylabel("C→W rate (mild + strong)", fontsize=8)
+    handles, names = axes[0].get_legend_handles_labels()
+    fig.legend(handles, names, frameon=False, fontsize=7, ncol=3, loc="upper center")
+    fig.tight_layout(rect=(0, 0, 1, 0.93))
+    save(fig, "fig_confidence")
+
+
+def main():
+    df = load()
+    desc, pt, rg = describe(df), paired_tests(df), regression(df)
+    desc.to_csv(TAB / "descriptives.csv", index=False)
+    pt.to_csv(TAB / "paired_tests.csv", index=False)
+    rg.to_csv(TAB / "regression.csv", index=False)
+    lb = letter_bias(df)
+    lb.to_csv(TAB / "letter_bias.csv", index=False)
+    rc, rc_info = regression_checks(df)
+    rc.to_csv(TAB / "regression_checks.csv", index=False)
+
+    # robustness: drop turn-1 answers where the model put < 50% probability on any letter token
+    rob = describe(df[df.mass0 >= 0.5])
+    rob.to_csv(TAB / "descriptives_mass_ge_0.5.csv", index=False)
+
+    latex_main(desc)
+    latex_paired(pt)
+    latex_reg(rg)
+    latex_reg_by_pushback(rc)
+    fig_accuracy(desc)
+    fig_flip(desc)
+    fig_confidence(df)
+
+    summary = {"models": sorted(df.model.unique()), "n_rows": len(df),
+               "n_items": int(df.item_id.nunique()),
+               "rows_per_model": df.groupby("model").size().to_dict(),
+               "regression_checks": rc_info}
+    if PILOT.exists():
+        pc, info = pilot_check(df)
+        pc.to_csv(TAB / "pilot_agreement.csv", index=False)
+        summary["pilot"] = info
+        print(pc.round(3).to_string())
+    rd = readout_check()
+    if len(rd):
+        rd.to_csv(TAB / "readout_check.csv", index=False)
+        print(rd.to_string())
+    (ROOT / "results/summary.json").write_text(json.dumps(summary, indent=2))
+    pd.set_option("display.width", 200)
+    print(desc.round(3).to_string())
+    print(pt.round(3).to_string())
+    print(rg.round(3).to_string())
+    print(lb.round(2).to_string())
+    print(rc.round(3).to_string())
+    print(rob[["model", "lang", "n_items", "acc0", "c2w_neutral", "c2w_mild", "c2w_strong"]].round(3).to_string())
+
+
+if __name__ == "__main__":
+    main()

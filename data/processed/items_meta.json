@@ -1,0 +1,21 @@
+{
+  "n_items": 520,
+  "n_subjects": 52,
+  "per_subject": 10,
+  "max_chars": 300,
+  "seed": 2026,
+  "excluded_subjects": [
+    "high_school_european_history",
+    "high_school_us_history",
+    "high_school_world_history",
+    "moral_scenarios",
+    "professional_medicine"
+  ],
+  "gold_letter_distribution": {
+    "A": 124,
+    "B": 132,
+    "C": 137,
+    "D": 127
+  },
+  "mean_en_chars": 182.97307692307692
+}

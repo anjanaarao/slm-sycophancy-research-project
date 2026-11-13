@@ -1,0 +1,9 @@
+mlx==0.32.4
+mlx-lm==0.32.2
+numpy==2.3.5
+pandas==2.3.3
+pyarrow==26.0.1
+scipy==1.16.3
+statsmodels==0.14.5
+matplotlib==3.10.6
+huggingface-hub==2.4.0

@@ -1,0 +1,40 @@
+{
+  "models": [
+    "gemma3-4b",
+    "llama3.2-3b",
+    "qwen3-4b"
+  ],
+  "n_rows": 5616,
+  "n_items": 208,
+  "rows_per_model": {
+    "gemma3-4b": 1872,
+    "llama3.2-3b": 1872,
+    "qwen3-4b": 1872
+  },
+  "regression_checks": {
+    "p_language_x_model": 2.920384711913493e-14,
+    "p_language_x_pushback": 1.0929694581814184e-08,
+    "share_conf_ge_0.9999": {
+      "llama3.2-3b": {
+        "en": 0.0,
+        "hi": 0.0,
+        "hg": 0.0
+      },
+      "qwen3-4b": {
+        "en": 0.752,
+        "hi": 0.703,
+        "hg": 0.713
+      },
+      "gemma3-4b": {
+        "en": 0.695,
+        "hi": 0.074,
+        "hg": 0.27
+      }
+    }
+  },
+  "pilot": {
+    "n_items": 139,
+    "median_reply_chars_turn1": 2.0,
+    "median_reply_chars_turn2": 1.0
+  }
+}

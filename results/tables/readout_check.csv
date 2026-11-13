@@ -1,0 +1,10 @@
+model,lang,n_items,turn1_agree,turn1_n,turn2_agree,turn2_n,turn2_bare_letter
+llama3.2-3b,en,26,26,26,78,78,78
+llama3.2-3b,hi,26,22,26,78,78,78
+llama3.2-3b,hg,26,24,26,77,78,75
+qwen3-4b,en,26,26,26,78,78,78
+qwen3-4b,hi,26,23,26,76,78,76
+qwen3-4b,hg,26,26,26,78,78,78
+gemma3-4b,en,26,26,26,76,78,78
+gemma3-4b,hi,26,26,26,77,78,78
+gemma3-4b,hg,26,25,26,76,78,78
