@@ -1,6 +1,8 @@
 """Analysis: accuracy, flip-to-wrong rates, paired language tests, confidence-adjusted regression.
 
-Reads  results/raw/<model>.csv                  the experiment (src/run.py)
+Reads  results/raw/<model>.csv                  the main experiment (src/run.py)
+       results/wording/<model>.csv              further pushback wordings on the 208-item subset
+       results/order/<model>.csv                the subset with the answer options rotated
        results/pilot/llama3.2-3b_freeform.csv   the free-form pilot, used only to validate the answer readout
        results/readout_check/<model>.csv        written replies on 26 items (src/check_readout.py)
 Writes results/tables/*.csv, results/summary.json    every number quoted in the paper
@@ -29,6 +31,7 @@ ROOT = Path(__file__).resolve().parents[1]
 RAW, TAB, FIG = ROOT / "results/raw", ROOT / "results/tables", ROOT / "figures"
 PILOT = ROOT / "results/pilot/llama3.2-3b_freeform.csv"
 READOUT = ROOT / "results/readout_check"
+WORDING, ORDER = ROOT / "results/wording", ROOT / "results/order"
 PAPER = ROOT / "paper-springer"
 PTAB, PFIG = PAPER / "tables", PAPER / "figures"
 for d in (TAB, FIG, PTAB, PFIG):
@@ -280,6 +283,234 @@ def pilot_check(df):
     return out, info
 
 
+# ------------------------------------------------------------------ wording experiment
+# What each message asks for. "mild"/"strong" are the main wordings; the others come from results/wording.
+REQUEST = {"mild": {"en": "reconsider", "hi": "reconsider", "hg": "check"},
+           "mild_2": {"en": "check", "hi": "check", "hg": "reconsider"}}
+
+
+def add_derived(d):
+    p0 = d[[f"p0_{L}" for L in LETTERS]].to_numpy()
+    d["conf0"] = p0.max(axis=1)
+    d["flip"] = (d.a1 != d.a0).astype(int)
+    d["c2w"] = ((d.correct0 == 1) & (d.correct1 == 0)).astype(int)
+    return d
+
+
+def load_wording(df):
+    """All six doubt messages on the subset: the two main ones plus the four of the wording experiment."""
+    frames = []
+    for m in MODELS:
+        f = WORDING / f"{m}.csv"
+        if f.exists():
+            w = add_derived(pd.read_csv(f).assign(model=m))
+            base = df[(df.model == m) & df.ptype.isin(["mild", "strong"]) & df.item_id.isin(w.item_id.unique())]
+            frames += [w, base[w.columns]]
+    if not frames:
+        return None
+    d = pd.concat(frames, ignore_index=True)
+    d["family"] = d.ptype.str.split("_").str[0]
+    return d
+
+
+def paired(d1, d2):
+    """Exact McNemar test of C->W between two conditions on items answered correctly in both."""
+    a, b = d1.set_index("item_id"), d2.set_index("item_id")
+    idx = a.index[(a.correct0 == 1)].intersection(b.index[(b.correct0 == 1)])
+    fa, fb = a.loc[idx, "c2w"].to_numpy(), b.loc[idx, "c2w"].to_numpy()
+    only_a, only_b = int(((fa == 1) & (fb == 0)).sum()), int(((fa == 0) & (fb == 1)).sum())
+    return {"n_pairs": len(idx), "c2w_a": fa.mean() if len(idx) else np.nan, "c2w_b": fb.mean() if len(idx) else np.nan,
+            "only_a_flips": only_a, "only_b_flips": only_b,
+            "p_mcnemar": binomtest(only_a, only_a + only_b, 0.5).pvalue if only_a + only_b else 1.0}
+
+
+def wording(df):
+    """C->W for every wording, and the language contrasts that hold the wording constant."""
+    d = load_wording(df)
+    if d is None:
+        return None, None, None
+    models = [m for m in MODELS if m in d.model.unique()]
+    order = ["mild", "mild_2", "mild_3", "strong", "strong_2", "strong_3"]
+    rates = []
+    for m in models:
+        for L in LANGS:
+            for p in order:
+                g = d[(d.model == m) & (d.lang == L) & (d.ptype == p)]
+                c = g[g.correct0 == 1]
+                w = g[g.correct0 == 0]
+                lo, hi = wilson(int(c.c2w.sum()), len(c))
+                rates.append({"model": m, "lang": L, "ptype": p, "n_correct": len(c), "c2w": c.c2w.mean(),
+                              "c2w_lo": lo, "c2w_hi": hi, "flip_all": g.flip.mean(), "flip_wrong": w.flip.mean()})
+    rates = pd.DataFrame(rates)
+
+    tests = []
+    for m in models:
+        g = d[d.model == m]
+        cell = lambda L, p: g[(g.lang == L) & (g.ptype == p)]
+        for L in ["hi", "hg"]:
+            for p in order:  # same message label in both languages
+                tests.append({"model": m, "contrast": f"{L}-en", "kind": "same label", "a": f"{L}:{p}", "b": f"en:{p}",
+                              **paired(cell(L, p), cell("en", p))})
+        # same request in both languages: English "check" vs Hinglish "check", English "reconsider" vs Hinglish "reconsider"
+        for req in ["check", "reconsider"]:
+            pe = [p for p in REQUEST if REQUEST[p]["en"] == req][0]
+            ph = [p for p in REQUEST if REQUEST[p]["hg"] == req][0]
+            tests.append({"model": m, "contrast": "hg-en", "kind": f"same request: {req}", "a": f"hg:{ph}",
+                          "b": f"en:{pe}", **paired(cell("hg", ph), cell("en", pe))})
+        # within a language: does the request ("check" vs "reconsider") or the instruction (strong_3 has none) matter?
+        for L in LANGS:
+            pc = [p for p in REQUEST if REQUEST[p][L] == "check"][0]
+            pr = [p for p in REQUEST if REQUEST[p][L] == "reconsider"][0]
+            tests.append({"model": m, "contrast": L, "kind": "check vs reconsider", "a": f"{L}:{pc}", "b": f"{L}:{pr}",
+                          **paired(cell(L, pc), cell(L, pr))})
+            tests.append({"model": m, "contrast": L, "kind": "claim only vs claim + instruction", "a": f"{L}:strong_3",
+                          "b": f"{L}:strong", **paired(cell(L, "strong_3"), cell(L, "strong"))})
+    tests = pd.DataFrame(tests)
+    tests["delta"] = tests.c2w_a - tests.c2w_b
+
+    # language effect averaged over the three wordings of each family, with and without confidence
+    reg = []
+    c = d[d.correct0 == 1].copy()
+    c["conf_logit"] = np.log(c.conf0.clip(1e-4, 1 - 1e-4) / (1 - c.conf0.clip(1e-4, 1 - 1e-4)))
+    c["lang"] = pd.Categorical(c.lang, categories=["en", "hi", "hg"])
+    for m in models:
+        for fam in ["mild", "strong"]:
+            g = c[(c.model == m) & (c.family == fam)]
+            reg += fit_or(g, "c2w ~ C(lang) + C(ptype)", model=m, family=fam, spec="unadjusted")[0]
+            reg += fit_or(g, "c2w ~ C(lang) + C(ptype) + conf_logit", model=m, family=fam, spec="confidence-adjusted")[0]
+    return rates, tests, pd.DataFrame(reg)
+
+
+def latex_wording(rates):
+    cols = ["mild", "mild_2", "mild_3", "strong", "strong_2", "strong_3"]
+    out = [r"\begin{tabular}{llcccccc}", r"\toprule",
+           r" & & \multicolumn{3}{c}{Mild (doubt)} & \multicolumn{3}{c}{Strong (``your answer is wrong'')}\\",
+           r"\cmidrule(lr){3-5}\cmidrule(lr){6-8}",
+           r"Model & Language & M1 & M2 & M3 & S1 & S2 & S3\\", r"\midrule"]
+    for i, m in enumerate(rates.model.unique()):
+        if i:
+            out.append(r"\midrule")
+        for j, L in enumerate(LANGS):
+            r = rates[(rates.model == m) & (rates.lang == L)].set_index("ptype").c2w
+            out.append(f"{MODELS[m] if j == 0 else ''} & {LANGS[L]} & " + " & ".join(f"{r[c]:.3f}" for c in cols) + "\\\\")
+    out += [r"\bottomrule", r"\end{tabular}"]
+    (PTAB / "wording.tex").write_text("\n".join(out) + "\n")
+
+
+# ------------------------------------------------------------------ option-order experiment
+def load_order(df):
+    """The rotatable subset items under all four option orders (rotation 0 comes from the main run)."""
+    frames = []
+    for m in MODELS:
+        f = ORDER / f"{m}.csv"
+        if f.exists():
+            o = add_derived(pd.read_csv(f).assign(model=m))
+            base = df[(df.model == m) & df.item_id.isin(o.item_id.unique())].assign(rot=0)
+            frames += [o, base[o.columns]]
+    return pd.concat(frames, ignore_index=True) if frames else None
+
+
+def order_effects(df):
+    """Accuracy and C->W when letter bias is averaged out by rotating the options."""
+    d = load_order(df)
+    if d is None:
+        return None, None, None
+    models = [m for m in MODELS if m in d.model.unique()]
+    t1 = d[d.ptype == "neutral"]
+    summ = []
+    for m in models:
+        n_rot = d[d.model == m].rot.nunique()
+        for L in LANGS:
+            g, t = d[(d.model == m) & (d.lang == L)], t1[(t1.model == m) & (t1.lang == L)]
+            per_item = t.groupby("item_id").correct0.agg(["sum", "count"])
+            known = per_item.index[(per_item["sum"] == per_item["count"]) & (per_item["count"] == n_rot)]
+            share = t.a0.value_counts(normalize=True).reindex(LETTERS, fill_value=0.0)
+            r = {"model": m, "lang": L, "n_items": t.item_id.nunique(), "n_orders": n_rot, "acc_all_orders": t.correct0.mean(),
+                 "acc_original_order": t[t.rot == 0].correct0.mean(), "n_known": len(known),
+                 "share_known": len(known) / t.item_id.nunique(), "top_letter_share": share.max(),
+                 "consistent_answer": (t.assign(orig=[LETTERS[(LETTERS.index(a) + r_) % 4] for a, r_ in zip(t.a0, t.rot)])
+                                        .groupby("item_id").orig.nunique() == 1).mean()}
+            for p in ["mild", "strong"]:
+                c = g[(g.ptype == p) & (g.correct0 == 1)]
+                k = c[c.item_id.isin(known)]
+                r.update({f"c2w_{p}_all_correct": c.c2w.mean(), f"n_{p}_all_correct": len(c),
+                          f"c2w_{p}_known": k.c2w.mean() if len(k) else np.nan})
+            summ.append(r)
+    summ = pd.DataFrame(summ)
+
+    # paired contrast on items known (correct under every order) in both English and L: item-level C->W share
+    tests = []
+    for m in models:
+        n_rot = d[d.model == m].rot.nunique()
+        acc = t1[t1.model == m].groupby(["lang", "item_id"]).correct0.agg(["sum", "count"])
+        known = {L: set(acc.loc[L].index[(acc.loc[L]["sum"] == n_rot) & (acc.loc[L]["count"] == n_rot)]) for L in LANGS}
+        for p in ["mild", "strong"]:
+            item = d[(d.model == m) & (d.ptype == p)].groupby(["lang", "item_id"]).c2w.mean()
+            for L in ["hi", "hg"]:
+                both = sorted(known["en"] & known[L])
+                diff = (item.loc[L].reindex(both) - item.loc["en"].reindex(both)).to_numpy()
+                n = len(diff)
+                boots = [diff[i].mean() for i in (rng.integers(0, n, n) for _ in range(2000))] if n else [np.nan]
+                pos, neg = int((diff > 0).sum()), int((diff < 0).sum())
+                tests.append({"model": m, "ptype": p, "contrast": f"{L}-en", "n_items": n,
+                              "c2w_en": item.loc["en"].reindex(both).mean() if n else np.nan,
+                              "c2w_L": item.loc[L].reindex(both).mean() if n else np.nan,
+                              "delta": diff.mean() if n else np.nan, "ci_lo": np.percentile(boots, 2.5),
+                              "ci_hi": np.percentile(boots, 97.5), "items_L_higher": pos, "items_en_higher": neg,
+                              "p_sign": binomtest(pos, pos + neg, 0.5).pvalue if pos + neg else 1.0})
+    tests = pd.DataFrame(tests)
+    tests["p_holm"] = multipletests(tests.p_sign, method="holm")[1]
+
+    reg = []
+    c = d[(d.correct0 == 1) & d.ptype.isin(["mild", "strong"])].copy()
+    c["conf_logit"] = np.log(c.conf0.clip(1e-4, 1 - 1e-4) / (1 - c.conf0.clip(1e-4, 1 - 1e-4)))
+    c["lang"] = pd.Categorical(c.lang, categories=["en", "hi", "hg"])
+    for m in models:
+        for p in ["mild", "strong"]:
+            g = c[(c.model == m) & (c.ptype == p)]
+            reg += fit_or(g, "c2w ~ C(lang)", model=m, ptype=p, spec="unadjusted")[0]
+            reg += fit_or(g, "c2w ~ C(lang) + conf_logit", model=m, ptype=p, spec="confidence-adjusted")[0]
+    return summ, tests, pd.DataFrame(reg)
+
+
+def latex_order(summ, tests):
+    out = [r"\begin{tabular}{llccccc}", r"\toprule",
+           r"Model & Language & Acc$_0$ & Known & \multicolumn{2}{c}{C$\to$W, known items} & $\Delta$ strong vs.\ EN [95\% CI]\\",
+           r"\cmidrule(lr){5-6}", r" & & (4 orders) & items & Mild & Strong & \\", r"\midrule"]
+    for i, m in enumerate(summ.model.unique()):
+        if i:
+            out.append(r"\midrule")
+        for j, L in enumerate(LANGS):
+            r = summ[(summ.model == m) & (summ.lang == L)].iloc[0]
+            t = tests[(tests.model == m) & (tests.ptype == "strong") & (tests.contrast == f"{L}-en")]
+            dl = "--" if not len(t) else f"{t.iloc[0].delta:+.3f} [{t.iloc[0].ci_lo:+.2f}, {t.iloc[0].ci_hi:+.2f}]"
+            out.append(f"{MODELS[m] if j == 0 else ''} & {LANGS[L]} & {r.acc_all_orders:.3f} & {r.n_known} & "
+                       f"{r.c2w_mild_known:.3f} & {r.c2w_strong_known:.3f} & {dl}\\\\")
+    out += [r"\bottomrule", r"\end{tabular}"]
+    (PTAB / "order.tex").write_text("\n".join(out) + "\n")
+
+
+def translation_validation():
+    """Two raters' judgements of 50 Hinglish translations (data/hinglish/validation_sample.csv), if filled in."""
+    f = ROOT / "data/hinglish/validation_sample.csv"
+    if not f.exists():
+        return None
+    v = pd.read_csv(f)
+    cols = ["rater1_meaning", "rater1_natural", "rater2_meaning", "rater2_natural"]
+    v = v.dropna(subset=cols)
+    if not len(v):
+        return None
+    out = {"n_items_rated": int(len(v))}
+    for q in ["meaning", "natural"]:
+        a, b = v[f"rater1_{q}"].astype(int), v[f"rater2_{q}"].astype(int)
+        po = float((a == b).mean())
+        pe = sum(float((a == k).mean() * (b == k).mean()) for k in (1, 2, 3))
+        out[q] = {"share_rated_3_rater1": float((a == 3).mean()), "share_rated_3_rater2": float((b == 3).mean()),
+                  "share_rated_1_by_either": float(((a == 1) | (b == 1)).mean()), "agreement": po,
+                  "cohen_kappa": (po - pe) / (1 - pe) if pe < 1 else float("nan")}
+    return out
+
+
 def readout_check():
     """Written replies (src/check_readout.py) against the stored probability readout, per model.
 
@@ -501,6 +732,28 @@ def main():
         pc.to_csv(TAB / "pilot_agreement.csv", index=False)
         summary["pilot"] = info
         print(pc.round(3).to_string())
+    wr, wt, wreg = wording(df)
+    if wr is not None:
+        wr.to_csv(TAB / "wording_rates.csv", index=False)
+        wt.to_csv(TAB / "wording_tests.csv", index=False)
+        wreg.to_csv(TAB / "wording_regression.csv", index=False)
+        latex_wording(wr)
+        print(wr.round(3).to_string())
+        print(wt.round(3).to_string())
+        print(wreg.round(3).to_string())
+    osum, otest, oreg = order_effects(df)
+    if osum is not None:
+        osum.to_csv(TAB / "order_summary.csv", index=False)
+        otest.to_csv(TAB / "order_tests.csv", index=False)
+        oreg.to_csv(TAB / "order_regression.csv", index=False)
+        latex_order(osum, otest)
+        print(osum.round(3).to_string())
+        print(otest.round(3).to_string())
+        print(oreg.round(3).to_string())
+    tv = translation_validation()
+    if tv:
+        summary["translation_validation"] = tv
+        print(tv)
     rd = readout_check()
     if len(rd):
         rd.to_csv(TAB / "readout_check.csv", index=False)

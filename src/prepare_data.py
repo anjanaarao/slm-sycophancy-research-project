@@ -7,6 +7,7 @@ Writes  data/processed/items_trilingual.csv   520 aligned items (English, Hindi,
         data/processed/items_subset.csv       the 208 items used in the experiment
         data/processed/items_meta.json        sampling parameters
         data/processed/hinglish_audit.json    lexical audit of the Hinglish translations
+        data/hinglish/validation_sample.csv   50 random items for two human raters (only if it does not exist)
 
 Steps
   1. Check that MMMLU Hindi is row-aligned with MMLU (subject and gold letter on all 14,042 rows).
@@ -167,6 +168,22 @@ def subset(items: pd.DataFrame, n_per_subject: int = 4) -> pd.DataFrame:
                  .sort_values("item_id").reset_index(drop=True))
 
 
+def validation_sheet(items: pd.DataFrame, n: int = 50) -> pd.DataFrame:
+    """A random sample of items for two raters who judge the Hinglish translation against the English.
+
+    meaning  3 = same meaning, 2 = small loss or shift, 1 = wrong or misleading
+    natural  3 = reads like natural Hinglish, 2 = acceptable, 1 = unnatural
+    """
+    s = items.sample(n=n, random_state=SEED).sort_values("item_id")
+    join = lambda r, lang: " | ".join(f"{L}. {r[f'{lang}_{L}']}" for L in LETTERS)
+    sheet = pd.DataFrame({"item_id": s.item_id, "subject": s.subject, "en_question": s.en_question,
+                          "en_options": s.apply(join, axis=1, lang="en"), "hg_question": s.hg_question,
+                          "hg_options": s.apply(join, axis=1, lang="hg")})
+    for col in ["rater1_meaning", "rater1_natural", "rater2_meaning", "rater2_natural", "comment"]:
+        sheet[col] = ""
+    return sheet
+
+
 def main():
     out = ROOT / "data/processed"
     out.mkdir(parents=True, exist_ok=True)
@@ -179,6 +196,9 @@ def main():
     sub.to_csv(out / "items_subset.csv", index=False)
     (out / "items_meta.json").write_text(json.dumps(meta, indent=2))
     (out / "hinglish_audit.json").write_text(json.dumps(audit, indent=2))
+    sheet = ROOT / "data/hinglish/validation_sample.csv"
+    if not sheet.exists():  # never overwrite ratings that have been filled in
+        validation_sheet(items).to_csv(sheet, index=False)
     print(json.dumps(meta, indent=2))
     print(json.dumps(audit, indent=2))
     print(f"wrote {len(items)} items and the {len(sub)}-item subset to {out}")
