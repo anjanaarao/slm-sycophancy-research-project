@@ -4,7 +4,6 @@ Reads   data/raw/mmlu_en_test.parquet      MMLU test split        (cais/mmlu, co
         data/raw/mmmlu_HI_IN_test.csv      MMMLU Hindi test split (openai/MMMLU, config "HI_IN")
         data/hinglish/hg_batch*.tsv        Hinglish translations of the 520 sampled items
 Writes  data/processed/items_trilingual.csv   520 aligned items (English, Hindi, Hinglish)
-        data/processed/items_subset.csv       a 208-item subset used by an earlier version (not used any more)
         data/processed/items_meta.json        sampling parameters
         data/processed/hinglish_audit.json    lexical audit of the Hinglish translations
         data/hinglish/validation_sample.csv   50 random items for two human raters (only if it does not exist)
@@ -15,7 +14,6 @@ Steps
      Five subjects have fewer than 10 such items and drop out.
   3. Sample 10 items per remaining subject (52 x 10 = 520, seed 2026).
   4. Attach the Hinglish translations and audit them.
-  5. Draw a 208-item subset (4 per subject, seed 2026); kept for compatibility, the experiment uses all 520.
 
 Hinglish TSV format: item_id <TAB> question <TAB> A <TAB> B <TAB> C <TAB> D
   "="    option kept identical to English (numbers, formulas, names, technical terms)
@@ -162,12 +160,6 @@ def add_hinglish(base: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
     return out, audit
 
 
-# ---------------------------------------------------------------- step 5: experiment subset
-def subset(items: pd.DataFrame, n_per_subject: int = 4) -> pd.DataFrame:
-    return (items.groupby("subject").sample(n=n_per_subject, random_state=SEED)
-                 .sort_values("item_id").reset_index(drop=True))
-
-
 def validation_sheet(items: pd.DataFrame, n: int = 50) -> pd.DataFrame:
     """A random sample of items for two raters who judge the Hinglish translation against the English.
 
@@ -190,10 +182,8 @@ def main():
     base, meta = sample_items()
     items, audit = add_hinglish(base)
     items.to_csv(out / "items_trilingual.csv", index=False)
-    # re-read exactly as run.py does, so the subset is the same whichever script creates it
+    # re-read exactly as run.py does, so the validation sample is drawn from the same table
     items = pd.read_csv(out / "items_trilingual.csv", dtype=str, keep_default_na=False)
-    sub = subset(items)
-    sub.to_csv(out / "items_subset.csv", index=False)
     (out / "items_meta.json").write_text(json.dumps(meta, indent=2))
     (out / "hinglish_audit.json").write_text(json.dumps(audit, indent=2))
     sheet = ROOT / "data/hinglish/validation_sample.csv"
@@ -201,7 +191,7 @@ def main():
         validation_sheet(items).to_csv(sheet, index=False)
     print(json.dumps(meta, indent=2))
     print(json.dumps(audit, indent=2))
-    print(f"wrote {len(items)} items and the {len(sub)}-item subset to {out}")
+    print(f"wrote {len(items)} items to {out}")
 
 
 if __name__ == "__main__":

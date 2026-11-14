@@ -53,13 +53,23 @@ def wilson(k, n):
     return proportion_confint(k, n, method="wilson")
 
 
+def mcnemar_p(b, c):
+    """Exact McNemar test from the two discordant counts."""
+    return binomtest(b, b + c, 0.5).pvalue if b + c else 1.0
+
+
+def bootstrap_ci(diff):
+    """Percentile 95% CI of the mean of diff (2000 resamples)."""
+    n = len(diff)
+    boots = [diff[i].mean() for i in (rng.integers(0, n, n) for _ in range(2000))] if n else [np.nan]
+    return np.percentile(boots, 2.5), np.percentile(boots, 97.5)
+
+
 def add_derived(d):
     p0 = d[[f"p0_{L}" for L in LETTERS]].to_numpy()
-    p1 = d[[f"p1_{L}" for L in LETTERS]].to_numpy()
     # p0_*, p1_* are already normalised over the four letters (run.py), so confidence does not depend on how much
     # probability a model puts on non-letter tokens.
     d["conf0"] = p0.max(axis=1)                        # turn-1 probability of the chosen answer
-    d["p_keep"] = p1[np.arange(len(d)), d.a0.map(LETTERS.index)]  # turn-2 probability of the turn-1 answer
     d["flip"] = (d.a1 != d.a0).astype(int)             # any change of answer
     d["c2w"] = ((d.correct0 == 1) & (d.correct1 == 0)).astype(int)
     return d
@@ -97,8 +107,7 @@ def describe(df):
                 r[f"w2c_{p}"] = w.correct1.mean() if len(w) else np.nan
                 ch = w[w.flip == 1]  # wrong answers that were changed: how many, and how many became right
                 r.update({f"flip_wrong_{p}": w.flip.mean() if len(w) else np.nan, f"n_changed_wrong_{p}": len(ch),
-                          f"w2c_changed_{p}": ch.correct1.mean() if len(ch) else np.nan,
-                          f"p_keep_{p}": d[d.ptype == p].p_keep.mean()})
+                          f"w2c_changed_{p}": ch.correct1.mean() if len(ch) else np.nan})
             rows.append(r)
     return pd.DataFrame(rows)
 
@@ -115,9 +124,7 @@ def letter_bias(df):
             top = share.idxmax()
             r = {"model": m, "lang": L, **{f"share_{x}": share[x] for x in LETTERS},
                  "gold_share_top": (t1.gold == top).mean(), "top_letter": top, "top_share": share[top],
-                 "acc_gold_top": t1[t1.gold == top].correct0.mean(), "acc_gold_other": t1[t1.gold != top].correct0.mean(),
-                 "balanced_acc": t1.groupby("gold").correct0.mean().mean(),
-                 "share_correct_on_top": (t1[t1.correct0 == 1].a0 == top).mean()}
+                 "acc_gold_top": t1[t1.gold == top].correct0.mean(), "acc_gold_other": t1[t1.gold != top].correct0.mean()}
             for p in ["mild", "strong"]:
                 c = d[(d.ptype == p) & (d.correct0 == 1)]
                 r.update({f"c2w_{p}_top": c[c.gold == top].c2w.mean(), f"n_{p}_top": int((c.gold == top).sum()),
@@ -139,25 +146,28 @@ def paired_tests(df):
                 fe, fl = both[("c2w", "en")].to_numpy(), both[("c2w", L)].to_numpy()
                 n = len(both)
                 b, c = int(((fl == 1) & (fe == 0)).sum()), int(((fl == 0) & (fe == 1)).sum())  # discordant pairs
-                pval = binomtest(b, b + c, 0.5).pvalue if b + c else 1.0
-                boots = [(fl[i] - fe[i]).mean() for i in (rng.integers(0, n, n) for _ in range(2000))] if n else [np.nan]
+                lo, hi = bootstrap_ci(fl - fe)
                 rows.append({"model": m, "ptype": p, "contrast": f"{L}-en", "n_pairs": n,
                              "c2w_en": fe.mean() if n else np.nan, "c2w_L": fl.mean() if n else np.nan,
                              "delta": (fl - fe).mean() if n else np.nan,
-                             "ci_lo": np.percentile(boots, 2.5), "ci_hi": np.percentile(boots, 97.5),
-                             "only_L_flips": b, "only_en_flips": c, "p_mcnemar": pval})
+                             "ci_lo": lo, "ci_hi": hi, "only_L_flips": b, "only_en_flips": c, "p_mcnemar": mcnemar_p(b, c)})
     t = pd.DataFrame(rows)
     t["p_holm"] = multipletests(t.p_mcnemar, method="holm")[1]
     return t
 
 
 # ------------------------------------------------------------------ confidence-adjusted regression
-def reg_data(df):
-    """Correct turn-1 answers under mild or strong pushback, with the logit of turn-1 confidence."""
-    d = df[(df.correct0 == 1) & (df.ptype.isin(["mild", "strong"]))].copy()
+def add_reg_cols(d):
+    """Add the logit of turn-1 confidence and make English the reference language."""
+    d = d.copy()
     d["conf_logit"] = np.log(d.conf0.clip(1e-4, 1 - 1e-4) / (1 - d.conf0.clip(1e-4, 1 - 1e-4)))
     d["lang"] = pd.Categorical(d.lang, categories=["en", "hi", "hg"])
     return d
+
+
+def reg_data(df):
+    """Correct turn-1 answers under mild or strong pushback, with the logit of turn-1 confidence."""
+    return add_reg_cols(df[(df.correct0 == 1) & (df.ptype.isin(["mild", "strong"]))])
 
 
 def fit_or(g, formula, **info):
@@ -269,7 +279,7 @@ def paired(d1, d2):
     only_a, only_b = int(((fa == 1) & (fb == 0)).sum()), int(((fa == 0) & (fb == 1)).sum())
     return {"n_pairs": len(idx), "c2w_a": fa.mean() if len(idx) else np.nan, "c2w_b": fb.mean() if len(idx) else np.nan,
             "only_a_flips": only_a, "only_b_flips": only_b,
-            "p_mcnemar": binomtest(only_a, only_a + only_b, 0.5).pvalue if only_a + only_b else 1.0}
+            "p_mcnemar": mcnemar_p(only_a, only_b)}
 
 
 def wording(full):
@@ -318,9 +328,7 @@ def wording(full):
 
     # language effect averaged over the three wordings of each family, with and without confidence
     reg = []
-    c = d[d.correct0 == 1].copy()
-    c["conf_logit"] = np.log(c.conf0.clip(1e-4, 1 - 1e-4) / (1 - c.conf0.clip(1e-4, 1 - 1e-4)))
-    c["lang"] = pd.Categorical(c.lang, categories=["en", "hi", "hg"])
+    c = add_reg_cols(d[d.correct0 == 1])
     for m in models:
         for fam in ["mild", "strong"]:
             g = c[(c.model == m) & (c.family == fam)]
@@ -367,17 +375,11 @@ def order_effects(full):
             g, t = d[(d.model == m) & (d.lang == L)], t1[(t1.model == m) & (t1.lang == L)]
             per_item = t.groupby("item_id").correct0.agg(["sum", "count"])
             known = per_item.index[(per_item["sum"] == per_item["count"]) & (per_item["count"] == n_rot)]
-            share = t.a0.value_counts(normalize=True).reindex(LETTERS, fill_value=0.0)
             r = {"model": m, "lang": L, "n_items": t.item_id.nunique(), "n_orders": n_rot, "acc_all_orders": t.correct0.mean(),
-                 "acc_original_order": t[t.rot == 0].correct0.mean(), "n_known": len(known),
-                 "share_known": len(known) / t.item_id.nunique(), "top_letter_share": share.max(),
-                 "consistent_answer": (t.assign(orig=[LETTERS[(LETTERS.index(a) + r_) % 4] for a, r_ in zip(t.a0, t.rot)])
-                                        .groupby("item_id").orig.nunique() == 1).mean()}
+                 "n_known": len(known)}
             for p in ["mild", "strong"]:
-                c = g[(g.ptype == p) & (g.correct0 == 1)]
-                k = c[c.item_id.isin(known)]
-                r.update({f"c2w_{p}_all_correct": c.c2w.mean(), f"n_{p}_all_correct": len(c),
-                          f"c2w_{p}_known": k.c2w.mean() if len(k) else np.nan})
+                k = g[(g.ptype == p) & (g.correct0 == 1) & g.item_id.isin(known)]
+                r[f"c2w_{p}_known"] = k.c2w.mean() if len(k) else np.nan
             summ.append(r)
     summ = pd.DataFrame(summ)
 
@@ -393,21 +395,19 @@ def order_effects(full):
                 both = sorted(known["en"] & known[L])
                 diff = (item.loc[L].reindex(both) - item.loc["en"].reindex(both)).to_numpy()
                 n = len(diff)
-                boots = [diff[i].mean() for i in (rng.integers(0, n, n) for _ in range(2000))] if n else [np.nan]
+                lo, hi = bootstrap_ci(diff)
                 pos, neg = int((diff > 0).sum()), int((diff < 0).sum())
                 tests.append({"model": m, "ptype": p, "contrast": f"{L}-en", "n_items": n,
                               "c2w_en": item.loc["en"].reindex(both).mean() if n else np.nan,
                               "c2w_L": item.loc[L].reindex(both).mean() if n else np.nan,
-                              "delta": diff.mean() if n else np.nan, "ci_lo": np.percentile(boots, 2.5),
-                              "ci_hi": np.percentile(boots, 97.5), "items_L_higher": pos, "items_en_higher": neg,
+                              "delta": diff.mean() if n else np.nan, "ci_lo": lo, "ci_hi": hi,
+                              "items_L_higher": pos, "items_en_higher": neg,
                               "p_sign": binomtest(pos, pos + neg, 0.5).pvalue if pos + neg else 1.0})
     tests = pd.DataFrame(tests)
     tests["p_holm"] = multipletests(tests.p_sign, method="holm")[1]
 
     reg = []
-    c = d[(d.correct0 == 1) & d.ptype.isin(["mild", "strong"])].copy()
-    c["conf_logit"] = np.log(c.conf0.clip(1e-4, 1 - 1e-4) / (1 - c.conf0.clip(1e-4, 1 - 1e-4)))
-    c["lang"] = pd.Categorical(c.lang, categories=["en", "hi", "hg"])
+    c = reg_data(d)
     for m in models:
         for p in ["mild", "strong"]:
             g = c[(c.model == m) & (c.ptype == p)]

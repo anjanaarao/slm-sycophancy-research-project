@@ -115,5 +115,3 @@ nothing else. The `*_all_answers.csv` tables give the results without this rule.
   (23 of 520).
 - The Hinglish audit in `prepare_data.py` uses the English word list `/usr/share/dict/words`
   (present on macOS). On a system without it, the code-mixing numbers in `hinglish_audit.json` change.
-- `data/processed/items_subset.csv` is a 208-item subset used by an earlier version of the study.
-  It is no longer used.
