@@ -4,7 +4,7 @@ Reads   data/raw/mmlu_en_test.parquet      MMLU test split        (cais/mmlu, co
         data/raw/mmmlu_HI_IN_test.csv      MMMLU Hindi test split (openai/MMMLU, config "HI_IN")
         data/hinglish/hg_batch*.tsv        Hinglish translations of the 520 sampled items
 Writes  data/processed/items_trilingual.csv   520 aligned items (English, Hindi, Hinglish)
-        data/processed/items_subset.csv       the 208 items used in the experiment
+        data/processed/items_subset.csv       a 208-item subset used by an earlier version (not used any more)
         data/processed/items_meta.json        sampling parameters
         data/processed/hinglish_audit.json    lexical audit of the Hinglish translations
         data/hinglish/validation_sample.csv   50 random items for two human raters (only if it does not exist)
@@ -15,7 +15,7 @@ Steps
      Five subjects have fewer than 10 such items and drop out.
   3. Sample 10 items per remaining subject (52 x 10 = 520, seed 2026).
   4. Attach the Hinglish translations and audit them.
-  5. Draw the experiment subset: 4 items per subject (208 items, seed 2026).
+  5. Draw a 208-item subset (4 per subject, seed 2026); kept for compatibility, the experiment uses all 520.
 
 Hinglish TSV format: item_id <TAB> question <TAB> A <TAB> B <TAB> C <TAB> D
   "="    option kept identical to English (numbers, formulas, names, technical terms)

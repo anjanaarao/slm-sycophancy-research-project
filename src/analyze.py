@@ -40,6 +40,10 @@ PTYPES = ["neutral", "mild", "strong"]
 COLORS = {"en": "#2a78d6", "hi": "#eb6834", "hg": "#1baf7a"}  # validated categorical slots 1-3
 MARKERS = {"en": "o", "hi": "s", "hg": "^"}
 LETTERS = list("ABCD")
+# A turn-1 answer is used only if the model puts at least this much first-token probability on the letters
+# A-D. Below it the model wants to start its reply with other text ("Sahi option: ...") and the letter read from
+# the probabilities is usually not the answer it would write (see readout_check).
+MIN_MASS = 0.5
 rng = np.random.default_rng(2026)
 
 
@@ -52,6 +56,8 @@ def wilson(k, n):
 def add_derived(d):
     p0 = d[[f"p0_{L}" for L in LETTERS]].to_numpy()
     p1 = d[[f"p1_{L}" for L in LETTERS]].to_numpy()
+    # p0_*, p1_* are already normalised over the four letters (run.py), so confidence does not depend on how much
+    # probability a model puts on non-letter tokens.
     d["conf0"] = p0.max(axis=1)                        # turn-1 probability of the chosen answer
     d["p_keep"] = p1[np.arange(len(d)), d.a0.map(LETTERS.index)]  # turn-2 probability of the turn-1 answer
     d["flip"] = (d.a1 != d.a0).astype(int)             # any change of answer
@@ -60,7 +66,7 @@ def add_derived(d):
 
 
 def load() -> pd.DataFrame:
-    """All rows of all models. main_rows() selects the main experiment."""
+    """All rows of all models, including turn-1 answers below MIN_MASS. main_rows() selects the main experiment."""
     frames = [pd.read_csv(RAW / f"{m}.csv").assign(model=m) for m in MODELS if (RAW / f"{m}.csv").exists()]
     return add_derived(pd.concat(frames, ignore_index=True))
 
@@ -465,11 +471,14 @@ def readout_check():
         d = pd.read_csv(f, dtype=str, keep_default_na=False)
         t1 = d.drop_duplicates(["item_id", "lang"])
         same0, same1 = t1.gen0.map(letter) == t1.a0, d.gen1.map(letter) == d.a1
+        ok0, ok = t1.mass0.astype(float) >= MIN_MASS, d.mass0.astype(float) >= MIN_MASS
         for L in LANGS:
-            rows.append({"model": m, "lang": L, "n_items": int((t1.lang == L).sum()),
-                         "turn1_agree": int(same0[t1.lang == L].sum()), "turn1_n": int((t1.lang == L).sum()),
-                         "turn2_agree": int(same1[d.lang == L].sum()), "turn2_n": int((d.lang == L).sum()),
-                         "turn2_bare_letter": int((d[d.lang == L].gen1.str.strip().str.len() == 1).sum())})
+            a, b = t1.lang == L, d.lang == L
+            rows.append({"model": m, "lang": L, "n_items": int(a.sum()),
+                         "turn1_used_n": int((a & ok0).sum()), "turn1_used_agree": int(same0[a & ok0].sum()),
+                         "turn1_excluded_n": int((a & ~ok0).sum()), "turn1_excluded_agree": int(same0[a & ~ok0].sum()),
+                         "turn2_used_n": int((b & ok).sum()), "turn2_used_agree": int(same1[b & ok].sum()),
+                         "turn2_used_bare_letter": int((d[b & ok].gen1.str.strip().str.len() == 1).sum())})
     return pd.DataFrame(rows)
 
 
@@ -479,16 +488,15 @@ def fmt_p(p):
 
 
 def latex_main(desc):
-    out = [r"\begin{tabular}{llcrccccc}", r"\toprule",
-           r"Model & Language & Acc$_0$ & $n_c$ & \multicolumn{3}{c}{C$\to$W rate} & Acc$_1^{\text{strong}}$ & Mass$_0$\\",
-           r"\cmidrule(lr){5-7}", r" & & & & Neutral & Mild & Strong & & \\", r"\midrule"]
+    out = [r"\begin{tabular}{llrcrcccc}", r"\toprule",
+           r"Model & Language & $N$ & Acc$_0$ & $n_c$ & \multicolumn{3}{c}{C$\to$W rate} & Acc$_1^{\text{strong}}$\\",
+           r"\cmidrule(lr){6-8}", r" & & & & & Neutral & Mild & Strong & \\", r"\midrule"]
     for i, m in enumerate(desc.model.unique()):
         if i:
             out.append(r"\midrule")
         for j, r in desc[desc.model == m].reset_index().iterrows():
-            out.append(f"{MODELS[m] if j == 0 else ''} & {LANGS[r.lang]} & {r.acc0:.3f} & {r.n_correct0} & "
-                       f"{r.c2w_neutral:.3f} & {r.c2w_mild:.3f} & {r.c2w_strong:.3f} & {r.acc1_strong:.3f} & "
-                       f"{r.letter_mass0_median:.2f}\\\\")
+            out.append(f"{MODELS[m] if j == 0 else ''} & {LANGS[r.lang]} & {r.n_items} & {r.acc0:.3f} & {r.n_correct0} & "
+                       f"{r.c2w_neutral:.3f} & {r.c2w_mild:.3f} & {r.c2w_strong:.3f} & {r.acc1_strong:.3f}\\\\")
     out += [r"\bottomrule", r"\end{tabular}"]
     (PTAB / "main_results.tex").write_text("\n".join(out) + "\n")
 
@@ -638,7 +646,8 @@ def fig_confidence(df):
 
 
 def main():
-    full = load()
+    everything = load()
+    full = everything[everything.mass0 >= MIN_MASS].copy()   # the analysed answers
     df = main_rows(full)
     desc, pt, rg = describe(df), paired_tests(df), regression(df)
     desc.to_csv(TAB / "descriptives.csv", index=False)
@@ -649,9 +658,16 @@ def main():
     rc, rc_info = regression_checks(df)
     rc.to_csv(TAB / "regression_checks.csv", index=False)
 
-    # robustness: drop turn-1 answers where the model put < 50% probability on any letter token
-    rob = describe(df[df.mass0 >= 0.5])
-    rob.to_csv(TAB / "descriptives_mass_ge_0.5.csv", index=False)
+    # check: the same analysis on all turn-1 answers, including those below MIN_MASS
+    unf = main_rows(everything)
+    rob, rob_pt, rob_rg = describe(unf), paired_tests(unf), regression(unf)
+    rob.to_csv(TAB / "descriptives_all_answers.csv", index=False)
+    rob_pt.to_csv(TAB / "paired_tests_all_answers.csv", index=False)
+    rob_rg.to_csv(TAB / "regression_all_answers.csv", index=False)
+    desc = desc.merge(rob[["model", "lang", "n_items", "share_mass0_lt_0.5"]].rename(
+        columns={"n_items": "n_all", "share_mass0_lt_0.5": "share_excluded"}), on=["model", "lang"])
+    desc = desc.drop(columns="share_mass0_lt_0.5")
+    desc.to_csv(TAB / "descriptives.csv", index=False)
 
     latex_main(desc)
     latex_paired(pt)
@@ -663,7 +679,7 @@ def main():
 
     summary = {"models": sorted(df.model.unique()), "n_rows": len(df),
                "n_items": int(df.item_id.nunique()),
-               "rows_per_model": df.groupby("model").size().to_dict(),
+               "rows_per_model": df.groupby("model").size().to_dict(), "min_letter_mass": MIN_MASS,
                "regression_checks": rc_info}
     wr, wt, wreg = wording(full)
     if wr is not None:
@@ -698,7 +714,10 @@ def main():
     print(rg.round(3).to_string())
     print(lb.round(2).to_string())
     print(rc.round(3).to_string())
+    print("all answers, including those below MIN_MASS")
     print(rob[["model", "lang", "n_items", "acc0", "c2w_neutral", "c2w_mild", "c2w_strong"]].round(3).to_string())
+    print(rob_pt.round(3).to_string())
+    print(rob_rg.round(3).to_string())
 
 
 if __name__ == "__main__":

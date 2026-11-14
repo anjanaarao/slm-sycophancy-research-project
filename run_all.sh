@@ -1,6 +1,6 @@
 #!/bin/sh
 # Rebuild the item files, run the experiment and the readout check for the three models, then compute
-# all statistics, tables and figures. Needs a GPU (about 1-2 h per model on a T4); the reported runs
+# all statistics, tables and figures. Needs a GPU (1-6 h per model on a T4); the reported runs
 # were made on Kaggle with kaggle/kernel.py. Finished work is skipped, so it is safe to stop and re-run.
 cd "$(dirname "$0")" || exit 1
 PY=${PY:-python}

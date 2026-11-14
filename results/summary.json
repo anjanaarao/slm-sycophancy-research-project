@@ -4,16 +4,17 @@
     "llama3.2-3b",
     "qwen3-4b"
   ],
-  "n_rows": 14040,
+  "n_rows": 12477,
   "n_items": 520,
   "rows_per_model": {
-    "gemma3-4b": 4680,
-    "llama3.2-3b": 4680,
-    "qwen3-4b": 4680
+    "gemma3-4b": 4677,
+    "llama3.2-3b": 3207,
+    "qwen3-4b": 4593
   },
+  "min_letter_mass": 0.5,
   "regression_checks": {
-    "p_language_x_model": 7.648377228198778e-38,
-    "p_language_x_pushback": 1.1646739875939446e-26,
+    "p_language_x_model": 3.161796624497728e-29,
+    "p_language_x_pushback": 2.5663336311801225e-26,
     "share_conf_ge_0.9999": {
       "llama3.2-3b": {
         "en": 0.007,
@@ -21,13 +22,13 @@
         "hg": 0.0
       },
       "qwen3-4b": {
-        "en": 0.849,
-        "hi": 0.735,
+        "en": 0.852,
+        "hi": 0.761,
         "hg": 0.8
       },
       "gemma3-4b": {
         "en": 0.755,
-        "hi": 0.351,
+        "hi": 0.353,
         "hg": 0.573
       }
     }
