@@ -106,6 +106,9 @@ nothing else. The `*_all_answers.csv` tables give the results without this rule.
 | Table 6, option orders | `order_summary.csv`, `order_tests.csv`, `order_regression.csv` |
 | Answer-letter bias | `letter_bias.csv` |
 | Readout check | `readout_check.csv` |
+| Within-item regression (item fixed effects), Sec. 4.7 | `within_item.csv` |
+| Prompt length by language, Discussion | `prompt_length.csv` |
+| Same option under all four orders, Sec. 4.1 | `order_summary.csv` (`consistent_answer`) |
 | Results without the letter-probability rule | `descriptives_all_answers.csv`, `paired_tests_all_answers.csv`, `regression_all_answers.csv` |
 
 ## Notes

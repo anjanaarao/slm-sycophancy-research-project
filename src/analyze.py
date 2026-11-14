@@ -23,6 +23,7 @@ import pandas as pd
 import statsmodels.api as sm
 import statsmodels.formula.api as smf
 from scipy.stats import binomtest
+from statsmodels.discrete.conditional_models import ConditionalLogit
 from statsmodels.stats.multitest import multipletests
 from statsmodels.stats.proportion import proportion_confint
 
@@ -255,6 +256,51 @@ def regression_checks(df):
     return out, info
 
 
+def within_item(df):
+    """Conditional logistic regression of C->W on language with item fixed effects (each item compared only with
+    itself across languages), per model and pushback type, with and without turn-1 confidence."""
+    d = reg_data(df)
+    rows = []
+    for m in [m for m in MODELS if m in d.model.unique()]:
+        for p in ["mild", "strong"]:
+            g = d[(d.model == m) & (d.ptype == p)]
+            X = pd.DataFrame({"hi": (g.lang == "hi").astype(float), "hg": (g.lang == "hg").astype(float),
+                              "conf_logit": g.conf_logit})
+            informative = int((g.groupby("item_id").c2w.nunique() > 1).sum())  # items whose outcome differs by language
+            for spec, cols in [("unadjusted", ["hi", "hg"]), ("confidence-adjusted", ["hi", "hg", "conf_logit"])]:
+                fit = ConditionalLogit(g.c2w.to_numpy(), X[cols].to_numpy(), groups=g.item_id.to_numpy()).fit(disp=0)
+                ci = fit.conf_int()
+                for i, L in enumerate(["hi", "hg"]):
+                    r = {"model": m, "ptype": p, "spec": spec, "lang": L, "n_informative_items": informative,
+                         "n_flips_L": int(g[g.lang == L].c2w.sum()), "OR": np.exp(fit.params[i]),
+                         "OR_lo": np.exp(ci[i, 0]), "OR_hi": np.exp(ci[i, 1]), "p": fit.pvalues[i]}
+                    if r["n_flips_L"] == 0 or r["OR_hi"] > 1e3:  # no or almost no flips: not estimable
+                        r.update({"OR_lo": np.nan, "OR_hi": np.nan, "p": np.nan})
+                    rows.append(r)
+    return pd.DataFrame(rows)
+
+
+def prompt_length(df):
+    """Turn-1 prompt length in tokens by model and language, and whether longer prompts go with more C->W flips
+    under strong pushback WITHIN one language (logistic regression on log2 tokens and turn-1 confidence)."""
+    d = reg_data(df)
+    rows = []
+    for m in [m for m in MODELS if m in df.model.unique()]:
+        t1 = df[(df.model == m) & (df.ptype == "neutral")]
+        en = t1[t1.lang == "en"].n_tok_turn1.median()
+        for L in LANGS:
+            med = t1[t1.lang == L].n_tok_turn1.median()
+            g = d[(d.model == m) & (d.lang == L) & (d.ptype == "strong")].copy()
+            g["log2_tokens"] = np.log2(g.n_tok_turn1)
+            fit = smf.glm("c2w ~ log2_tokens + conf_logit", g, family=sm.families.Binomial()).fit()
+            ci = fit.conf_int()
+            rows.append({"model": m, "lang": L, "median_tokens": med, "ratio_to_en": med / en,
+                         "OR_per_doubling": np.exp(fit.params["log2_tokens"]),
+                         "OR_lo": np.exp(ci.loc["log2_tokens", 0]), "OR_hi": np.exp(ci.loc["log2_tokens", 1]),
+                         "p": fit.pvalues["log2_tokens"], "n": int(fit.nobs)})
+    return pd.DataFrame(rows)
+
+
 # ------------------------------------------------------------------ wording experiment
 # What each message asks for. "mild"/"strong" are the main wordings; the others come from results/wording.
 REQUEST = {"mild": {"en": "reconsider", "hi": "reconsider", "hg": "check"},
@@ -375,8 +421,13 @@ def order_effects(full):
             g, t = d[(d.model == m) & (d.lang == L)], t1[(t1.model == m) & (t1.lang == L)]
             per_item = t.groupby("item_id").correct0.agg(["sum", "count"])
             known = per_item.index[(per_item["sum"] == per_item["count"]) & (per_item["count"] == n_rot)]
+            # same original option chosen in every order; only items whose answer was analysed under all orders
+            # (an item left with one order after the letter-mass rule would otherwise count as consistent)
+            orig = t.assign(orig=[LETTERS[(LETTERS.index(a) + r_) % 4] for a, r_ in zip(t.a0, t.rot)])
+            per = orig.groupby("item_id").agg(n=("rot", "nunique"), k=("orig", "nunique"))
+            per = per[per.n == n_rot]
             r = {"model": m, "lang": L, "n_items": t.item_id.nunique(), "n_orders": n_rot, "acc_all_orders": t.correct0.mean(),
-                 "n_known": len(known)}
+                 "n_known": len(known), "n_items_all_orders": len(per), "consistent_answer": (per.k == 1).mean()}
             for p in ["mild", "strong"]:
                 k = g[(g.ptype == p) & (g.correct0 == 1) & g.item_id.isin(known)]
                 r[f"c2w_{p}_known"] = k.c2w.mean() if len(k) else np.nan
@@ -659,6 +710,10 @@ def main():
     lb.to_csv(TAB / "letter_bias.csv", index=False)
     rc, rc_info = regression_checks(df)
     rc.to_csv(TAB / "regression_checks.csv", index=False)
+    wi = within_item(df)
+    wi.to_csv(TAB / "within_item.csv", index=False)
+    pl = prompt_length(df)
+    pl.to_csv(TAB / "prompt_length.csv", index=False)
 
     # check: the same analysis on all turn-1 answers, including those below MIN_MASS
     unf = main_rows(everything)
@@ -716,6 +771,8 @@ def main():
     print(rg.round(3).to_string())
     print(lb.round(2).to_string())
     print(rc.round(3).to_string())
+    print(wi.round(3).to_string())
+    print(pl.round(3).to_string())
     print("all answers, including those below MIN_MASS")
     print(rob[["model", "lang", "n_items", "acc0", "c2w_neutral", "c2w_mild", "c2w_strong"]].round(3).to_string())
     print(rob_pt.round(3).to_string())
