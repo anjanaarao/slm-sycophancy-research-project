@@ -434,24 +434,26 @@ def latex_order(summ, tests):
 
 
 def translation_validation():
-    """Two raters' judgements of 50 Hinglish translations (data/hinglish/validation_sample.csv), if filled in."""
+    """Ratings of 50 Hinglish translations (data/hinglish/validation_sample.csv): counts per rater, agreement if two."""
     f = ROOT / "data/hinglish/validation_sample.csv"
     if not f.exists():
         return None
     v = pd.read_csv(f)
-    cols = ["rater1_meaning", "rater1_natural", "rater2_meaning", "rater2_natural"]
-    v = v.dropna(subset=cols)
-    if not len(v):
-        return None
-    out = {"n_items_rated": int(len(v))}
+    out = {}
     for q in ["meaning", "natural"]:
-        a, b = v[f"rater1_{q}"].astype(int), v[f"rater2_{q}"].astype(int)
-        po = float((a == b).mean())
-        pe = sum(float((a == k).mean() * (b == k).mean()) for k in (1, 2, 3))
-        out[q] = {"share_rated_3_rater1": float((a == 3).mean()), "share_rated_3_rater2": float((b == 3).mean()),
-                  "share_rated_1_by_either": float(((a == 1) | (b == 1)).mean()), "agreement": po,
-                  "cohen_kappa": (po - pe) / (1 - pe) if pe < 1 else float("nan")}
-    return out
+        out[q] = {}
+        for r in ["rater1", "rater2"]:
+            x = v[f"{r}_{q}"].dropna().astype(int)
+            if len(x):
+                out[q][r] = {"n_items": int(len(x)), **{f"n_rated_{k}": int((x == k).sum()) for k in (3, 2, 1)}}
+        both = v.dropna(subset=[f"rater1_{q}", f"rater2_{q}"])
+        if len(both):  # agreement needs both raters
+            a, b = both[f"rater1_{q}"].astype(int), both[f"rater2_{q}"].astype(int)
+            po = float((a == b).mean())
+            pe = sum(float((a == k).mean() * (b == k).mean()) for k in (1, 2, 3))
+            out[q].update({"n_rated_by_both": int(len(both)), "agreement": po,
+                           "cohen_kappa": (po - pe) / (1 - pe) if pe < 1 else float("nan")})
+    return out if any(out.values()) else None
 
 
 def readout_check():

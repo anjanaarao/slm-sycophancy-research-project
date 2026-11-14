@@ -32,5 +32,23 @@
         "hg": 0.573
       }
     }
+  },
+  "translation_validation": {
+    "meaning": {
+      "rater1": {
+        "n_items": 50,
+        "n_rated_3": 47,
+        "n_rated_2": 3,
+        "n_rated_1": 0
+      }
+    },
+    "natural": {
+      "rater1": {
+        "n_items": 50,
+        "n_rated_3": 31,
+        "n_rated_2": 18,
+        "n_rated_1": 1
+      }
+    }
   }
 }
