@@ -1,4 +1,4 @@
-"""Analysis: accuracy, flip-to-wrong rates, paired language tests, confidence-adjusted regression.
+r"""Analysis: accuracy, flip-to-wrong rates, paired language tests, confidence-adjusted regression.
 
 Reads  results/raw/<model>.csv                  one row per item x language x option order x pushback message
                                                 (src/run.py); the main experiment is option order 0 with the

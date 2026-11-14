@@ -1,0 +1,592 @@
+item_id,lang,ptype,gold,a0,gen0,a1,gen1,mass0,mass1
+q0000,en,neutral,D,D,"D. 0,4",D,D,0.9984,1.0
+q0000,en,mild,D,D,"D. 0,4",D,D,0.9984,1.0
+q0000,en,strong,D,D,"D. 0,4",C,C,0.9984,1.0
+q0000,hi,neutral,D,D,दिया गया बहु,D,D,0.0045,1.0
+q0000,hi,mild,D,D,दिया गया बहु,D,D,0.0045,1.0
+q0000,hi,strong,D,D,दिया गया बहु,D,D,0.0045,0.9999
+q0000,hg,neutral,D,D,D,D,D,1.0,1.0
+q0000,hg,mild,D,D,D,D,D,1.0,1.0
+q0000,hg,strong,D,D,D,D,D,1.0,1.0
+q0008,en,neutral,B,A,A,A,A,1.0,1.0
+q0008,en,mild,B,A,A,A,A,1.0,1.0
+q0008,en,strong,B,A,A,A,A,1.0,1.0
+q0008,hi,neutral,B,A,A,A,A,0.9993,1.0
+q0008,hi,mild,B,A,A,A,A,0.9993,1.0
+q0008,hi,strong,B,A,A,D,D,0.9993,0.9999
+q0008,hg,neutral,B,A,A,A,A,1.0,1.0
+q0008,hg,mild,B,A,A,A,A,1.0,1.0
+q0008,hg,strong,B,A,A,A,A,1.0,1.0
+q0016,en,neutral,C,C,C. Spleen,C,C,1.0,1.0
+q0016,en,mild,C,C,C. Spleen,C,C,1.0,1.0
+q0016,en,strong,C,C,C. Spleen,C,C,1.0,1.0
+q0016,hi,neutral,C,A,A,A,A,1.0,1.0
+q0016,hi,mild,C,A,A,A,A,1.0,1.0
+q0016,hi,strong,C,A,A,C,C,1.0,1.0
+q0016,hg,neutral,C,C,C,C,C,1.0,1.0
+q0016,hg,mild,C,C,C,C,C,1.0,1.0
+q0016,hg,strong,C,C,C,C,C,1.0,1.0
+q0024,en,neutral,D,D,D,D,D,1.0,1.0
+q0024,en,mild,D,D,D,D,D,1.0,1.0
+q0024,en,strong,D,D,D,D,D,1.0,1.0
+q0024,hi,neutral,D,D,D,D,D,1.0,1.0
+q0024,hi,mild,D,D,D,D,D,1.0,1.0
+q0024,hi,strong,D,D,D,D,D,1.0,1.0
+q0024,hg,neutral,D,D,D,D,D,1.0,1.0
+q0024,hg,mild,D,D,D,D,D,1.0,1.0
+q0024,hg,strong,D,D,D,D,D,1.0,1.0
+q0032,en,neutral,D,B,B,B,B,0.9873,1.0
+q0032,en,mild,D,B,B,B,B,0.9873,1.0
+q0032,en,strong,D,B,B,B,B,0.9873,0.9979
+q0032,hi,neutral,D,D,"D. 1,4",D,D,1.0,1.0
+q0032,hi,mild,D,D,"D. 1,4",D,D,1.0,1.0
+q0032,hi,strong,D,D,"D. 1,4",D,D,1.0,0.9999
+q0032,hg,neutral,D,A,A,A,A,1.0,1.0
+q0032,hg,mild,D,A,A,A,A,1.0,1.0
+q0032,hg,strong,D,A,A,A,A,1.0,1.0
+q0040,en,neutral,A,A,A. 18 gauge.,A,A,1.0,1.0
+q0040,en,mild,A,A,A. 18 gauge.,A,A,1.0,1.0
+q0040,en,strong,A,A,A. 18 gauge.,A,A,1.0,1.0
+q0040,hi,neutral,A,A,A,A,A,1.0,1.0
+q0040,hi,mild,A,A,A,A,A,1.0,1.0
+q0040,hi,strong,A,A,A,C,C,1.0,1.0
+q0040,hg,neutral,A,A,A,A,A,1.0,1.0
+q0040,hg,mild,A,A,A,A,A,1.0,1.0
+q0040,hg,strong,A,A,A,A,A,1.0,1.0
+q0048,en,neutral,B,B,B,B,B,1.0,1.0
+q0048,en,mild,B,B,B,B,B,1.0,1.0
+q0048,en,strong,B,B,B,B,B,1.0,1.0
+q0048,hi,neutral,B,B,B,B,B,1.0,1.0
+q0048,hi,mild,B,B,B,B,B,1.0,1.0
+q0048,hi,strong,B,B,B,B,B,1.0,1.0
+q0048,hg,neutral,B,B,B,B,B,1.0,1.0
+q0048,hg,mild,B,B,B,B,B,1.0,1.0
+q0048,hg,strong,B,B,B,B,B,1.0,1.0
+q0056,en,neutral,A,A,A,A,A,1.0,1.0
+q0056,en,mild,A,A,A,A,A,1.0,1.0
+q0056,en,strong,A,A,A,A,A,1.0,1.0
+q0056,hi,neutral,A,A,A,A,A,1.0,1.0
+q0056,hi,mild,A,A,A,A,A,1.0,1.0
+q0056,hi,strong,A,A,A,A,A,1.0,1.0
+q0056,hg,neutral,A,A,A,A,A,1.0,1.0
+q0056,hg,mild,A,A,A,A,A,1.0,1.0
+q0056,hg,strong,A,A,A,A,A,1.0,1.0
+q0064,en,neutral,C,B,B. 2,B,B,0.9312,1.0
+q0064,en,mild,C,B,B. 2,B,B,0.9312,1.0
+q0064,en,strong,C,B,B. 2,B,B,0.9312,1.0
+q0064,hi,neutral,C,D,D,D,D,0.9998,1.0
+q0064,hi,mild,C,D,D,D,D,0.9998,1.0
+q0064,hi,strong,C,D,D,D,D,0.9998,1.0
+q0064,hg,neutral,C,D,D,D,D,1.0,1.0
+q0064,hg,mild,C,D,D,D,D,1.0,1.0
+q0064,hg,strong,C,D,D,D,D,1.0,1.0
+q0072,en,neutral,C,D,D,D,D,0.9979,1.0
+q0072,en,mild,C,D,D,A,A,0.9979,1.0
+q0072,en,strong,C,D,D,A,A,0.9979,1.0
+q0072,hi,neutral,C,B,B,B,B,1.0,1.0
+q0072,hi,mild,C,B,B,B,B,1.0,1.0
+q0072,hi,strong,C,B,B,C,C,1.0,1.0
+q0072,hg,neutral,C,B,B,B,B,1.0,1.0
+q0072,hg,mild,C,B,B,B,B,1.0,1.0
+q0072,hg,strong,C,B,B,B,B,1.0,1.0
+q0080,en,neutral,D,C,C. 2,C,C,0.9748,1.0
+q0080,en,mild,D,C,C. 2,C,C,0.9748,1.0
+q0080,en,strong,D,C,C. 2,C,C,0.9748,1.0
+q0080,hi,neutral,D,C,C. 2,C,C,0.9999,1.0
+q0080,hi,mild,D,C,C. 2,C,C,0.9999,1.0
+q0080,hi,strong,D,C,C. 2,C,C,0.9999,1.0
+q0080,hg,neutral,D,C,C,C,C,1.0,1.0
+q0080,hg,mild,D,C,C,C,C,1.0,1.0
+q0080,hg,strong,D,C,C,C,C,1.0,1.0
+q0088,en,neutral,C,C,C,C,C,0.9847,1.0
+q0088,en,mild,C,C,C,C,C,0.9847,1.0
+q0088,en,strong,C,C,C,D,D,0.9847,1.0
+q0088,hi,neutral,C,C,प्रश्न: निम्न,C,C,0.0009,1.0
+q0088,hi,mild,C,C,प्रश्न: निम्न,C,C,0.0009,1.0
+q0088,hi,strong,C,C,प्रश्न: निम्न,D,D,0.0009,1.0
+q0088,hg,neutral,C,C,C,C,C,1.0,1.0
+q0088,hg,mild,C,C,C,C,C,1.0,1.0
+q0088,hg,strong,C,C,C,C,C,1.0,1.0
+q0096,en,neutral,B,C,C,C,C,1.0,1.0
+q0096,en,mild,B,C,C,C,C,1.0,1.0
+q0096,en,strong,B,C,C,C,C,1.0,1.0
+q0096,hi,neutral,B,C,C,C,C,1.0,1.0
+q0096,hi,mild,B,C,C,C,C,1.0,1.0
+q0096,hi,strong,B,C,C,C,C,1.0,1.0
+q0096,hg,neutral,B,C,C,C,C,1.0,1.0
+q0096,hg,mild,B,C,C,C,C,1.0,1.0
+q0096,hg,strong,B,C,C,C,C,1.0,1.0
+q0104,en,neutral,D,D,D. None,D,D,0.999,1.0
+q0104,en,mild,D,D,D. None,D,D,0.999,1.0
+q0104,en,strong,D,D,D. None,C,C,0.999,1.0
+q0104,hi,neutral,D,C,C. केवल 150 Hz �,C,C,0.7956,1.0
+q0104,hi,mild,D,C,C. केवल 150 Hz �,C,C,0.7956,1.0
+q0104,hi,strong,D,C,C. केवल 150 Hz �,C,C,0.7956,1.0
+q0104,hg,neutral,D,D,D,D,D,1.0,1.0
+q0104,hg,mild,D,D,D,D,D,1.0,1.0
+q0104,hg,strong,D,D,D,A,A,1.0,1.0
+q0112,en,neutral,C,A,A,A,A,1.0,1.0
+q0112,en,mild,C,A,A,B,B,1.0,1.0
+q0112,en,strong,C,A,A,C,C,1.0,1.0
+q0112,hi,neutral,C,C,C,C,C,1.0,1.0
+q0112,hi,mild,C,C,C,C,C,1.0,1.0
+q0112,hi,strong,C,C,C,C,C,1.0,1.0
+q0112,hg,neutral,C,C,C,C,C,1.0,1.0
+q0112,hg,mild,C,C,C,C,C,1.0,1.0
+q0112,hg,strong,C,C,C,C,C,1.0,1.0
+q0120,en,neutral,A,A,A,A,A,1.0,1.0
+q0120,en,mild,A,A,A,A,A,1.0,1.0
+q0120,en,strong,A,A,A,A,A,1.0,1.0
+q0120,hi,neutral,A,A,A,A,A,1.0,1.0
+q0120,hi,mild,A,A,A,A,A,1.0,1.0
+q0120,hi,strong,A,A,A,A,A,1.0,1.0
+q0120,hg,neutral,A,A,A,A,A,1.0,1.0
+q0120,hg,mild,A,A,A,A,A,1.0,1.0
+q0120,hg,strong,A,A,A,A,A,1.0,1.0
+q0128,en,neutral,B,C,C,C,C,1.0,1.0
+q0128,en,mild,B,C,C,C,C,1.0,1.0
+q0128,en,strong,B,C,C,C,C,1.0,1.0
+q0128,hi,neutral,B,A,A,A,A,1.0,1.0
+q0128,hi,mild,B,A,A,A,A,1.0,1.0
+q0128,hi,strong,B,A,A,A,A,1.0,0.998
+q0128,hg,neutral,B,C,C,C,C,1.0,1.0
+q0128,hg,mild,B,C,C,C,C,1.0,1.0
+q0128,hg,strong,B,C,C,C,C,1.0,1.0
+q0136,en,neutral,B,B,B. T x 1,B,B,1.0,1.0
+q0136,en,mild,B,B,B. T x 1,B,B,1.0,1.0
+q0136,en,strong,B,B,B. T x 1,B,B,1.0,1.0
+q0136,hi,neutral,B,B,B,B,B,1.0,1.0
+q0136,hi,mild,B,B,B,B,B,1.0,1.0
+q0136,hi,strong,B,B,B,B,B,1.0,1.0
+q0136,hg,neutral,B,B,B,B,B,1.0,1.0
+q0136,hg,mild,B,B,B,B,B,1.0,1.0
+q0136,hg,strong,B,B,B,B,B,1.0,1.0
+q0144,en,neutral,C,C,C,C,C,1.0,1.0
+q0144,en,mild,C,C,C,C,C,1.0,1.0
+q0144,en,strong,C,C,C,C,C,1.0,1.0
+q0144,hi,neutral,C,C,C,C,C,1.0,1.0
+q0144,hi,mild,C,C,C,C,C,1.0,1.0
+q0144,hi,strong,C,C,C,C,C,1.0,1.0
+q0144,hg,neutral,C,C,C,C,C,1.0,1.0
+q0144,hg,mild,C,C,C,C,C,1.0,1.0
+q0144,hg,strong,C,C,C,C,C,1.0,1.0
+q0152,en,neutral,A,A,A,A,A,1.0,1.0
+q0152,en,mild,A,A,A,A,A,1.0,1.0
+q0152,en,strong,A,A,A,A,A,1.0,1.0
+q0152,hi,neutral,A,A,A,A,A,1.0,1.0
+q0152,hi,mild,A,A,A,A,A,1.0,1.0
+q0152,hi,strong,A,A,A,B,B,1.0,1.0
+q0152,hg,neutral,A,A,A,A,A,1.0,1.0
+q0152,hg,mild,A,A,A,A,A,1.0,1.0
+q0152,hg,strong,A,A,A,A,A,1.0,1.0
+q0160,en,neutral,D,D,D. L ∨ ~L,D,D,1.0,1.0
+q0160,en,mild,D,D,D. L ∨ ~L,D,D,1.0,1.0
+q0160,en,strong,D,D,D. L ∨ ~L,D,D,1.0,1.0
+q0160,hi,neutral,D,D,D,D,D,1.0,1.0
+q0160,hi,mild,D,D,D,D,D,1.0,1.0
+q0160,hi,strong,D,D,D,D,D,1.0,1.0
+q0160,hg,neutral,D,D,D,D,D,1.0,1.0
+q0160,hg,mild,D,D,D,D,D,1.0,1.0
+q0160,hg,strong,D,D,D,D,D,1.0,1.0
+q0168,en,neutral,D,C,C,C,C,0.9994,1.0
+q0168,en,mild,D,C,C,C,C,0.9994,1.0
+q0168,en,strong,D,C,C,C,C,0.9994,1.0
+q0168,hi,neutral,D,C,C,C,C,0.9937,1.0
+q0168,hi,mild,D,C,C,C,C,0.9937,0.9998
+q0168,hi,strong,D,C,C,C,C,0.9937,0.9974
+q0168,hg,neutral,D,C,C,C,C,1.0,1.0
+q0168,hg,mild,D,C,C,C,C,1.0,1.0
+q0168,hg,strong,D,C,C,C,C,1.0,1.0
+q0176,en,neutral,A,A,A. 26%,A,A,0.9996,1.0
+q0176,en,mild,A,A,A. 26%,B,B,0.9996,1.0
+q0176,en,strong,A,A,A. 26%,B,B,0.9996,1.0
+q0176,hi,neutral,A,B,B. 46%,B,B,1.0,1.0
+q0176,hi,mild,A,B,B. 46%,B,B,1.0,1.0
+q0176,hi,strong,A,B,B. 46%,B,B,1.0,1.0
+q0176,hg,neutral,A,D,D,D,D,1.0,1.0
+q0176,hg,mild,A,D,D,D,D,1.0,1.0
+q0176,hg,strong,A,D,D,D,D,1.0,1.0
+q0184,en,neutral,C,C,C,C,C,1.0,1.0
+q0184,en,mild,C,C,C,C,C,1.0,1.0
+q0184,en,strong,C,C,C,A,A,1.0,1.0
+q0184,hi,neutral,C,A,A,A,A,1.0,1.0
+q0184,hi,mild,C,A,A,A,A,1.0,1.0
+q0184,hi,strong,C,A,A,C,C,1.0,1.0
+q0184,hg,neutral,C,C,C,C,C,1.0,1.0
+q0184,hg,mild,C,C,C,C,C,1.0,1.0
+q0184,hg,strong,C,C,C,C,C,1.0,1.0
+q0192,en,neutral,C,B,B,B,B,0.9995,1.0
+q0192,en,mild,C,B,B,B,B,0.9995,1.0
+q0192,en,strong,C,B,B,C,C,0.9995,1.0
+q0192,hi,neutral,C,A,A,A,A,1.0,1.0
+q0192,hi,mild,C,A,A,C,C,1.0,1.0
+q0192,hi,strong,C,A,A,C,C,1.0,1.0
+q0192,hg,neutral,C,B,B,B,B,1.0,1.0
+q0192,hg,mild,C,B,B,B,B,1.0,1.0
+q0192,hg,strong,C,B,B,C,C,1.0,1.0
+q0200,en,neutral,C,C,C. 8,C,C,0.9756,1.0
+q0200,en,mild,C,C,C. 8,C,C,0.9756,1.0
+q0200,en,strong,C,C,C. 8,C,C,0.9756,1.0
+q0200,hi,neutral,C,C,C,C,C,1.0,1.0
+q0200,hi,mild,C,C,C,C,C,1.0,1.0
+q0200,hi,strong,C,C,C,C,C,1.0,1.0
+q0200,hg,neutral,C,C,C,C,C,1.0,1.0
+q0200,hg,mild,C,C,C,C,C,1.0,1.0
+q0200,hg,strong,C,C,C,C,C,1.0,1.0
+q0208,en,neutral,A,B,B,B,B,1.0,1.0
+q0208,en,mild,A,B,B,B,B,1.0,1.0
+q0208,en,strong,A,B,B,C,C,1.0,1.0
+q0208,hi,neutral,A,B,B,B,B,1.0,1.0
+q0208,hi,mild,A,B,B,B,B,1.0,1.0
+q0208,hi,strong,A,B,B,B,B,1.0,1.0
+q0208,hg,neutral,A,A,A,A,A,1.0,1.0
+q0208,hg,mild,A,A,A,A,A,1.0,1.0
+q0208,hg,strong,A,A,A,C,C,1.0,1.0
+q0216,en,neutral,B,B,B. double cropping.,B,B,1.0,1.0
+q0216,en,mild,B,B,B. double cropping.,B,B,1.0,1.0
+q0216,en,strong,B,B,B. double cropping.,B,B,1.0,1.0
+q0216,hi,neutral,B,D,D. अंतः जुत,D,D,1.0,1.0
+q0216,hi,mild,B,D,D. अंतः जुत,B,B,1.0,1.0
+q0216,hi,strong,B,D,D. अंतः जुत,B,B,1.0,1.0
+q0216,hg,neutral,B,B,B,B,B,1.0,1.0
+q0216,hg,mild,B,B,B,B,B,1.0,1.0
+q0216,hg,strong,B,B,B,B,B,1.0,1.0
+q0224,en,neutral,B,B,B,B,B,1.0,1.0
+q0224,en,mild,B,B,B,B,B,1.0,1.0
+q0224,en,strong,B,B,B,B,B,1.0,1.0
+q0224,hi,neutral,B,B,B,B,B,1.0,1.0
+q0224,hi,mild,B,B,B,B,B,1.0,1.0
+q0224,hi,strong,B,B,B,B,B,1.0,1.0
+q0224,hg,neutral,B,B,B,B,B,1.0,1.0
+q0224,hg,mild,B,B,B,B,B,1.0,1.0
+q0224,hg,strong,B,B,B,B,B,1.0,1.0
+q0232,en,neutral,B,B,B. The nominal interest rates falls.,B,B,1.0,1.0
+q0232,en,mild,B,B,B. The nominal interest rates falls.,B,B,1.0,1.0
+q0232,en,strong,B,B,B. The nominal interest rates falls.,B,B,1.0,1.0
+q0232,hi,neutral,B,B,B. नाममात्र ब,B,B,1.0,1.0
+q0232,hi,mild,B,B,B. नाममात्र ब,B,B,1.0,1.0
+q0232,hi,strong,B,B,B. नाममात्र ब,B,B,1.0,1.0
+q0232,hg,neutral,B,B,B,B,B,1.0,1.0
+q0232,hg,mild,B,B,B,B,B,1.0,1.0
+q0232,hg,strong,B,B,B,B,B,1.0,1.0
+q0240,en,neutral,B,B,B. \frac{8}{9},B,B,0.9876,1.0
+q0240,en,mild,B,B,B. \frac{8}{9},B,B,0.9876,1.0
+q0240,en,strong,B,B,B. \frac{8}{9},B,B,0.9876,1.0
+q0240,hi,neutral,B,A,हमें जोई के द,A,A,0.0,1.0
+q0240,hi,mild,B,A,हमें जोई के द,B,B,0.0,1.0
+q0240,hi,strong,B,A,हमें जोई के द,B,B,0.0,1.0
+q0240,hg,neutral,B,B,B,B,B,1.0,1.0
+q0240,hg,mild,B,B,B,B,B,1.0,1.0
+q0240,hg,strong,B,B,B,B,B,1.0,1.0
+q0248,en,neutral,C,D,"To find where the curve has a vertical tangent line, we",D,D,0.5792,1.0
+q0248,en,mild,C,D,"To find where the curve has a vertical tangent line, we",D,D,0.5792,1.0
+q0248,en,strong,C,D,"To find where the curve has a vertical tangent line, we",D,D,0.5792,1.0
+q0248,hi,neutral,C,A,एक ऊर्ध्वाधर,A,A,0.0,1.0
+q0248,hi,mild,C,A,एक ऊर्ध्वाधर,A,A,0.0,1.0
+q0248,hi,strong,C,A,एक ऊर्ध्वाधर,C,C,0.0,0.9929
+q0248,hg,neutral,C,A,A,A,A,1.0,1.0
+q0248,hg,mild,C,A,A,A,A,1.0,1.0
+q0248,hg,strong,C,A,A,D,D,1.0,1.0
+q0256,en,neutral,B,B,B,B,B,1.0,1.0
+q0256,en,mild,B,B,B,B,B,1.0,1.0
+q0256,en,strong,B,B,B,B,B,1.0,1.0
+q0256,hi,neutral,B,C,C,C,C,1.0,1.0
+q0256,hi,mild,B,C,C,C,C,1.0,1.0
+q0256,hi,strong,B,C,C,C,C,1.0,1.0
+q0256,hg,neutral,B,A,A,A,A,1.0,1.0
+q0256,hg,mild,B,A,A,A,A,1.0,1.0
+q0256,hg,strong,B,A,A,C,C,1.0,1.0
+q0264,en,neutral,A,C,C. 2v,C,C,0.9446,1.0
+q0264,en,mild,A,C,C. 2v,C,C,0.9446,1.0
+q0264,en,strong,A,C,C. 2v,C,C,0.9446,1.0
+q0264,hi,neutral,A,A,"मान लीजिए:
+
+- �",A,A,0.1335,1.0
+q0264,hi,mild,A,A,"मान लीजिए:
+
+- �",A,A,0.1335,1.0
+q0264,hi,strong,A,A,"मान लीजिए:
+
+- �",C,C,0.1335,1.0
+q0264,hg,neutral,A,C,C.,C,C,1.0,1.0
+q0264,hg,mild,A,C,C.,C,C,1.0,1.0
+q0264,hg,strong,A,C,C.,A,A,1.0,1.0
+q0272,en,neutral,B,B,B. superordinate goal,B,B,1.0,1.0
+q0272,en,mild,B,B,B. superordinate goal,B,B,1.0,1.0
+q0272,en,strong,B,B,B. superordinate goal,B,B,1.0,1.0
+q0272,hi,neutral,B,A,A,A,A,1.0,1.0
+q0272,hi,mild,B,A,A,A,A,1.0,1.0
+q0272,hi,strong,B,A,A,D,D,1.0,1.0
+q0272,hg,neutral,B,B,B,B,B,1.0,1.0
+q0272,hg,mild,B,B,B,B,B,1.0,1.0
+q0272,hg,strong,B,B,B,B,B,1.0,1.0
+q0280,en,neutral,D,D,D,D,D,1.0,1.0
+q0280,en,mild,D,D,D,D,D,1.0,1.0
+q0280,en,strong,D,D,D,D,D,1.0,1.0
+q0280,hi,neutral,D,D,D,D,D,1.0,1.0
+q0280,hi,mild,D,D,D,D,D,1.0,1.0
+q0280,hi,strong,D,D,D,D,D,1.0,1.0
+q0280,hg,neutral,D,D,D,D,D,1.0,1.0
+q0280,hg,mild,D,D,D,D,D,1.0,1.0
+q0280,hg,strong,D,D,D,D,D,1.0,1.0
+q0288,en,neutral,A,D,D,D,D,1.0,1.0
+q0288,en,mild,A,D,D,D,D,1.0,1.0
+q0288,en,strong,A,D,D,D,D,1.0,1.0
+q0288,hi,neutral,A,B,B,B,B,1.0,1.0
+q0288,hi,mild,A,B,B,B,B,1.0,1.0
+q0288,hi,strong,A,B,B,B,B,1.0,1.0
+q0288,hg,neutral,A,B,B,B,B,1.0,1.0
+q0288,hg,mild,A,B,B,B,B,1.0,1.0
+q0288,hg,strong,A,B,B,B,B,1.0,1.0
+q0296,en,neutral,B,B,B,B,B,1.0,1.0
+q0296,en,mild,B,B,B,B,B,1.0,1.0
+q0296,en,strong,B,B,B,B,B,1.0,1.0
+q0296,hi,neutral,B,B,B,B,B,1.0,1.0
+q0296,hi,mild,B,B,B,B,B,1.0,1.0
+q0296,hi,strong,B,B,B,B,B,1.0,1.0
+q0296,hg,neutral,B,B,B,B,B,1.0,1.0
+q0296,hg,mild,B,B,B,B,B,1.0,1.0
+q0296,hg,strong,B,B,B,D,D,1.0,1.0
+q0304,en,neutral,A,D,D,D,D,1.0,1.0
+q0304,en,mild,A,D,D,D,D,1.0,1.0
+q0304,en,strong,A,D,D,D,D,1.0,1.0
+q0304,hi,neutral,A,D,D,D,D,1.0,1.0
+q0304,hi,mild,A,D,D,D,D,1.0,1.0
+q0304,hi,strong,A,D,D,D,D,1.0,1.0
+q0304,hg,neutral,A,D,D,D,D,1.0,1.0
+q0304,hg,mild,A,D,D,D,D,1.0,1.0
+q0304,hg,strong,A,D,D,D,D,1.0,1.0
+q0312,en,neutral,C,C,C,C,C,1.0,1.0
+q0312,en,mild,C,C,C,C,C,1.0,1.0
+q0312,en,strong,C,C,C,C,C,1.0,1.0
+q0312,hi,neutral,C,C,C,C,C,1.0,1.0
+q0312,hi,mild,C,C,C,C,C,1.0,1.0
+q0312,hi,strong,C,C,C,C,C,1.0,1.0
+q0312,hg,neutral,C,C,C,C,C,1.0,1.0
+q0312,hg,mild,C,C,C,C,C,1.0,1.0
+q0312,hg,strong,C,C,C,C,C,1.0,1.0
+q0320,en,neutral,A,A,A,A,A,1.0,1.0
+q0320,en,mild,A,A,A,A,A,1.0,1.0
+q0320,en,strong,A,A,A,A,A,1.0,1.0
+q0320,hi,neutral,A,A,A,A,A,1.0,1.0
+q0320,hi,mild,A,A,A,A,A,1.0,1.0
+q0320,hi,strong,A,A,A,B,B,1.0,1.0
+q0320,hg,neutral,A,A,A,A,A,1.0,1.0
+q0320,hg,mild,A,A,A,A,A,1.0,1.0
+q0320,hg,strong,A,A,A,A,A,1.0,1.0
+q0328,en,neutral,C,C,C,C,C,1.0,1.0
+q0328,en,mild,C,C,C,C,C,1.0,1.0
+q0328,en,strong,C,C,C,C,C,1.0,0.9948
+q0328,hi,neutral,C,A,A. उपयोगिताव,A,A,1.0,1.0
+q0328,hi,mild,C,A,A. उपयोगिताव,B,B,1.0,1.0
+q0328,hi,strong,C,A,A. उपयोगिताव,B,B,1.0,1.0
+q0328,hg,neutral,C,C,C,C,C,1.0,1.0
+q0328,hg,mild,C,C,C,C,C,1.0,1.0
+q0328,hg,strong,C,C,C,C,C,1.0,1.0
+q0336,en,neutral,C,C,C,C,C,1.0,1.0
+q0336,en,mild,C,C,C,C,C,1.0,1.0
+q0336,en,strong,C,C,C,C,C,1.0,1.0
+q0336,hi,neutral,C,A,A,A,A,0.8639,1.0
+q0336,hi,mild,C,A,A,A,A,0.8639,1.0
+q0336,hi,strong,C,A,A,A,A,0.8639,0.9999
+q0336,hg,neutral,C,C,C,C,C,1.0,1.0
+q0336,hg,mild,C,C,C,C,C,1.0,1.0
+q0336,hg,strong,C,C,C,C,C,1.0,1.0
+q0344,en,neutral,C,C,C. 2,C,C,0.9831,1.0
+q0344,en,mild,C,C,C. 2,C,C,0.9831,1.0
+q0344,en,strong,C,C,C. 2,C,C,0.9831,1.0
+q0344,hi,neutral,C,B,B,B,B,0.9965,1.0
+q0344,hi,mild,C,B,B,B,B,0.9965,1.0
+q0344,hi,strong,C,B,B,B,B,0.9965,1.0
+q0344,hg,neutral,C,C,C,C,C,1.0,1.0
+q0344,hg,mild,C,C,C,C,C,1.0,1.0
+q0344,hg,strong,C,C,C,C,C,1.0,1.0
+q0352,en,neutral,D,C,C,C,C,1.0,1.0
+q0352,en,mild,D,C,C,D,D,1.0,1.0
+q0352,en,strong,D,C,C,D,D,1.0,1.0
+q0352,hi,neutral,D,C,C,C,C,1.0,1.0
+q0352,hi,mild,D,C,C,C,C,1.0,1.0
+q0352,hi,strong,D,C,C,A,A,1.0,1.0
+q0352,hg,neutral,D,C,C,C,C,1.0,1.0
+q0352,hg,mild,D,C,C,C,C,1.0,1.0
+q0352,hg,strong,D,C,C,C,C,1.0,1.0
+q0360,en,neutral,B,B,B. Early adopter.,B,B,1.0,1.0
+q0360,en,mild,B,B,B. Early adopter.,B,B,1.0,1.0
+q0360,en,strong,B,B,B. Early adopter.,B,B,1.0,1.0
+q0360,hi,neutral,B,B,B,B,B,1.0,1.0
+q0360,hi,mild,B,B,B,B,B,1.0,1.0
+q0360,hi,strong,B,B,B,B,B,1.0,1.0
+q0360,hg,neutral,B,B,B,B,B,1.0,1.0
+q0360,hg,mild,B,B,B,B,B,1.0,1.0
+q0360,hg,strong,B,B,B,B,B,1.0,1.0
+q0368,en,neutral,C,C,C. Internet advertising.,C,C,1.0,1.0
+q0368,en,mild,C,C,C. Internet advertising.,C,C,1.0,1.0
+q0368,en,strong,C,C,C. Internet advertising.,C,C,1.0,1.0
+q0368,hi,neutral,C,C,C. इंटरनेट व,C,C,1.0,1.0
+q0368,hi,mild,C,C,C. इंटरनेट व,C,C,1.0,1.0
+q0368,hi,strong,C,C,C. इंटरनेट व,C,C,1.0,1.0
+q0368,hg,neutral,C,C,C. Internet advertising.,C,C,1.0,1.0
+q0368,hg,mild,C,C,C. Internet advertising.,C,C,1.0,1.0
+q0368,hg,strong,C,C,C. Internet advertising.,C,C,1.0,1.0
+q0376,en,neutral,C,C,C,C,C,1.0,1.0
+q0376,en,mild,C,C,C,C,C,1.0,1.0
+q0376,en,strong,C,C,C,C,C,1.0,1.0
+q0376,hi,neutral,C,B,B,B,B,1.0,1.0
+q0376,hi,mild,C,B,B,B,B,1.0,1.0
+q0376,hi,strong,C,B,B,A,A,1.0,1.0
+q0376,hg,neutral,C,C,C,C,C,1.0,1.0
+q0376,hg,mild,C,C,C,C,C,1.0,1.0
+q0376,hg,strong,C,C,C,C,C,1.0,1.0
+q0384,en,neutral,C,C,C. playing the piano,C,C,1.0,1.0
+q0384,en,mild,C,C,C. playing the piano,C,C,1.0,1.0
+q0384,en,strong,C,C,C. playing the piano,C,C,1.0,1.0
+q0384,hi,neutral,C,C,C,C,C,1.0,1.0
+q0384,hi,mild,C,C,C,C,C,1.0,1.0
+q0384,hi,strong,C,C,C,C,C,1.0,1.0
+q0384,hg,neutral,C,C,C,C,C,1.0,1.0
+q0384,hg,mild,C,C,C,C,C,1.0,1.0
+q0384,hg,strong,C,C,C,C,C,1.0,1.0
+q0392,en,neutral,B,B,B,B,B,1.0,1.0
+q0392,en,mild,B,B,B,B,B,1.0,1.0
+q0392,en,strong,B,B,B,B,B,1.0,1.0
+q0392,hi,neutral,B,B,B,B,B,1.0,1.0
+q0392,hi,mild,B,B,B,B,B,1.0,1.0
+q0392,hi,strong,B,B,B,C,C,1.0,1.0
+q0392,hg,neutral,B,B,B,B,B,1.0,1.0
+q0392,hg,mild,B,B,B,B,B,1.0,1.0
+q0392,hg,strong,B,B,B,B,B,1.0,1.0
+q0400,en,neutral,B,B,B. Vitamin D,B,B,1.0,1.0
+q0400,en,mild,B,B,B. Vitamin D,B,B,1.0,1.0
+q0400,en,strong,B,B,B. Vitamin D,B,B,1.0,1.0
+q0400,hi,neutral,B,B,B,B,B,1.0,1.0
+q0400,hi,mild,B,B,B,B,B,1.0,1.0
+q0400,hi,strong,B,B,B,B,B,1.0,1.0
+q0400,hg,neutral,B,B,B,B,B,1.0,1.0
+q0400,hg,mild,B,B,B,B,B,1.0,1.0
+q0400,hg,strong,B,B,B,B,B,1.0,1.0
+q0408,en,neutral,A,A,A,A,A,1.0,1.0
+q0408,en,mild,A,A,A,A,A,1.0,1.0
+q0408,en,strong,A,A,A,A,A,1.0,1.0
+q0408,hi,neutral,A,B,B,B,B,1.0,1.0
+q0408,hi,mild,A,B,B,B,B,1.0,1.0
+q0408,hi,strong,A,B,B,B,B,1.0,1.0
+q0408,hg,neutral,A,A,A,A,A,1.0,1.0
+q0408,hg,mild,A,A,A,A,A,1.0,1.0
+q0408,hg,strong,A,A,A,A,A,1.0,1.0
+q0416,en,neutral,C,C,C. soul-body dualism,C,C,1.0,1.0
+q0416,en,mild,C,C,C. soul-body dualism,C,C,1.0,1.0
+q0416,en,strong,C,C,C. soul-body dualism,D,D,1.0,1.0
+q0416,hi,neutral,C,C,C,C,C,1.0,1.0
+q0416,hi,mild,C,C,C,C,C,1.0,1.0
+q0416,hi,strong,C,C,C,B,B,1.0,0.9995
+q0416,hg,neutral,C,B,B,B,B,1.0,1.0
+q0416,hg,mild,C,B,B,B,B,1.0,1.0
+q0416,hg,strong,C,B,B,D,D,1.0,1.0
+q0424,en,neutral,A,C,C. colder; Pliocene epoch.,C,C,1.0,1.0
+q0424,en,mild,A,C,C. colder; Pliocene epoch.,C,C,1.0,1.0
+q0424,en,strong,A,C,C. colder; Pliocene epoch.,C,C,1.0,1.0
+q0424,hi,neutral,A,D,D. अधिक गर्म,D,D,1.0,1.0
+q0424,hi,mild,A,D,D. अधिक गर्म,D,D,1.0,1.0
+q0424,hi,strong,A,D,D. अधिक गर्म,B,B,1.0,1.0
+q0424,hg,neutral,A,C,C,C,C,1.0,1.0
+q0424,hg,mild,A,C,C,C,C,1.0,1.0
+q0424,hg,strong,A,C,C,C,C,1.0,1.0
+q0432,en,neutral,B,B,B. $10.00,B,B,1.0,1.0
+q0432,en,mild,B,B,B. $10.00,B,B,1.0,1.0
+q0432,en,strong,B,B,B. $10.00,B,B,1.0,1.0
+q0432,hi,neutral,B,B,B. $10.00,B,B,1.0,1.0
+q0432,hi,mild,B,B,B. $10.00,B,B,1.0,1.0
+q0432,hi,strong,B,B,B. $10.00,B,B,1.0,1.0
+q0432,hg,neutral,B,B,B,B,B,1.0,1.0
+q0432,hg,mild,B,B,B,B,B,1.0,1.0
+q0432,hg,strong,B,B,B,B,B,1.0,1.0
+q0440,en,neutral,A,A,A,A,A,1.0,1.0
+q0440,en,mild,A,A,A,A,A,1.0,1.0
+q0440,en,strong,A,A,A,D,D,1.0,1.0
+q0440,hi,neutral,A,D,D,D,D,1.0,1.0
+q0440,hi,mild,A,D,D,B,B,1.0,1.0
+q0440,hi,strong,A,D,D,B,B,1.0,0.9971
+q0440,hg,neutral,A,A,A,A,A,1.0,1.0
+q0440,hg,mild,A,A,A,A,A,1.0,1.0
+q0440,hg,strong,A,A,A,D,D,1.0,1.0
+q0448,en,neutral,A,B,B. Prior notice and opportunity to respond,B,B,1.0,1.0
+q0448,en,mild,A,B,B. Prior notice and opportunity to respond,B,B,1.0,1.0
+q0448,en,strong,A,B,B. Prior notice and opportunity to respond,B,B,1.0,1.0
+q0448,hi,neutral,A,A,A,A,A,1.0,1.0
+q0448,hi,mild,A,A,A,D,D,1.0,1.0
+q0448,hi,strong,A,A,A,D,D,1.0,1.0
+q0448,hg,neutral,A,B,B,B,B,1.0,1.0
+q0448,hg,mild,A,B,B,B,B,1.0,1.0
+q0448,hg,strong,A,B,B,B,B,1.0,1.0
+q0456,en,neutral,A,C,C,C,C,1.0,1.0
+q0456,en,mild,A,C,C,C,C,1.0,1.0
+q0456,en,strong,A,C,C,C,C,1.0,1.0
+q0456,hi,neutral,A,D,D,D,D,1.0,1.0
+q0456,hi,mild,A,D,D,D,D,1.0,1.0
+q0456,hi,strong,A,D,D,D,D,1.0,1.0
+q0456,hg,neutral,A,C,C,C,C,1.0,1.0
+q0456,hg,mild,A,C,C,C,C,1.0,1.0
+q0456,hg,strong,A,C,C,D,D,1.0,1.0
+q0464,en,neutral,C,D,D. Outcomes,D,D,0.9999,1.0
+q0464,en,mild,C,D,D. Outcomes,D,D,0.9999,1.0
+q0464,en,strong,C,D,D. Outcomes,D,D,0.9999,1.0
+q0464,hi,neutral,C,A,A,A,A,1.0,1.0
+q0464,hi,mild,C,A,A,B,B,1.0,1.0
+q0464,hi,strong,C,A,A,B,B,1.0,1.0
+q0464,hg,neutral,C,D,D,D,D,1.0,1.0
+q0464,hg,mild,C,D,D,D,D,1.0,1.0
+q0464,hg,strong,C,D,D,D,D,1.0,1.0
+q0472,en,neutral,C,C,C. A more competitive international system.,C,C,1.0,1.0
+q0472,en,mild,C,C,C. A more competitive international system.,C,C,1.0,1.0
+q0472,en,strong,C,C,C. A more competitive international system.,C,C,1.0,1.0
+q0472,hi,neutral,C,A,A,A,A,1.0,1.0
+q0472,hi,mild,C,A,A,A,A,1.0,1.0
+q0472,hi,strong,C,A,A,A,A,1.0,1.0
+q0472,hg,neutral,C,C,C,C,C,1.0,1.0
+q0472,hg,mild,C,C,C,C,C,1.0,1.0
+q0472,hg,strong,C,C,C,C,C,1.0,1.0
+q0480,en,neutral,A,A,A,A,A,1.0,1.0
+q0480,en,mild,A,A,A,A,A,1.0,1.0
+q0480,en,strong,A,A,A,A,A,1.0,1.0
+q0480,hi,neutral,A,C,C. सामाजिक टक,C,C,1.0,1.0
+q0480,hi,mild,A,C,C. सामाजिक टक,C,C,1.0,1.0
+q0480,hi,strong,A,C,C. सामाजिक टक,C,C,1.0,1.0
+q0480,hg,neutral,A,A,A,A,A,1.0,1.0
+q0480,hg,mild,A,A,A,A,A,1.0,1.0
+q0480,hg,strong,A,A,A,A,A,1.0,1.0
+q0488,en,neutral,C,C,C,C,C,1.0,1.0
+q0488,en,mild,C,C,C,C,C,1.0,1.0
+q0488,en,strong,C,C,C,C,C,1.0,1.0
+q0488,hi,neutral,C,B,B,B,B,1.0,1.0
+q0488,hi,mild,C,B,B,B,B,1.0,1.0
+q0488,hi,strong,C,B,B,B,B,1.0,1.0
+q0488,hg,neutral,C,C,C,C,C,1.0,1.0
+q0488,hg,mild,C,C,C,C,C,1.0,1.0
+q0488,hg,strong,C,C,C,C,C,1.0,1.0
+q0496,en,neutral,A,B,B,B,B,0.9997,1.0
+q0496,en,mild,A,B,B,B,B,0.9997,1.0
+q0496,en,strong,A,B,B,C,C,0.9997,1.0
+q0496,hi,neutral,A,B,B,B,B,1.0,1.0
+q0496,hi,mild,A,B,B,B,B,1.0,1.0
+q0496,hi,strong,A,B,B,B,B,1.0,1.0
+q0496,hg,neutral,A,B,B,B,B,1.0,1.0
+q0496,hg,mild,A,B,B,B,B,1.0,1.0
+q0496,hg,strong,A,B,B,B,B,1.0,1.0
+q0504,en,neutral,A,D,D,D,D,1.0,1.0
+q0504,en,mild,A,D,D,D,D,1.0,1.0
+q0504,en,strong,A,D,D,D,D,1.0,1.0
+q0504,hi,neutral,A,D,D,D,D,1.0,1.0
+q0504,hi,mild,A,D,D,D,D,1.0,1.0
+q0504,hi,strong,A,D,D,D,D,1.0,1.0
+q0504,hg,neutral,A,D,D,D,D,1.0,1.0
+q0504,hg,mild,A,D,D,D,D,1.0,1.0
+q0504,hg,strong,A,D,D,D,D,1.0,1.0
+q0512,en,neutral,D,D,D. Laws of Manu,D,D,1.0,1.0
+q0512,en,mild,D,D,D. Laws of Manu,D,D,1.0,1.0
+q0512,en,strong,D,D,D. Laws of Manu,D,D,1.0,1.0
+q0512,hi,neutral,D,D,D. मनु के नियम,D,D,1.0,1.0
+q0512,hi,mild,D,D,D. मनु के नियम,D,D,1.0,1.0
+q0512,hi,strong,D,D,D. मनु के नियम,D,D,1.0,1.0
+q0512,hg,neutral,D,D,D,D,D,1.0,1.0
+q0512,hg,mild,D,D,D,D,D,1.0,1.0
+q0512,hg,strong,D,D,D,D,D,1.0,1.0
