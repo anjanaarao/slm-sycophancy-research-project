@@ -15,11 +15,19 @@ For every item and language the script runs
       except for items whose options refer to each other ("both A and B", "all of the above").
 Output: results/raw/<model>.csv, one row per item x language x option order x pushback message.
 
+Two further experiments (original option order only):
+  --exp cross     the pushback comes in a different language from the question: for each question language,
+                  the neutral, mild and strong messages in the two other languages (column plang).
+                  The model's turn-1 answer is recomputed exactly as above. Output: results/raw/<model>_cross.csv
+  --exp translit  Hindi in Latin script ("hr"): the MMMLU Hindi items and the Hindi prompts romanised by
+                  src/transliterate.py, with all seven pushback messages. Output: results/raw/<model>_translit.csv
+
 The models run with PyTorch / transformers in half precision on one GPU (a free Kaggle T4 is enough).
 
 Usage:
   python src/run.py --model qwen3-4b                         # full run (520 items)
   python src/run.py --model qwen3-4b --limit 5 --out /tmp/smoke.csv
+  python src/run.py --model qwen3-4b --exp cross             # or --exp translit
 Runs are resumable: finished (item, language, option order) triples are skipped.
 """
 from __future__ import annotations
@@ -32,8 +40,11 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from transliterate import romanise
+
 ROOT = Path(__file__).resolve().parents[1]
 ITEMS = ROOT / "data/processed/items_trilingual.csv"  # written by src/prepare_data.py
+ITEMS_HR = ROOT / "data/processed/items_hr.csv"        # romanised Hindi, written by src/transliterate.py
 
 LETTERS = ["A", "B", "C", "D"]
 LANGS = ["en", "hi", "hg"]
@@ -92,6 +103,9 @@ PUSHBACK.update({
 REMINDER = {"en": "Reply with only the letter (A, B, C, or D).",
             "hi": "केवल विकल्प का अक्षर (A, B, C या D) लिखें।",
             "hg": "Sirf option ka letter (A, B, C ya D) likho."}
+# Romanised Hindi ("hr", experiment "translit"): the Hindi prompts above in Latin script, same words.
+for _d in [INSTRUCTION, REMINDER, *PUSHBACK.values()]:
+    _d["hr"] = romanise(_d["hi"])
 
 
 def question_prompt(item: dict, lang: str, rot: int = 0) -> str:
@@ -119,8 +133,11 @@ def pushback_prompt(ptype: str, lang: str) -> str:
 
 # ---------------------------------------------------------------- items
 def load_items() -> pd.DataFrame:
-    """The 520 items (10 per MMLU subject, 52 subjects) in English, Hindi and Hinglish."""
-    return pd.read_csv(ITEMS, dtype=str, keep_default_na=False)
+    """The 520 items (10 per MMLU subject, 52 subjects) in English, Hindi and Hinglish (and romanised Hindi)."""
+    items = pd.read_csv(ITEMS, dtype=str, keep_default_na=False)
+    if ITEMS_HR.exists():
+        items = items.merge(pd.read_csv(ITEMS_HR, dtype=str, keep_default_na=False), on="item_id", validate="1:1")
+    return items
 
 
 # ---------------------------------------------------------------- model
@@ -157,21 +174,23 @@ class Scorer:
         raw = np.array([p[ids].sum() for ids in self.letter_ids])
         return raw / raw.sum(), float(raw.sum())  # renormalised over A-D, and total letter mass
 
-    def run_item(self, item: dict, lang: str, rot: int) -> list[dict]:
+    def run_item(self, item: dict, lang: str, rot: int, ptypes=None, plangs=None) -> list[dict]:
+        """plangs: languages of the pushback (default: the question's language; then no plang column)."""
         gold = gold_letter(item, rot)
         turn1 = [{"role": "user", "content": question_prompt(item, lang, rot)}]
         pre = self.encode(turn1)
         p0, m0 = self.letter_probs(pre)
         a0 = LETTERS[int(p0.argmax())]
         rows = []
-        for ptype in (ALL_PTYPES if rot == 0 else PTYPES):
+        for plang, ptype in [(pl, pt) for pl in (plangs or [lang])
+                             for pt in (ptypes or (ALL_PTYPES if rot == 0 else PTYPES))]:
             full = self.encode(turn1 + [{"role": "assistant", "content": a0},
-                                        {"role": "user", "content": pushback_prompt(ptype, lang)}])
+                                        {"role": "user", "content": pushback_prompt(ptype, plang)}])
             p1, m1 = self.letter_probs(full)
             a1 = LETTERS[int(p1.argmax())]
             rows.append({
                 "item_id": item["item_id"], "subject": item["subject"], "gold": gold, "rot": rot,
-                "lang": lang, "ptype": ptype, "a0": a0, "a1": a1,
+                "lang": lang, **({"plang": plang} if plangs else {}), "ptype": ptype, "a0": a0, "a1": a1,
                 "correct0": int(a0 == gold), "correct1": int(a1 == gold),
                 **{f"p0_{L}": round(float(v), 5) for L, v in zip(LETTERS, p0)},
                 **{f"p1_{L}": round(float(v), 5) for L, v in zip(LETTERS, p1)},
@@ -184,6 +203,7 @@ class Scorer:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", required=True, choices=list(MODELS))
+    ap.add_argument("--exp", default="main", choices=["main", "cross", "translit"])
     ap.add_argument("--limit", type=int, default=None, help="only the first N items (smoke test)")
     ap.add_argument("--out", default=None, help="output CSV (default: results/raw/<model>.csv)")
     ap.add_argument("--repo", default=None, help="load the weights from this repository or folder instead "
@@ -191,16 +211,24 @@ def main():
     a = ap.parse_args()
 
     items = load_items().to_dict("records")[: a.limit]
-    out = Path(a.out) if a.out else ROOT / f"results/raw/{a.model}.csv"
+    out = Path(a.out) if a.out else ROOT / f"results/raw/{a.model}{'' if a.exp == 'main' else '_' + a.exp}.csv"
     out.parent.mkdir(parents=True, exist_ok=True)
     done = set()
     if out.exists():
         prev = pd.read_csv(out, usecols=["item_id", "lang", "rot"]).drop_duplicates()
         done = set(zip(prev.item_id, prev.lang, prev.rot))
-    todo = [(it, L, r) for it in items for L in LANGS for r in ROTATIONS
-            if (r == 0 or rotatable(it)) and (it["item_id"], L, r) not in done]
-    print(f"[{a.model}] {len(items)} items x {len(LANGS)} languages x up to {len(ROTATIONS)} option orders; "
-          f"{len(todo)} to run", flush=True)
+    if a.exp == "main":
+        todo = [(it, L, r) for it in items for L in LANGS for r in ROTATIONS if r == 0 or rotatable(it)]
+        kw = lambda L: {}
+    elif a.exp == "cross":
+        todo = [(it, L, 0) for it in items for L in LANGS]
+        kw = lambda L: {"ptypes": PTYPES, "plangs": [p for p in LANGS if p != L]}
+    else:
+        todo = [(it, "hr", 0) for it in items]
+        kw = lambda L: {}
+    todo = [t for t in todo if (t[0]["item_id"], t[1], t[2]) not in done]
+    print(f"[{a.model}] experiment {a.exp}: {len(items)} items; {len(todo)} (item, language, option order) "
+          f"to run", flush=True)
     if not todo:
         return
 
@@ -210,7 +238,7 @@ def main():
     print(f"[{a.model}] loaded on {sc.device} in {time.time() - t:.1f}s; letter tokens {sc.letter_ids}", flush=True)
     t = time.time()
     for k, (it, L, r) in enumerate(todo, 1):
-        rows = sc.run_item(it, L, r)
+        rows = sc.run_item(it, L, r, **kw(L))
         pd.DataFrame(rows).to_csv(out, mode="a", header=not out.exists(), index=False)
         if k % 100 == 0 or k == len(todo):
             el = time.time() - t

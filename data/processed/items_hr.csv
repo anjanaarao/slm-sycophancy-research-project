@@ -1,0 +1,546 @@
+item_id,hr_question,hr_A,hr_B,hr_C,hr_D
+q0000,die gae bahupad ke sanketit parimit kshetr men gunankon ke sath sabhi shuny bataen. x^5 + 3x^3 + x^2 + 2x in Z_5,0,1,"0,1","0,4"
+q0001,"kathan 1 | ek ring homomorphijm van tu van hota hai agar aur keval agar karnel {0} hai. kathan 2 | Q, R men ek aadarsh hai.","sahi, sahi","galat, galat","sahi, galat","galat, sahi"
+q0002,"gunan samuh {1, -1, i , -i} men -i ka vyutkram _ hai",1,-1,i, -i
+q0003,"kathan 1 | agar T: V -> W ek liniyar transaformeshan hai aur dim(V ) < dim(W) < 1, to T nishchit hi injektiv hoga. kathan 2 | man lijie dim(V) = n aur man lijie ki T: V -> V raikhik hai. yadi T injektiv hai, to yah ek baijekshan hai.","sahi, sahi","galat, galat","sahi, galat","galat, sahi"
+q0004,"Q par die gae kshetr vistar Q(sqrt(2), sqrt(3)) ke lie digri pata karen.",0,4,2,6
+q0005,die gae valay ka gunanphal bataen. (20)(-8) in Z_26,0,1,11,22
+q0006,"man lijie A aur B ek set hain, f: A -> B aur g: B -> A aise phalan hain ki sabhi a \in A ke lie, g(f(a)) = a hai. kathan 1 | phalan f anivary rup se injektiv hona chahie. kathan 2 | phalan f anivary rup se sarjektiv hona chahie.","sahi, sahi","galat, galat","sahi, galat","galat, sahi"
+q0007,kathan 1 | upavlay ki yuniti valay ki ekta ke saman honi chahie. kathan 2 | har kshetr ek abhinn domen hai.,"sahi, sahi","galat, galat","sahi, galat","galat, sahi"
+q0008,"yadi A = (1, 2, 3, 4). man len ~= {(1, 2), (1, 3), (4, 2)}. tab ~ _",enti simetrik nahin hai,tranzitiv,rifleksiv,simetrik
+q0009,valay Z x Z ki visheshta pata karen.,0,3,12,30
+q0010,purush harmon nimnalikhit men se kiske dvara utpadit kie jate hain?,glans shishn,pripyus (shishn ke mukh par khuli tvacha),prostet (purusth),andakosh
+q0011,"pasli ke sanbandh men, usse sanbandhit pasliyon ke bich ki tantrika hoti hai",apni upri sima se gahrai men.,apni upri sima se upar,apni nichli sima se gahrai men.,apni nichli sima se upar.
+q0012,shravan nalika,aantarik kan aur nesophairinks ko jorti hai.,dusri grasni thaili se nikalti hai.,levetar veli pailatini ki kriya se khulti hai.,tensar veli pailatini ki kriya se band hoti hai.
+q0013,serebrospainal phluid mastishk men inke bich sancharit hota hai,kapal aur dyura metar.,dyura metar aur araknoid metar.,araknoid aur piya metar.,piya metar aur mastishk ki satah.
+q0014,satvin kapaliy tantrika aapurti karti hai,jibh ke pichhle tihai bhag par svad indriyon ko.,narm talu ki peshiyon ko.,nichle honth ki peshiyon ko.,pairotid lar granthi ko.
+q0015,pairasimpethetik prigaingliyonik tantrikaen kendriy tantrika tantr ko chhor deti hain,tisri kapaliy tantrika ke sath.,chauthi kapaliy tantrika ke sath.,panchavi kapaliy tantrika ke sath.,chhathi kapaliy tantrika ke sath.
+q0016,nimnalikhit men se kaun udar guha ke baen upri chaturthansh men dayaphram ke niche sthit hai?,apendiks,duodenam,tilli,agnashay
+q0017,nimnalikhit men se kaun si sanrachna chhoti aant ka hissa hai?,upar uthti hui kolon,sesam,iliyam,sigmoid
+q0018,nimnalikhit men se kis haddi men ek prakriya hai jo zaigomaitik haddi ke sath jurkar zaigomaitik aark banati hai?,maiksilri haddi,tenporal haddi,sphenoid haddi,phrantal haddi
+q0019,sabhi merudandiy tantrikaon ki prishthiy jaron men shamil hain,indriy nyuronal prakriyaen.,indriy aur svayatt nyuronal prakriyaen.,motar nyuronal prakriyaen.,motar aur svayatt nyuronal prakriyaen.
+q0020,"yadi aap apne sthan se kisi vastu ki vastavik chamak tatha uski pratitigat chamak donon jante hain, to bina kisi any jankari ke aap anuman laga sakte hain:",aapke sapeksh iski gati,iska sanghatan,iska aakar,aapse iski duri
+q0021,hamare saurmandal ke kis grah par vishalkay lal dhabba maujud hai?,shukr,budh,brihaspati,shani
+q0022,adhikansh log rojmarra ke tapman ko mapne ke lie C° (digri selsiyas) ka upyog karte hain. khagolvid tapman ko mapne ke lie K (kelvin) ka upyog karna pasand karte hain. 25 C° lagbhag kitne kelvin hote hain?,200 kelvin,250 kelvin,300 kelvin,350 kelvin
+q0023,khagoliy shabd krantipath (ekliptik) kya varnan karta hai?,pure varsh ke dauran aakash men sury ka path.,pure varsh ke dauran prithvi ka akshiy jhukav.,prithvi ke ghurnan ke karan taron ki gati.,ghurnan ki dhuri se guzarne vali madhy rekha.
+q0024,ham prithvi ki aayu kaise jante hain?,prithvi ke bhitar padarthon ki parton se.,prachin jivan ke jivashmon se.,prithvi ki satah par kretron ke itihas se.,chattanon aur ulkapindon ki rediyodharmi deting se.
+q0025,6.5 karor varsh pahle daynasoron ke bare paimane par vilupt hone ke lie jimmedar mane jane vale sanghat se bana kretar kahan hai?,tunguska saiberiya.,meksiko men yukatan prayadvip par chikzulub kretar.,kyubek kanada.,erizona men ulkapind kretar.
+q0026,mangal ka ek varsh prithvi ke lagbhag kitne varsh ke barabar hai?,1/2,1,2,4
+q0027,jis rup men ham jivan ko jante hain uske lie kaun si mulbhut aavashyakta nahin hai?,oksijan ki sans lena,sury ke prakash se urja banane ki kshamta ya aisi kshamta rakhne vali chijon ko khana,karbanik anuon ka koi srot,A aur B
+q0028,saur mandal men kis grah(hon) men sakriy plet tektoniks hain?,budh,shukr,prithvi,mangal aur prithvi
+q0029,trojan kshudragrah kahan sthit hain?,kshudragrah patti ke kendr men,prithvi ki kaksha ko par karne vali kakshaon par,brihaspati ke charon or,brihaspati ki kaksha men brihaspati se 60° aage aur pichhe
+q0030,"________ upbhokta ka yah adhikar hai ki vah yah niyantrit kar sake ki kanpaniyan unke bare men kya jankari ekatr kar sakti hain aur ise kaise sangrahit, upyog aur sajha kiya jata hai.",upbhokta samaveshan,upbhokta niyantran,upbhokta gopniyta,upbhokta bahishkar
+q0031,"___________, ___________ aur __________ sabhi karak hain jo naitik tivrata ko prabhavit kar sakte hain","samajik sahamti, asthayi tatkalikta, nikatta","nikatta, samajik matbhed, prabhav ki nirarthakta","nikatta, asthayi tatkalikta, samajik matbhed","samajik ashamti, sanskritik tatkalikta, nikatta"
+q0032,behad sasti kimat.,"1,2,4","1,2,3,4","1,2","1,4"
+q0033,siddhant ki jatilta.,"1,2,3,4","1,3,4","1,2,3","1,2,4"
+q0034,nimnalikhit men se kaun sa korporet gavarnens sanyukt abhyas sanhita ke antarnihit siddhanton men se ek nahin hai?,khulapan,akhandata,uplabdhata,svikaryata
+q0035,uttar-aadhunik naitikta is bat par jor deti hai ki naitikta sandarbh aur vyaktigat vishisht hai aur is tarah naitikta ke lie ek aantarik margadarshika hai.,"2,3","1,3","1,2,3","1,2"
+q0036,"______ karyasthal men karmachariyon ko sashakt banana shamil hai, udahran ke lie, 'naukri sanvardhan' jahan karmachariyon ko apne kam ko vyavasthit karne ka nirnay lene ke lie ek bara dayra diya jata hai ya 'naukri vistar' jahan karmachariyon ko karne ke lie karyon ki ek vistrit shrrinkhala di jati hai.",pun: sphurtidayak,punah phalna-phulna,punah sashakt,punarmanvikran karna
+q0037,"svasth bhojan, vishesh rup se chini aur namak ki khapat, bhojan aur paikejing apshisht aur aapurti shrrinkhala CO2 utsarjan se sanbandhit sabhi vyavsayik naitikta ke mudde hain jo ________ ka samna kar rahe hain.",suparmarket udyog,rasayan udyog,nirman udyog,suchna evan mobail praudyogiki udyog
+q0038,ve bahut adhik tarkahin aur asanhitabaddh hain.,"3,4","1,3","2,3","4,1"
+q0039,niji kshetr samajik udyam modal.,"1,2,4","2,3,4","1,2,3,4","1,2,3"
+q0040,aap us rogi men kis aakar ke kainula ka upyog karenge jise tvarit rakt aadhan ki aavashyakta hai (2020 ke chikitsa jnan ke anusar)?,18 gej.,20 gej.,22 gej.,24 gej.
+q0041,nimnalikhit men se kaun si prakriya anuvad ke bad protin sanrachna ko sanshodhit karne ke lie upyog nahin ki jati hai?,lipideshan.,peptaid band ke madhyam se adhik amino esid ka jurav.,glaikosileshan.,phosphorilikran.
+q0042,baen ventrikal ke sankuchan ke bich rakt vahikaon ke madhyam se pravahit hota rahta hai kyonki:,atriya sikur rahe hain.,vahikaen sikur jati hain.,dayan ventrikal shithil ho jata hai.,dhamniyon men lochdar punravritti hoti hai.
+q0043,haidrojan aayan tab bante hain jab:,glaikojan samapt ho jata hai.,phosphokrietin ka vightan hota hai.,pairuvet laiktet men parivartit ho jata hai.,glaikolaisis ka upyog etipi sanshleshan ke pramukh sadhan ke rup men kiya ja raha hai.
+q0044,nimnalikhit men se kaun-sa amino esid nahin hai?,glutamik esid,espartik aml,glutamain,pamitik esid
+q0045,ghav ki jalnikasi ko siras jalnikasi kaha jata hai yadi:,ismen lal rakt koshikaen hoti hain.,yah garha aur pila ya hara hota hai.,ismen sukshmajiv hote hain.,yah saf ya halka pila hota hai.
+q0046,bachche ka ling nimnalikhit virasat se nirdharit hota hai:,man se prapt eks gunsutron ki sankhya.,eks gunsutr par ek aprabhavi elil.,man se prapt ek ekal Y gunsutr.,pita se prapt ek ekal Y gunsutr.
+q0047,rakt ke thakke bar-bar kaithetar ko avruddh karne ke lie jimmedar hote hain. aapko kya karna chahie?,madad ke lie pukaren.,chikitsa karmachariyon ko suchit karen.,mariz ko suchit karen.,kaithetar nikalen aur punah kaithetar lagaen.
+q0048,jinom hai:,kisi jiv ki daihik koshikaon men pae jane vale gunsutron ki sankhya.,kisi jiv ka sampurn dienae anukram.,protinon ki sampurn suchi jise koi jiv utpadit karne men saksham hai.,sanpurn gunsutr ka dienae anukram.
+q0049,"samanyatah, vyayam ki tivrata jitni adhik hogi, uska aanupatik yogdan utna hi adhik hoga:",erobik urja utpadan.,avayviy urja utpadan.,tisie chakr (krebs chakr) se etipi ke utpadan tak.,ilektron sthanantaran shrrinkhala se etipi ka utpadan hota hai.
+q0050,ek ekal straind vale aaraenae tempalet se aaraenae/dienae haibrid ke sanshleshan ke lie … ki aavashyakta hoti hai,ek dienae ya aaraenae praimar aur rivars transakriptez,ek dienae ya aaraenae praimar aur dienae polimrez,keval aaraenez,keval rivars transakriptez
+q0051,"aabadi ki vriddhi men, jis bindu par janm aur mrityu dar ek dusre ke barabar ho jati hai, use … kahte hain",aabadi ka kraish hona,aabadi ka visphot hona,aabadi men shuny vriddhi,aniyantrit vriddhi
+q0052,daikot tane ke bhitar sankendrit pith utak se yukt koshika prakar ko … kahte hain,pairenkaima,sklerokaima,vaiskular kaimbiyam,veskular bandal
+q0053,manushyon men jerodarma pigmentosam (XP) namak ek aanuvanshik vikar ke karan dienae ko hone vali parabaingani kshati ki marammat karne ki asmarthata utpann ho sakti hai. XP vale vyaktiyon men nimnalikhit men se kaun sa aanvik kshat hone ki sabse adhik sanbavna hai?,thaimin daimar,saitosin ka diamanaineshan,dipyurineshan,singal straind dianae brek
+q0054,nimnalikhit ke sivay ye sabhi intraselyular mesenjaron ka kam kar sakte hain,kailshiyam aayan,cAMP,esitailkolin,"inositol 1,4,5-traiphosphet"
+q0055,kavak … ke sivay nimnalikhit men se pratyek men bhag lete hain,glukoj utpann karne ke lie prakash sanshleshan,alkohal utpann karne ke lie kinvan,ringavarm utpann karne ke lie manushyon ke sath sahyog,maikorize banane ke lie paudhon ki jaron ke sath sahyog
+q0056,manviy jinom ka lagbhag kitna ansh protinon ko kodit karta hai?,2%,25%,50%,90%
+q0057,manushyon men kailshiyam ke parchapt siram star … ke srav ke dvara kayam rakhe jate hain,thairoksin,glukagon,groth harmon,pairathayroid harmon
+q0058,phailoidin deth kaip mashrum dvara banaya jane vala ek vish hai. yah vish ektin sabyuniton se baind hota hai aur ektin ke prakary ko badhit karta hai. nimnalikhit men se kaun si sanrachna phailoidin dvara sabse pratyaksh rup se prabhavit hogi?,madhyavarti philament,kolaijan tantu,maikrophilament,maikrotyubul
+q0059,homiyotik klastar jinon ke utparivartan se aksar drosophiliya men nimnalikhit men se kis vikas sanbandhi dosh ki utpatti hoti hai? ,sannihit segmenton ke samuh ki anupasthiti,ek segment se dusre men rupantaran,agr-pashch aksh men pratyek segment men polairiti ke dosh,imejinal diskon men tyumar ka nirman
+q0060,"shuny-kram rasaynik abhikriya A → B ki dar, r, ko nimnalikhit men se kis rup men vyakt kiya ja sakta hai?",r = k ln[A],r = k [A]^2,r = k [A],r = k
+q0061,"jab nimnalikhit samikran santulit hai, to nimnalikhit men se kaun sa saty hai?
+__ MnO4− + __ I− + __ H+ <-> __ Mn2+ + __ IO3− + __ H2O",I− : IO3− anupat 3:1 hai.,MnO4- : I- anupat 6:5 hai.,MnO4- : Mn2+ anupat 3:1 hai.,H+ : I− anupat 2:1 hai.
+q0062,43Ca ke spin koniy sanveg ki ganna karen. [I = 7⁄2],2.166 x 10^-34 J s,3.691 x 10^-34 J s,4.185 x 10^-34 J s,5.493 x 10^-34 J s
+q0063,nimnalikhit yaugikon men se kiska galnank sabse kam hai?,HCl,AgCl,CaCl2,CCl4
+q0064,"us ilektron ki kakshiy koniy gati kvantam sankhya, l, kya hai jo nimnatam avastha elyuminiyam ke aaynit hone par sabse aasani se hat jati hai?",3,2,1,0
+q0065,55Mn nyuklaid ke lie svikrit urja staron ki sankhya hai:,3,5,8,4
+q0066,"vah padarth jise samanyatah jal men vishaila pradushak nahin mana jata hai, vah hai",karbonik esid,ek hailojanyukt haidrokarban,netritv karna,para
+q0067,"sabhi protin 190 enaem ke aaspas tarangadairghy ke vidyut chumbakiy vikiran ko avshoshit karte hain, jo protin anu men π → π* uttejna ke anurup hai. spektram ke kis kshetr men yah tarangadairghy paya jata hai?",eks-re,parabaingani,drishyaman,avrakt
+q0068,"thayonil kloraid, SOCl2, ki aanvik jyamiti ko sabse achchhe dhang se varnit kiya gaya hai",trikoniy samtal,ti ke aakar ka,chatushphalkiy,trikoniy piramidiy
+q0069,"nimnalikhit men se kaun si prakriya mape gae parinamon par betartib trutiyon ke prabhav ko kam karne ki koshish karti hai?
+ I. signal ausat 
+II. aantarik mankon ka upyog
+ III. kai namunon se parinamon ka ausat nikalna",keval I,keval II,keval III,keval I aur III
+q0070,"nimnalikhit men se kaun sa kathan sahi tarike se segmented memori sistam ke gunon ka varnan karta hai?
+I. yah memori ko saman aakar ki ikaiyon men vibhajit karta hai.
+II. yah varchual memori ke inplimenteshan ki anumti deta hai.
+III. yah intarnal fregmenteshan se grast hai.",keval I,keval II,keval III,I aur III
+q0071,die gae andayrekted graf G se sanbandhit nimnalikhit samasyaon men se kaun si samasya vartaman men bahupad samay men hal karne yogy mani jati hai?,G men sabse lamba saral chakr ka pata lagana,G men sabse chhota chakr ka pata lagana,G ke sabhi phaile hue tri ka pata lagana,G men sabse bara samuh ka pata lagana
+q0072,nimnalikhit men se kaun sa bitmaip graphiks ka gun nahin hai?,piksel blokon ko kushaltapurvak sthanantarit karne ke lie tez hardaveyar maujud hai.,riylistik prakash aur chhayankan kiya ja sakta hai.,sabhi rekhakhandon ko sidhe rup men dikhaya ja sakta hai.,bahubhujon ko thos rangon aur banavton se bhara ja sakta hai.
+q0073,"bob 1 se 1,000 ke bich ki koi sankhya likhta hai. mairi ko bob se ""han/nahin"" vale saval puchhkar us sankhya ko pahchanna hoga. mairi janti hai ki bob hamesha sach bolta hai. agar mairi ek optimal ranniti ka upyog karti hai, to vah sabse kharab sthiti men kitne savalon ke ant men uttar nirdharit karegi?","1,000",999,500,10
+q0074,"8-bit shabdon dvara sankhyaon ke nimnalikhit men se kis nirupan men purnank 109 aur -42 ka yog sima ke bhitar hai?
+I. ek ka purak
+II. do ka purak
+III. chihn aur pariman",keval I,keval II,keval I aur II,"I, II, aur III"
+q0075,nimnalikhit men se kis sorting elgoridam ka ausat-kes aur sabse kharab-kes raning samay O(n log n) hai?,babal sort,insarshan sort,marj sort,kviksort
+q0076,"man lijie k >= 2. man lijie L {0, 1}^* men strings ka set hai, jaise ki x \in L tabhi aur keval tabhi jab x men 0 ki sankhya k se vibhajy ho aur x men 1 ki sankhya visham ho. ek niytatmak parimit otometan (DFA) men rajyon ki nyuntam sankhya jo L ko pahchanti hai, ____ hai.",k + 2,2k,k log k,k^2
+q0077,nimnalikhit men se kaun si bhasha visheshta ke lie sthaitik aavantan ke bajay staik-aadharit storej alokeshan ka upyog karna aavashyak hai?,punravarti prakriyaen,aarbitreri goto,do-aayami ere,purnank-man vale fankshan
+q0078,"fazi lojik deta ko sanbhalne ka ek tarika tarnari (bes-3) lojik ka upyog karke kanpyutar ko dizain karna ho sakta hai taki deta ko ""sahi"", ""galat"" aur ""ajnat"" ke rup men sangrahit kiya ja sake. agar pratyek tarnari lojik tatv ko flit kaha jata hai, to kam se kam 256 alag-alag manon ka pratinidhitv karne ke lie kitne flit ki aavashyakta hoti hai?",4,5,6,7
+q0079,"man lijie ki kisi softaveyar utpad ki viphaltaon ke bich ka ausat samay 10,000 ghante hai aur marammat ka ausat samay 20 ghante hai. agar utpad ka upyog 100 grahak karte hain, to iski uplabdhata kya hai?",80%,90%,98%,99.80%
+q0080,"aaisomorphizm tak, kram 16 ke kitne yogatmak ebeliyan grup G men yah gun hai ki G men har x ke lie x + x + x + x = 0 hai?",0,1,2,3
+q0081,"man lijie P bahupdon ka grup hai, jinke gunank Z_5 men hain aur ghat 7 se kam ya uske barabar hai. yah opretar D, P men p(x) ko uske vyutpann p′(x) par bhejta hai, to D ke shuny sthan n aur shreni r ke aayam kya hain?",n = 1 aur r = 6,n = 1 aur r = 7,n = 2 aur r = 5,n = 2 aur r = 6
+q0082,inmen se kaun sa sahi hai?,har kompaikt jagah puri hai,har puri jagah kompaikt hai,(a) aur (b). donon nahin., (a) aur (b) donon.
+q0083,"man lijie ki F ek sthir ikai bal hai jo xyz-spes men vektar (-1, 0, 1) ke samanantar hai. samay t=0 aur samay t=1 ke bich (t, t^2, t^3) dvara die gae path par gati karne vale kan par F dvara kiya gaya kary kya hai?",-0.25,-1/(4sqrt(2)),0,sqrt(2)
+q0084,"kin purnankon nke lie, jahan 3 <= n <= 11 hai, kram n (aaisomorfizm tak) ka keval ek grup hai?",aise kisi purnank n ke lie,"keval 3, 5, 7 aur 11 ke lie","keval 3, 5, 7, 9 aur 11 ke lie","keval 4, 6, 8 aur 10 ke lie"
+q0085,nimnalikhit men se kaun sa x = 0 par y = x + e^x ke graph ki sparsh rekha ka samikran hai?,y = 2x + 1,y = 2x,y = x + 2,y = x + 1
+q0086,"agar A 2 guna 2 maitriks hai jiski (i, j) pravishti i + j ke barabar hai aur B 3 guna 3 maitriks hai jiski (i, j) pravishti i + j ke barabar hai, to yog detA + detB ka man pata karen.",-2,-1,0,2
+q0087,(1+i)^10 =,1,i,32,32i
+q0088,nimnalikhit men se kis vritt men paravlay x^2 = y + 4 ke sath intarsekshan binduon ki sankhya sabse adhik hai?,x^2 + y^2 = 1,x^2 + y^2 = 2,x^2 + y^2 = 9,x^2 + y^2 = 16
+q0089,"man lijie T: R^2 -> R^2 vah raikhik badlav hai jo bindu (1, 2) ko (2, 3) aur bindu (-1, 2) ko (2, -3) par maip karta hai. tab T bindu (2, 1) ko maip karta hai","(1, 6)","(-1, 4)","(3, 2)","(-4, 3)"
+q0090,nimnalikhit men se kaun si prakriya rupantaran ke bad protin sanrachna ko sanshodhit karne ke lie upyog nahin ki jati hai?,lipideshan.,peptaid band ke madhyam se adhik amino esid ka jurav.,glaikosileshan.,phosphorilikran.
+q0091,glaikolisis nimn ke rupantaran se jure marg ko diya gaya nam hai:,glaikojan se gluko-1-phosphet.,glaikojan ya gluko se phrukto.,glaikojan ya gluko se pairuvet ya laiktet.,glaikojan ya gluko se pairuvet ya esitail CoA.
+q0092,nimnalikhit men se kise ekadhik sprint gatividhiyon ke dauran paridhiy mansapeshi thakan ke vikas men shamil mana jata hai?,akarbanik phosphet ka sanchayan.,mansapeshiyon men haipraosmolailiti ka vikas.,entioksident ki adhikta.,poteshiyam ki kami.
+q0093,mansapeshiyon men laiktet ka utpadan tab barhta hai jab:,oksijan aasani se uplabdh ho.,pairuvet ka nirman glukoz ke tutne se nahin ho sakta.,mansapeshiyon ka piech star gir jata hai.,vyayam ke prarambh men glaikolaisis sakriy ho jata hai.
+q0094,kankal ki mansapeshiyon men sankuchan prakriya shuru karne ke lie trigar hai:,potaishiyam ka mayosin se bandhan.,kailshiyam ka tropomayosin se bandhan.,etipi ka mayosin kros brij se bandhan.,kailshiyam ka troponin se bandhan.
+q0095,aushdhiy ejenton dvara mastishk men nyurotransamitar men parivartan se thakan ke vikas par prabhav parta hai?,esitailkolain aur noraedrenalain.,dopamain aur esitailkolain.,glutamet aur serotonin.,dopamain aur serotonin.
+q0096,oksijan ka upyog kiya jata hai:,glaikolaisis men.,phaiti esid ko esitail sioe men parivartit karne men.,traikarboksilik esid chakr (krebs chakr) men.,glaikojenolisis men.
+q0097,krietin ka sanshleshan nimnalikhit se hota hai:,mansapeshiyon men amino esid.,yakrit men amino esid.,gurde men amino esid.,gurde men krietinin.
+q0098,mansapeshi koshika men phosphokrietin paya jata hai:,maitokondriya.,sabhi upkoshikiy kaksh.,sarkolema.,koshika dravy.
+q0099,bachche ka ling nimnalikhit virasat se nirdharit hota hai:,man se prapt eks gunsutron ki sankhya.,eks gunsutr par ek aprabhavi elil.,man se prapt ek ekal Y gunsutr.,pita se prapt ek ekal Y gunsutr.
+q0100,di brogli ne parikalpana ki ki ek mukt bare kan ka raikhik sanveg aur tarangadairghy nimnalikhit men se kis konsatent se sanbandhit hain?,plaink konsatent,boltzamain konsatent,ridbarg konsatent,prakash ki gati
+q0101,ek dopd semikandaktar men aavesh vahkon ka chinh nimnalikhit men se kis gun ko mapkar nikala ja sakta hai?,maignetik saspektibiliti,hol koefishient,ilektril rezistiviti,tharmal kandaktiviti
+q0102,drishyaman tarangadairghy ki ek shrrinkhala par spektroskopi karne ke lie sabse achchha prakar ka lejar ____ hai,ek dai lezar,hiliyam-niyon lezar,ek eksaimar lezar,ek rubi lezar
+q0103,"ek chunbakiy kshetr 0.2 m^2 kshetraphal aur 250 pheron vali ek vrittakar kundali ke tal par lanbavat nirdeshit hai. agar chunbakiy kshetr ko 0.25 sekand ke samay antaral ke dauran 0.01 T se 0.06 T tak barhaya jata hai, to kundali men ausat prerit EMF ____ hai.",0.04 V,0.1 V,2.5 V,10 V
+q0104,"donon siron par khule ek organ paip dvara utpadit pahle 5 harmoniks 50 hartj, 100 hartj, 150 hartj, 200 hartj aur 250 hartj hain. paip ke ek sire par band hone ke bad kaun sa harmoniks, yadi koi ho, bach jaega?","keval 50 Hz, 150 Hz, aur 250 Hz",keval 100 Hz aur 200 Hz,keval 150 Hz aur 250 Hz,koi bhi nahin
+q0105,"sury ki satah ka tapman 6,000 K ke karib hai aur yah ek blaikbodi (plaink) spektram utsarjit karta hai jo 500 nm ke karib adhiktam tak pahunchata hai. 300 K ke karib satah ke tapman vale pind ke lie, kis tarangadairghy par tharmal spektram adhiktam tak pahunchega?",10:00 PM,100 Pm,10 mm,100 mm
+q0106,"haidrojan men n = 4, l = 1 avastha men ek ilektron par vichar karen. nimnalikhit men se kaun si antim avastha anumat sankraman dvara prapt nahin ki ja sakti hai?","n = 3, l = 2","n = 3, l = 1","n = 3, l = 0","n = 2, l = 0"
+q0107,"do aayan vale lithiyam parmanu Li++ (Z = 3, A = 7) ka utsarjan spektram haidrojan parmanu ke utsarjan spektram ke saman hai jismen sabhi tarangadairghy men ___",9 guna ki kami hoti hai,49 guna ki kami hoti hai,81 guna ki kami hoti hai,9 guna vriddhi hoti hai
+q0108,4.0 ke dayailektrik konsatent vale ek achunbakiy dayailektrik padarth ke andar prakash ki gati _____ hai,1.2 * 10^9 m/s,3.0 * 10^8 m/s,1.5 * 10^8 m/s,1.0 * 10^8 m/s
+q0109,"ek gair-sapekshikiy, ek-aayami takkar men, dravyaman 2m ka ek kan, dravyaman m ke ek sthir kan se takrata hai. agar takkar ke bad kan ek sath chipak jate hain, to takkar men praranbhik gatij urja ka kitna ansh nasht ho jata hai?",0,4-Jan,3-Jan,2-Jan
+q0110,____________ bhi darkanet ka ek hissa hai jiska upyog gumnam rup se failon ko sthanantarit karne ke lie kiya jata hai.,Freenet,ARPANET,Stuxnet,intarnet
+q0111,inmen se kiski vayarles suraksha sabse majbut hai?,WEP,WPA,WPA2,WPA3
+q0112,aamtaur par bafar ovraphlo kab hota hai?,kisi aise pointar par likhte samay jise frid kar diya gaya ho,staik se hip men bafar ki pratilipi banate samay,jab kisi pointar ka upyog use aloket na ki gai memori tak pahunchane ke lie kiya jata hai,jab program notis karta hai ki bafar bhar gaya hai aur islie anurodhon ko asvikar karna shuru kar deta hai
+q0113,nimnalikhit men se kaun netvark intrushan ka pata lagane aur vastavik samay yatayat vishleshan se sanbandhit hai?,John the Ripper,L0phtCrack,Snort,Nessus
+q0114,ek proksi rivol ___ par filtar karta hai,fizikal leyar,aiplikeshan leyar,deta link leyar,netvark leyar
+q0115,purane opreting sistam jaise _______ aur NT-aadharit sistam men bafar-ovraphlo hamla ek samany kamjori hai.,Windows 7,Chrome,IOS12,UNIX
+q0116,"jab deta risivar tak thik usi tarah pahunchana chahie jaisa ki use bheja gaya tha, to use kaha jata hai",maisej gopniyta,maisej intigriti,maisej splaishing,maisej bhejne
+q0117,Nmap ki or se nirdharit port sthitiyan kya hain?,"sakriy, nishkriy, staindabay","khula, aadha khula, band","khula, filtar kiya hua, filtar na kiya hua","sakriy, band, istemal na kiya gaya"
+q0118,ping svip ka upyog kyon kiya jaega?,laiv sistam ki pahchan karne ke lie,laiv sistam ka pata lagane ke lie,opan ports ki pahchan karne ke lie,fayarvol ka pata lagane ke lie
+q0119,sandeshon se sanbandhit char prathmik suraksha siddhant hain:,"gopniyta, intigriti, gair asvikriti aur pramanikran","gopniyta, aikses kantrol, intigriti, gair asvikriti","othentikeshan, othraizeshan, uplabdhata, intigriti","uplabdhata, othraizeshan, gopniyta, intigriti"
+q0120,ilektrik sarkit men step-ap transaformar _ barha sakta hai,voltej,urja,donon ko,inmen se koi nahin
+q0121,"jab aap hava se bhare parti gubbare ko dabate hain, to aap uska _ barha dete hain",aaytan,dravyaman,vazan,ghanatv
+q0122,kala rang _ ka sanyojan hai,sabhi rang ko milane,do ya usse jyada sahi rang,jab prijm ko ulta rakha jata hai to prakash,inmen se koi nahin
+q0123,doplar prabhav tab hota hai jab dhvani ka srot _ barhta hai,aapki or,aapse dur,donon ko,inmen se koi nahin
+q0124,_ ko chhorkar nimnalikhit sabhi vidyut chumbakiy tarangen hain,maikrovev,prakash tarangon,eks-re,sabhi ek hi faimili se hain; sabhi vidyut chumbakiy tarangen hain
+q0125,"jab ek tin ke dibbe ko kshaitij vritt men ghumaya jata hai, to dibbe par lagne vala kul bal kaise kary karta hai",andar ki or,bahar ki or,upar ki or,inmen se koi nahin
+q0126,"25 N bal ke sath rassi ko niche ki or khinchakar ek aadarsh puli sistam ke sath 100-N kret ko upar uthaen. rassi ki har 1-mitar lanbai ko niche khinchane par, kret _ upar uthta hai",25 semi,25 mi,50 semi,inmen se koi nahin
+q0127,vidyut aur chunbakiy kshetron ke myuchual indakshan se,prakash utpann ho sakta hai,urja,donon ko,inmen se koi nahin
+q0128,dharkan ki ghatna dhvani _ se utpann hoti hai,pratibinbon.,apvartan.,hastakshep.,ye sabhi.
+q0129,"samay vistar, lanbai sankuchan aur sapekshik gati aur urja ke lie sapekshik samikran _ par saty hote hain.",prakash ke nikat gati ,pratidin kam gati par.,sabhi gati par.,keval lagbhag.
+q0130,inke bich antar karne ke lie piesieph jaruri hai,ear aur emae modal,ear aur earaemae modal,emae aur earaemae modal,earaemae parivar men alag-alag modal
+q0131,nimnalikhit men se kaun sa kathan phited pratigman rekha ke bijagnitiy pratinidhitv ka sabse achchha varnan karta hai?,\hat{y}_t = \hat{\alpha} + \hat{\beta}x_t + \hat{u}_t,\hat{y}_t = \hat{\alpha} + \hat{\beta}x_t,\hat{y}_t = \hat{\alpha} + \hat{\beta}x_t + u_t,y_t = \hat{\alpha} + \hat{\beta}x_t + \hat{u}_t
+q0132,ordar ki shart yah hai,pahchan ke lie ek zaruri evan paryapt shart,pahchan ke lie ek zaruri lekin aparyapt shart,pahchan ke lie paryapt lekin gairaavashyak shart,aisi shart jo pahchan ke lie na to aavashyak hai aur na hi paryapt hai
+q0133,"agar kisi anumanak ke pas nyuntam vichlan hota hai, to nimnalikhit men se kaun sa kathan lagu nahin hai?",yah prayikta kam ho gai hai ki anuman apne vastavik muly se bahut dur hai,anumanak kushal hai,"aise anumanak ko ""sabse behtar"" kaha jaega",aisa anumanak hamesha nishpaksh rahega
+q0134,"$y_t$ ke lie is die gae modal par vichar karen:
+
+$y_t = \mu + \lambda t + u_t$
+
+nimnalikhit men se kaun sa $y_t$ ke lie prakriya ka sabse satik varnan karta hai?",ikai rut prakriya,sthaitik prakriya,niytatmak trend prakriya,bahav vali raindam chal
+q0135,phiksd prabhav painal modal ko kabhi-kabhi is rup men bhi jana jata hai,asanbaddh lagne vala ek pratigman modal,nyuntam varg dami char aproch,raindam prabhav modal,vishamlaingikta aur svasahsanbandh susangat
+q0136,"klasikal raikhik pratigman modal ke lie maitriks noteshan ke tahat, $y = X \beta + u$, $u$ ke aayam kya hain?",T x k,T x 1,k x 1,1 x 1
+q0137,nimnalikhit men se kiska upyog tisre kram tak svat: sahsanbandh ke parikshan ke rup men kiya ja sakta hai?,darbin votsan parikshan,vhait ka parikshan,riset parikshan,brush-godaphre parikshan
+q0138,"agar oelaes ko har samikran par alag se lagu kiya jata hai jo ek sath pranali ka hissa hai, to parinami anuman honge",nishpaksh aur susangat,pakshapatpurn lekin susangat,pakshapatpurn aur asangat,oelaes ko un samikarnon par lagu karna asanbhav hai jo ek sath pranali ka hissa hain
+q0139,"agar engal-grenjar parikshan sanbhavit sah-ekikrit pratigman ke avsheshon par lagu kiya jata hai, to shuny parikalpana ki vyakhya kya hogi?",char sah-ekikrit hain,char ek sath ekikrit nahin hain,donon char sthir hain,donon char gair-sthir hain
+q0140,LC osiletar ka upyog ___ ki aavritti vali tarang utpann karne ke lie kiya jata hai,1MHz se 500 MHz tak,100 KHz se 500 MHz tak,1 KHz se 1 MHz tak,1MHz se 100 GHz tak
+q0141,bainri sankhya pranali men kitne ank hote hain?,0,1,2,10
+q0142,________chunbakiy padarthon men sabse hanikarak ashuddhata hai,karban.,salfar.,oksijan.,naitrojan.
+q0143,uchch sancharan voltej ke labh kya hain?,transamishan lain ki povar transafar kshamta barh jati hai,transamishan lain haniyan kam ho jati hain,kandaktar ka kros sekshan ka kshetr aur aaytan kam ho jata hai,upar ke sabhi
+q0144,nimnalikhit men se ek osiletar ka prathmik kary hai,sainsoidal osiletar utpann karta hai,non sainsoidal tarangen utpann karta hai,nirantar aayam aur vishisht aavritti par nirantar osiletar utpann karta hai,inmen se koi nahin
+q0145,SCR ka laiching karant 20 mA hai. iska holding karant ____,23 mA hoga.,40 mA hoga.,10 mA hoga.,60 mA hoga.
+q0146,"intel 8085A men, nirdesh ka pahla mashin chakr kaun sa hai?",op-kod fech saikal,memori rid saikal,memori lekhan saikal,I/O rid saikal
+q0147,nimnalikhit men se kya klozd lup niyantran pranali ke lie thik nahin hain?,samagr labh kam hona.,jatil aur mahanga.,dolan pratikriya.,upar ke sabhi.
+q0148,kisi bhi tatv ke bohar modal men valyon ki sankhya kiske dvara nirdharit hoti hai?,aavart sarni par kolam sankhya.,parmanu bhar.,aavart sarni par pankti sankhya.,parmanu sankhya.
+q0149,monolithik IC men kaun se osiletars ka nirman aasan hai?,kristal osiletar.,hartali osiletar.,vin brij osiletar.,rilaikseshan osiletar.
+q0150,24 = 2p men p ka man kya hai?,p = 4,p = 8,p = 12,p = 24
+q0151,"aankaron ke samuh 23, 13, 18, 29, 32, 25 men madhyika jnat kijie.",18,24,25,29
+q0152,"abe ne sankhyaon ki is suchi ka madhy aur madhyika jnat kiya. 1, 3, 3 yadi suchi men sankhya 6 jor di jae, to",ausat barh jaega.,matlab kam ho jaega.,madhyaman men vriddhi hogi.,madhyika ghat jaegi.
+q0153,"ek shelph par char kitaben rakhi hain. shelph par rakhi char kitabon men se pratyek ka vazan, paund men, 2.5, 3.2, 2.7, 2.3 hai. kaun si asmanta shelph se chuni gai kisi bhi kitab ke vazan, w, ko darshati hai?",w > 2.3,w < 2.4,w > 3.2,w < 3.3
+q0154,2 kap aur 3 kvart ka anupat saraltam rup men bhinn ke rup men likhen.,3 bata 2,2 bata 3,2 bata 12,1 bata 6
+q0155,Y ka kaun sa man y + 2.9 = 11 ko saty banata hai?,8.1,8.9,9.1,13.9
+q0156,4 ghante men 308 kimi ki duri tay karne ke lie ikai dar likhen. yadi aavashyak ho to nikattam sauven bhag tak purnankit karen.,82 kimi/ghanta,74 kimi/ghanta,72 kimi/ghanta,77 kimi/ghanta
+q0157,"aaisakrim ki dukan ne ek din men 48 venila milkashek beche, jo us din beche gae kul milkashek ki sankhya ka 40% tha. us din aaisakrim ki dukan dvara beche gae milkashek ki kul sankhya kya thi?",60,72,100,120
+q0158,kaun sa bijiy vyanjak x se char guna kam matra 22 ko darshata hai?,4(x – 22),(4 • 22) – x,4(22 – x),(x • 4) – 22
+q0159,"ek shadi men 190 mehman hain. sabhi mehmanon ko baithane ke lie kam se kam kitni golakar mezon ki zarurat hogi, agar pratyek mez par thik 8 log baith sakte hain?",22,23,24,25
+q0160,"PL ke die gae sutron men se kaun sa nimnalikhit vaky ka sabse achchha pratikatmakikran hai?
+ har koi remand se pyar karta hai, ya nahin.",L,~L,L • ~L,L ∨ ~L
+q0161,"vidhey tark men sabse achchha anuvad chunen. sabhi grah brihaspati se chhote hain. (j: brihaspati; Px: x ek grah hai; Sxy: x, y se chhota hai)",(∃x)(Px • Sxj),(∀x)(Px • Sxj),(∀x)(Px ⊃ Sjx),(∀x)(Px ⊃ Sxj)
+q0162,vidhey tark men sabse achchha anuvad chunen. jos ne vilma ko kevin se milvaya. (j: jos; k: kevin; w: vilma; Ixyz: x ne y ko z se milvaya),Iwkj,Ijwk,Iwjk,Ijkw
+q0163,"PL ke die gae sutron men se kaun sa nimnalikhit vaky ka sabse achchha pratik hai? 
+restaran mithai ke lie pai ya chizkek ya aaisakrim parosta hai.",P ∨ (C ∨ I),(P ∨ C) ∨ I,P ∨ C ∨ I,vikalp A aur B
+q0164,"PL ke die gae sutron men se kaun sa nimnalikhit vaky ka sabse achchha pratikatmakikran hai?
+ yadi beth apni baik chalati hai, to vah jaldi kam par pahunch jati hai.",B ⊃ W,W ⊃ B,B ≡ W,A aur B donon
+q0165,vidhey tark men sarvottam anuvad ka chayan karen: ya to telar ya erik ek late larka hai.,Lt ∨ Le,Lx ∨ Ly,tL ∨ eL,Tl ⊃ El
+q0166,vidhey tark men sarvottam anuvad ka chayan karen: abdul aur kliyopetra misr ke hain.,Ea • Ec,Ea • c,Ae ∨ Ce,Ex • Ey
+q0167,"vidhey tark men sarvottam anuvad ka chayan karen: sushri jaiksan ne mujhe thori chini udhar di, lekin na to jenet aur na hi latoya ne.",Lm ∨ ~(Jl ∨ Ll),Lm • ~(Lj • Ll),Lm • ~(Lj ∨ Ll),Lm ∨ ~(Lj • Ll)
+q0168,"nimnalikhit men se kaun sa prasthapna die gae aadhar ke PL men tatkal (ek-charniy) parinam nahin hai?
+I ⊃ (J ≡ K)
+(J ≡ K) ⊃ (L ∨ M)
+I ⊃ ~L",~L,J ≡ K,I ⊃ (L ∨ M),~L ⊃ (J ≡ K)
+q0169,"PL ke die gae sutron men se kaun sa nimnalikhit vaky ka sabse achchha pratik hai?
+ daylan ko na to ganit aur na hi vijnan pasand hai.",M ∨ S,~(M • S),~(M ∨ S),~M ∨ ~S
+q0170,nimnalikhit men se kis desh ne 2019 men saur sroton se sabse adhik urja utpann ki?,chin,amerika,jarmani,japan
+q0171,2020 tak vishv ki lagbhag kitni pratishat aabadi khule men shauch karti thi?,2%,4%,9%,18%
+q0172,1965 men kitne amerikiyon ne socha tha ki viyatnam men sena bhejna galti thi?,25%,45%,65%,85%
+q0173,"1997 men, vishv baink ne paya ki nimn aur nimn-madhyam aay vale deshon men rahne vali duniya ki aabadi ka ansh - yani, prati vyakti aay 1230 dolar ya usse kam vale desh - lagbhag tha",25%,40%,55%,75%
+q0174,"mudrasphiti aur pipipi-samayojan ko niyantrit karte hue, chin men 1950 se 2016 tak prati vyakti sakal gharelu utpad men lagbhag kitni vriddhi hui?",4 guna,8 guna,16 guna,32 guna
+q0175,nimnalikhit men se kaun 20vin sadi men sabse adhik mrityu ke lie jimmedar tha?,bhukanp,jvalamukhiy gatividhi,jangal ki aag,pani ki barh
+q0176,"varsh 2017 tak chin ke sarvekshan uttardataon men se lagbhag kitne pratishat ne sarvajnik sevaon (jaise shiksha, nyaypalika, chikitsa aur svasthy, pulis, rajistri aur parmit sevaen, janopyogi sevaen, kar rajasv aur sima shulk, tatha bhumi seva) tak pahunchane ke lie pichhle varsh rishvat di thi?",26%,46%,66%,86%
+q0177,"2017 tak, chin dvara sainy par kharch kiya gaya sakal gharelu utpad ka hissa lagbhag hai",0.50%,2%,6%,12%
+q0178,2020 tak ausat antarrashtriy aay kya hai?,$300,"$1,000","$10,000","$30,000"
+q0179,varsh 2017 tak vishv men kitne logon ke pas bijli tak pahunch thi?,60%,70%,80%,90%
+q0180,do asanbandhit prajatiyan is prakar viksit hoti hain jisse ve ek-dusre ke aur saman ho jati hain.,apsari vikas,abhisari vikas,samanantar vikas,sah-udvikas
+q0181,nimnalikhit sabhi kathan saty hain sivay,thayroksin chayapchay ki dar ko barhata hai,insulin glaikojan ke bhandaran ko kam karta hai,vaisopresin gurde men pani ke punah avshoshan ko prerit karta hai,epinephrin rakt sharkara ke star aur hriday gati men vriddhi karta hai
+q0182,nimnalikhit men se kaun sa jaivik karak hai jo jansankhya ki vriddhi dar ko prabhavit kar sakta hai?,jvalamukhi ka visphot,gleshiyar ka pighalna,ojon parat ka vinash,pashu aahar sansadhan men achanak kami
+q0183,"dienae anu ka nyukliyotaid anukram 5′-C-A-T-3′ hai. protin sanshleshan ki prakriya men dienae se ek purak kodan vala mRNA anu transakript hota hai, ek tRNA mRNA kodan ke sath yugmit hota hai. tRNA entikodan ka nyukliyotaid anukram kya hai?",5′-G-T-A-3′,5′-G-U-A-3′,5′-C-A-U-3′,5-′U-A-C-3′
+q0184,ardhasutrivibhajan ke bare men nimnalikhit men se kaun sa kathan saty nahin hai?,ardhasutrivibhajan se do agunit yugmak utpann hote hain.,samjatiy gunsutr sinaipsis ke dauran jurte hain.,ardhasutrivibhajan I ke dauran bahan krometids alag ho jate hain.,krosing-ovar se yugmakon men aanuvanshik vividhta barh jati hai.
+q0185,"ek hanirhit janvar ek khatarnak janvar ki nakal karta hai, taki shikariyon ko hamla karne se pahle do bar sochna pare.",aposemetik rang,betsiyan anukran,bhramak chihnankan,rahasyamay rang
+q0186,nimnalikhit men se kaun enjiyosparm ki photoperiyodik pushpan pratikriya men shamil mana jata hai?,oksin,saitokrom,phaitokrom,jibrelin
+q0187,"samanyatah, pashu koshikaen padap koshikaon se is mayne men bhinn hoti hain ki pashu koshikaon men",selyuloz se bani ek koshika bhitti,laisosom,bare riktikaen jo jal sangrahit karti hain,sentrosom ke bhitar sentriols
+q0188,ek koshika ko haipartonik vatavran men rakha jata hai aur uska koshikadravy sikur jata hai. yah kis siddhant ko darshata hai,prasar.,sakriy parivhan.,susadhy visran.,plasmolisis.
+q0189,A B rakt prakar vale bachche ko ek mata-pita se IA elil aur dusre se IB elil virasat men milta hai. bachche men sabhi lal rakt koshikaon ki satah par A aur B donon glaikoprotin honge. abhivyakti ke is paitarn ko kaha jata hai,sahaprabhutv,epistasis,bahujini,kari
+q0190,nimnalikhit men se kis stoikiyometrik ghatank ka upyog karke ret lo likha ja sakta hai?,presipiteshan pratikriyaen,aml-kshar pratikriyaen,elimentari prakriyaen,ghulanshilta pratikriyaen
+q0191,stret-chen haidrokarbanon ka galan bindu karban parmanuon ki sankhya ke barhne ke sath barhta hai. iska karan … hai,yaugikon ka barhta dravyaman,yaugikon ki barhti polairiti,prati anu indyusd daipolon ki barhti sankhya,haidrojan bondon ki barhti hui sanbhavyata 
+q0192,nimnalikhit men se dravon ki kaun si jori ke mishrit na hone ki apeksha ki jati hai?,H2O aur CH3OH,C6H6 aur C5H12,C10H22 aur CH2CH2CH2OH,CH3CH2NH2 aur CH3CH2CH2OH
+q0193,sabse adhik bhedyata ki kshamta vala sabaetomik kan … hai,bita kan,nyutron,proton,alpha kan
+q0194,nimnalikhit suchi men bronsted-lauri konjuget esid-bes jori ki pahchan karen.,H3O+ aur OH-,H3PO4 aur H3PO3,HC2H3O2 aur C2H3O2-,SO32- aur SO22-
+q0195,"ilektronigetiviti aur bond ki strenth men mulbhut rujhanon ka upyog karte hue, nimnalikhit men se kise sabse shaktishali esid hona chahie?",H2S,HI,HBr,H2O
+q0196,nimnalikhit men se kaun si ek ridakshan haph-riekshan hai? (1) Cu2+ + e- → Cu+ (2) Cu+ + e- → Cu0 (3) Fe2+ → Fe3+ + e-,keval 1 kyonki kopar(II) aayan apachyit ho jate hain,keval 3 kyonki aayran apachyit hoti hai,1 aur 2 kyonki ve donon kopar aaynon ko apachyit karte hain,1 aur 3 kyonki unmen aghulanshil aayan nahin hain
+q0197,"ek 2.35 gram ke namune ko pani men ghola gaya, aur silvar naitret (Ag+ + Cl- → AgCl) dalkar kloraid aayan presipitet kie gae. yadi 0.435 presipitet prapt hua, to namune men klorin ka pratishat kya hai?",10.80%,4.60%,43.50%,18%
+q0198,kisi bhi parmanu ke dravyaman ka 1/1000 se kam bhag nimnalikhit se bana hota hai,ilektron,ilektron aur nyutron,ilektron aur proton,proton aur nyutron
+q0199,thos MgCl2 ka namuna nimnalikhit men se kis ghol men sabse adhik ghulanshil hoga?,LiOH(aq),CBr4(aq),Mg(NO3)2(aq),AlCl3(aq)
+q0200,mana ki x = 1. Python 3 men x << 3 kya hai?,1,3,8,16
+q0201,"Python 3 men ""a"" + ""ab"" kathan ka aautput kya hai?",truti,aab,ab,a ab
+q0202,"ek piksel ke rang ko RGB (lal, hara, nila) rang modal ka upyog karke darshaya ja sakta hai, jo lal, hare aur nile rang ke lie man stor karta hai, har man 0 se 255 tak. RGB modal men ek rang ko dikhane ke lie kitne bits (bainri ank) ki aavashyakta hogi?",8,16,24,32
+q0203,kis tarah ke fankshan sabse dhimi gati se barhte hain?,O(log e^N),O(log N),O(log log N),O(N)
+q0204,"Python 3 men, nimn men se kaun sa fankshan adhiktam man vale aaitam ko suchi se lautata hai?",cmp(list),len(list),max(list),min(list)
+q0205,"jab koi churae gae login aur pasvard ka upyog karke sistam men log in karta hai, to saibar suraksha ke kis stanbh se samjhauta hota hai?",pramanan,gopniyta,akhandata,nonrepyudieshan
+q0206,is python eksapreshan ka man kya hai: 4 + 3 % 2?,1,6,4,5
+q0207,"mana l = [1,2,3,4]. Python3 men sum(l) kya hai?",4,1,10,8
+q0208,nimnalikhit men se kismen upyogkarta ki vyaktigat gopniyta ko khatre men dalne ki sabse adhik aashanka hai?,upyogkarta ke veb brauzar dvara stor ki gai kukiz ka ek grup,upyogkarta ke kanpyutar ka intarnet protokol (aaipi) pata,upyogkarta ka i-mel pata,enkripshan ke lie upyogkarta ki sarvajnik kunji ka upyog kiya jata hai
+q0209,"mana l = [1,2,2,3,4]. Python3 men, set(l) sanbhavit aautput kya hai?",{1},"{1,2,2,3,4}","{1,2,3,4}","{4,3,2,2,1}"
+q0210,"kis kshetr men kam aay vali gandi bastiyan, jatiy yahudi bastiyan aur barges ke shahri svarup ke sankendrit kshetr modal men samany giravat shamil hai?",pahla,dusra,tisra,chautha
+q0211,"nimnalikhit men se kis par sabse sahi tarike se vastavik bhaugolik duri, sahi disha, sahi aakar aur sahi aakar ka chitran kiya ja sakta hai?",ek marketar anuman,ek glob,ek shanku anuman,ek sukti anuman
+q0212,"ankara, turki aur islamabad, pakistan donon iske udahran hain",registani shahar.,aage ki or jane vali rajdhaniyan.,purani aupniveshik rajdhaniyan.,pratidvandvi shahar.
+q0213,kisi desh men dharm ko asvikrit karna ya udasinta ko kaha jata hai,bahudevvad.,jivvad.,dharmanirpekshata.,ekeshvarvad.
+q0214,"latin amerika men pramukh shahron men nimnalikhit sabhi karan yuvaon ko aakarshit karte hain, inke sivay",naukriyon ki uplabdhata.,sabhy aavas ki sanbhavna.,shiksha ke avsar.,unke parivar pahle se hi vahan rahte hain.
+q0215,nimnalikhit men se kiska upyog bhugolvettaon dvara satik sthan nirdharit karne ke lie nahin kiya jata hai?,deshantar,akshansh,bhumadhy rekha,sabse pas ke shahar se duri
+q0216,ek hi phasal ko sal men ek se adhik bar bone aur katne ki gahan krishi paddhati ko kaha jata hai,sviden.,dohri phasal.,pashucharanvad.,antah jutai.
+q0217,"jab ek naya phaishan dizain duniya ke star par pesh kiya jata hai, to jankari shuru men ek prakriya se gujarti hai jise kaha jata hai",sankramak prasar,sthanantaran prasar,nvonmeshi prasar,anukram prasar
+q0218,1960 aur 1970 ke dashak men viyatnam men ameriki bhagidari ke auchity ke rup men niche die gae kis siddhant ka upyog kiya gaya tha?,hastantaran,upniveshvad,hartalaind siddhant,roktham siddhant
+q0219,tab kya sthiti tab utpann hoti hai jab ek rajy ke log kisi aise kshetr par kabza karna chahte hain jiski jansankhya us rajy ki jansankhya se jatiy rup se sanbandhit hai lekin ab dusre rajy ke shasan ke adhin hai?,rashtravad,sansadhan vivad,asangattavad,sthitigat vivad
+q0220,"inmen se kis hit samuh ne 1970 ke dashak se sabse adhik sankhya men rajnitik kary samitiyan (politikal ekshan kamiti, PAC) gathit ki hain?",paryavran karyakarta,shramik sangh,labh-hetu vyavsay,dharmik sansthan
+q0221,sanvidhan ke vanijy khand ka upyog kislie kiya gaya hai?,gairkanuni giraftari ke bad bandiyon ko jel se riha karne ke lie,nausena banae rakhne ke lie,rashtriy sarkar ki shakti barhane ke lie,praptakarta vidheykon par vito lagane ke lie
+q0222,haus kamiti on vez end mins (amriki lokasbha ki arthopay samiti) ke bare men inmen se kya saty hai?,buniyadi dhancha pariyojnaon ke lie upyukt vyay sunishchit karna iski mukhy bhumika hai.,yah samiti kangresnal (amriki sansad ke) bainking sudhar kanun ki mukhy rachyita hai.,yah nahron aur jalmargon ke lie vittaposhan aabantit karti hai.,kar pranali iske kshetradhikar men aati hai.
+q0223,inmen se kaun is bat ka sabse achchhe se anuman lagata hai ki koi vyakti kisi chunav men kaise matdan karega?,matdata ka samajik ling,matdata ki rajnitik dal se sanbaddhata,matdata ki samajik-aarthik sthiti,matdata ka dharm
+q0224,"inmen se kya, ""motar votar"" kanunon ka mukhy prayojan hai?",chunav vale din matdan pratishat barhana,nagrikon ke lie matdan hetu panjikran aasan banana,yah aavashyak karna ki sabhi matdata vahan chalana jante hon,matdata pahchan ke kanun sthapit karna
+q0225,inmen se kaun kangres (amriki sansad) ki ek garbhit shakti ka udahran hai?,antarrajyiy vanijy ka niyman,sanyukt rajy amrika ki sakh par dhan udhar lena,karyapalak shakha abhikarnon ki nigrani,yuddh ki ghoshnaen
+q0226,"band prathmik chunav ke viprit, khule prathmik chunav men",matdata vaiyaktik matpatron ki bajae kokas (gut baithak) dvara vijeta chunte hain,chunav parinam badhyakari nahin hote hain,"koi bhi panjikrit matdata bhag le sakta hai, uski daliy sanbaddhata chahe jo bhi ho",matdata chunav vale din matdan ke lie panjikran kara sakte hain
+q0227,sanghiy nyayadhishon ke bare men inmen se kya saty hai?,unka karyakal char varshon ka hota hai jiska aaranbh aur ant rashtrapti ke karyakal ke sath-sath hota hai.,ve aajivan niyukt kie jate hain aur unhen keval mahabhiyog dvara hi hataya ja sakta hai.,unhen kangres (amriki sansad) chunti hai aur unka karyakal das varshon ka hota hai.,ve aajivan niyukt kie jate hain aur unhen pad se hataya nahin ja sakta hai.
+q0228,"gidiyan banam venrait men, sarvochch nyayalay ne yah nirnay diya tha ki rajy vadon ke apradhi prativadiyon ke pas … ka adhikar hai.",adhivakta dvara pratinidhitv,khud ko doshi nahin thahrane,tez vicharan (mukadme),atyadhik saza na die jane
+q0229,"nagrik adhikar adhiniyam, 1964 ko … ko sudrirh karne ke lie parit kiya gaya tha.",rashtrapti ki vito,niyantranon aur santulnon ki pranali,rajyon ki sanghiy niyman ko chunauti dene ki shakti,chaudahvan sanshodhan
+q0230,man len ki aarakshit aavashyakta 10 pratishat hai. agar FED khule bazar sanchalan men $29 miliyan muly ki sarkari pratibhutiyan bechta hai to dhan ki aapurti men ho sakti hai,$2.9 miliyan ki vriddhi.,$2.9 miliyan ki kami.,$290 miliyan ki vriddhi.,$290 miliyan ki kami.
+q0231,nimnalikhit kathnon men se kaunsa sahi hai?,M2 men shamil kuchh chijen MI men maujud chijon ki tarah taral nahin hain.,"M2, MI se chhota hai.",MI ko sone ka samarthan prapt hai aur M2 ko chandi ka samarthan prapt hai.,MI ka sabse bara ghatak mudra hai.
+q0232,agar mudra aapurti barhti hai to mudra bajar men kya hota hai (yah mante hue ki dhan ki mang niche ki or jhuki hui hai)?,nammatr byaj daren barh jati hain.,nammatr byaj daren girti hain.,nammatr byaj dar nahin badalti.,paise ki lenden mang girti hai.
+q0233,dolar ke avmulyan se iski sabse adhik sanbhavna hai,aayat barhotri,bahri deshon ki yatra men barhotri,niryat men barhotri,vyapar saraplas ki kami
+q0234,vistarvadi rajkoshiy niti iske lie sabse behtar mani jaegi,mandi ke antar ko khatm karna,mahangai kam karna,byaj dar kam karna,mudrasphiti ke antar ko samapt karna
+q0235,agar bhavishy men kimten aur dhimi gati se barhne ki ummid hai,philips vakr dain or sthanantarit ho jaega,mudrasphiti ki vastavik dar men vriddhi hogi,vastavik mudrasphiti dar tab tak sthir rahegi jab tak aapurti jhatke na lagen,ye ummiden hakikat ban jaengi
+q0236,nimnalikhit men se kaun samagr mang phalan ko barhaega?,aayatit vastuon ka uchch star,upbhokta dhan ka nimn star,uchchatar vastavik byaj dar,vyaktigat aay par kam kar
+q0237,sarkari kharid ke karan uchch byaj daron se utpann vastavik nivesh men kami ko aamtaur par kami kaha jata hai,krauding aaut,shuny niti prabhavshilta,lafar prabhav,rajkoshiy har
+q0238,mudrasphiti ko dur karne ke lie uchit rajkoshiy niti ke tahat,sanghiy sarkar ko ghate men chalna chahie.,sanghiy sarkar ko adhishesh men chalna chahie.,karon aur sarkari kharchon men vriddhi karni chahie.,karon aur sarkari kharchon men katauti karni chahie.
+q0239,nimnalikhit men se kiske parinamasvarup aarthik vriddhi hogi?,berojgari dar men kami.,berojgari dar men vriddhi.,shram shakti ke aakar men vriddhi.,jansankhya men kami.
+q0240,"joi nashte, dophar ke bhojan aur rat ke khane men raindam tarike saman sanbhavnaon ke sath, khane ke lie ek seb, ek santara, ya ek kela chunta hai. kisi die gae din, kya sanbhavna hai ki joi kam se kam do alag-alag prakar ke phal khaega?",\frac{7}{9},\frac{8}{9},\frac{5}{9},\frac{9}{11}
+q0241,"$n$ ke sabhi dhanatmak purnank manon ka yog kya hai, jab $n^2$ $1200$ ka ek karak hai?",42,12,36,39
+q0242,"kagaj ke 8.5 guna 11 inch ke tukre ko bar-bar aadha mora jata hai (kabhi bhi khola nahin jata), har bar lanbe hisse ko chhota kar diya jata hai. dusre mor ke turant bad, sabse lanbi bhuja ki lanbai inch men kya hai? apne uttar ko dashamlav se nikattam dasven tak vyakt karen.",4.5,1,5.5,5
+q0243,man lijie $f(x)=\frac{(x-2)^2-9}{3}$ hai. samikran $y=f(x)$ ko graf kiya gaya hai aur graf ke $x$- aur $y$-intarsept ek bahubhuj banane ke lie jure hue hain. us bahubhuj ka kshetraphal kya hai?,5,\frac{25}{6},\frac{\sqrt{2465}{9},2
+q0244,"jab 25^1059 ko 23 se vibhajit kiya jae, to sheshphal jnat kijie.",11,13,8,5
+q0245,"kisi restaran men manak tip taiks se pahle bil ka $ 15 \%$ hai. kailiforniya men bahut se log bikri kar ko doguna karke tip pate hain, jo $8.25 \%$ hai. yah kar se pahle $ \$60 $ ke bil par manak tip se kitne sent adhik hai?",90,80,70,60
+q0246,ek samkon tribhuj ke padon ki lanbai $6$ aur $b$ hai aur ek karn ki lanbai $c$ hai. tribhuj ka parimap $18$ hai. $c$ ki ganna karen.,18,\frac{15}{2},8,6
+q0247,jon ke panch bachche hain. iski kya prayikta hai ki unmen se kam se kam aadhi larkiyan hain? (ham yah man sakte hain ki larke ke janm ki bhi utni hi sanbhavna hai jitni larki ke janm ki aur iske viprit bhi.),\frac{1}{2},\frac{1}{4},\frac{1}{8},\frac{3}{5}
+q0248,"x^3 + xy - y^2 = 10 dvara paribhashit vakr men ek urdhvadhar sparsh rekha hoti hai, jab x =",0 ya –1/3,1.037,2.074,2.096
+q0249,"jab abhivyakti $-2x^2-20x-53$ ko $a(x+d)^2+e$ ke rup men likha jata hai, jahan $a$, $d$, aur $e$ sthirank hain, to yog $a+d+e$ kya hai?",-80,0,6,53
+q0250,"naish santulan par,",aapurti vakr mang vakr ko pratichchhedit karta hai,kisi bhi paksh ko apni ranniti se vichlit hone ka koi protsahan nahin hai,simant rajasv vakr simant lagat vakr ko pratichchhed karta hai,santulan asthir hai aur pratyek paksh apni ranniti badalna chahega
+q0251,nimnalikhit men se kaun sa aarthik kiraye ka udahran hai?,ek suprastar basketbol khilari ki kamai 50 miliyan dolar.,ek samajik suraksha sevanivritti aay.,samajik sevaon se kalyankari bhugtan.,mata-pita ya abhibhavak dvara kolej chhatr ko diya gaya chek.
+q0252,nimnalikhit men se kaun sa tarika yuniynon dvara majduri barhane ke lie upyog nahin kiya jata hai?,nyuntam vetan prapt karne ke lie batchit,pratibandhatmak sadasyata nitiyan,sthanapann sansadhnon ki kimton men kami lane ke prayas,phedarbeding ya mek-vark niyam
+q0253,nimnalikhit men se kaun tuba nirmataon ki majduri barhaega?,tuba mekar prashikshan skul men snatkon ki sankhya men vriddhi,tuba ki kimat men vriddhi,tuba prashikshan ki kimat men vriddhi,tuba par kar men vriddhi
+q0254,"avtal utpadan sanbhavna sima.man lijie ki saikilon ke utpadan men elyuminiyam ek pramukh utpadan input hai. yadi elyuminiyam ki kimat girti hai, aur any sabhi char sthir rahte hain, to ham ummid karte hain",elyuminiyam ki mang barhegi.,saikilon ki aapurti barhegi.,saikilon ki aapurti men giravat.,saikilon ki mang barhegi.
+q0255,"kisi pratispardhi pharm ke lie, alpavdhi men band karne ka nirnay lene men sabse mahatvapurn bat kya hai?",AVC ki tulna MR se karen.,TR ki tulna TC se karen.,yadi kul vittiy lagat aay dvara kavar nahin hoti hai to utpadan na karen.,kimat ki parvah kie bina mang ke anusar uchchatam matra men utpadan karen.
+q0256,"yadi koi bazar kisi kartel dvara sangathit kiya jata hai, to ham ummid kar sakte hain",sabhi kartel pharmon ke lie samany labh.,kartel pharmon ko kartel samjhaute par dhokhadhri karne ke lie protsahan.,kartel men vyaktigat pharmon dvara labh ko adhiktam karna.,aavantan dakshata.
+q0257,purn pratispardha ke tahat kam karne vali vyaktigat pharm ki visheshta is prakar hai:,ek muly-nirmata.,kuchh vikretaon men se ek.,ek muly rannitikar.,ek muly lene vala.
+q0258,"ek purnatya pratispardhi pharm ke viprit, ek ekadhikar pharm",mang vakr par uchchatam muly vasul karega,ek kshaitij simant aay vakr hai,kul aay vakr upar ki or jhuka hua hai,niche ki or jhuki hui mang vakr ka samna karna parta hai
+q0259,sankhya 1 men die gae uttar ka aadhar hai,"shram ki majduri dar P > shram ki MRP tatha shram ki ek atirikt ikai ke sath, majduri dar < MRP.","shram ki majduri dar P < shram ki MRP aur shram ki ek atirikt ikai WI ke sath, > MRP.",kul aay adhiktam hai.,kul utpadan adhiktam hai.
+q0260,10 μF sandharitr ko 100 V ke vibhvantar tak charj karne ke lie kitna kary aavashyak hai?,0.005 J,0.01 J,0.05 J,0.1 J
+q0261,"aavesh ghanatv σ le jane vale ek anant rup se bare viman ke upar, vidyut kshetr upar ki or sanket karta hai aur σ/2εo ke barabar hai. viman ke niche vidyut kshetr ka pariman aur disha kya hai?","σ/2εo, niche","σ/2εo, upar","σ/εo, niche","σ/εo, upar"
+q0262,"ek nishchit kshetr men, vidyut kshetr mul se dur trijya ke sath samikran Er = –6r^2 + 4r + 3 dvara bhinn hota hai, jahan r mitar men aur E N/C men diya jata hai. mul bindu aur bindu (3, 4) ke bich vibhvantar hai",–165 V,–120 V,64 V,185 V
+q0263,"ek vidyut dvidhruv men 4.0 nC pariman ke saman, lekin viprit bindu aaveshon ki ek jori hoti hai jo 2.0 semi ki duri se alag hoti hai. aaveshon ke madhy bindu par vidyut kshetr ki shakti kya hai?",0,9.0 × 10^4 N/C,1.8 × 10^5 N/C,7.2 × 10^5 N/C
+q0264,"m dravyaman ki ek chhoti gari shuruat men viramavastha men hai. yah dravyaman 4m aur veg v ki ek bari gari se pratyasth rup se takrata hai. bari gari, chhoti gari ke karan apni aadhi gatij urja kho deti hai. chhoti gari ka ab veg hai",1.41v,v,2v,4v
+q0265,100 kilogram dravyaman ka ekasman ghanatv (paksh ki lanbai = 0.5 m) vala ek thos plastik ghan taral padarth ke ek bartan men rakha jata hai jiska ghanatv 1200 kg/m^3 hai. ghan ke aaytan ka kaun sa ansh drav ki satah ke upar tairta hai?,1.0/9,1.0/3,2.0/3,4.0/5
+q0266,hava se kanch ki khirki ke shishe men pravesh karne vali monokromaitik prakash ki kiran men ismen badlav ka anubhav hoga,aavritti aur tarangadairghy,gati aur tarangadairghy,keval gati,keval tarangadairghy
+q0267,"ek blok ko ek mej ke sath ghasita jata hai aur ek gharshan bal, f ka anubhav hota hai, jo iski gatividhi ka virodh karta hai. tebal dvara blok par lagaya gaya bal hai",shuny,tebal ke samanantar,tebal ke lanbavat,na to tebal ke samanantar aur na hi tebal ke lanbavat
+q0268,hava se kanch ki khirki ke shishe men pravesh karne vali monokromaitik prakash ki kiran men ismen badlav ka anubhav hoga,aavritti aur tarangadairghy,aavritti aur gati,gati aur tarangadairghy,keval gati
+q0269,"ek vidyut dvidhruv men 4.0 nC pariman ke saman, lekin viprit bindu aaveshon ki ek jori hoti hai jo 2.0 semi ki duri se alag hoti hai. aaveshon ke madhy bindu par vidyut kshetr ki shakti kya hai?",0,9.0 × 10^4 V/m,1.8 × 10^5 V/m,7.2 × 10^5 V/m
+q0270,bayan mastishk golarddh nimnalikhit men se kis kary ke lie vishisht hai?,"maukhik, ganitiy aur bhavnatmak abhivyaktiyon ko pahchanna","maukhik, sahityik aur aitihasik tathyon ko pahchanna","maukhik, vishleshnatmak aur ganitiy","ganitiy, sthanik aur vishleshnatmak"
+q0271,kisi samuh aur uske sadasyon ke prati anuchit aur aamtaur par nakaratmak ravaiye ko kaha jata hai,purvagrah,prajatikendrikta,samuh-antargat purvagrah,bhedbhav
+q0272,"jo log pahle kabhi ek-dusre ke sath nahin rahe hain, ve aksar aapsi sankat ke samay apne matbhedon ko dur rakhne men saksham hote hain. ek sath kam karne ki unki zarurat ko aksar ek(n) ke rup men ullikhit kiya jata hai",samudayik lakshy,uchch koti ka lakshy,adhinasth lakshy,gathbandhan ka gathan
+q0273,bhavna ke kainan-bard siddhant men mastishk ke kis bhag ko sabse mahatvapurn bhumika nibhane vala mana gaya tha?,thailamas,hippokaimpas,medula,sanbaddh kshetr
+q0274,"prayogatmak aur niyantran samuhon ke ausat ankon ke bich antar mahatvapurn tha ya nahin, yah nirdharit karne ke lie shodhkarta ko nimnalikhit men se kiska upyog karne ki aavashyakta hogi?",varnanatmak aankare,aanumanik aankare,kshetr ka prayog,manak vichlan
+q0275,"jivan kal men sanjnanatmak, vyavharik aur samajik parivartanon ka adhyayan sabse pratyaksh rup se nimnalikhit men se kiske dvara kiya jata hai?",saikometrikiyan,okyupeshnal manovaijnanik,vikasatmak manovaijnanik,samajik manovaijnanik
+q0276,mansik avasthaon aur sharirik avasthaon ke bich sanbandh ki janch ko kaha jata hai,svad kalikaen,man-sharir samasya,poshan banam prakriti,samanantar prasanskaran
+q0277,nimnalikhit men se kis prakar ke vaijnanik ne sabse pahle yah tark diya ki kisi vyakti ke sochne ke tarike mukhy rup se sanskritik mulyon aur vicharon se aakar lete hain?,sanrachnavadi,etholojist,samaj-jivvijnani,manavvijnani
+q0278,"bairi ne bataya ki unke adhyayan men dharmikta aur shaikshanik gred ke bich sanbandh sankhyikiy rup se mahatvapurn nahin tha. ""sankhyikiy rup se mahatvapurn nahin"" se unka matlab tha ki parinam",mahatvapurn nahin the,majbut nahin the,shayad sanyogvash hua hoga,sankhyikividon ke lie koi muly nahin tha
+q0279,sanjnanatmak vikas ke adhyayan ke lie lev vaygotski ka drishtikon tha,manovegiy,vyavhar,jaivik,samajik-sanskritik
+q0280,gair aisa avlokan hai jo,deta samuchchay men any avloknon ki tulna men adhik bar dekha jata hai,deta samuchchay men any avloknon ki tulna men kam bar dekha jata hai,deta samuchchay men any avloknon ki tulna men hamesha chhota hota hai,deta samuchchay men any avloknon se kaphi alag hai
+q0281,"jansankhya anupat ke lie 90% vishvas antaral anuman se 99% vishvas antaral anuman men parivartan, any sabhi chijen saman hone par,",antaral ka aakar 9% barh jata hai.,antaral ka aakar 9% kam ho jata hai.,antaral ka aakar 57% barh jata hai.,antaral ka aakar 57% kam ho jata hai.
+q0282,"yadi any sabhi char sthir rahen, to nimnalikhit men se kaun parikalpana parikshan ki shakti ko barhaegi? I. namuna aakar barhana. II. mahatv ka star barhana. III.taip II truti ki prayyikta men vriddhi karna",keval I,keval II,keval III,I aur II
+q0283,"do char X aur Y par deta ekatr kiya gaya aur deta par kam se kam varg pratigman rekha phit ki gai. is deta ke lie anumanit samikran y = –2.29 + 1.70x hai. ek bindu par x = 5, y = 6 hai. is bindu ke lie avshisht kya hai?",7.91,6.21,0.21,–0.21
+q0284,nimnalikhit men se kinhin do ghatnaon A aur B ke bare men kaun sa kathan saty hai?,P(A ∪ B) se tatpary hai ki ghatnaen A aur B svatantr hain.,P(A ∪ B) = 1 ka tatpary hai ki ghatnaen A aur B paraspar anany hain.,P(A ∩ B) = 0 ka tatpary hai ki ghatnaen A aur B svatantr hain.,P(A ∩ B) = 0 ka tatpary hai ki ghatnaen A aur B paraspar anany hain.
+q0285,svatantrata ka ek kai-skverd parikshan 3 × 4 aakasmikta talika par kiya jana hai. is parikshan men svatantrata ki kitni digri hain?,6,8,10,11
+q0286,nimnalikhit men se kis sthiti men parinam ka varnan karne ke lie dvipad modal upyukt modal nahin hai?,sikke ki tin uchhalon men shirshon ki sankhya,kisi die gae saptah men barsat ke dinon ki sankhya,panch bachchon vale parivar men larkiyon ki sankhya,22 sadasyon vali ek kaksha men upasthit vidyarthiyon ki sankhya
+q0287,"philing mashin austan char auns kofi jar men dalti hai, jiska manak vichlan 0.25 auns hai. is mashin dvara bhare gae chalis jar betartib rup se chune jate hain. kya sanbhavna hai ki sainpal kie gae jar men prati jar bhari gai ausat matra 3.9 auns se kam hai?",0.0057,0.0225,0.025,0.05
+q0288,"yadi kisi deta set ke sabhi man saman hain, to nimnalikhit men se kise chhorkar sabhi shuny ke barabar honge?",madhyaman,manak vichlan,antar,dayra
+q0289,"do ghatnaon A aur B men se pratyek ki sanbhavna shuny nahin hai. yadi A aur B svatantr hain, to nimnalikhit men se kaun sa kathan saty hai?",P(A and B) = P(A) · P(B),A aur B paraspar anany ho bhi sakte hain aur nahin bhi.,A aur B paraspar anany hone chahie.,P(A| B) = P(B| A)
+q0290,nimn se samany smriti men sudhar hone lagta hai,erobik vyayam,esitailkolain lena,jinjako lena,samajik sanpark ko bana
+q0291,"is adhyay ke varishth drishtikon men, do. shili aapko nimn karne ki salah dete hain",skul men bane rahna,sahi khana khana,bharpur vyayam karna,uchch vetan vali naukri khojna
+q0292,samajik samarthan ka svasthy aur kalyan par sakaratmak prabhav parne ki sabse adhik sanbhavna hoti jab vah,bahut bhavuk ho,samarthan ke rup men mana jata hai,apratyashit ho,aantarik ke bajay bahri ho
+q0293,"kul logon ki sankhya jinhen koi vikar hai, ko kul logon ki sankhya se vibhajit karne par aapko ____ dar milti hai.",prachlan,ghatna,praranbhik,rogagrast
+q0294,kisi nuksan ke bad avsad ka anubhav karne ki adhik sanbhavna un logon men hoti hai jo,yuva uttarjivi hain,pahle kabhi avsad ka anubhav nahin kiya hai,40 sal se zyada samay se shadishuda hain,kya ve khud bhi kharab svasthy men hain
+q0295,"ek shodhkarta jo do ya do se zyada logon ke samuhon ke bich antar men ruchi rakhta hai, vah nimnalikhit men se kis drishtikon ka upyog karne ki sabse adhik sanbhavna rakhta hai?",ardh prayogatmak,anudairdhy,sahsanbaddh,kros-anukramik
+q0296,nimnalikhit men se kaun sa vriddh vayaskon ki sankhya men vriddhi ka pramukh karan nahin hai?,bebi bum pirhi,lagatar barhti janm dar,janm ke samay jivan pratyasha men vriddhi,ek nirdisht aayu men jivan pratyasha men vriddhi
+q0297,"nimn men se kis karak ko samajik samarthan behtar svasthy se sanbandhit kyon hai, iski janch karne vale shodh men dusron ki tulna men utna samarthan nahin mila hai?",samajik,vyavharik,manovaijnanik,jarachikitsa
+q0298,nimn men se kis samuh men burhape aur vriddh vayaskon ke bare men adhik sakaratmak drishtikon hone ki sanbhavna hai?,any vriddh vayask,10 varsh se kam umr ke bachche,yuva vayask,kishor
+q0299,dirghayu ka nimn se uchch star se gahra sanbandh hai,samajik samarthan,biemaai,sharab ka upyog,sapliment ka upyog
+q0300,nimnalikhit men se kis kishor ki garbhadharan dar sabse adhik hai?,amerika,kainediyan,svidish,phrench
+q0301,ham aise vyakti ki or aakarshit hote hain jo hamare jaisa vyavhar rakhta hai kyonki:,hamen us vyakti se sakaratmak sudrirhikran milta hai jo hamse sahmat hota hai,dusre vyakti ki sahamti hamare sahi hone ke ehsas ko majbut karti hai,ham us vyakti ke sath sakaratmak batchit ki aasha karte hain,upar ke sabhi
+q0302,"garbhadharan ke lagbhag _________ mahine bad, bhrun ka ling bahy jannangon ki upasthiti se spasht ho jata hai.",2,4,6,8
+q0303,apne sabhi rishton men helen ko aam taur par kisi dusre vyakti ke karib hone ya us vyakti ke apne karib hone se ashajta mahsus hoti hai. lagav siddhant ke anusar helen ko sabse achchhe tarike se is tarah varnit kiya ja sakta hai:,surakshit premi,parihar premi,chintit-ubhaybhavi premi,bhavuk premi
+q0304,nimnalikhit men se kaun sa/se karan purushon aur mahilaon donon ke lie sanbhog pira ka karan ban sakta hai?,sankramnon,chamri bahut tang,yoni ka sankuchan,e aur si donon
+q0305,nimnalikhit men se kaun si ghatna yauvan ki shuruat karti hai?,pityutri granthi FSH jari karti hai,pityutri granthi vriddhi harmon jari karti hai,haipothailemas GNRS rilij karta hai,haipothailemas elaech rilij karta hai
+q0306,"1988 se 1990 tak amerika men vishamlaingikon ke bich, 20 se 45 varsh ki aayu ke avivahit vayaskon ki sankhya, jinhonne ek se adhik sathi hone ki bat kahi hai, is prakar hai:",purushon aur mahilaon donon ke lie giravat,"purushon ke lie giravat aai, lekin mahilaon ke lie nahin","mahilaon ke lie giravat aai, lekin purushon ke lie nahin","purushon ke lie giravat aai, aur mahilaon ke lie vahi sthiti bani rahi"
+q0307,lagbhag ___% kishor larkon ko apni kishoravastha ke dauran samlaingik anubhav hota hai.,5,10,20,30
+q0308,purushon men durdamy avdhi ______ charan ke dauran hoti hai.,sankalp,ogazm,bimbanu,uttejna
+q0309,mis jons hal hi men apne svasthy ko lekar chintit hain. unhonne apne jannangon ke aas-pas khujli aur tvacha men jalan mahsus ki hai. apne aniymit yaun itihas ko dekhte hue unhen sandeh hai ki unhen ye bimari ho gai hai:,klaimaidiya,jannang massa,sujak,jaghan jun
+q0310,samudri jahajon par kie gae apradhon ke sambandh men kaun-sa rajy samany rup se kshetradhikar ka prayog karta hai. ,tatiy rajy,dhvaj rajy,sabhi rajy aise kshetradhikar ka aanand lete hain,antarrashtriy samudri kanun nyayadhikran
+q0311,nimnamen se kaun-si sandhi aadharit manvadhikar vyavastha hai?,sanyukt rashtr manvadhikar samiti,sanyukt rashtr manvadhikar parishad,sanyukt rashtr sarvabhaumik aavdhik samiksha,sanyukt rashtr ka vishesh aadesh
+q0312,sanyukt rashtr viyna ghoshna 1993 men ghoshit kiya gaya ki,tisri pirhi ke adhikar prathmik mahatv ke hain,nagrik aur rajnitik adhikar mul adhikar hain,"sabhi prakar ke adhikar avibhajy, antarsanbandhit aur anyonyashrit hain",samajik aur aarthik adhikar apravartaniy hain
+q0313,kshetradhikar ka samany bhaugolik kshetr kya hai?,kshetradhikar aam taur par atirikt-kshetriy hota hai,kshetradhikar samanyatah vishal samudr par hota hai,kshetradhikar aam taur par pradeshik hota hai,kshetradhikar apradhi ke sthan se tay hota hai.
+q0314,nimn men se kaun-sa anuchchhed yogy adhikar nahin hain?,anuchchhed 3,anuchchhed 8,anuchchhed 9 ,anuchchhed 11
+q0315,antarrashtriy kanun ke aupcharik sroton ke bich kya sanbandh hai?,antarrashtriy kanun ke aupcharik sroton ke bich koi padanukram nahin hai,sandhiyan riti-rivaj ka sthan grahan karti hain,riti-rivaj sandhiyon ka sthan grahan karte hain,kanun ke samany siddhant riti-rivaj aur sandhiyon donon se upar hain
+q0316,karyatmak manyata ka arth kya hai?,manyata ek shakti ke viprit ek kary hai,manyata do rajyon ke bich parasparik hai,manyata keval vishesh prashasnik karyon ke lie pradan ki jati hai na ki ikai ke ghoshit rajy ke lie,"manyata keval sarkar ko di jati hai, rajy ko nahin"
+q0317,yuropiy manvadhikar nyayalay dvara lagu 'mulyankan ke labh' ke siddhant ke arth ko paribhashit karne vala pahla mamla kaun sa tha?,gudvin banam yuke (2002),ere banam aayarlaind (1979),usman banam yuke (1998),haindisaid banam yuke (1976)
+q0318,nagrik evan rajnitik adhikaron (aur protokol) par antarrashtriy anubandh ke pravartan tantr men nimn shamil hain,keval ek riporting tantr,antarrashtriy nyayadhikran ka nirnay,keval vyaktigat yachika ka adhikar,riporting tantr aur vyaktigat yachika ka adhikar
+q0319,manav adhikaron ki sarvabhaumik ghoshna (yudiechaar) ki kanuni prakriti kya hai?,yudiechaar ek bahupakshiy sandhi hai,yudiechaar sanyukt rashtr mahasbha ka sankalp hai,yudiechaar sanyukt rashtr suraksha parishad ka sankalp hai,yudiechaar ek antarrashtriy sammelan men kai rajyon dvara apnai gai ek ghoshna hai
+q0320,________ sanpraday yah manta hai ki bazar dakshata ko barhava dena kanuni nirnayan ka mukhy lakshy hona chahie.,vidhi aur aarthiki,samalochnatmak vidhik adhyayan,aitihasik,prakritik vidhi
+q0321,"inmen se kaun-sa kathan, fular ki 'kanun ki aantarik naitikta' ki prakriti ka sabse achchhe dhang se grahan karta hai?",kanun ka pratyakshavadi drishtikon.,aakanksha ki naitikta.,prakritik vidhi ki ekviniyan avdharna.,hani siddhant' ki asvikriti.
+q0322,sanvidhiyon ko prayah ________ kanun kaha jata hai.,arddh,arh,sahyogit,sanhitabaddh
+q0323,aantarik drishtikon' hart ki kanun ki avdharna men inmen se kaun-sa prayojan pura karta hai?,yah samajik niymon aur samuhik aadton matr ke bich vibhed karta hai.,yah nyayik prakary ko paribhashit karta hai.,yah vidhayika ke pradhikar ko spasht karta hai.,yah kanun aur nyay ke bich ke sanbandh par bal deta hai.
+q0324,inmen se kaun-sa prastav saza ki parinamvadi auchity-siddhi ke sath sarvadhik asangat hai?,saza suraksha ka sanrakshan karti hai.,saza apradh rokne ya ghatane ki ek kifayti vidhi hai.,saza vyaktigat suraksha ka sanrakshan karti hai.,saza apradh ke anurup honi chahie.
+q0325,dvarkin ka 'shabdarth-vishyak dansh' se kya arth hai?,kanun ki bhasha samanyatah aspasht hoti hai.,adhivaktaon ke tark aam taur par bhasha se sarokar rakhte hain.,nyayadhish bhashayi galatfahmiyon ke shikar hote hain.,manyata ka niyam kanuni manyata ka purnarupen karan nahin ho sakta hai.
+q0326,prakritik vidhi par hyum ka hamla unke is tark par aadharit hai ki:,ham nishpaksh rup se yah nahin jan sakte ki naitik rup se kya sahi hai aur kya galat.,prakritik vidhi pashchadarshi hoti hai.,samajik anubandh jaisi koi chiz nahin hoti.,prakritik vidhi rajy ko hamlon ke viruddh suraksha dene men viphal rahti hai.
+q0327,"sabse sahi uttar chunen : ostin ke anusar, kanun ke nimnalikhit gun hain :","samadesh, sanprabhu aur pravartaniyta","samadesh, sanprabhu aur kanuni upay","samadesh, sanprabhu aur pratibandh","samadesh, sanprabhu aur aayatt dvara aajnakarita"
+q0328,manvadhikaron ke prati naitik sapekshavad ke virodhbhav ke viruddh inmen se kaun-sa tark sabse shaktishali hai?,upyogitavad.,samudayvad.,sanjnanatmakvad.,pratyakshavad.
+q0329,kaint ka 'nirpeksh niyog' kya hai?,aap kisi any vyakti ko jante-bujhte hue hani nahin pahunchaenge.,aapko hamesha samuday ke sarvottam hit men hi kary karna hoga.,aapko manushyon ko uddeshy nahin balki sadhan manna hoga.,aapko aise kary karna chahie mano aapki manyataen har kisi par lagu hoti hain.
+q0330,"viliyam sheksapiyar ke hemlet men poloniyas: ""aapka nek beta pagal hai: sachche pagalpan ko paribhashit karne ke lie main ise pagal kahta hun, pagal hone ke alava aur kuchh nahin hai?""",vyakti par hamla (vijnapan hominem),vakchhal,prashn puchhna,daya ki apil
+q0331,"jab koi yah tark deta hai ki parivartan karne se koi mahatvapurn prabhav nahin parega, lekin iska koi praman nahin hai ki prabhav ullekhniy nahin hoga, to vah vyakti nimnalikhit men se kaun si bhranti ka shikar hua hai?",kuen men vish dalna,thos jhukav,paranpara se apil,pradhikran se tark
+q0332,jab koi vyakti kisi parikalpit avdharna ko aise manta hai mano vah koi murt vastu ho to vah vyakti nimnalikhit bhranti ka shikar ho sakta hai,prashn puchhne vale lakshan,aspashtata ka durupyog karna,murt-vidhan,vaky-chhal
+q0333,vaidh viyojak nyayvaky men nimnalikhit men se kaun si abhilakshanik visheshtaen hoti hain?,laghu aadhar ko ya to purvagami ki pushti karni chahie ya parinami ko asvikar karna chahie,laghu aadhar ko ya to kisi vikalp ko svikar karna hoga ya kisi vikalp ko asvikar karna hoga,ek aadhar gayab hai,yah sachche nishkarsh par pahunchata hai
+q0334,shyam ya shvet bhranti nimnalikhit ka dusra nam hai,durghatna ka bhranti,jhuthi duvidha,prashn puchhna,vrittakar tark
+q0335,prashansaniy vyaktitv ki bhranti ek vishisht prakar ki hoti hai,durghatna ka bhranti,jhuthi duvidha,prashn puchhna,vrittakar vivek-buddhi
+q0336,"to, aap kab se apni patni ko pit rahe hain?",vyakti par aakraman karna (vyakti ke viruddh aakraman),jhuthi duvidha,purvagrahpurn bhasha,bal se apil
+q0337,"yadi koi yah tark deta hai ki koi chiz ek nishchit tarike se ki jani chahie kyonki vah hamesha isi tarah se ki jati hai, to vah vyakti ne nimnalikhit men se kaun si bhranti ka shikar hua hai?",phislan vali dhalan,paranpara se apil,adhikar se tark,glani hone tak
+q0338,mithya sadrishy kis bhranti ka dusra nam hai?,ati samanyikran,sanghatan,sahvarti bhinnata,apurn sadrishy
+q0339,kisi dave ko keval islie svachalit rup se asvikar karna kyonki vah paranparik hai...,uchit nahin,paranpara ke lie apil,janta se apil,tarkasangat
+q0340,"jaise-jaise prashikshan udaharnon ki sankhya anant ho jati hai, us deta par prashikshit aapke modal men ye hoga:",nichla veriens,uchchatar veriens,saman veriens,inme se koi bhi nahin
+q0341,nyural netvark,konveks objektiv fankshan ko anukulit karen,keval stokestik gredient disent ke sath prashikshit kiya ja sakta hai,alag-alag ektiveshan nkshan ke mishran ka upyog kar sakte hain,inme se koi bhi nahin
+q0342,rigresan ke sanbandh men inmen se kaun sa vaky galat hai?,yah input ko aautput se jorta hai.,iska upyog bhavishyavani ke lie kiya jata hai.,iska upyog intarapriteshan ke lie kiya ja sakta hai.,yah kaial rileshanship ka pata lagata hai
+q0343,"agar N prashikshan detaset men udaharnon ki sankhya hai, to nikattam parosiyon ka vargikran ran taim hai",O(1),O( N ),O(log N ),O( N^2 )
+q0344,"die gae maitriks ke shuny sthan ki vimiyta kya hai? A = [[3, 2, −9], [−6, −4, 18], [12, 8, −36]]",0,1,2,3
+q0345,saport vektar kya hain?,nirnay sima se sabse dur ke udahran.,SVM men f(x) ki ganna karne ke lie ruri ekmatr udahran.,deta kendrak.,SVM men ve sabhi udahran jinka bhar αk gair-shuny hota hai.
+q0346,inmen se kaun sa mashin larning men klastaring elgoridam hai?,apeksha adhikatmikran,CART,gosiyan naiv beys,eprayori
+q0347,ke-phold kros-vailideshan _ hoti hai,K ke sapeksh liniyar,K ke sapeksh kvadretik,K ke sapeksh kyubik,K ke sapeksh eksaponenshiyal
+q0348,"kathan 1| BLEU metrik satikta ka upyog karta hai, jabki ROGUE metrik yad karne ki kshamta ka upyog karta hai. kathan 2| chhipe hue markov modal ka upyog aksar angreji vakyon ko modal karne ke lie kiya jata tha.","sahi, sahi","galat, galat","sahi, galat","galat, sahi"
+q0349,"kathan 1| ReLU ka gredient $x<0$ ke lie shuny hai, aur sigmoid gredient $\sigma(x)(1-\sigma(x))\le \frac{1}{4}$ sabhi $x$ ke lie hai. kathan 2| sigmoid men ek satat gredient hota hai aur ReLU men ek asantat gredient hota hai.","sahi, sahi","galat, galat","sahi, galat","galat, sahi"
+q0350,naye sarvajnik prabandhan ke pichhe margadarshak siddhant kya hai?,labh adhikatmikran,niji kshetr ke vyavsayik siddhanton ko sarvajnik kshetr men lagu karna,sarvajnik prabandhan ko niji kshetr ke prabandhan se pratisthapit karna,sarvajnik sangathnon ka punargathan
+q0351,karyatmak sanrachnaen banane men madad karti hain...,tim vark,visheshajnata,pariyojna kary samuh,bahu-kushal karmachari
+q0352,kramadeshit nirnay ki visheshtaen kya hain?,jatil evan jokhimpurn,anishchit evan aniymit,kam jokhim aur nishchit,niymit aur gair-jatil
+q0353,samuh mandand kya hain?,vyavhar ke aise tarike jo samuh ke sadasyon dvara svikary aur sajha kie jate hain,samuh ke kuchh sadasyon dvara sajha kie jane vale vyavhar ke tarike,vyavhar ke aise tarike jo samuh ke mulyon aur vishvason ko chunauti dete hain,vyavhar ke aise tarike jo samuh ke any sadasyon se bhinn hon
+q0354,varchual tim ke sthan ki visheshta kya hai?,isi imarat men,isi udyog men,usi desh men,dur se
+q0355,phraink gilabreth ka kary kis lie sarvadhik prasiddh hai?,kam karne ki sthiti,samay aur gati adhyayan,kary ka manovijnan,samajik parivesh men kary karen
+q0356,rannitik yojnaen kis samay-sima se sanbandhit hoti hain?,dirghakalik,madhyam avdhi,laghu avdhi,lakshy prapti men lagne vala anirdisht samay
+q0357,‘yojna aur pradarshan ke bich koi spasht sanbandh nahin hai.’ yah pad kiske pas hai?,maikal portar,miltan phridmain,gairi haimel,henri mintzabarg
+q0358,netritv ka paristhitijany siddhant kis bat par jor deta hai?,vyaktigat khasiyten,aayojan,paryavran,rajnitik sthiti
+q0359,samajik udyam kisse sanbandhit hai?,labh adhikatmikran,bajar hissedari ko adhiktam karna,sarvajnik seva pradan karna,samajik labh ke lie vyavsay chalana
+q0360,yah prasar ki prakriya men logon ka ek samuh hai jo navachar ke agrani kinare par hone ka aanand lete hain aur shuruati charan men nae utpadon ko kharidte hain:,der se bahutae men aane vale.,jaldi apnane vale.,jaldi  se bahutae men aane vale.,pichhe rah jane vale. 
+q0361,"vipnan sanchar upakran ke is rup ko 'pahchan yogy srot se sanchar ka ek bhugtan kiya gaya, madhyasth rup kaha jata hai, jise praptakarta ko abhi ya bhavishy men kuchh karravai karne ke lie raji karne ke lie dizain kiya gaya hai'. ise is rup men sandarbhit kiya jata hai:",vijnapan,vyaktigat bikri.,jansanpark. ,prachar.
+q0362,bajar men ek naya aur anutha utpad pesh karte samay nimnalikhit men se kaun si sabse upyukt muly nirdharan ranniti hai?,muly skiming,prachar muly nirdharan,manovaijnanik muly nirdharan,pravesh muly nirdharan
+q0363,nimnalikhit men se kaun sa shodh dijain ki shreniyon men se ek nahin hai?,khojpurn shodh.,varnanatmak shodh.,karan sanbandhi shodh.,desk shodh.
+q0364,yah vipnan aur sanchar tul grahkon ko utpad/seva kharidne ke lie protsahit karne ke lie pratyaksh pralobhan ya protsahan pradan karta hai:,vijnapan,jansanpark. ,bikri sanvardhan.,pratyaksh vipnan.
+q0365,jab koi vyakti nishkriy rup se kisi ghatna ya paryavran ki sarahna karta hai lekin paryavran ki prakriti ko prabhavit ya badle bina chhor deta hai to use kaha jata hai:,manoranjan ka kshetr.,shaikshanik kshetr.,saundaryatmak kshetr.,palayanvadi kshetr
+q0366,nimnalikhit men se kis upbhokta kharidari vyavhar ke lie sabse kam prayas ki aavashyakta hoti hai?,uchch bhagidari kharidari ki sthiti.,nai kharidari ki sthiti.,niymit kharidari.,aavegpurn kharidari.
+q0367,___________ tab ghatit hota hai jab kisi vebsait ki sanrachna aur samagri ko prasangik kivard ya khoj vakyanshon ka upyog karke orgenik khoj injan parinam prishthon men iski suchi ko adhiktam karne ke lie behtar banaya jata hai.,bhugtan samaveshan.,sarch injan anukulan.,prasangik khoj.,prati klik bhugtan.
+q0368,"vipnan sanchar ka ek rup jo vijnapan ke uddeshy se intarnet ka upyog karta hai, jiska lakshy vebsait traifik barhana aur/ya utpad parikshan, kharidari aur bar-bar kharidari gatividhi ko protsahit karna hai, ise kaha jata hai:",khoj vipnan.,imel vipnan.,intarnet vijnapan.,samajik veb vipnan.
+q0369,"is branding niti ke lie aavashyak hai ki sabhi utpad sangathan ke nam ka upyog karen, ya to puri tarah se ya aanshik rup se, udahran ke lie, maikrosopht, henj aur kelogs",vyaktigat branding.,parivarik branding.,korporet brand.,vinirmata brand.
+q0370,"yadi manav jansankhya men eks-linkd aprabhavi sthiti se prabhavit purushon ki aavritti .10 (das men se ek) hai, to prabhavit mahilaon ki apekshit aavritti kya hogi?",0.01,0.001,0.02,0.0001
+q0371,aanvik riport men Asp235Phe ingit karta hai ki:,esparaigain ka sthan phenilaelnin ne le liya hai.,phenilaelnin ko esparaigain dvara pratisthapit kiya gaya hai.,espartik esid ko phenilaelnin dvara pratisthapit kiya gaya hai.,phenilaelnin ko espartik esid dvara pratisthapit kiya gaya hai.
+q0372,sikalsel rog men utparivartan nimn prakar se hota hai:,vilopan.,dohrav.,pravishti.,bindu utparivartan.
+q0373,glukoj-6-phosphet dihaidrojnej (G6PD) ki kami se utpann vanshagti ka paitarn is prakar hai:,otosomal dominent.,otosomal resesiv.,eks-linkd pramukh.,eks-linkd aprabhavi.
+q0374,"epijenetik vanshanukram pranali ko ______ ke rup men varnit kiya gaya hai (meyar aur provain, 1980).",jinotaip vanshanukram,naram virasat,aaraenae vanshagti,kathin virasat
+q0375,nimnalikhit men se kaun sa tyumar sapresar jin nahin hai?,APC,NF1,RB1,RET
+q0376,i. kolai ke echaephaar stren men shamil hain:,khamir ya jivanu mul ka ek vektar jiska upyog kisi vishesh dienae anukram ki kai pratiyan banane ke lie kiya jata hai,jivanu gunsutr jismen manav jin dala gaya hai,F phaiktar ke sath ek jivanu gunsutr dala gaya,manav gunsutr jismen ek transapojebal tatv dala gaya hai
+q0377,manushyon men saral agranukram dohrav bahurupta sabse adhik upyogi hai,aapradhik aur pitritv mamlon ko suljhana,manav aur chimpanji ke rishton ka punarnirman karna.,manav aur niendarthal ke sanbandhon ka aaklan,rog pratirodhak karkon ko asthi majja koshikaon men sthanantarit karna
+q0378,nimnalikhit men se kaun sa vikar X-linkd vanshagti pradarshit nahin karta hai?,duchen peshi durvikas,Tay-Sachs rog,himophiliya e,himophiliya bi
+q0379,pratham timahi men svatahsphurt garbhapat men sabse aam gunsutr asamanyata hai:,trigunsutrata.,monosomi.,trigunitta.,tetrasomi.
+q0380,inmen se kaun si ameriki sarkar ki tin shakhaon men se ek nahin hai?,nyayik,karyakari,sansadiy,niyamak 
+q0381,prithvi ke mahasagron men ghule lavan mukhyatah kahan se prapt hote hain?,samudri jaivik gatividhi,vayumandaliy nikshepan,mahadvipiy chattanon ka apakshay,samudr ke andar garm sthanon par sthit jvalamukhiyon ka visphot
+q0382,inmen se kaun sa samanyatah jnat nivesh khata hai?,CNN,EMC,IRA,IRS
+q0383,"kisi desh men utpadit sabhi vastuon aur sevaon ka kul khudra bajar muly, jise aamtaur par varshik rup men bataya jata hai, hota hai.",bikri se labh ka anupat,vartaman anupat,sakal gharelu utpad,vyapar ke mal ka atirikt bhag
+q0384,komik strip 'pinats' men shroedar kis kam ke lie jane jate hain?,nrity,phutbol khelte hue,piyano baja raha hun,kalpanik viman urana
+q0385,pahla vanijyik rediyo steshan kis shahar men sthit tha?,shikago,ostin,pitsabarg,klivlaind
+q0386,lois len aur klark kent kis samachar patr ke lie kam karte hain?,The Bugle,The Daily Planet,The Metropolis Tribune,The New York Times
+q0387,paranparik ruben saindavich men kis prakar ka mans hota hai?,tarki,bologna,gomans,peprauni
+q0388,us parvat ka nam kya hai jahan pauranik yunani devta rahte hain?,brihaspati,olinp,visuviyas,valhaila
+q0389,kis shahar ka havai adda ORD kod ka upyog karta hai?,shikago,orlaindo,nyuyork shahar,portalaind
+q0390,"pogge ke anusar, garibi se sanbandhit karnon se hone vali varshik mrityu dar hai,","pogge ke anusar, garibi se sanbandhit paristhitiyon se hone vali varshik mrityu dar hai,",sabhi manav mrityuon men se lagbhag ek tihai.,sabhi manav mauton men se lagbhag aadhi.,inme se koi bhi nahin.
+q0391,"kairthars ka tark hai ki sanvidavadi aadhar par, gair-manav janavron ko nimnalikhit men se kis prakar ka naitik darja diya ja sakta hai?",pratyaksh,apratyaksh,pray-,inme se koi bhi nahin
+q0392,nimnalikhit men se kaun sa kas ke nirankushta tark ka aadhar hai?,kloning svabhavik rup se naitik rup se galat hai.,"prajnan kloning men, vyakti apni ichchha ko bachche ke bhavishy par thopne ka prayas karta hai.","prajnan kloning men, vyakti apni ichchha ko bachche ke bhavishy par taipne ka prayas karta hai.",hamare pas klon na banane ka ek achchha karan hai.
+q0393,arastu ka naitik siddhant iska ek sanskaran hai,puny naitikta.,parinamvad.,adhikar-aadharit siddhant.,upyogitavad.
+q0394,"norakros ke anusar, nimnalikhit men se kaun sa tark purn naitik sthiti ke kisi bhi prastavit mandand ke lie ek kathin chunauti pesh karta hai, jismen janavron ko shamil nahin kiya jata hai?",ontolojikal tark,brahmand vijnan se tark,simant mamlon se tark,inme se koi bhi nahin
+q0395,thomsan ki udasinta aur aatm-kendritta ki apil garbhapat ke prati kis tarah ke drishtikon se sanbandhit hai?,kartavy-sanbandhi drishtikon,kantiy drishtikon,sadgun naitikta drishtikon,parinamvadi drishtikon
+q0396,"sinot-aarmastrang ke anusar, aapki sarkar ko naitik rup se kuchh karna chahie",isse yah sabit nahin hota ki sarkari adhikariyon ko ise barhava dena chahie.,isse yah sabit nahin hota ki aapko aisa karna chahie.,yah siddh karta hai ki aapko aisa nahin karna chahie.,isse yah siddh hota hai ki aapko bhi aisa karna chahie.
+q0397,kairens ne is svarup ka bachav kiya,kantiy vitranvad.,vishvanagrikta-virodhi.,svatantratavadi vishvanagrikta.,samtavadi vishvanagrikta.
+q0398,"kairens ke anusar, nimnalikhit men se kaun-sa sabhi udar samtavadiyon ke lie chinta ka vishay nahin hai?",logon ki apni pariyojnaon ko aage barhane ki kshamta,saman avsar,abhivyakti ki svatantrata,vastavik asmantaon ko yathasanbhav kam rakhna
+q0399,"naitikta men, ""sahi"" aur ""galat"" shabdon ka prayog mukhyatah vyaktiyon ki ",naitikta ka mulyankan karne ke lie kiya jata hai.,kriyaen”.,parinam.,thos vastuen.
+q0400,chhoti aant se kailshiyam ke avshoshan ke lie kaun sa vitamin aavashyak hai?,vitamin e,vitamin di,vitamin i,vitamin ke
+q0401,plama phospholipid men pae jane vale kaun se vasayukt aml hriday sanbandhi mrityu dar ko kam karne se jure hain?,pamitik aml (16:0),lanbi shrrinkhala (=20 karban) santript aur en-3 bahuasantript vasiy aml,e-linolenik aml (18:3),stiyrik aml (18:0)
+q0402,inmen se kaun sa karak pet ke kainsar ke khatre ko barhata hai?,motapa,chini,namak va namak se sanrakshit khady padarth ,aahar men ibar
+q0403,jo bachche mote hain unhen:,parivar ke baki sadasyon se alag aahar lena chahie,vahi khana chahie aur adhik vyayam karna chahie,"apna kul urja sevan kam karna, gatividhi ka star barhana aur skrin vala samay kam karna chahie",adhik phal aur sabjiyan khani chahien
+q0404,nimnalikhit men se kaun sa bayotin ka kary hai?,amin nyurotransamitar banane ke lie amino aml ka dikarbaksileshan,homosistin se methiyonin ka sanshleshan,pairuvet ka oksaloesitet men karboksileshan,methilin tetrahaidropholet ka sanshleshan
+q0405,bhojan men shamil karne se pahle nimnalikhit men se kis padarth ki suraksha ka pradarshan kiya jana chahie?,kitnashak rasayan,khady paikejing se aane vale padarth,rang ke lie milane vali chin,upar ke sabhi
+q0406,inmen se kis ang men sharir dravyaman ki prati ikai (kilo) sabse kam urja vyay hoti hai?,mastishk,gurda,livar,kankal ki mansapeshi
+q0407,asthi khanij abhivriddhi,bhrun ke jivan ke pahle 10 saptah men te se hoti hai,shaishvavastha men dhimi hoti hai,"bachpan, kishoravastha aur prarambhik vayaskata ki avastha men, burhape men rekchar ke khatre ki bhavishyavani karti hai",mahilaon men rajonivritti ke bad vishesh rup se adhik hoti hai
+q0408,nimnalikhit men se kaun sa vitamin e ka kary nahin hai?,rakt ka thakka banane vale protin ka sanshleshan,vitamin di riseptaron ka sakriyan,thayraid harmon riseptaron ka sakriyan,jin abhivyakti aur koshika vibhedan ka viniyman
+q0409,prasavpurv programing:,pri-skul varshon men motape men vriddhi ki vyakhya karta hai,antargarbhashyi poshan sanbandhi aparyaptata ke epijenetik prabhavon ke madhyam se prabhavit kiya ja sakta hai,chhote bachchon men uchch raktachap ka karan banta hai,yah keval kam vajan vale bachchon ko prabhavit karta hai
+q0410,enskombe ka dava hai ki naitik darshan karna tab tak labhdayak nahin hai jab tak hamare pas paryapt darshan na ho:,dharm.,bhautik vijnan.,manovijnan.,kala.
+q0411,is pepar men stivensan ka prathmik uddeshy hai:,"sahi karyon ko sahi banane ke lie kya karna chahie, iska vivran dijie.",yah sthapit karen ki kaun si chijen apne aap men achchhi hain.,achchhe naitik charitr ka siddhant viksit karen.,naitik prashnon ko spasht karen.
+q0412,"ros ke anusar, hamare pratham drishtaya kartavy hain:",siddh kiya ja sakta hai.,svayansiddh hain.,jnat nahin kiya ja sakta.,vastunishth nahin hain.
+q0413,epiktetas ki salah hai ki ham inse dur rahen:,bina rok-tok ke hansana.,aakasmik rup se vyakhyanon men jana.,shadi se pahle yaun sanbandh banana.,upar ke sabhi.
+q0414,"yadi aap mante hain ki kathnon ka ek samuh saty hai, aur phir bhi aap isse ek galat ya betuka kathan nikal sakte hain, to kathnon ka mul samuh samagr rup se galat hona chahie. is tarah ke tark ko _____ ke rup men jana jata hai.",vidhi ko hatana,"vaidh, saral tark aur nishkarsh ke niyam ke rup",parikalpanatmak nyayvaky,kami aur betukapan
+q0415,niyantran sthiti ka dava hai:,svayan par niyantran khona naitik rup se galat hai.,dusron (vayask) ke jivan ko niyantrit karne ka prayas karna naitik rup se galat hai.,kisi vyakti ka naitik mulyankan uske niyantran se bahar ke karkon ke karan nahin kiya ja sakta.,kisi ko apne jivan par niyantran rakhne ke lie naitik rup se doshi nahin thahraya ja sakta.
+q0416,aatma ke vishay men baibal ka vivran _____ se mel nahin khata.,aatma ki ekatmak avdharna,pahchan ka siddhant,aatma-sharir dvaitvad,ekatm aatma ka vichar
+q0417,phinbarg ka dava hai ki abraham linkan ke bare men kahani:,manovaijnanik ahanbhav ke lie kuchh sabut pradan karti hai.,manovaijnanik ahanbhav ke khilaph kuchh sabut pradan karti hai.,manovaijnanik ahanbhav ke paksh ya vipaksh men koi sabut nahin deti hai.,vastav men ismen naitik svarth aur manovaijnanik svarth ke bich bhram shamil hai.
+q0418,hobs ne sukh ka varnan is prakar kiya hai:,shanti ki avastha,ek vastu se dusri vastu ki or ichchha ki nirantar pragti.,chintan ki avastha.,ichchha ka abhav.
+q0419,"hare ka dava hai ki ek bar jab do log ""chahie"" shabd ke arth par sahmat ho jate hain:",ve sabhi ek hi naitik ray sajha karenge.,ve naitik rup se tabhi asahmat honge jab ve mamle ke tathyon par asahmat honge.,ve naitik rup se tabhi asahmat honge jab unke vichar bhinn honge.,inme se koi bhi nahin.
+q0420,phrere ki khoj ka mahatv yah tha ki unhonne jo paya vah nimn tha:,vilupt janavron ke avsheshon ke niche.,"satah par, vilupt janavron ke avsheshon ke upar.",aphrika ke ek aise kshetr men jahan kisi ne nahin socha tha ki kabhi manushy raha hoga.,ek madhyakalin mahal ke khandahar ke upar.
+q0421,"apne charam par, tiyotihuakan shahar ki jansankhya sanbhavtah itni rahi hogi:","50,000 log.","200,000 log.","500,000 log.","1,000,000 log."
+q0422,manushyon dvara paudhon aur janavron ke nirdeshit prajnan ko kaha jata hai:,charagah.,kritrim chayan.,prakritik chayan.,pashucharan.
+q0423,prachin shahar kahokiya men _______ se adhik log rahte the aur iski jansankhya lagbhag _______ thi.,"120 mitti ke tile; 10,000","60 daphan tile; 2,000","50 dharmik smarak; 5,000","200 piramidnuma tile; 200,000"
+q0424,lagbhag 2.6 se 1.9 miliyan varsh pahle grah bahut adhik _____ ho gaya aur ______ men pravesh kar gaya:,thanda; pleistosin yug.,adhik garm; mayosin yug.,thanda; pliyosin yug.,adhik garm; pleistosin yug.
+q0425,"vartaman se adhik thande samay, jismen vyapak barph aur him aavran ki visheshta hoti thi, ko nimnalikhit rup men jana jata hai:",altrishiyals.,gleshiyar.,intarastediyals.,intaragleshiyal
+q0426,minoan log krete ke _________ dvip par nivas karte the.,bhumadhy,misr ke,mesopotemiya,indoneshiyai
+q0427,"400,000 varsh purv ke bad, hominid vikas ki visheshta yah hai:",dvipadta aur apekshakrit sthir mastishk ka aakar.,ausat mastishk aakar men mamuli kami.,mastishk ke aakar men teji se vriddhi.,dhire-dhire mastishk ka aakar barha aur pahle patthar ke aujar bane.
+q0428,"haddiyon men 13C ke star ka vishleshan karke, anusandhankarta yah pata laga sakte hain ki kya kisi vyakti ne khaya hai:",adhiktar anaj ya adhiktar meve aur phal.,zyadatar mans ya zyadatar sabjiyan.,koi deyri utpad nahin ya bahut adhik deyri utpad.,vishesh prakar ka shahad jo keval up-sahara aphrika men utpadit hota hai.
+q0429,uchch purapashan kal ​​samanyatah nimnalikhit se sanbaddh hai:,nai aur unnat patthar upakran praudyogiki.,jivika aadhar ka vistar.,barhi hui aabadi ke sath bare sthal.,upar ke sabhi.
+q0430,nimnalikhit men se kaun sa uttar ek CPA pharm ki akaunting aur oditing paripati par lagu hone vali gunvatta niyantran nitiyon aur prakriyaon ka ek tatv hai? ,igejment pradarshan.,jokhim vishleshan.,sanpattiyon ko surakshit karna.,jankari ki prosesing.
+q0431,ek pariyojna ko karne men $1 miliyan lagenge aur panch varsh ki avdhi men usse $2 miliyan ki kamai hogi. diskaunt dar 10% hai. pariyojna ki NPV kya hai?,"$1,000,000","$300,000","$2,000,000","$242,000"
+q0432,"yadi ek varant men koman stok ke ek sheyar ko kharidne ka adhikar shamil hai aur use $20 prati koman stok ki dar se prayog kiya ja sakta hai jabki ek sheyar ki bazar men kimat $30 hai, to varant ka saiddhantik muly hai: ",$20.00,$10.00,$5.00,$0.00
+q0433,nimnalikhit men se kise sthaniy sarkar ki samany prayojan bahy vittiy riporting ke lie aavashyak purak jankari ka hissa mana jata hai?,phand ka aarthik stetment.,gair-pramukh phand stetment ko sanyojit karna.,vittiy stetmenton ke nots.,prabandhan dvara charcha aur vishleshan.
+q0434,"yadi sipie ek korporeshan ke mahatvapurn rup se galat bayan kie gae vittiy stetmenton par kapat rup se anakvaliphaid ray jari karta hai to sipie nimnalikhit men se kis paksh ke prati javabdeh hoga? korporet sheyardharak, korporet bondadharak",han han,han nahin,nahin han,nahin nahin
+q0435,gama kan. namak medikal utpadon ke nirmata ko sanpattiyon par 10% ki ritarn mili aur uski sanpattiyon ka tarnaovar 4:1 tha. bikri par gama ke munaphe ki marjin kitni thi?,40.00%,10.00%,4.00%,0.025
+q0436,"taiks shild ka muly kitna hoga yadi pharm ka muly $5 miliyan hai, iska anlivard muly $4.78 miliyan hoga, aur divaliyepan ka vartaman muly tatha ejensi ki lag $360,000 hai? ","$140,000","$220,000","$360,000","$580,000"
+q0437,"yadi pratibhuti A aur B ke bich sanbandh −0.20 hai, aur unke manak vichlan (standard deviation) kramshah 8% aur 18% hain, to A men ek chauthai aur B men tin-chauthai nivesh karne vale portafoliyo ka manak vichlan kya hai?",8.70%,13.20%,54%,6.60%
+q0438,strat kan. ko apni janak plen kan. ko kuchh bhugtan karna hai. nimnalikhit men se kis bailens sit men is bhugtan ko alag se riport karna chahie? strat ki plen ki samekit bailens shit bailens shit,han han,han nahin,nahin han,nahin nahin
+q0439,be kanpani ko apne petent adhikaron ki raksha ke lie kanuni phis deni pari. is kanuni phis ko kaipitlaiz kab karna chahie mukadme ke saphal hone par asphal hone par,han han,han nahin,nahin nahin,nahin han
+q0440,niche die gae men se kaun-sa varant rahit talashi ka apvad nahin hai?,chupchap pichha karna,ek vaidhanik girtari ki ghatna,spasht drishy,rokna tatha talashi lena
+q0441,"yadi kuchh logon ko unke maulik adhikaron se vanchit kar diya jata hai, lekin dusron ko nahin, to ise kis tarah ki samasya mana jaega?",mul uchit prakriya samasya,saman suraksha samasya,prakriyagat uchit prakriya samasya,inmen se koi nahin
+q0442,inmen se kis charan men kisi vipann vyakti ke pas chhathven sanshodhan dvara pradatt paramarsh ka adhikar nahin hota hai?,praranbhik sunvai,dosharopan,vivechnatmak nigrani,aarop-pashchat panktibaddhan
+q0443,"ek kreta ek vyapari se ek vastu kharidta hai jo uske sadharan prayojnon ke lie ayogy, doshpurn aur asurakshit nikalti hai. yah mante hue ki any koi aashvasti uplabdh nahin hai, kreta inmen se kise aahut kar sakta hai?",spasht aashvasti,garbhit aashvasti,svatvadhikar ki aashvasti,vyaparikta ki aashvasti
+q0444,"yadi koi viniyman lene ke saman hai, to sarkar ko kya karna chahie?",sanpatti ke lie uchit muavja den,viniyman samapt karen aur viniyman prabhavi hone ke dauran hui kshati ka bhugtan karen,30 din men samadhan na hone par doguna harjana ada karen.,e ya bi
+q0445,yuniform kamarshiyal kod (yusisi) ke tahat vargikrit hone ki sabse adhik sanbhavna ek anubandh hai,naya kanpyutar vitrit karne vala ek samany vahak.,agli garmiyon men phaslon aur lakri ko sanpatti se alag kar diya jaega,vyavsayik sanpatti bhavan ki kharid.,kisi amurt sanpatti ki bikri.
+q0446,"vikreta ke pas ek karar hai, jismen ek nirdisht dilivri sthal ka ullekh kiya gaya hai. yah kis prakar ka karar hai?",eph. e. es. karar,gantavy karar,shipment karar ,eph. o. bi. karar 
+q0447,nimn men se kaun sa kanun lagu hone par karar ko samapt nahin karega?,kisi paksh ki mrityu ya pagalpan.,aanshik pradarshan,anubandh ki vishay-vastu ka vinash.,avaidhta ka paryavekshan
+q0448,mata-pita ke kastidi adhikaron aur kalyankari labhon ki samapti donon ke lie kis prakar ki prakriya ki aavashyakta hoti hai?,purv suchna aur purv sakshy sanbandhi sunvai,purv suchna aur uttar dene ka avsar,tatasth tathy phaindar dvara purv janch,purv janch aur bad men sakshy sanbandhi sunvai
+q0449,"inmen se kis prakar ke viniymon ki samiksha, samiksha ke kathor sanviksha manak ke tahat nahin ki jaegi?",ling,antarrajyiy yatra,nijta,videshiyta
+q0450,nimnalikhit ke nidan ke lie unmatt prakarnon ki upasthiti aavashyak hai:,avsad,baipolar I,baipolar II,disthimiya
+q0451,"strok jo korpas kolosam ke pichhe ke kshetr ko prabhavit karta hai, jisse mastishk ke drishy kendr mastishk ke bhasha kendron se alag ho jate hain, is sanlakshan ka parinam ho sakta hai:",eleksiya ke bina egraiphiya,bina egraiphiya ke eleksiya ,vachaghat,cheshta-akshamta
+q0452,"karyasthal men anusandhan se pata chala hai ki lakshy nirdharan men adhinasth ki bhagidari se lakshyon ka chayan hota hai, jo ki adhinasthon ke lie unke paryavekshakon dvara ektarpha rup se nirdharit lakshyon ki tulna men adhik behtar hote hain.",adhik chunautipurn,lagbhag saman kathinai star ka,kabhi pura nahin hua,kam chunautipurn
+q0453,kisi vyakti ke skor ki anuchit mandand samuh ke sath tulna nimnalikhit sabhi ko prabhavit karti hai sivay,skor ki prasangikta,skor ka vishvasniy hona,vishay ke bare men nirnay,skor ki vaidhta
+q0454,endarsan ke ACT siddhant men dosh yah tha ki kuchh log ise ___________ mante the.,keval motar pranali par lagu,"parikshan yogy nahin aur islie, anishchit vaijnanik muly",iske tatvon ki paribhasha ka abhav,sanjnan ke sanchalan ko samjhane men atyadhik jatilta
+q0455,keval sparsh se vastuon ko pahchanne men asmarthata sanbhavtah mastishk ko hue nuksan ka parinam hai.,medula oblangera,mahasanyojika,parshvika prantastha,pons
+q0456,baltes aur unke sahkarmiyon (1999) dvara kie gae shodh ka meta-vishleshan ingit karta hai ki kisi sangathan men phleksitaim sthapit karne se nimnalikhit men se kis par sabse adhik labhkari prabhav parne ki sanbhavna hai?,kary se anupasthit hona,sv-mulyankit pradarshan,karyasuchi se santushti,utpadakta
+q0457,aap soloman char-samuh dizain ka upyog nimnalikhit uddeshyon ke lie karenge:,kairiovar prabhav ko samapt karna.,mang visheshtaon ko kam karna.,purvaprikshan ke prabhav ka mulyankan karen.,itihas aur paripakvata ke prabhavon ka mulyankan karen.
+q0458,mankikrit vyaktitv parikshan ka phorm e sharad ritu men aur phir vasant men usi samuh ke logon ko diya gaya tha. is shodh se prapt vishvasniyta anuman ko is prakar sandarbhit kiya jata hai,bahy sthirta,samanak,sthirta,aantarik susangati
+q0459,samany taur par yah kaha ja sakta hai ki naukri se santushti,naukri ke pradarshan ke sath atyadhik sahsanbandhit nahin hai,majduri men vriddhi ke sath ismen kaphi vriddhi hoti pratit hoti hai,un samuhon men yah dar adhik hoti hai jinhen jimmedari nahin leni parti,naukri men karyakal barhne ke sath-sath ismen lagatar kami aati jati hai
+q0460,kaun si aam jansanpark ranniti men patrakaron ko uchit sthanon par daure par bhejna shamil hai?,midiya vijnapti,midiya daura,pres rum,prachar divas/saptah
+q0461,pustak lonch kis tarah ki samany ranniti hogi?,pratiyogita,karyakram,puraskar,prayojan
+q0462,kaun si gurilla marketing taknik men onlain piyar-tu-piyar sanchar ke madhyam se kisi utpad jari karne ya seva ke bare men sandesh phailana shamil hai?,phain pej,strit gatividhiyan,grasrut marketing,vayral kainpen
+q0463,"maiknamara (2005) ke mulyankan piramid ke anusar, kis charan men sthiti vishleshan kiya jata hai aur uddeshyon aur karyanvayan yojnaon ko banane ke lie upyog kiya jata hai?",input,aautput,aauttek,parinam
+q0464,"maiknamara (2005) ke mulyankan piramid ke anusar, kis charan men janmat sarvekshan sabse upyogi hote hain?",input,aautput,aauttek,parinam
+q0465,inmen se kaun sa visheshan vyavsayik lekhan ka varnan nahin karta hai?,aupcharik,saransh,vyaktigat,uddeshy
+q0466,aap kis paranparik samachar mandand ko jansanchar madhyamon ke madhyam se vitrit jansanpark sandeshon men sabse mahatvapurn manenge?,nikatta,samaybaddhata,pramukhta,prabhav
+q0467,kis yug men patrakarita ne vyavsay men jansanpark ki vyapak shuruat ki?,"yuddhottar yug, 1945 - 1965","rujvelt yug, 1930 - 1945","tarakki bhari bisvin shatabdi vala yug, 1919 - 1929","sidbed era, 1900 ' 1917"
+q0468,kisi mudde ke prati purvagrah banane ya badalne men sanchar ka kaun sa rup sabse prabhavi hai?,parasparik,midiya,samuh,sarvajnik
+q0469,inmen se kaun si gatividhiyan dvitiyak shodh men shamil ho sakti hain?,samagri vishleshan karna,sarvekshan karna,logon ka avlokan karna,sarvajnik abhilekhon ki janch karna
+q0470,inmen se kaun sa siddhant suraksha ki jimmedari ka hissa nahin hai?,rokne ki jimmedari.,pratikriya karne ki jimmedari.,sanprabhu bane rahne ki jimmedari.,punarnirman ki jimmedari.
+q0471,manav vikas riport kis varsh prakashit hui thi?,1987,1997,1994,2004
+q0472,rajyon dvara akushal santulan ya dayitv-adhinta se kya parinam ho sakta hai?,gair-paranparik suraksha khatron men vriddhi.,ek adhik sahyogatmak antarrashtriy pranali.,ek adhik pratispardhi antarrashtriy pranali.,antarrajyiy gathbandhanon aur sainy sanyam men vriddhi.
+q0473,nimnalikhit men se kaun sa samajik suraksha ke lie aavashyak hai?,sanprabhuta.,pahchan.,ye sabhi vikalp. ,aadhipatyavadi jatiyta.
+q0474,nimnalikhit men se kaun se suraksha kshetr aantarik rup se urja suraksha se jure hain?,aarthik aur vikas suraksha.,shasan aur antarrashtriy suraksha.,paryavran aur manav suraksha.,ye sabhi vikalp. 
+q0475,samkalin saibar-suraksha men sandarbh vastu kya hai?,dijitlikrit sanvedanshil jankari ,mahatvapurn suchna avsanrachna ,sarkari aaiti sistam ,dursanchar netvark 
+q0476,aitihasik bhautikvad kin siddhantakaron ke vicharon aur darshan par aadharit hai?,Barry Buzan aur Ole Waever,Kenneth Waltz aur Hans Morgenthau,karl marks aur phredrik engels,edam smith aur karl marks
+q0477,"R2P ki avdharna tin stanbhon par tiki hai, inmen se kaun sa sabse mahatvapurn mana jata hai?",javabi karravai karne ki jimmedari.,rokne ki jimmedari.,punarnirman ki jimmedari.,pratikriya karne ki jimmedari.
+q0478,mailveyar' kya hai?,vayras ya vorm,trojan hors,haikar tul,bhrasht program
+q0479,nimnalikhit men se kaun visham hai?,sansthagat badhaen aur sansadhan badhaen.,suchna evan samay kshitij.,lakshy.,aarthik protsahan ke vektar.
+q0480,"jab samajshastri samaj men parton ki sanrachna aur unke bich logon ki aavajahi ka adhyayan karte hain, to ve ise kahte hain:",samajik santushti,samajik niyantran,samajik takrav,samajik ekjutta
+q0481,dvitiyak vichlan' shabd ka tatpary isse hai:,vichlit kriyaon ki saja ya kalank,kisi kriya par samajik pratikriyaon ke madhyam se use vichlit ke rup men lebal karna,jis tarah se ek vichlit bhumika nibhane se bhavishy ki kriya prabhavit hoti hai,upar ke sabhi
+q0482,sanrachnatmak-karyatmakvadi samaj ka varnan is prakar karte hain:,sukshm star par batchit ka ek jatil netvark,"takrav, asmanta, aur algav ka srot",samajik sanbandhon ki asthir sanrachna,bhumikaon aur sansthanon ka ek manak dhancha
+q0483,nimnalikhit men se kaun vaishvikran ki ek visheshta nahin hai?,puri duniya ke bare men barhti jagrukta,rashtr rajyon ki vistarit shakti,sanchar praudyogikiyon ke madhyam se duri ka khatma,rashtriy simaon se pare samajik sanbandhon ka vistar
+q0484,jatiy pahchan nimnalikhit ko sandarbhit karti hai:,janganna men prayukt jatiyta ki nishpaksh shreniyan,"dharm, bhasha, ya itihas ke aadhar par samuh sadasyata ki ek mahsus ki gai bhavna",shaktishali bahumat dvara alpasankhyak par jatiy lebal lagana,jatiyta ki khandit aur anekvadi prakriti
+q0485,sanskritik punargathan men shamil hai:,aarthik giravat men shahron ka punruddhar karna,audyogik paridrishyon ko paryatak aakarshan men badalna,midiya vijnapan ki 'pratikatmak arthavyavastha' ke madhyam se sthalon aur chhaviyon ko bechna,upar ke sabhi
+q0486,aaiboling' ek aisi taknik hai jismen nimnalikhit shamil hai:,kisi pathy dastavez ko jaldi se parhkar uska sar samajhna,"sarvajnik sthan par jo bhi vyakti aapko dikhai de, usse namuna ekatr karna",samany shailiyon aur mahatvapurn aankaron ki pahchan karne ke lie talika ko skain karna,har samay shodh pratibhagiyon par apni nazar rakhna
+q0487,"ek aisi aabadi ka jansankhya piramid jiski kai pirhiyon se mrityu dar ki tulna men janm dar thori adhik rahi hai, sanbhavtah nimnalikhit men se kis aakar ka hoga?",bich ki tulna men upar ki or adhik chaura,upar ki tulna men niche ki or adhik chaura,bich men ubhra hua,samanantar paksh hona
+q0488,tripakshiy pranali ne nimnalikhit ke lie vidyarthiyon ka chayan karne ke lie 11+ pariksha ka upyog kiya:,lokapriy skul jo unke bahet kshetr se bahar hain,"niji, sarvajnik aur vyapak skul","vyakran, takniki, aur madhyamik aadhunik skul","politekniks, kolej aur vishvavidyalay"
+q0489,nimnalikhit men se kise domhoph ne amerika men nirnay lene ki prakriya ke rup men nahin pahchana?,vichardhara prakriya,shoshan prakriya,niti-nirman prakriya,ummidvar ka chayan karne ki prakriya
+q0490,tonkin khari sankalp ki kya sarthakta thi?,isne amerika ko viyatnam men apni sanlagnata ko aur barhane ki anumti di,isne ameriki videsh niti par janmat ka prabhav spasht kiya,isne viyatnam yuddh par kangres ka niyantran barhaya,isne viyatnam men amerika ki sanlagnata kam kar di
+q0491,"sarvangi siddhanton ke anusar, kisi rajy ki videsh niti ka mukhy nirdharak kya hota hai?",rajy ke netritvakarta ka charitr,antarrashtriy pranali men shakti ka vitran,rajy ki sarkari pranali ke bhitar shakti ka vitran,rajy ki rajnitik vichardhara
+q0492,"ameriki rajniti ke bhitar, any deshon ko aadhikarik manyata dene ki shakti inke pas hoti hai.",sinet.,rashtrapti.,sekretri of stet.,karmachari-varg ke sanyukt pramukh ka adhyaksh.
+q0493,amerika ke adhikansh itihas ke dauran videsh niti ka pradhan path kya raha hai?,roktham.,navsanrakshanvad.,nihsangatavad.,sanrakshanvad.
+q0494,antarsarkari sangathan inmen se kya kabhi-kabhar hi karte hain?,shaktishali pravartan pradan karna,dalon ki nigrani karna,charcha hetu manch pradan karna,kararon ki lenden lagten ghatana
+q0495,raksha kharch aur samajik kharch ke bich ke samjhaute ko aam taur par inmen se ek ko chunna kaha jata hai.,bred aur makkhan.,yuddh aur shanti.,banduk aur makkhan.,bam aur kitaben.
+q0496,"inmen se kaun videshon men achchhe kam (jaise manvadhikar sanrakshan, loktantr, ityadi) karne ke lie bal prayog ko anaitik manta hai?",yatharthavad,aadarshavad,udarvad,inmen se koi nahin
+q0497,amerika aur soviyat sangh ke bich barhte tanav ne ek niti ko janm diya jise jon fostar dales yah kahte the,"""paraspar sunishchit vinash.""","""brinkamainship.""","""yatharthavad.""","""mere ahate men nahin."""
+q0498,"udar antarrashtriy aarthik vyavastha ke prathmik sansthan kaun the?
+I. get (GATT)
+II. aaiemaeph (IMF)
+III. vishv baink
+IV. nato (NATO)",keval IV,II aur III,"I, II, aur III","I, II, III aur IV"
+q0499,ameriki videsh niti ko garhne men tel ki mahatta kya darshati hai?,sainy shreshthata ka mahatv.,kaise tel ki mahatta ka prayah barha-charhakar varnan kiya jata hai.,videsh niti ke aarthik sadhnon ka barhta mahatv.,gharelu sroton ke lie driling ki zarurat.
+q0500,amerika svasthy charya pranali ka vishisht gun hai iska:,"vyavasthit, loktantrik drishtikon","bikhra hua, samanvayvihin drishtikon",suchit kanun nirmataon dvara tarkik nirnayon ka parinam,uprokt a. aur c. 
+q0501,nimnalikhit men se kaun si davaen harpis vayarson ko rokti hain?,emaintadin,esaiklovir,oseltamivir,ezaidothaimidin
+q0502,filovayras ki aakariki ka varnan kaise kiya ja sakta hai?,bahut bari gend jaisi sanrachna,lanbe philament jaise dhage,aaikoshedral vayriyan,lachili jhilliyan bina kisi nishchit akariki ke
+q0503,nimnalikhit men se kiski vajah se echaaivi ke khilaph koi vaiksin nahin hai?,vayras bahut entijenik rup se parivarti hai,aisi vaiksin bahut kharchili hogi,vayras ko yaun aadton men badlav se niyantrit kiya ja sakta hai,vilanbita vaiksin ke kisi bhi prabhav ko kharij kar sakti hai
+q0504,hepetaitis si ke upchar men hal hi men nimnalikhit men se kiske dvara kranti lai gai hai?,intarpheron ka upyog,ek nai vaiksin,monoklonal entibodiz,deklatesvir aur sophosbuvir jaise sidhe kam karne vali entivayral davaen
+q0505,saphal enti-kainsar echpivi vaiksin men shamil hain:,vishisht myutajenesis dvara kshin kie gae jivit vayras,purn vayras rasaynik rup se nishkriy vaiksin,vayras L1 protin ka VLP men svatah badalna,up yunit rasaynik rup se nishkriy vaiksin
+q0506,intarpheron bahut vishesh raksha tantr hain jo iske dvara kam karte hain:,vayarson san chipakkar,parosi koshikaon se chipakkar,pratirodh ki ek der tak chalne vali sthiti utpann karke,vayras prerit enzaimon ko rokkar
+q0507,"naitik anusandhan ki mul sanhita (vyaktiyon ke lie samman, labh, aur nyay) pahli bar iske dvara sthapit ki gai thi:",nyurembarg sanhita,helsinki ghoshna,CIOMS,belmont riport
+q0508,pairamiksovayras parivar vayras pravesh men kya ranniti apnata hai?,vayras F protin ka upyog karke ‘bahar se’ sanlayan aaranbh karna,nimn pH par saitoplazmik vaikuol ke bhitar sanlayan hota hai,vayras pravesh men plajma jhilli men chhed kar sakte hain,M protin dvara karaya gaya sanlayan
+q0509,pozitiv tantubaddh RNA vayarson men nimnalikhit men se kaun si visheshtaen hoti hain?,unke jinom RNA ko sidhe mRNA men rupantarit kiya ja sakta hai,unhen apne jinom RNA ko mRNA ke rup men mirar imej pratilipi men transakraib karna hota hai,yah jinom vrittakar hota hai,unka RNA jinom segmented hai
+q0510,prakritik tatvon aur prakriyaon par dhyan kendrit karne vale prakritivadi nimnalikhit men se kisse jure hain?,taovad,yin-yang skul,mengaji,manavtavadi bauddh dharm
+q0511,japan men pahla bauddh mandir kab banaya gaya tha?,325 CE,119 CE,451 CE,596 CE
+q0512,"sabse prasiddh dharmashastron ka nam kya hai, jo sanbhavtah pahli shatabdi ke aaspas ke hain?",dharm ke niyam,karm ke niyam,vishnu ke niyam,manu ke niyam
+q0513,sikh dharm men puja sthal par parose jane vale samuhik bhojan ko kya kaha jata hai?,sangat,langar,gurudvara,panth
+q0514,"apni antim kriti, loj men, pleto ne brahmand vijnan se hatkar nimnalikhit men se kis mudde par dhyan kendrit kiya?",jnanmimansa,naitikta,dharm,saundaryashasr
+q0515,gilagmesh ke purane bebiloniyan sanskaran ko manak sanskaran men kab sanshodhit kiya gaya?,pratham sahasrabdi isa purv ke ant men,pahli sahasrabdi isa purv ke madhy men,dusri sahasrabdi isa purv ke ant men,dusri sahasrabdi isa purv ke madhy men
+q0516,karishma ko nimnalikhit men se kis rup men paribhashit kiya ja sakta hai?,tel,bhavishyavani,aadhyatmik uphar,pradhikar
+q0517,"kuran par tippani ke lie kya shabd hai, jiska arth hai ""anavran""?",fiqh,dhikr,ijtihad,tafsir
+q0518,kis roman rajneta ne apni kriti da loj men nagrik dharm ko protsahit kiya?,varro,pleto,sisero,ogastas
+q0519,yuropiy log tatha anek musalman islam ke pratik ke rup men kise dekhte hain?,hijab,krisent,minar,quran

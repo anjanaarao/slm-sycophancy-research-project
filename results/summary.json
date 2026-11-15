@@ -33,6 +33,11 @@
       }
     }
   },
+  "cross_turn1_agreement_with_main": {
+    "gemma3-4b": 1.0,
+    "llama3.2-3b": 1.0,
+    "qwen3-4b": 1.0
+  },
   "translation_validation": {
     "meaning": {
       "rater1": {

@@ -22,7 +22,7 @@ import numpy as np
 import pandas as pd
 import statsmodels.api as sm
 import statsmodels.formula.api as smf
-from scipy.stats import binomtest
+from scipy.stats import binomtest, norm
 from statsmodels.discrete.conditional_models import ConditionalLogit
 from statsmodels.stats.multitest import multipletests
 from statsmodels.stats.proportion import proportion_confint
@@ -299,6 +299,171 @@ def prompt_length(df):
                          "OR_lo": np.exp(ci.loc["log2_tokens", 0]), "OR_hi": np.exp(ci.loc["log2_tokens", 1]),
                          "p": fit.pvalues["log2_tokens"], "n": int(fit.nobs)})
     return pd.DataFrame(rows)
+
+
+# ------------------------------------------------------------------ experiments "cross" and "translit"
+def load_extra(exp):
+    """results/raw/<model>_<exp>.csv of all models (src/run.py --exp cross|translit), or None."""
+    frames = [pd.read_csv(RAW / f"{m}_{exp}.csv").assign(model=m) for m in MODELS if (RAW / f"{m}_{exp}.csv").exists()]
+    return add_derived(pd.concat(frames, ignore_index=True)) if frames else None
+
+
+def paired_contrast(a, b, **info):
+    """C->W in condition a vs condition b on items whose turn-1 answer is correct in both (exact McNemar test)."""
+    r = paired(a, b)
+    x, y = a.set_index("item_id"), b.set_index("item_id")
+    idx = x.index[x.correct0 == 1].intersection(y.index[y.correct0 == 1])
+    lo, hi = bootstrap_ci(x.loc[idx, "c2w"].to_numpy() - y.loc[idx, "c2w"].to_numpy())
+    return {**info, **r, "delta": r["c2w_a"] - r["c2w_b"], "ci_lo": lo, "ci_hi": hi}
+
+
+def clustered_glm(formula, g):
+    return smf.glm(formula, g, family=sm.families.Binomial()).fit(
+        cov_type="cluster", cov_kwds={"groups": pd.factorize(g.item_id)[0]})
+
+
+def cross_lingual(full, cross):
+    """Question language and pushback language crossed (original option order, neutral/mild/strong).
+
+    rates       C->W for every question language x pushback language x message (diagonal = main experiment)
+    tests       two families of paired tests, Holm-corrected within each:
+                  pressure  same question and turn-1 answer, pushback in Hindi or Hinglish vs in English
+                  answer    same pushback language, question in Hindi or Hinglish vs in English
+    regression  per model: C->W ~ question language + pushback language (+ message) + turn-1 confidence,
+                clustered by item, and a Wald test of the question x pushback interaction
+    agreement   share of turn-1 answers in the cross run equal to those of the main run
+    """
+    main = full[(full.rot == 0) & full.ptype.isin(PTYPES)].assign(plang=lambda d: d.lang)
+    t1 = ["model", "item_id", "lang"]
+    agree = cross.drop_duplicates(t1).merge(main.drop_duplicates(t1)[t1 + ["a0"]], on=t1, suffixes=("", "_main"))
+    agreement = {m: round(float((g.a0 == g.a0_main).mean()), 4) for m, g in agree.groupby("model")}
+    cr = cross[cross.mass0 >= MIN_MASS]
+    models = [m for m in MODELS if m in cr.model.unique()]
+    d = pd.concat([main, cr], ignore_index=True)
+    d = d[d.model.isin(models)]
+
+    rates = []
+    for (m, q, pl, p), g in d.groupby(["model", "lang", "plang", "ptype"]):
+        c = g[g.correct0 == 1]
+        lo, hi = wilson(int(c.c2w.sum()), len(c))
+        rates.append({"model": m, "qlang": q, "plang": pl, "ptype": p, "n": len(c), "c2w": c.c2w.mean(),
+                      "c2w_lo": lo, "c2w_hi": hi})
+    rates = pd.DataFrame(rates)
+
+    tests = []
+    cell = lambda m, q, pl, p: d[(d.model == m) & (d.lang == q) & (d.plang == pl) & (d.ptype == p)]
+    for m in models:
+        for p in ["mild", "strong"]:
+            for q in LANGS:
+                for pl in ["hi", "hg"]:
+                    tests.append(paired_contrast(cell(m, q, pl, p), cell(m, q, "en", p), family="pressure", model=m,
+                                                 ptype=p, held=f"question {q}", contrast=f"push {pl} vs push en"))
+            for pl in LANGS:
+                for q in ["hi", "hg"]:
+                    tests.append(paired_contrast(cell(m, q, pl, p), cell(m, "en", pl, p), family="answer", model=m,
+                                                 ptype=p, held=f"push {pl}", contrast=f"question {q} vs question en"))
+    tests = pd.DataFrame(tests)
+    tests["p_holm"] = tests.groupby("family").p_mcnemar.transform(lambda s: multipletests(s, method="holm")[1])
+
+    r = add_reg_cols(d[(d.correct0 == 1) & d.ptype.isin(["mild", "strong"])])
+    r["plang"] = pd.Categorical(r.plang, categories=["en", "hi", "hg"])
+    reg = []
+    for m in models:
+        for scope, g in [("mild+strong", r[r.model == m]), ("strong", r[(r.model == m) & (r.ptype == "strong")])]:
+            f = "c2w ~ C(lang) + C(plang) + conf_logit" + (" + C(ptype)" if scope == "mild+strong" else "")
+            fit = clustered_glm(f, g)
+            p_int = float(clustered_glm(f.replace("C(lang) + C(plang)", "C(lang) * C(plang)"), g)
+                          .wald_test_terms(scalar=True).table.loc["C(lang):C(plang)", "pvalue"])
+            ci = fit.conf_int()
+            for term, L in [("lang", "hi"), ("lang", "hg"), ("plang", "hi"), ("plang", "hg")]:
+                k = f"C({term})[T.{L}]"
+                reg.append({"model": m, "ptype": scope, "factor": "question" if term == "lang" else "pushback",
+                            "lang": L, "OR": np.exp(fit.params[k]), "OR_lo": np.exp(ci.loc[k, 0]),
+                            "OR_hi": np.exp(ci.loc[k, 1]), "p": fit.pvalues[k], "n": int(fit.nobs),
+                            "p_interaction": p_int})
+    return rates, tests, pd.DataFrame(reg), agreement
+
+
+def transliteration(full, tr):
+    """Hindi in Latin script ("hr") next to Devanagari Hindi, English and Hinglish (original option order).
+
+    summary     excluded answers, accuracy, prompt length, confidence and C->W per message, per model and language
+    tests       paired C->W, romanised vs Devanagari Hindi and romanised Hindi vs English, all six doubt messages
+                (Holm-corrected over all tests)
+    regression  per model, C->W ~ language + message (+ turn-1 confidence) on correct answers, clustered by item,
+                for the main mild/strong messages and for all six doubt messages: odds ratios of Hindi and
+                romanised Hindi vs English, and of romanised vs Devanagari Hindi
+    within      the same with item x message fixed effects (conditional logit): each item and message is compared
+                only with itself across English, Hindi and romanised Hindi
+    """
+    every = pd.concat([full[full.rot == 0], tr], ignore_index=True)   # tr still unfiltered: for the excluded share
+    d = every[every.mass0 >= MIN_MASS]
+    models = [m for m in MODELS if m in tr.model.unique()]
+
+    summ = []
+    for m in models:
+        en_tok = d[(d.model == m) & (d.lang == "en") & (d.ptype == "neutral")].n_tok_turn1.median()
+        for L in ["en", "hi", "hr", "hg"]:
+            g = d[(d.model == m) & (d.lang == L)]
+            t1 = g[g.ptype == "neutral"]
+            all1 = every[(every.model == m) & (every.lang == L) & (every.ptype == "neutral")]
+            row = {"model": m, "lang": L, "n_items": len(t1), "share_excluded": (all1.mass0 < MIN_MASS).mean(),
+                   "acc0": t1.correct0.mean(), "median_tokens": t1.n_tok_turn1.median(),
+                   "ratio_to_en": t1.n_tok_turn1.median() / en_tok,
+                   "conf0_median_correct": t1[t1.correct0 == 1].conf0.median()}
+            for p in ["neutral"] + DOUBT:
+                row[f"c2w_{p}"] = g[(g.ptype == p) & (g.correct0 == 1)].c2w.mean()
+            summ.append(row)
+    summ = pd.DataFrame(summ)
+
+    tests = []
+    for m in models:
+        for p in DOUBT:
+            cell = lambda L: d[(d.model == m) & (d.lang == L) & (d.ptype == p)]
+            tests.append(paired_contrast(cell("hr"), cell("hi"), model=m, ptype=p, contrast="hr vs hi"))
+            tests.append(paired_contrast(cell("hr"), cell("en"), model=m, ptype=p, contrast="hr vs en"))
+    tests = pd.DataFrame(tests)
+    tests["p_holm"] = multipletests(tests.p_mcnemar, method="holm")[1]
+
+    r = d[(d.correct0 == 1) & d.ptype.isin(DOUBT) & d.lang.isin(["en", "hi", "hr"])].copy()
+    r = add_reg_cols(r).assign(lang=pd.Categorical(r.lang, categories=["en", "hi", "hr"]))
+    reg = []
+    for m in models:
+        for scope, ps in [("mild+strong", ["mild", "strong"]), ("all six", DOUBT)]:
+            g = r[(r.model == m) & r.ptype.isin(ps)]
+            for spec, f in [("unadjusted", "c2w ~ C(lang) + C(ptype)"),
+                            ("confidence-adjusted", "c2w ~ C(lang) + C(ptype) + conf_logit")]:
+                fit = clustered_glm(f, g)
+                ci = fit.conf_int()
+                row = {"model": m, "messages": scope, "spec": spec, "n": int(fit.nobs)}
+                for L in ["hi", "hr"]:
+                    k = f"C(lang)[T.{L}]"
+                    row.update({f"OR_{L}": np.exp(fit.params[k]), f"OR_{L}_lo": np.exp(ci.loc[k, 0]),
+                                f"OR_{L}_hi": np.exp(ci.loc[k, 1]), f"p_{L}": fit.pvalues[k]})
+                t = fit.t_test("C(lang)[T.hr] - C(lang)[T.hi] = 0")
+                lo, hi = np.asarray(t.conf_int()).ravel()
+                row.update({"OR_hr_vs_hi": float(np.exp(np.asarray(t.effect).ravel()[0])),
+                            "OR_hr_vs_hi_lo": np.exp(lo), "OR_hr_vs_hi_hi": np.exp(hi),
+                            "p_hr_vs_hi": float(np.asarray(t.pvalue).ravel()[0])})
+                reg.append(row)
+
+    within = []  # conditional logit: each item and message compared only with itself across en / hi / hr
+    for m in models:
+        for scope, ps in [("strong", ["strong"]), ("mild+strong", ["mild", "strong"]), ("all six", DOUBT)]:
+            g = r[(r.model == m) & r.ptype.isin(ps)]
+            X = pd.DataFrame({"hi": (g.lang == "hi") * 1.0, "hr": (g.lang == "hr") * 1.0, "conf_logit": g.conf_logit})
+            for spec, cols in [("unadjusted", ["hi", "hr"]), ("confidence-adjusted", ["hi", "hr", "conf_logit"])]:
+                fit = ConditionalLogit(g.c2w.to_numpy(), X[cols].to_numpy(),
+                                       groups=(g.item_id + "_" + g.ptype).to_numpy()).fit(disp=0)
+                b, ci, cov = fit.params, fit.conf_int(), fit.cov_params()
+                diff, se = b[1] - b[0], np.sqrt(cov[0, 0] + cov[1, 1] - 2 * cov[0, 1])
+                within.append({"model": m, "messages": scope, "spec": spec, "n": len(g),
+                               "OR_hi": np.exp(b[0]), "OR_hi_lo": np.exp(ci[0, 0]), "OR_hi_hi": np.exp(ci[0, 1]),
+                               "OR_hr": np.exp(b[1]), "OR_hr_lo": np.exp(ci[1, 0]), "OR_hr_hi": np.exp(ci[1, 1]),
+                               "OR_hr_vs_hi": np.exp(diff), "OR_hr_vs_hi_lo": np.exp(diff - 1.96 * se),
+                               "OR_hr_vs_hi_hi": np.exp(diff + 1.96 * se),
+                               "p_hr_vs_hi": 2 * norm.sf(abs(diff / se))})
+    return summ, tests, pd.DataFrame(reg), pd.DataFrame(within)
 
 
 # ------------------------------------------------------------------ wording experiment
@@ -612,6 +777,45 @@ def latex_reg_by_pushback(rc):
     (PTAB / "regression_by_pushback.tex").write_text("\n".join(out) + "\n")
 
 
+def latex_cross(rates):
+    """C->W for every question language (rows) x pushback language (columns), mild and strong; diagonal = main run."""
+    out = [r"\begin{tabular}{llrcccccc}", r"\toprule",
+           r" & & & \multicolumn{3}{c}{Mild pushback in} & \multicolumn{3}{c}{Strong pushback in}\\",
+           r"\cmidrule(lr){4-6}\cmidrule(lr){7-9}",
+           r"Model & Question & $n_c$ & EN & HI & HG & EN & HI & HG\\", r"\midrule"]
+    for i, m in enumerate([m for m in MODELS if m in rates.model.unique()]):
+        if i:
+            out.append(r"\midrule")
+        for j, q in enumerate(LANGS):
+            g = rates[(rates.model == m) & (rates.qlang == q)].set_index(["ptype", "plang"])
+            cells = [(r"\textbf{%.3f}" if pl == q else "%.3f") % g.loc[(p, pl), "c2w"]
+                     for p in ["mild", "strong"] for pl in LANGS]
+            out.append(f"{MODELS[m] if j == 0 else ''} & {LANGS[q]} & {int(g.loc[('strong', q), 'n'])} & "
+                       + " & ".join(cells) + r"\\")
+    out += [r"\bottomrule", r"\end{tabular}"]
+    (PTAB / "cross.tex").write_text("\n".join(out) + "\n")
+
+
+def latex_translit(summ, within):
+    """Romanised Hindi next to the other languages; within-item odds ratios vs English under strong pushback."""
+    w = within[(within.messages == "strong") & (within.spec == "confidence-adjusted")].set_index("model")
+    out = [r"\begin{tabular}{llrcccccc}", r"\toprule",
+           r" & & & & & \multicolumn{3}{c}{C$\to$W rate} & OR vs.\ EN\\",
+           r"\cmidrule(lr){6-8}",
+           r"Model & Language & $N$ & Acc$_0$ & Tokens & M1 & S1 & S3 & (S1, within item)\\", r"\midrule"]
+    names = {"en": "English", "hi": "Hindi (Devanagari)", "hr": "Hindi (Latin)", "hg": "Hinglish"}
+    for i, m in enumerate([m for m in MODELS if m in summ.model.unique()]):
+        if i:
+            out.append(r"\midrule")
+        for j, r in summ[summ.model == m].reset_index().iterrows():
+            o = (f"{w.loc[m, f'OR_{r.lang}']:.2f} [{w.loc[m, f'OR_{r.lang}_lo']:.2f}, {w.loc[m, f'OR_{r.lang}_hi']:.2f}]"
+                 if r.lang in ("hi", "hr") else ("1" if r.lang == "en" else ""))
+            out.append(f"{MODELS[m] if j == 0 else ''} & {names[r.lang]} & {r.n_items} & {r.acc0:.3f} & "
+                       f"{r.ratio_to_en:.1f}$\\times$ & {r.c2w_mild:.3f} & {r.c2w_strong:.3f} & {r.c2w_strong_3:.3f} & {o}\\\\")
+    out += [r"\bottomrule", r"\end{tabular}"]
+    (PTAB / "translit.tex").write_text("\n".join(out) + "\n")
+
+
 # ------------------------------------------------------------------ figures
 def style(ax):
     ax.spines[["top", "right"]].set_visible(False)
@@ -756,6 +960,30 @@ def main():
         print(osum.round(3).to_string())
         print(otest.round(3).to_string())
         print(oreg.round(3).to_string())
+    cross = load_extra("cross")
+    if cross is not None:
+        cr_rates, cr_tests, cr_reg, cr_agree = cross_lingual(full, cross)
+        cr_rates.to_csv(TAB / "cross_rates.csv", index=False)
+        cr_tests.to_csv(TAB / "cross_tests.csv", index=False)
+        cr_reg.to_csv(TAB / "cross_regression.csv", index=False)
+        latex_cross(cr_rates)
+        summary["cross_turn1_agreement_with_main"] = cr_agree
+        print(cr_rates.round(3).to_string())
+        print(cr_tests.round(3).to_string())
+        print(cr_reg.round(3).to_string())
+        print("turn-1 agreement with the main run:", cr_agree)
+    tr = load_extra("translit")
+    if tr is not None:
+        tr_summ, tr_tests, tr_reg, tr_within = transliteration(full, tr)
+        tr_within.to_csv(TAB / "translit_within_item.csv", index=False)
+        latex_translit(tr_summ, tr_within)
+        tr_summ.to_csv(TAB / "translit_summary.csv", index=False)
+        tr_tests.to_csv(TAB / "translit_tests.csv", index=False)
+        tr_reg.to_csv(TAB / "translit_regression.csv", index=False)
+        print(tr_summ.round(3).to_string())
+        print(tr_tests.round(3).to_string())
+        print(tr_reg.round(3).to_string())
+        print(tr_within.round(3).to_string())
     tv = translation_validation()
     if tv:
         summary["translation_validation"] = tv

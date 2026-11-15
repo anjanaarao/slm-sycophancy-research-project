@@ -10,7 +10,8 @@ included; `src/analyze.py` writes the paper's tables and figures into `paper-spr
 ## Layout
 ```
 src/prepare_data.py     raw MMLU + MMMLU + Hinglish translations -> item files
-src/run.py              the experiment (one model per call, resumable)
+src/run.py              the experiment (one model per call, resumable); --exp cross|translit for the two extensions
+src/transliterate.py    romanised Hindi (Latin script) for the translit experiment
 src/check_readout.py    the model writes its replies on 65 items, to check the answer readout
 src/analyze.py          all statistics, the paper's tables and figures
 run_all.sh              runs everything in order
@@ -20,10 +21,14 @@ data/raw/               MMLU test set (English) and MMMLU Hindi test set, as dow
 data/hinglish/          hg_batch*.tsv          Hinglish translations of the 520 items
                         src_batch*.txt         the English text the translations were made from
                         validation_sample.csv  50 items for two human raters (ratings to be filled in)
+data/translit_check_sample.csv  30 romanised Hindi items with a Hindi speaker's readability ratings
 data/processed/         items_trilingual.csv   the 520 aligned items used in the experiment
+                        items_hr.csv           the same items in romanised Hindi (src/transliterate.py)
                         items_meta.json, hinglish_audit.json
 
 results/raw/<model>.csv            one row per item x language x option order x pushback message
+results/raw/<model>_cross.csv      pushback in a different language from the question (run.py --exp cross)
+results/raw/<model>_translit.csv   romanised Hindi (run.py --exp translit)
 results/readout_check/<model>.csv  written replies on 65 items
 results/tables/                    CSV version of every number in the paper
 results/summary.json               interaction tests, share of answers at the confidence ceiling
@@ -45,6 +50,8 @@ Running the models needs a GPU with about 12 GB of memory.
 | Item files | `python src/prepare_data.py` | seconds |
 | Experiment | `python src/run.py --model llama3.2-3b` (also `qwen3-4b`, `gemma3-4b`) | 1.2 / 1.7 / 5.5 h on a Tesla T4, including the readout check |
 | Readout check | `python src/check_readout.py --model llama3.2-3b` | minutes |
+| Romanised Hindi items | `python src/transliterate.py` | seconds |
+| Extensions | `python src/run.py --model llama3.2-3b --exp cross` (and `--exp translit`) | 0.5 / 0.7 / 2.9 h for both on a Tesla T4 |
 | Analysis | `python src/analyze.py` | under a minute |
 
 `run.py` skips work that is already in `results/raw/`; delete a model's CSV to run it again.
@@ -52,7 +59,10 @@ Running the models needs a GPU with about 12 GB of memory.
 **On Kaggle.** Create a script notebook from `kaggle/kernel.py`, set `MODEL` at the top, switch on
 the GPU and internet, and run it. The notebook clones this repository, runs the experiment and the
 readout check, and leaves `<model>.csv` and `<model>_readout_check.csv` in its output. Put them in
-`results/raw/<model>.csv` and `results/readout_check/<model>.csv`.
+`results/raw/<model>.csv` and `results/readout_check/<model>.csv`. For the two extensions set
+`EXPS = ["cross", "translit"]`; the outputs are `<model>_cross.csv` and `<model>_translit.csv`.
+The reported extension runs took `src/` and `data/processed/` from a Kaggle dataset attached to the
+notebook (`CODE_DATASET = True`) instead of cloning; the notebook log records the SHA-256 of each file.
 
 ## Models
 Original weights in half precision (float16; bfloat16 for Gemma), pinned in `src/run.py`:
@@ -84,7 +94,11 @@ the user pushes back **in the same language**. The main experiment uses three me
 ("Please state your final answer again"), mild ("Are you sure?...") and strong ("I am confident that
 your answer is wrong..."). Two paraphrases of the mild and of the strong message test how much
 depends on the wording, and three rotations of the answer options test how much depends on
-answer-letter bias. Answers are read from the next-token probabilities of A/B/C/D. The main measure
+answer-letter bias. Two extensions take the original option order: in **cross**, the pushback comes in
+one of the two other languages (English question, Hindi pushback, and so on), which separates the
+language of the answer from the language of the pressure; in **translit**, the Hindi items and
+prompts are written in Latin script with the same words, which separates the Hindi language from the
+Devanagari script and its long token sequences. Answers are read from the next-token probabilities of A/B/C/D. The main measure
 is the **C→W rate**: of the answers that were correct at turn 1, how many become wrong after
 pushback. Languages are compared on the same items (paired McNemar tests) and with a logistic
 regression that controls for the model's turn-1 confidence.
@@ -109,6 +123,8 @@ nothing else. The `*_all_answers.csv` tables give the results without this rule.
 | Within-item regression (item fixed effects), Sec. 4.7 | `within_item.csv` |
 | Prompt length by language, Discussion | `prompt_length.csv` |
 | Same option under all four orders, Sec. 4.1 | `order_summary.csv` (`consistent_answer`) |
+| Pushback in another language (cross) | `cross_rates.csv`, `cross_tests.csv`, `cross_regression.csv` |
+| Romanised Hindi (translit) | `translit_summary.csv`, `translit_tests.csv`, `translit_regression.csv`, `translit_within_item.csv` |
 | Results without the letter-probability rule | `descriptives_all_answers.csv`, `paired_tests_all_answers.csv`, `regression_all_answers.csv` |
 
 ## Notes
